@@ -822,3 +822,23 @@ body{
         right: 10px;
     }
 }
+/* Crossed Bands Animation - Paint Roll Effect (X-Cross) */
+@keyframes rollFromLeft {
+    0% { transform: translateX(-100%) rotate(-6deg); opacity: 0; }
+    100% { transform: translateX(0) rotate(-6deg); opacity: 1; }
+}
+
+@keyframes rollFromRight {
+    0% { transform: translateX(100%) rotate(6deg); opacity: 0; }
+    100% { transform: translateX(0) rotate(6deg); opacity: 1; }
+}
+
+.animate-roll-left {
+    animation: rollFromLeft 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    transform-origin: center;
+}
+
+.animate-roll-right {
+    animation: rollFromRight 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    transform-origin: center;
+}

@@ -124,39 +124,39 @@ function App() {
     <div className="wrapper">
       {/* Spinner is in index.html */}
 
+      {/* Navbar fixed */}
+      <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
+        <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
+          <a href="/" className="navbar-brand m-0">
+            <img width="170" height="50" src="/LOGO HORIZONTAL-02-02.png" alt="Logo" />
+          </a>
+          <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <div className="navbar-nav align-items-center">
+                <a href="/" className="nav-item nav-link active">Accueil</a>
+                <div className="nav-item dropdown">
+                  <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
+                  <div className="dropdown-menu border-0 m-0">
+                    <a href="#" className="dropdown-item">Qui sommes nous?</a>
+                    <a href="#" className="dropdown-item">Notre Vision</a>
+                    <a href="#" className="dropdown-item">Nos Valeurs</a>
+                  </div>
+                </div>
+                <a href="#" className="nav-item nav-link">Nos actions</a>
+                <a href="#" className="nav-item nav-link">Nos actualités</a>
+                <a href="#" className="nav-item nav-link">Contact</a>
+              </div>
+              <div className="ms-auto d-none d-lg-flex">
+                <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="#!" style={{ borderRadius: "7px" }}>Nous soutenir</a>
+              </div>
+            </div>
+        </nav>
+      </div>
+
       {/* Banner Section */}
       <div className="container-fluid top p-0 wow fadeIn" data-wow-delay="0.1s">
-        {/* Navbar */}
-        <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
-          <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
-            <a href="/" className="navbar-brand m-0">
-              <img width="170" height="50" src="/LOGO HORIZONTAL-02-02.png" alt="Logo" />
-            </a>
-            <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-              <div className="collapse navbar-collapse" id="navbarCollapse">
-                <div className="navbar-nav align-items-center">
-                  <a href="/" className="nav-item nav-link active">Accueil</a>
-                  <div className="nav-item dropdown">
-                    <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
-                    <div className="dropdown-menu bg-light m-0">
-                      <a href="#" className="dropdown-item">A propos de nous</a>
-                      <a href="#" className="dropdown-item">La Team</a>
-                      <a href="#" className="dropdown-item">Galerie</a>
-                      <a href="#" className="dropdown-item">Centre de ressources</a>
-                    </div>
-                  </div>
-                  <a href="#" className="nav-item nav-link">Nos actions</a>
-                  <a href="#" className="nav-item nav-link">Nos actualités</a>
-                  <a href="#" className="nav-item nav-link">Contact</a>
-                </div>
-                <div className="ms-auto d-none d-lg-flex">
-                  <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="#!" style={{ borderRadius: "7px" }}>Nous soutenir</a>
-                </div>
-              </div>
-          </nav>
-        </div>
 
         {/* Hero Slider */}
         <div className="owl-carousel header-carousel py-5">
@@ -184,7 +184,7 @@ function App() {
         </div>
       </div>
 
-      <div className="d-none d-lg-flex justify-content-center" style={{ marginTop: "-50px", position: "relative", zIndex: 10 }}>
+      <div className="d-none d-lg-flex justify-content-center" style={{ marginTop: "-25px", position: "relative", zIndex: 10 }}>
         <a className="btn btn-secondary text-uppercase text-white fw-bold px-4 py-2" href="#!" style={{ borderRadius: "7px" }}>Nos actualités</a>
       </div>
 
@@ -193,58 +193,8 @@ function App() {
           LE SILENCE PROTèGE <br />L'aGRESSEUR. NOTRE aCTION <br /> PROTèGE <span className="text-white bg-primary">La VICTIME</span>
         </h1>
       </div>
-
-      {/* NOS ACTUALITÉS - juste après la bannière */}
-      <div className="container-fluid py-5">
-        <div className="container">
-          <div className="mb-4 wow fadeIn" data-wow-delay="0.1s">
-            <a className="btn btn-secondary px-3 text-white fw-bold mb-3" href="#!" style={{ borderRadius: "7px" }}>
-              NOS ACTUALITÉS
-            </a>
-          </div>
-          <div className="row g-3">
-            {/* Grande carte à gauche */}
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-              <div className="event-item h-100 p-0" style={{ overflow: "hidden" }}>
-                <img className="img-fluid w-100" src="/BUSOLA_39.jpg.jpeg" alt="Article Busola" style={{ height: "420px", objectFit: "cover" }} />
-                <div className="p-4 bg-white">
-                  <div className="d-flex align-items-center justify-content-between mb-2">
-                    <span className="badge bg-secondary text-white px-3 py-1" style={{ fontSize: "11px" }}>ARTICLE</span>
-                    <small className="text-muted">20 Mars 2025</small>
-                  </div>
-                  <a href="#!" className="h5 d-inline-block text-primary mb-2">Campagne de sensibilisation en SSRAJ :</a>
-                  <p className="mb-2 small">Busola organise à l'occasion de la célébration de ses 5 années d'existence, une Journée Portes Ouvertes qui a réuni plus d'une centaine d'adolescents et jeunes de la commune de Parakou.</p>
-                  <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
-                </div>
-              </div>
-            </div>
-            {/* 2 photos empilées à droite */}
-            <div className="col-lg-6">
-              <div className="d-flex flex-column gap-3 h-100">
-                <div className="wow fadeIn" data-wow-delay="0.2s" style={{ flex: 1 }}>
-                  <img className="img-fluid w-100" src="/IMG-20250926-WA0023_M0UP60m.jpg" alt="Activité Busola" style={{ height: "200px", objectFit: "cover", borderRadius: "4px" }} />
-                </div>
-                <div className="wow fadeIn" data-wow-delay="0.3s" style={{ flex: 1 }}>
-                  <img className="img-fluid w-100" src="/IMG-20251016-WA0099_cK78lYo.jpg" alt="Activité Busola" style={{ height: "200px", objectFit: "cover", borderRadius: "4px" }} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* RESTEZ BRANCHÉS ! */}
-      <div className="container-fluid py-4 text-center wow fadeIn" data-wow-delay="0.1s">
-        <h2 className="display-6 text-uppercase text-primary fw-bold mb-4">RESTEZ BRANCHÉS !</h2>
-        <div className="d-flex align-items-center justify-content-center gap-3">
-          <a className="btn btn-square rounded-circle btn-secondary p-4 text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100064788966440"><i className="fab fa-facebook-f"></i></a>
-          <a className="btn btn-square rounded-circle btn-secondary p-4 text-white" target="_blank" href="https://www.twitter.com/"><i className="fab fa-twitter"></i></a>
-          <a className="btn btn-square rounded-circle btn-secondary p-4 text-white" target="_blank" href="https://www.linkedin.com/company/ong-busola/"><i className="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-
       {/* Partenaires */}
-      <div className="container-fluid mt-5 pt-5 partenaire wow fadeIn">
+      <div className="container-fluid mt-5 pt-5 pb-0 partenaire wow fadeIn">
         <div className="container">
           <div className="d-none d-lg-flex justify-content-start mb-4">
             <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="#!" style={{ borderRadius: "7px" }}>Nos partenaires</a>
@@ -261,27 +211,105 @@ function App() {
               </div>
             ))}
           </div>
-          <hr className="my-4" style={{ borderTop: "2px solid #ddd" }} />
         </div>
       </div>
 
-      <div className="container-fluid bg-primary text-uppercase my-5 py-2 text-center text-white wow fadeIn" style={{ transform: "skewY(-1.5deg)" }}>
-        <marquee behavior="scroll" direction="left" style={{ fontSize: "20px", fontWeight: "bold" }}>
-          Investir dans la jeunesse, c’est investir dans le changement : ses idées, son énergie et son engagement sont les leviers les plus puissants pour transformer les communautés.
-        </marquee>
+      {/* Crossed Bands Section - Animated Paint Roll (X-Cross) */}
+      <div className="container-fluid overflow-hidden position-relative my-5" style={{ height: "200px", display: "flex", alignItems: "center" }}>
+        {/* Orange Band - Roll from Left */}
+        <div className="position-absolute w-100 bg-secondary text-white py-3 shadow animate-roll-left" 
+             style={{ top: "50%", marginTop: "-40px", left: "0", zIndex: 1, whiteSpace: "nowrap" }}>
+          <marquee behavior="scroll" direction="left" scrollamount="7" style={{ fontSize: "28px", fontWeight: "900" }}>
+            {[1, 2, 3, 4, 5, 6].map(i => (
+              <span key={i} className="text-uppercase mx-5">S'INSCRIRE A NOTRE NEWSLETTER</span>
+            ))}
+          </marquee>
+        </div>
+        {/* Green Band - Roll from Right */}
+        <div className="position-absolute w-100 bg-tertiary text-white py-3 shadow animate-roll-right" 
+             style={{ top: "50%", marginTop: "-40px", left: "0", zIndex: 2, whiteSpace: "nowrap" }}>
+          <marquee behavior="scroll" direction="right" scrollamount="9" style={{ fontSize: "28px", fontWeight: "900" }}>
+            {[1, 2, 3, 4, 5, 6].map(i => (
+              <span key={i} className="text-uppercase mx-5">S'INSCRIRE A NOTRE NEWSLETTER</span>
+            ))}
+          </marquee>
+        </div>
       </div>
 
-      {/* About */}
-      <div className="container-fluid py-5">
-        <div className="container">
+      {/* About Section - New Design */}
+      <div className="container-fluid py-5 bg-white">
+        <div className="container py-5">
           <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeIn">
-              <img className="img-fluid w-100" src="/about.jpeg" alt="About" />
+            {/* Left Image Column */}
+            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+              <div className="position-relative">
+                <img 
+                  className="img-fluid w-100 rounded-5 shadow-lg" 
+                  src="/IMG_8938.jpeg" 
+                  alt="About Busola" 
+                  style={{ objectFit: "cover", height: "600px", backgroundColor: "#eef4ff" }} 
+                />
+                <div className="position-absolute bottom-0 end-0 bg-white p-4 m-4 rounded-4 shadow" style={{ minWidth: "180px" }}>
+                  <h3 className="text-primary fw-bold mb-0">15 000+</h3>
+                  <p className="text-muted mb-0 small">Bénéficiaires directs</p>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-6">
-              <p className="section-title fw-semi-bold text-start text-white pe-3"><span className="bg-tertiary p-1">Qui somme nous ?</span></p>
-              <h1 className="display-6 mb-4"><span className="bg-primary text-white text-uppercase p-2">ONG Busola</span></h1>
-              <p className="mb-4 text-justify">Créée en 2020 à Parakou, l’ONG Busola est le fruit d’un engagement citoyen et associatif porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés...</p>
+
+            {/* Right Content Column */}
+            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+              <div className="ps-lg-5">
+                {/* Section Title - Modern Premium Style */}
+                <div className="mb-5 position-relative pt-4">
+                  <div className="position-absolute top-0 start-0 bg-tertiary text-white px-4 py-2 fw-bold text-uppercase shadow" 
+                       style={{ transform: "rotate(-3deg)", zIndex: 2, letterSpacing: "2px", borderRadius: "4px" }}>
+                    Qui somme nous ?
+                  </div>
+                  <div className="bg-primary p-4 ps-5 shadow-lg position-relative overflow-hidden" 
+                       style={{ borderLeft: "12px solid var(--bs-secondary)", borderRadius: "8px" }}>
+                    {/* Decorative background element - Hands holding globe icon (silver version, no text) */}
+                    <div className="position-absolute end-0 bottom-0 opacity-20" style={{ transform: "translate(15%, 15%)", width: "180px", height: "150px", overflow: "hidden" }}>
+                      <img src="/LOGO VERTICAL-02-02.svg" style={{ width: "100%", marginTop: "-10px" }} alt="" />
+                    </div>
+                    <h1 className="display-4 text-white fw-black text-uppercase mb-0" style={{ letterSpacing: "4px", fontWeight: "900" }}>
+                      ONG BUSOLA
+                    </h1>
+                  </div>
+                </div>
+                
+                <p className="text-muted mb-4 fs-5 lh-base">
+                  Créée en 2020 à Parakou, l’ONG Busola est le fruit d’un engagement citoyen porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
+                </p>
+                <p className="text-muted mb-5 fs-5 lh-base">
+                  Nos fondateurs, issus d’expériences en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté l’absence de cadres structurés articulant droits humains, autonomisation, paix et développement durable.
+                </p>
+
+                {/* Values Grid */}
+                <div className="row g-4 mb-5">
+                  {[
+                    { icon: 'hand-holding-heart', color: '#ffc107', title: 'Dignité', desc: 'Chaque personne au cœur de l\'action' },
+                    { icon: 'users', color: '#0dcaf0', title: 'Équité de Genre', desc: 'L\'égalité comme condition à la paix' },
+                    { icon: 'link', color: '#198754', title: 'Partenariat', desc: 'Ensemble pour un impact durable' },
+                    { icon: 'shield-check', color: '#fd7e14', title: 'Intégrité', desc: 'Transparence & redevabilité' }
+                  ].map((val, idx) => (
+                    <div key={idx} className="col-sm-6">
+                      <div className="d-flex align-items-start p-3 rounded-4" style={{ backgroundColor: "#f8faff" }}>
+                        <div className="rounded-3 p-2 me-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: "white", boxShadow: "0 4px 10px rgba(0,0,0,0.05)" }}>
+                          <i className={`fa fa-${val.icon} fs-4`} style={{ color: val.color }}></i>
+                        </div>
+                        <div>
+                          <h6 className="fw-bold mb-1">{val.title}</h6>
+                          <small className="text-muted d-block" style={{ fontSize: "0.85rem" }}>{val.desc}</small>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <a href="#" className="btn btn-primary rounded-3 px-4 py-3 fw-bold d-inline-flex align-items-center shadow">
+                  En savoir plus <i className="fa fa-arrow-right ms-2"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -291,8 +319,14 @@ function App() {
       <div className="container-fluid py-5">
         <div className="container">
           <div className="text-center py-5">
-            <p className="section-title fw-semi-bold text-start text-white pe-3"><span className="bg-tertiary p-1">Que prônons-nous ?</span></p>
-            <h1 className="display-6 mb-4"><span className="text-uppercase text-white bg-primary p-3">Nos axes stratégiques d'intervention</span></h1>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
+              <span className="bg-tertiary text-white text-uppercase fw-bold p-2 mx-3">Que prônons-nous ?</span>
+              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
+            </div>
+            <h1 className="display-5 mb-4">
+              <span className="text-uppercase text-white bg-primary px-4 py-2 shadow-sm" style={{ display: "inline-block" }}>Nos axes stratégiques d'intervention</span>
+            </h1>
           </div>
           <div className="row g-5">
             <div className="col-md-4">
@@ -327,8 +361,14 @@ function App() {
       <div className="container-fluid py-5">
         <div className="container">
           <div className="text-center mx-auto mb-5">
-            <p className="section-title fw-semi-bold text-center text-white px-3"><span className="bg-tertiary p-1">Actions</span></p>
-            <h1 className="display-6"><span className="text-uppercase text-white bg-primary fw-bold p-2">Principales actions menées</span></h1>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
+              <span className="bg-tertiary text-white text-uppercase fw-bold p-2 mx-3">Actions</span>
+              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
+            </div>
+            <h1 className="display-5">
+              <span className="text-uppercase text-white bg-primary fw-bold px-4 py-2 shadow-sm" style={{ display: "inline-block" }}>Principales actions menées</span>
+            </h1>
           </div>
           <div className="row g-4">
             {[
@@ -352,6 +392,44 @@ function App() {
         </div>
       </div>
 
+      {/* NOS ACTUALITÉS */}
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
+            <p className="section-title fw-semi-bold text-center text-white px-3"><span className="bg-tertiary p-1">Actualités</span></p>
+            <h1 className="display-6 text-uppercase text-primary mb-4">Soyez au courant de notre actualités en temps réel.</h1>
+          </div>
+          <div className="row g-4">
+            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
+                <img className="img-fluid w-100 mb-4" src="/BUSOLA_39.jpg.jpeg" alt="Actualité Busola" />
+                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
+                <h3 className="h5 text-primary">Cérémonie de présentation des voeux au CA et aux PTF de Busola</h3>
+                <p className="small">10 Février, Busola ONG a vécu un instant d’exception à l’occasion de sa cérémonie de présentation des vœux à son Président d’Honneur, Monsieur Alain ASSANKPO, ainsi qu’à ses partenaires techniques et financiers locaux, nationaux et internationaux.</p>
+                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
+                <img className="img-fluid w-100 mb-4" src="/571270432_1263128095856811_5608146033344449618_n.jpg" alt="Actualité Busola" />
+                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
+                <h3 className="h5 text-primary">48H contre le cancer du sein Edition 2025</h3>
+                <p className="small">Ce jeudi 23 octobre, la 2ème journée de notre initiative "48h contre le Cancer du Sein" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d’un deuxieme pole économique majeur de Parakou : Le marché dépôt</p>
+                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
+                <img className="img-fluid w-100 mb-4" src="/IMG_8811.jpg" alt="Actualité Busola" />
+                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
+                <h3 className="h5 text-primary">Renforcement de capacités en Plaidoyer et Redevabilité</h3>
+                <p className="small">Du 10 au 12 novembre 2025, l’Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l’appui de l’UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin.</p>
+                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Team */}
       <div className="container-fluid py-5">
@@ -436,12 +514,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="container-fluid bg-secondary text-uppercase py-2 text-center text-white wow fadeIn position-relative"
-        style={{ transform: "skewY(-1deg)", top: "-60px" }}>
-        <marquee behavior="scroll" direction="left" style={{ fontSize: "20px", fontWeight: "bold" }}>
-          Nous n'apportons pas de solutions. Nous aidons les communautés à construire les leurs.
-        </marquee>
-      </div>
+
+
 
       {/* Nous soutenir button */}
       <div className="d-none d-lg-flex justify-content-center" style={{ marginTop: "-40px" }}>
@@ -460,13 +534,6 @@ function App() {
         </div>
       </div>
 
-      {/* Transition Marquee 2 - tertiary skewed */}
-      <div className="container-fluid bg-tertiary text-uppercase py-2 text-center text-white wow fadeIn position-relative"
-        style={{ transform: "skewY(-1deg)", bottom: "-60px" }}>
-        <marquee behavior="scroll" direction="left" style={{ fontSize: "20px", fontWeight: "bold" }}>
-          L'avenir ne se prédit pas. Il se façonne dans le présent, ici, par celles et ceux qui prennent part à l'action et choisissent de bâtir demain.
-        </marquee>
-      </div>
 
       {/* Transition Image Foot - 600px */}
       <div className="container-fluid p-0 wow fadeIn" style={{ background: "url('/foot.jpeg') center/cover", height: "600px" }} data-wow-delay="0.1s"></div>
