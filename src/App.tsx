@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from './Navbar';
 
 declare global {
   interface Window {
@@ -34,18 +35,18 @@ function App() {
 
   useEffect(() => {
     const initJS = () => {
-      / Hide Spinner
+      // Hide Spinner
       const spinner = document.getElementById('spinner');
       if (spinner) {
         spinner.classList.remove('show');
       }
 
-      / Initialize WOW.js
+      // Initialize WOW.js
       if (window.WOW) {
         new window.WOW().init();
       }
 
-      / Initialize Owl Carousel for Header
+      // Initialize Owl Carousel for Header
       if (window.$ && window.$(".header-carousel").length) {
         window.$(".header-carousel").owlCarousel({
           animateOut: 'fadeOut',
@@ -65,7 +66,7 @@ function App() {
         });
       }
 
-      / Initialize Owl Carousel for Testimonials
+      // Initialize Owl Carousel for Testimonials
       if (window.$ && window.$(".testimonial-carousel").length) {
         window.$(".testimonial-carousel").owlCarousel({
           items: 1,
@@ -110,7 +111,7 @@ function App() {
       setNewsletterStatus({ type: 'error', message: 'Erreur de connexion au serveur.' });
     }
 
-    / Reset status after 5 seconds
+    // Reset status after 5 seconds
     setTimeout(() => setNewsletterStatus({ type: null, message: '' }), 5000);
   };
 
@@ -147,7 +148,7 @@ function App() {
     setChatHistory(prev => [...prev, { role: 'user', text: userMsg }]);
     setChatMessage('');
 
-    / Simple Bot Logic (MVP)
+    // Simple Bot Logic (MVP)
     setTimeout(() => {
       let botResponse = "Je ne suis pas sûr de comprendre. Pourriez-vous préciser ? Vous pouvez aussi nous contacter directement.";
       const lowerMsg = userMsg.toLowerCase();
@@ -211,36 +212,8 @@ function App() {
     <div className="wrapper">
       {/* Spinner is in index.html */}
 
-      {/* Navbar fixed */}
-      <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
-        <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
-          <a href="/" className="navbar-brand m-0">
-            <img width="170" height="50" src="/LOGO HORIZONTAL-02-02.png" alt="Logo" />
-          </a>
-          <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav align-items-center">
-                <a href="/" className="nav-item nav-link active">Accueil</a>
-                <div className="nav-item dropdown">
-                  <a href="/#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
-                  <div className="dropdown-menu border-0 m-0">
-                    <a href="/#" className="dropdown-item">Qui sommes nous?</a>
-                    <a href="/#" className="dropdown-item">Notre Vision</a>
-                    <a href="/#" className="dropdown-item">Nos Valeurs</a>
-                  </div>
-                </div>
-                <a href="/#" className="nav-item nav-link">Nos actions</a>
-                <a href="/#" className="nav-item nav-link">Nos actualités</a>
-                <a href="/#" className="nav-item nav-link">Contact</a>
-              </div>
-              <div className="ms-auto d-none d-lg-flex">
-                <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="/#!" style={{ borderRadius: "7px" }}>Nous soutenir</a>
-              </div>
-            </div>
-        </nav>
-      </div>
+      {/* Navbar */}
+      <Navbar />
 
       {/* Banner Section */}
       <div className="container-fluid top p-0 wow fadeIn" data-wow-delay="0.1s" style={{ minHeight: '95vh', display: 'flex', alignItems: 'center' }}>
@@ -283,7 +256,6 @@ function App() {
                      style={{ height: "500px", backgroundColor: "#eef4ff", position: "relative" }}>
                   <div className="text-center">
                     <i className="fa fa-globe-africa display-1 text-primary opacity-50"></i>
-                    {/* If user prefers an actual image, we can put it here, but the mockup shows a graphic style */}
                   </div>
                   {/* Stats Badge */}
                   <div className="position-absolute bottom-0 end-0 bg-white p-4 m-3 rounded-4 shadow-lg border" 
@@ -307,10 +279,10 @@ function App() {
                 <div className="bg-secondary mb-4" style={{ width: "60px", height: "4px" }}></div>
 
                 <p className="text-muted mb-4 fs-6 leading-relaxed">
-                  Créée en 2020 à Parakou, l’ONG Busola est le fruit d’un engagement citoyen porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
+                  Créée en 2020 à Parakou, l'ONG Busola est le fruit d'un engagement citoyen porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
                 </p>
                 <p className="text-muted mb-5 fs-6 leading-relaxed">
-                  Nos fondateurs, issus d’expériences en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté l’absence de cadres structurés articulant droits humains, autonomisation, paix et développement durable.
+                  Nos fondateurs, issus d'expériences en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté l'absence de cadres structurés articulant droits humains, autonomisation, paix et développement durable.
                 </p>
 
                 {/* Values Grid */}
@@ -335,7 +307,7 @@ function App() {
                   ))}
                 </div>
 
-                <a href="/#!" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow transition-all hover-up">
+                <a href="/about" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow transition-all hover-up">
                   En savoir plus <i className="fa fa-arrow-right ms-2"></i>
                 </a>
               </div>
