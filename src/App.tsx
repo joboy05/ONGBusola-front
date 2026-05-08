@@ -170,39 +170,39 @@ function App() {
     {
       name: "Zoulfath ZIME ",
       role: "Chargé de Communauté ",
-      photo: "/NS1_8838_p9dGDR5.jpg",
+      photo: "NS1_8838_p9dGDR5.jpg",
       description: ""
     },
     {
       name: "Fadel KASSALI",
       role: "Assistant Projet",
-      photo: "/Fadel_QL0iHKL.jpg",
+      photo: "Fadel_QL0iHKL.jpg",
       email: "kassalifadel4@gmail.com",
       description: ""
     },
     {
       name: "Abouyaïdou MAMA",
       role: "Directeur Exécutif",
-      photo: "/IMG_8826a_uSwjVqX.jpg",
+      photo: "IMG_8826a_uSwjVqX.jpg",
       email: "mamaabouyaidou22@gmail.com",
       description: "MAMA Abouyaïdou est doctorant en relations internationales à l’Université de Parakou (Bénin), spécialisé en sécurité internationale, cohésion sociale et prévention du terrorisme au Sahel. Fort de plus de huit années d’expérience, il a coordonné et supervisé des projets communautaires majeurs financés par des partenaires internationaux tels que l’UNICEF, l’Union européenne et CARE International. Coordonnateur et Directeur exécutif de l’ONG Busola, il œuvre dans les domaines de la paix, des VBG, du développement rural et de la santé sexuelle et reproductive. Assistant de recherche et enseignant universitaire, il est certifié par le Peace Operations Training Institute des Nations Unies. Sa vision est de transformer la recherche en action pour une paix durable et inclusive."
     },
     {
       name: "BOUKO Chabi Dramane",
       role: "Président du Conseil de Surveillance",
-      photo: "/WhatsApp_Image_2026-02-11_at_13.24.20.jpeg",
+      photo: "WhatsApp_Image_2026-02-11_at_13.24.20.jpeg",
       description: ""
     },
     {
       name: "Alain ASSANKPON",
       role: "Président d'honneur",
-      photo: "/IMG_9787_1tS0sWp.JPG.jpeg",
+      photo: "IMG_9787_1tS0sWp.JPG.jpeg",
       description: ""
     },
     {
       name: "Sybgath SANNI",
       role: "Présidente du Conseil d’Administration",
-      photo: "/pca.jpg",
+      photo: "pca.jpg",
       description: "Pionnière de la naissance de l'ONG BUSOLA, est une figure remarquable, dotée d'un esprit brillant, d'un talent indéniable et d'un esprit innovant. En tant qu'entrepreneuse émérite, elle a fondé plusieurs entreprises prospères telles que BUSOLA BUILDINGS SARL, SUPERMARCHÉ CHANCE GLORY et le restaurant AFRICAN'S DELICES by SYB. En tant que gestionnaire de projets de formation, Sybgath se spécialise dans le domaine du Droit à la Santé Sexuelle et Reproductive (DSSR) ainsi que dans les..."
     }
   ];
@@ -214,15 +214,15 @@ function App() {
       {/* Navbar fixed */}
       <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
         <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
-          <a href="/" className="navbar-brand m-0">
-            <img width="170" height="50" src="/LOGO HORIZONTAL-02-02.png" alt="Logo" />
+          <a href="" className="navbar-brand m-0">
+            <img width="170" height="50" src="LOGO HORIZONTAL-02-02.png" alt="Logo">
           </a>
           <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span className="navbar-toggler-icon"></span>
           </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <div className="navbar-nav align-items-center">
-                <a href="/" className="nav-item nav-link active">Accueil</a>
+                <a href="" className="nav-item nav-link active">Accueil</a>
                 <div className="nav-item dropdown">
                   <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                   <div className="dropdown-menu border-0 m-0">
@@ -264,7 +264,7 @@ function App() {
                 </div>
               </div>
               <div className="col-lg-4 p-0 text-center">
-                <img className="w-100 shadow-lg" style={{ borderRadius: "50%", border: "10px solid white" }} src="/IMG_8938.jpeg" alt="Busola" />
+                <img className="w-100 shadow-lg" style={{ borderRadius: "50%", border: "10px solid white" }} src="IMG_8938.jpeg" alt="Busola">
               </div>
             </div>
           </div>
@@ -272,26 +272,24 @@ function App() {
       </div>
 
 
-      {/* About Section - New Design */}
-      <div className="container-fluid py-5">
+      {/* About Section - New Design (Image-based) */}
+      <div className="container-fluid py-5 bg-white">
         <div className="container py-5">
           <div className="row g-5 align-items-center">
-            {/* Left Image Column */}
+            {/* Left Decorative Card Column */}
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-              <div className="position-relative">
-                <img 
-                  className="img-fluid w-100 rounded-5 shadow-lg" 
-                  src="/IMG_8938.jpeg" 
-                  alt="A propos" 
-                  style={{ objectFit: "cover", height: "600px", border: "15px solid white" }}
-                />
-                <div className="position-absolute bottom-0 end-0 bg-white p-4 m-4 rounded-4 shadow" style={{ minWidth: "180px" }}>
-                  <div className="d-flex align-items-center">
-                    <h2 className="display-4 fw-bold text-primary mb-0 me-3">05</h2>
-                    <div>
-                      <p className="mb-0 fw-bold text-uppercase small">Années</p>
-                      <p className="mb-0 text-muted small">d'Impact</p>
-                    </div>
+              <div className="position-relative p-4">
+                <div className="rounded-5 shadow-sm d-flex align-items-center justify-content-center" 
+                     style={{ height: "500px", backgroundColor: "#eef4ff", position: "relative" }}>
+                  <div className="text-center">
+                    <i className="fa fa-globe-africa display-1 text-primary opacity-50"></i>
+                    {/* If user prefers an actual image, we can put it here, but the mockup shows a graphic style */}
+                  </div>
+                  {/* Stats Badge */}
+                  <div className="position-absolute bottom-0 end-0 bg-white p-4 m-3 rounded-4 shadow-lg border" 
+                       style={{ minWidth: "200px", transform: "translate(20%, 20%)" }}>
+                    <h2 className="display-5 fw-bold text-primary mb-0">15 000+</h2>
+                    <p className="mb-0 text-muted fw-medium">Bénéficiaires directs</p>
                   </div>
                 </div>
               </div>
@@ -300,54 +298,46 @@ function App() {
             {/* Right Content Column */}
             <div className="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
               <div className="ps-lg-5">
-                <div className="mb-5 position-relative pt-4">
-                  <div className="position-absolute top-0 start-0 bg-tertiary text-white px-4 py-2 fw-bold text-uppercase shadow" 
-                       style={{ transform: "rotate(-3deg)", zIndex: 2, letterSpacing: "2px", borderRadius: "4px" }}>
-                    Qui sommes-nous ?
-                  </div>
-                  <div className="bg-primary p-4 ps-5 shadow-lg position-relative overflow-hidden" 
-                       style={{ borderLeft: "12px solid var(--bs-secondary)", borderRadius: "8px" }}>
-                    <div className="position-absolute end-0 top-0 opacity-10 p-4">
-                      <img src="/ICON_LOGO-03.svg" width="100" alt="" />
-                    </div>
-                    <h1 className="display-5 text-white fw-black text-uppercase mb-0 position-relative" style={{ zIndex: 1 }}>
-                      Bâtir un avenir de <br /> 
-                      <span className="text-secondary">Dignité & d'Égalité</span>
-                    </h1>
-                  </div>
-                </div>
+                <span className="badge rounded-pill bg-light text-primary px-3 py-2 mb-4 fw-bold text-uppercase border" style={{ letterSpacing: "1px" }}>
+                  • QUI SOMMES-NOUS ?
+                </span>
+                <h1 className="display-4 fw-bold mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  ONG <span className="text-primary italic">Busola</span>
+                </h1>
+                <div className="bg-secondary mb-4" style={{ width: "60px", height: "4px" }}></div>
 
-                <p className="fs-5 text-muted mb-5 leading-relaxed">
-                  L'ONG <span className="fw-bold text-primary">BUSOLA</span> est une organisation béninoise née de la volonté d'agir pour le bien-être des populations vulnérables. Fondée sur des valeurs de solidarity et d'engagement citoyen, elle s'investit particulièrement dans l'autonomisation des femmes et l'épanouissement des jeunes.
+                <p className="text-muted mb-4 fs-6 leading-relaxed">
+                  Créée en 2020 à Parakou, l’ONG Busola est le fruit d’un engagement citoyen porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
+                </p>
+                <p className="text-muted mb-5 fs-6 leading-relaxed">
+                  Nos fondateurs, issus d’expériences en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté l’absence de cadres structurés articulant droits humains, autonomisation, paix et développement durable.
                 </p>
 
+                {/* Values Grid */}
                 <div className="row g-4 mb-5">
-                  <div className="col-sm-6">
-                    <div className="d-flex align-items-center p-3 bg-light rounded-4 transition-all hover-shadow">
-                      <div className="btn-square bg-primary rounded-circle text-white me-3">
-                        <i className="fa fa-eye"></i>
+                  {[
+                    { icon: 'hand-holding-heart', title: 'Dignité', desc: 'Chaque personne au cœur de l\'action' },
+                    { icon: 'users', title: 'Équité de Genre', desc: 'L\'égalité comme condition à la paix' },
+                    { icon: 'link', title: 'Partenariat', desc: 'Ensemble pour un impact durable' },
+                    { icon: 'shield-check', title: 'Intégrité', desc: 'Transparence & redevabilité' }
+                  ].map((val, idx) => (
+                    <div key={idx} className="col-sm-6">
+                      <div className="d-flex align-items-center p-3 rounded-4 border bg-light h-100 transition-all hover-shadow">
+                        <div className="rounded-circle p-2 me-3 d-flex align-items-center justify-content-center bg-white shadow-sm" style={{ width: "45px", height: "45px" }}>
+                          <i className={`fa fa-${val.icon} text-secondary`}></i>
+                        </div>
+                        <div>
+                          <h6 className="fw-bold mb-0">{val.title}</h6>
+                          <small className="text-muted" style={{ fontSize: "0.8rem" }}>{val.desc}</small>
+                        </div>
                       </div>
-                      <h5 className="mb-0">Notre Vision</h5>
                     </div>
-                  </div>
-                  <div className="col-sm-6">
-                    <div className="d-flex align-items-center p-3 bg-light rounded-4 transition-all hover-shadow">
-                      <div className="btn-square bg-secondary rounded-circle text-white me-3">
-                        <i className="fa fa-bullseye"></i>
-                      </div>
-                      <h5 className="mb-0">Notre Mission</h5>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
-                <div className="d-flex flex-wrap gap-3">
-                  <a href="#!" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-sm transition-all hover-up">
-                    EN SAVOIR PLUS <i className="fa fa-arrow-right ms-2"></i>
-                  </a>
-                  <a href="#!" className="btn btn-outline-secondary rounded-pill px-5 py-3 fw-bold transition-all hover-up">
-                    NOS VALEURS
-                  </a>
-                </div>
+                <a href="#!" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow transition-all hover-up">
+                  En savoir plus <i className="fa fa-arrow-right ms-2"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -373,7 +363,7 @@ function App() {
               'ROAJELF.jpeg', 'sianson.png', 'Barika.jpg', 'wendia.jpg'
             ].map((img, i) => (
               <div key={i} className="col-4 col-md-3 col-lg-2 p-3 text-center">
-                <img src={`/${img}`} className="img-fluid" style={{ maxHeight: "80px", objectFit: "contain" }} alt="partner" />
+                <img src={`/${img}`} className="img-fluid" style={{ maxHeight: "80px", objectFit: "contain" }} alt="partner">
               </div>
             ))}
           </div>
@@ -412,7 +402,7 @@ function App() {
           <div className="row g-4">
             <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
-                <img className="img-fluid w-100 mb-4" src="/BUSOLA_39.jpg.jpeg" alt="Actualité Busola" />
+                <img className="img-fluid w-100 mb-4" src="BUSOLA_39.jpg.jpeg" alt="Actualité Busola">
                 <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
                 <h3 className="h5 text-primary">Cérémonie de présentation des voeux au CA et aux PTF de Busola</h3>
                 <p className="small">10 Février, Busola ONG a vécu un instant d’exception à l’occasion de sa cérémonie de présentation des vœux à son Président d’Honneur, Monsieur Alain ASSANKPO, ainsi qu’à ses partenaires techniques et financiers locaux, nationaux et internationaux.</p>
@@ -421,7 +411,7 @@ function App() {
             </div>
             <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
-                <img className="img-fluid w-100 mb-4" src="/571270432_1263128095856811_5608146033344449618_n.jpg" alt="Actualité Busola" />
+                <img className="img-fluid w-100 mb-4" src="571270432_1263128095856811_5608146033344449618_n.jpg" alt="Actualité Busola">
                 <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
                 <h3 className="h5 text-primary">48H contre le cancer du sein Edition 2025</h3>
                 <p className="small">Ce jeudi 23 octobre, la 2ème journée de notre initiative "48h contre le Cancer du Sein" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d’un deuxieme pole économique majeur de Parakou : Le marché dépôt</p>
@@ -430,7 +420,7 @@ function App() {
             </div>
             <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
-                <img className="img-fluid w-100 mb-4" src="/IMG_8811.jpg" alt="Actualité Busola" />
+                <img className="img-fluid w-100 mb-4" src="IMG_8811.jpg" alt="Actualité Busola">
                 <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
                 <h3 className="h5 text-primary">Renforcement de capacités en Plaidoyer et Redevabilité</h3>
                 <p className="small">Du 10 au 12 novembre 2025, l’Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l’appui de l’UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin.</p>
@@ -498,9 +488,9 @@ function App() {
           </div>
           <div className="row g-4">
             {[
-              { title: 'PAGEDA', tag: 'Leadership et Autonomisation', img: '/IMG_3463_yZbdIV5.JPG', desc: 'Le Programme PAGEDA a pour objectif de lutter contre la pauvreté par l\'Alphabétisation fonctionnelle...' },
-              { title: 'YES', tag: 'Autonomisation des jeunes', img: '/IMG-20250926-WA0023_M0UP60m.jpg', desc: 'Le projet YES (Youth Engagement for Sexual and Reproductive Health Rights) vise à renforcer l’autonomisation des jeunes...' },
-              { title: 'TEDIDJO', tag: 'DSSR & VBG', img: '/IMG-20251016-WA0099_cK78lYo.jpg', desc: 'Le projet TEDIDJO améliore la SSR des adolescents et prévient les VBG dans le nord du Bénin.' }
+              { title: 'PAGEDA', tag: 'Leadership et Autonomisation', img: 'IMG_3463_yZbdIV5.JPG', desc: 'Le Programme PAGEDA a pour objectif de lutter contre la pauvreté par l\'Alphabétisation fonctionnelle...' },
+              { title: 'YES', tag: 'Autonomisation des jeunes', img: 'IMG-20250926-WA0023_M0UP60m.jpg', desc: 'Le projet YES (Youth Engagement for Sexual and Reproductive Health Rights) vise à renforcer l’autonomisation des jeunes...' },
+              { title: 'TEDIDJO', tag: 'DSSR & VBG', img: 'IMG-20251016-WA0099_cK78lYo.jpg', desc: 'Le projet TEDIDJO améliore la SSR des adolescents et prévient les VBG dans le nord du Bénin.' }
             ].map((proj, i) => (
               <div key={i} className="col-md-6 col-lg-4">
                 <div className="donation-item h-100 p-4 shadow-sm rounded">
@@ -560,7 +550,7 @@ function App() {
                   <div key={i} className="testimonial-item p-4">
                     <div className="row align-items-center">
                       <div className="col-md-6">
-                        <img className="img-fluid rounded" src="/testimoner 1.jpg" alt="testimony" />
+                        <img className="img-fluid rounded" src="testimoner 1.jpg" alt="testimony">
                       </div>
                       <div className="col-md-6">
                         <div className="mb-2"><i className="fa fa-star text-primary"></i><i className="fa fa-star text-primary"></i><i className="fa fa-star text-primary"></i><i className="fa fa-star text-primary"></i><i className="fa fa-star text-primary"></i></div>
@@ -589,13 +579,13 @@ function App() {
             <p>Votre soutien financier, même modeste, est un levier puissant, pour nos actions sur le terrain.</p>
             <a className="btn btn-light text-secondary text-uppercase fw-bold m-1 px-3 me-3" href="#!" style={{ borderRadius: "7px" }}>Je donne</a>
           </div>
-          <div className="col-md-4 p-0 wow fadeIn" data-wow-delay="0.1s" style={{ background: "url('/IMG_0966.jpeg') center/cover", minHeight: "300px" }}></div>
+          <div className="col-md-4 p-0 wow fadeIn" data-wow-delay="0.1s" style={{ background: "url('IMG_0966.jpeg') center/cover", minHeight: "300px" }}></div>
           <div className="col-md-4 bg-tertiary line-height-3 text-white text-center p-5 wow fadeIn" data-wow-delay="0.1s">
             <h1 className="text-primary text-uppercase mb-4">DEVENIR <br /><span className="text-primary bg-white">Partenaire</span></h1>
             <p>Vous êtes une entreprise, une fondation, une institution? Collaborons pour démultiplier notre impact.</p>
             <a className="btn btn-light text-secondary text-uppercase fw-bold m-1 px-3 me-3" href="#!" data-bs-toggle="modal" data-bs-target="#partenariatModal" style={{ borderRadius: "7px" }}>Nous contacter</a>
           </div>
-          <div className="col-md-4 p-0 wow fadeIn" data-wow-delay="0.1s" style={{ background: "url('/IMG-2025.jpeg') center/cover", minHeight: "300px" }}></div>
+          <div className="col-md-4 p-0 wow fadeIn" data-wow-delay="0.1s" style={{ background: "url('IMG-2025.jpeg') center/cover", minHeight: "300px" }}></div>
           <div className="col-md-4 bg-primary line-height-3 text-white text-center p-5 wow fadeIn" data-wow-delay="0.1s">
             <h1 className="text-white text-uppercase mb-4">DEVENIR <br /><span className="text-white bg-secondary">MEMBRE</span></h1>
             <p>Vous êtes une entreprise, une fondation, une institution? Collaborons pour démultiplier notre impact.</p>
@@ -646,12 +636,12 @@ function App() {
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
               <div className="row g-3">
                 <div className="col-6 mt-5">
-                  <img src="/IMG_3463_yZbdIV5.JPG" className="img-fluid rounded-4 shadow-lg mb-3" alt="Social" />
-                  <img src="/IMG-20250926-WA0023_M0UP60m.jpg" className="img-fluid rounded-4 shadow-lg" alt="Social" />
+                  <img src="IMG_3463_yZbdIV5.JPG" className="img-fluid rounded-4 shadow-lg mb-3" alt="Social">
+                  <img src="IMG-20250926-WA0023_M0UP60m.jpg" className="img-fluid rounded-4 shadow-lg" alt="Social">
                 </div>
                 <div className="col-6">
-                  <img src="/IMG-20251016-WA0099_cK78lYo.jpg" className="img-fluid rounded-4 shadow-lg mb-3" alt="Social" />
-                  <img src="/IMG_8811.jpg" className="img-fluid rounded-4 shadow-lg" alt="Social" />
+                  <img src="IMG-20251016-WA0099_cK78lYo.jpg" className="img-fluid rounded-4 shadow-lg mb-3" alt="Social">
+                  <img src="IMG_8811.jpg" className="img-fluid rounded-4 shadow-lg" alt="Social">
                 </div>
               </div>
             </div>
@@ -661,7 +651,7 @@ function App() {
 
 
       {/* Transition Image Foot - 600px */}
-      <div className="container-fluid p-0 wow fadeIn" style={{ background: "url('/foot.jpeg') center/cover", height: "600px" }} data-wow-delay="0.1s"></div>
+      <div className="container-fluid p-0 wow fadeIn" style={{ background: "url('foot.jpeg') center/cover", height: "600px" }} data-wow-delay="0.1s"></div>
 
       {/* Newsletter */}
       <div id="newsletter" className="container-fluid bg-primary py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -702,7 +692,7 @@ function App() {
             <div className="col-lg-3 col-md-6">
               <div className="row g-2">
                 <div className="col-12">
-                  <img className="img-fluid w-75" src="/LOGO VERTICAL-02-02.svg" alt="Logo Busola" />
+                  <img className="img-fluid w-75" src="LOGO VERTICAL-02-02.svg" alt="Logo Busola">
                 </div>
               </div>
             </div>
@@ -932,7 +922,7 @@ function App() {
             <div className="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
               <div className="d-flex align-items-center">
                 <div className="bg-white rounded-circle p-1 me-2" style={{ width: '30px', height: '30px' }}>
-                  <img src="/ICON_LOGO-03.svg" className="img-fluid" alt="Bot" />
+                  <img src="ICON_LOGO-03.svg" className="img-fluid" alt="Bot">
                 </div>
                 <h6 className="mb-0 fw-bold">Assistant Busola</h6>
               </div>

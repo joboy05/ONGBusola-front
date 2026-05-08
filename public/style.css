@@ -188,7 +188,7 @@ body{
 
 /*** Header Carousel ***/
 .top{
-    background: url("/bg1.png") center center no-repeat;
+    background: url("bg1.png") center center no-repeat;
     background-size: cover;
     background-color: #ffffff;
 }
@@ -226,7 +226,7 @@ body{
 }
 
 .page-header {
-    background: url("/MOTIF\ LOGO-54.png") center center no-repeat;
+    background: url("MOTIF\ LOGO-54.png") center center no-repeat;
     background-size: cover;
 }
 
@@ -415,7 +415,7 @@ body{
 
 .banner .banner-inner {
     position: relative;
-    background: url("/bg.svg") center center no-repeat;
+    background: url("bg.svg") center center no-repeat;
     background-size: cover;
 }
 
@@ -456,7 +456,7 @@ body{
 /*** Donate ***/
 .donate .donate-text {
     position: relative;
-    background: url("/bg.svg") center center no-repeat;
+    background: url("bg.svg") center center no-repeat;
     background-size: cover;
 }
 
@@ -532,7 +532,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url("/MOTIF\ LOGO-54.png") center center no-repeat;
+    background: url("MOTIF\ LOGO-54.png") center center no-repeat;
     background-size: cover;
 }
 
@@ -593,7 +593,7 @@ body{
 .footer {
     color: white;
     position: relative;
-    background: url("/MOTIF\ LOGO-54.png") center center no-repeat !important;
+    background: url("MOTIF\ LOGO-54.png") center center no-repeat !important;
     background-size: cover;
 }
 
