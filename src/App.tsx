@@ -34,18 +34,18 @@ function App() {
 
   useEffect(() => {
     const initJS = () => {
-      / Hide Spinner
+      // Hide Spinner
       const spinner = document.getElementById('spinner');
       if (spinner) {
         spinner.classList.remove('show');
       }
 
-      / Initialize WOW.js
+      // Initialize WOW.js
       if (window.WOW) {
         new window.WOW().init();
       }
 
-      / Initialize Owl Carousel for Header
+      // Initialize Owl Carousel for Header
       if (window.$ && window.$(".header-carousel").length) {
         window.$(".header-carousel").owlCarousel({
           animateOut: 'fadeOut',
@@ -65,7 +65,7 @@ function App() {
         });
       }
 
-      / Initialize Owl Carousel for Testimonials
+      // Initialize Owl Carousel for Testimonials
       if (window.$ && window.$(".testimonial-carousel").length) {
         window.$(".testimonial-carousel").owlCarousel({
           items: 1,
@@ -110,7 +110,7 @@ function App() {
       setNewsletterStatus({ type: 'error', message: 'Erreur de connexion au serveur.' });
     }
 
-    / Reset status after 5 seconds
+    // Reset status after 5 seconds
     setTimeout(() => setNewsletterStatus({ type: null, message: '' }), 5000);
   };
 
@@ -147,7 +147,7 @@ function App() {
     setChatHistory(prev => [...prev, { role: 'user', text: userMsg }]);
     setChatMessage('');
 
-    / Simple Bot Logic (MVP)
+    // Simple Bot Logic (MVP)
     setTimeout(() => {
       let botResponse = "Je ne suis pas sûr de comprendre. Pourriez-vous préciser ? Vous pouvez aussi nous contacter directement.";
       const lowerMsg = userMsg.toLowerCase();
@@ -279,12 +279,9 @@ function App() {
             {/* Left Decorative Card Column */}
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
               <div className="position-relative p-4">
-                <div className="rounded-5 shadow-sm d-flex align-items-center justify-content-center" 
-                     style={{ height: "500px", backgroundColor: "#eef4ff", position: "relative" }}>
-                  <div className="text-center">
-                    <i className="fa fa-globe-africa display-1 text-primary opacity-50"></i>
-                    {/* If user prefers an actual image, we can put it here, but the mockup shows a graphic style */}
-                  </div>
+                <div className="rounded-5 shadow-sm overflow-hidden" 
+                     style={{ height: "500px", position: "relative" }}>
+                  <img src="/about.jpeg" className="w-100 h-100" style={{ objectFit: 'cover' }} alt="L'équipe Busola" />
                   {/* Stats Badge */}
                   <div className="position-absolute bottom-0 end-0 bg-white p-4 m-3 rounded-4 shadow-lg border" 
                        style={{ minWidth: "200px", transform: "translate(20%, 20%)" }}>
@@ -344,6 +341,49 @@ function App() {
         </div>
       </div>
 
+      {/* Strategic Axes (RE-ENABLED) */}
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="text-center py-5">
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
+              <span className="bg-tertiary text-white text-uppercase fw-bold p-2 mx-3">Que prônons-nous ?</span>
+              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
+            </div>
+            <h1 className="display-5 mb-4">
+              <span className="text-uppercase text-white bg-primary px-4 py-2 shadow-sm" style={{ display: "inline-block" }}>Nos axes stratégiques d'intervention</span>
+            </h1>
+          </div>
+          <div className="row g-5">
+            <div className="col-md-4">
+              <div className="bg-primary p-5 h-100 text-white rounded">
+                <h1 className="text-white mb-4">Sur quoi agissons-nous?</h1>
+                <p className="fs-5">Nous oeuvrons pour garantir la dignité, renforcer le pouvoir d’agir et ouvrir des opportunités aux femmes, aux jeunes et aux communautés.</p>
+              </div>
+            </div>
+            <div className="col-md-8">
+              <div className="row g-4">
+                {[
+                  { icon: 'droplet', title: 'Santé et Droits Sexuels et Reproductifs (SDSR)', desc: 'Garantir l\'accès des adolescent(e)s jeunes et des femmes à une information complète et à des services de santé de qualité...' },
+                  { icon: 'hospital', title: 'Prévention et réponse aux Violences Basées sur le Genre (VBG)', desc: 'Mettre en œuvre des programmes de prévention et de lutte contre les VBG...' },
+                  { icon: 'hands-holding-child', title: 'Leadership, éducation et autonomisation', desc: 'Renforcer l\'indépendance économique des femmes et des filles...' },
+                  { icon: 'bowl-food', title: 'Paix, cohésion sociale et citoyenneté', desc: 'Créer des espaces de dialogue intercommunautaire, renforcer le vivre-ensemble...' }
+                ].map((axe, i) => (
+                  <div key={i} className="col-sm-6">
+                    <div className="service-item h-100 p-4 shadow-sm bg-white rounded border-start border-4 border-secondary">
+                      <div className="btn-square bg-light mb-3"><i className={`fa fa-${axe.icon} fa-2x text-secondary`}></i></div>
+                      <h3 className="h5 text-primary">{axe.title}</h3>
+                      <p className="mb-0">{axe.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="container-fluid p-0 text-center py-5 bannere wow fadeOut" style={{ height: "400px" }}>
         <h1 className="text-uppercase text-primary display-1 fw-bold">
           LE SILENCE PROTèGE <br />L'aGRESSEUR. NOTRE aCTION <br /> PROTèGE <span className="text-white bg-primary">La VICTIME</span>
@@ -400,7 +440,7 @@ function App() {
             <h1 className="display-6 text-uppercase text-primary mb-4">Soyez au courant de notre actualités en temps réel.</h1>
           </div>
           <div className="row g-4">
-            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-md-4 wow fadeIn" data-wow-delay="0.1s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
                 <img className="img-fluid w-100 mb-4" src="/BUSOLA_39.jpg.jpeg" alt="Actualité Busola" />
                 <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
@@ -409,7 +449,7 @@ function App() {
                 <a href="/#!" className="text-secondary fw-bold small">Lire la suite...</a>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+            <div className="col-md-4 wow fadeIn" data-wow-delay="0.3s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
                 <img className="img-fluid w-100 mb-4" src="/571270432_1263128095856811_5608146033344449618_n.jpg" alt="Actualité Busola" />
                 <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
@@ -418,7 +458,7 @@ function App() {
                 <a href="/#!" className="text-secondary fw-bold small">Lire la suite...</a>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-md-4 wow fadeIn" data-wow-delay="0.5s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
                 <img className="img-fluid w-100 mb-4" src="/IMG_8811.jpg" alt="Actualité Busola" />
                 <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
@@ -431,47 +471,7 @@ function App() {
         </div>
       </div>
 
-      {/* Strategic Axes (RE-ENABLED) */}
-      <div className="container-fluid py-5">
-        <div className="container">
-          <div className="text-center py-5">
-            <div className="d-flex align-items-center justify-content-center mb-3">
-              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
-              <span className="bg-tertiary text-white text-uppercase fw-bold p-2 mx-3">Que prônons-nous ?</span>
-              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "100px" }}></div>
-            </div>
-            <h1 className="display-5 mb-4">
-              <span className="text-uppercase text-white bg-primary px-4 py-2 shadow-sm" style={{ display: "inline-block" }}>Nos axes stratégiques d'intervention</span>
-            </h1>
-          </div>
-          <div className="row g-5">
-            <div className="col-md-4">
-              <div className="bg-primary p-5 h-100 text-white rounded">
-                <h1 className="text-white mb-4">Sur quoi agissons-nous?</h1>
-                <p className="fs-5">Nous oeuvrons pour garantir la dignité, renforcer le pouvoir d’agir et ouvrir des opportunités aux femmes, aux jeunes et aux communautés.</p>
-              </div>
-            </div>
-            <div className="col-md-8">
-              <div className="row g-4">
-                {[
-                  { icon: 'droplet', title: 'Santé et Droits Sexuels et Reproductifs (SDSR)', desc: 'Garantir l\'accès des adolescent(e)s jeunes et des femmes à une information complète et à des services de santé de qualité...' },
-                  { icon: 'hospital', title: 'Prévention et réponse aux Violences Basées sur le Genre (VBG)', desc: 'Mettre en œuvre des programmes de prévention et de lutte contre les VBG...' },
-                  { icon: 'hands-holding-child', title: 'Leadership, éducation et autonomisation', desc: 'Renforcer l\'indépendance économique des femmes et des filles...' },
-                  { icon: 'bowl-food', title: 'Paix, cohésion sociale et citoyenneté', desc: 'Créer des espaces de dialogue intercommunautaire, renforcer le vivre-ensemble...' }
-                ].map((axe, i) => (
-                  <div key={i} className="col-sm-6">
-                    <div className="service-item h-100 p-4 shadow-sm bg-white rounded border-start border-4 border-secondary">
-                      <div className="btn-square bg-light mb-3"><i className={`fa fa-${axe.icon} fa-2x text-secondary`}></i></div>
-                      <h3 className="h5 text-primary">{axe.title}</h3>
-                      <p className="mb-0">{axe.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Projects */}
       <div className="container-fluid py-5">
