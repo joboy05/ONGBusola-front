@@ -22,6 +22,15 @@ interface TeamMember {
 
 function App() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [email, setEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '', type: '' });
+  const [contactStatus, setContactStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [chatMessage, setChatMessage] = useState('');
+  const [chatHistory, setChatHistory] = useState<{ role: 'user' | 'bot', text: string }[]>([
+    { role: 'bot', text: 'Bonjour ! Comment puis-je vous aider aujourd\'hui ?' }
+  ]);
 
   useEffect(() => {
     const initJS = () => {
@@ -78,6 +87,84 @@ function App() {
     const timer = setTimeout(initJS, 500);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    try {
+      const response = await fetch('http://localhost:5000/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setNewsletterStatus({ type: 'success', message: data.message });
+        setEmail('');
+      } else {
+        setNewsletterStatus({ type: 'error', message: data.message });
+      }
+    } catch (error) {
+      setNewsletterStatus({ type: 'error', message: 'Erreur de connexion au serveur.' });
+    }
+
+    // Reset status after 5 seconds
+    setTimeout(() => setNewsletterStatus({ type: null, message: '' }), 5000);
+  };
+
+  const handleContactSubmit = async (e: React.FormEvent, type: string) => {
+    e.preventDefault();
+    const dataToSend = { ...formData, type };
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setContactStatus({ type: 'success', message: data.message });
+        setFormData({ name: '', email: '', subject: '', message: '', type: '' });
+      } else {
+        setContactStatus({ type: 'error', message: data.message });
+      }
+    } catch (error) {
+      setContactStatus({ type: 'error', message: 'Erreur de connexion au serveur.' });
+    }
+
+    setTimeout(() => setContactStatus({ type: null, message: '' }), 5000);
+  };
+
+  const handleChatSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!chatMessage.trim()) return;
+
+    const userMsg = chatMessage.trim();
+    setChatHistory(prev => [...prev, { role: 'user', text: userMsg }]);
+    setChatMessage('');
+
+    // Simple Bot Logic (MVP)
+    setTimeout(() => {
+      let botResponse = "Je ne suis pas sûr de comprendre. Pourriez-vous préciser ? Vous pouvez aussi nous contacter directement.";
+      const lowerMsg = userMsg.toLowerCase();
+      
+      if (lowerMsg.includes('santé') || lowerMsg.includes('dssr')) {
+        botResponse = "Nous intervenons en Santé et Droits Sexuels et Reproductifs. Nos projets comme TEDIDJO accompagnent les jeunes. Voulez-vous en savoir plus ?";
+      } else if (lowerMsg.includes('contact') || lowerMsg.includes('adresse')) {
+        botResponse = "Nous sommes situés à Parakou, quartier Arafat. Vous pouvez nous appeler au +229 01 90 44 46 90.";
+      } else if (lowerMsg.includes('don') || lowerMsg.includes('soutenir')) {
+        botResponse = "Merci de votre intérêt ! Vous pouvez faire un don via le bouton 'Nous soutenir' ou nous contacter pour un partenariat.";
+      } else if (lowerMsg.includes('benevole') || lowerMsg.includes('membre')) {
+        botResponse = "Nous cherchons toujours des bénévoles ! Cliquez sur 'Je m'engage' dans la section 'Devenir Membre'.";
+      }
+
+      setChatHistory(prev => [...prev, { role: 'bot', text: botResponse }]);
+    }, 1000);
+  };
 
   const team: TeamMember[] = [
     {
@@ -156,7 +243,7 @@ function App() {
       </div>
 
       {/* Banner Section */}
-      <div className="container-fluid top p-0 wow fadeIn" data-wow-delay="0.1s">
+      <div className="container-fluid top p-0 wow fadeIn" data-wow-delay="0.1s" style={{ minHeight: '95vh', display: 'flex', alignItems: 'center' }}>
 
         {/* Hero Slider */}
         <div className="owl-carousel header-carousel py-5">
@@ -184,8 +271,87 @@ function App() {
         </div>
       </div>
 
-      <div className="d-none d-lg-flex justify-content-center" style={{ marginTop: "-25px", position: "relative", zIndex: 10 }}>
-        <a className="btn btn-secondary text-uppercase text-white fw-bold px-4 py-2" href="#!" style={{ borderRadius: "7px" }}>Nos actualités</a>
+
+      {/* About Section - New Design */}
+      <div className="container-fluid py-5">
+        <div className="container py-5">
+          <div className="row g-5 align-items-center">
+            {/* Left Image Column */}
+            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+              <div className="position-relative">
+                <img 
+                  className="img-fluid w-100 rounded-5 shadow-lg" 
+                  src="/IMG_8938.jpeg" 
+                  alt="A propos" 
+                  style={{ objectFit: "cover", height: "600px", border: "15px solid white" }}
+                />
+                <div className="position-absolute bottom-0 end-0 bg-white p-4 m-4 rounded-4 shadow" style={{ minWidth: "180px" }}>
+                  <div className="d-flex align-items-center">
+                    <h2 className="display-4 fw-bold text-primary mb-0 me-3">05</h2>
+                    <div>
+                      <p className="mb-0 fw-bold text-uppercase small">Années</p>
+                      <p className="mb-0 text-muted small">d'Impact</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content Column */}
+            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+              <div className="ps-lg-5">
+                <div className="mb-5 position-relative pt-4">
+                  <div className="position-absolute top-0 start-0 bg-tertiary text-white px-4 py-2 fw-bold text-uppercase shadow" 
+                       style={{ transform: "rotate(-3deg)", zIndex: 2, letterSpacing: "2px", borderRadius: "4px" }}>
+                    Qui sommes-nous ?
+                  </div>
+                  <div className="bg-primary p-4 ps-5 shadow-lg position-relative overflow-hidden" 
+                       style={{ borderLeft: "12px solid var(--bs-secondary)", borderRadius: "8px" }}>
+                    <div className="position-absolute end-0 top-0 opacity-10 p-4">
+                      <img src="/ICON_LOGO-03.svg" width="100" alt="" />
+                    </div>
+                    <h1 className="display-5 text-white fw-black text-uppercase mb-0 position-relative" style={{ zIndex: 1 }}>
+                      Bâtir un avenir de <br /> 
+                      <span className="text-secondary">Dignité & d'Égalité</span>
+                    </h1>
+                  </div>
+                </div>
+
+                <p className="fs-5 text-muted mb-5 leading-relaxed">
+                  L'ONG <span className="fw-bold text-primary">BUSOLA</span> est une organisation béninoise née de la volonté d'agir pour le bien-être des populations vulnérables. Fondée sur des valeurs de solidarity et d'engagement citoyen, elle s'investit particulièrement dans l'autonomisation des femmes et l'épanouissement des jeunes.
+                </p>
+
+                <div className="row g-4 mb-5">
+                  <div className="col-sm-6">
+                    <div className="d-flex align-items-center p-3 bg-light rounded-4 transition-all hover-shadow">
+                      <div className="btn-square bg-primary rounded-circle text-white me-3">
+                        <i className="fa fa-eye"></i>
+                      </div>
+                      <h5 className="mb-0">Notre Vision</h5>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="d-flex align-items-center p-3 bg-light rounded-4 transition-all hover-shadow">
+                      <div className="btn-square bg-secondary rounded-circle text-white me-3">
+                        <i className="fa fa-bullseye"></i>
+                      </div>
+                      <h5 className="mb-0">Notre Mission</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="d-flex flex-wrap gap-3">
+                  <a href="#!" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-sm transition-all hover-up">
+                    EN SAVOIR PLUS <i className="fa fa-arrow-right ms-2"></i>
+                  </a>
+                  <a href="#!" className="btn btn-outline-secondary rounded-pill px-5 py-3 fw-bold transition-all hover-up">
+                    NOS VALEURS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="container-fluid p-0 text-center py-5 bannere wow fadeOut" style={{ height: "400px" }}>
@@ -194,7 +360,7 @@ function App() {
         </h1>
       </div>
       {/* Partenaires */}
-      <div className="container-fluid mt-5 pt-5 pb-0 partenaire wow fadeIn">
+      <div className="container-fluid mt-0 pt-5 pb-0 partenaire wow fadeIn">
         <div className="container">
           <div className="d-none d-lg-flex justify-content-start mb-4">
             <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="#!" style={{ borderRadius: "7px" }}>Nos partenaires</a>
@@ -215,100 +381,60 @@ function App() {
       </div>
 
       {/* Crossed Bands Section - Animated Paint Roll (X-Cross) */}
-      <div className="container-fluid overflow-hidden position-relative my-5" style={{ height: "200px", display: "flex", alignItems: "center" }}>
+      <div className="container-fluid overflow-hidden position-relative my-5" style={{ height: "400px", display: "flex", alignItems: "center" }}>
         {/* Orange Band - Roll from Left */}
-        <div className="position-absolute w-100 bg-secondary text-white py-3 shadow animate-roll-left" 
-             style={{ top: "50%", marginTop: "-40px", left: "0", zIndex: 1, whiteSpace: "nowrap" }}>
-          <marquee behavior="scroll" direction="left" scrollamount="7" style={{ fontSize: "28px", fontWeight: "900" }}>
-            {[1, 2, 3, 4, 5, 6].map(i => (
-              <span key={i} className="text-uppercase mx-5">S'INSCRIRE A NOTRE NEWSLETTER</span>
+        <a href="#newsletter" className="position-absolute bg-secondary text-white py-4 shadow animate-roll-left text-decoration-none" 
+             style={{ top: "50%", marginTop: "-50px", zIndex: 1, whiteSpace: "nowrap", cursor: "pointer" }}>
+          <marquee behavior="scroll" direction="left" scrollamount="7" style={{ fontSize: "32px", fontWeight: "900" }}>
+            {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
+              <span key={i} className="text-uppercase mx-3">S'INSCRIRE A NOTRE NEWSLETTER</span>
             ))}
           </marquee>
-        </div>
+        </a>
         {/* Green Band - Roll from Right */}
-        <div className="position-absolute w-100 bg-tertiary text-white py-3 shadow animate-roll-right" 
-             style={{ top: "50%", marginTop: "-40px", left: "0", zIndex: 2, whiteSpace: "nowrap" }}>
-          <marquee behavior="scroll" direction="right" scrollamount="9" style={{ fontSize: "28px", fontWeight: "900" }}>
-            {[1, 2, 3, 4, 5, 6].map(i => (
-              <span key={i} className="text-uppercase mx-5">S'INSCRIRE A NOTRE NEWSLETTER</span>
+        <a href="#newsletter" className="position-absolute bg-tertiary text-white py-4 shadow animate-roll-right text-decoration-none" 
+             style={{ top: "50%", marginTop: "-50px", zIndex: 2, whiteSpace: "nowrap", cursor: "pointer" }}>
+          <marquee behavior="scroll" direction="right" scrollamount="9" style={{ fontSize: "32px", fontWeight: "900" }}>
+            {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
+              <span key={i} className="text-uppercase mx-3">S'INSCRIRE A NOTRE NEWSLETTER</span>
             ))}
           </marquee>
-        </div>
+        </a>
       </div>
 
-      {/* About Section - New Design */}
-      <div className="container-fluid py-5 bg-white">
-        <div className="container py-5">
-          <div className="row g-5 align-items-center">
-            {/* Left Image Column */}
-            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-              <div className="position-relative">
-                <img 
-                  className="img-fluid w-100 rounded-5 shadow-lg" 
-                  src="/IMG_8938.jpeg" 
-                  alt="About Busola" 
-                  style={{ objectFit: "cover", height: "600px", backgroundColor: "#eef4ff" }} 
-                />
-                <div className="position-absolute bottom-0 end-0 bg-white p-4 m-4 rounded-4 shadow" style={{ minWidth: "180px" }}>
-                  <h3 className="text-primary fw-bold mb-0">15 000+</h3>
-                  <p className="text-muted mb-0 small">Bénéficiaires directs</p>
-                </div>
+      {/* NOS ACTUALITÉS */}
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
+            <p className="section-title fw-semi-bold text-center text-white px-3"><span className="bg-tertiary p-1">Actualités</span></p>
+            <h1 className="display-6 text-uppercase text-primary mb-4">Soyez au courant de notre actualités en temps réel.</h1>
+          </div>
+          <div className="row g-4">
+            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
+                <img className="img-fluid w-100 mb-4" src="/BUSOLA_39.jpg.jpeg" alt="Actualité Busola" />
+                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
+                <h3 className="h5 text-primary">Cérémonie de présentation des voeux au CA et aux PTF de Busola</h3>
+                <p className="small">10 Février, Busola ONG a vécu un instant d’exception à l’occasion de sa cérémonie de présentation des vœux à son Président d’Honneur, Monsieur Alain ASSANKPO, ainsi qu’à ses partenaires techniques et financiers locaux, nationaux et internationaux.</p>
+                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
               </div>
             </div>
-
-            {/* Right Content Column */}
-            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
-              <div className="ps-lg-5">
-                {/* Section Title - Modern Premium Style */}
-                <div className="mb-5 position-relative pt-4">
-                  <div className="position-absolute top-0 start-0 bg-tertiary text-white px-4 py-2 fw-bold text-uppercase shadow" 
-                       style={{ transform: "rotate(-3deg)", zIndex: 2, letterSpacing: "2px", borderRadius: "4px" }}>
-                    Qui somme nous ?
-                  </div>
-                  <div className="bg-primary p-4 ps-5 shadow-lg position-relative overflow-hidden" 
-                       style={{ borderLeft: "12px solid var(--bs-secondary)", borderRadius: "8px" }}>
-                    {/* Decorative background element - Hands holding globe icon (silver version, no text) */}
-                    <div className="position-absolute end-0 bottom-0 opacity-20" style={{ transform: "translate(15%, 15%)", width: "180px", height: "150px", overflow: "hidden" }}>
-                      <img src="/LOGO VERTICAL-02-02.svg" style={{ width: "100%", marginTop: "-10px" }} alt="" />
-                    </div>
-                    <h1 className="display-4 text-white fw-black text-uppercase mb-0" style={{ letterSpacing: "4px", fontWeight: "900" }}>
-                      ONG BUSOLA
-                    </h1>
-                  </div>
-                </div>
-                
-                <p className="text-muted mb-4 fs-5 lh-base">
-                  Créée en 2020 à Parakou, l’ONG Busola est le fruit d’un engagement citoyen porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
-                </p>
-                <p className="text-muted mb-5 fs-5 lh-base">
-                  Nos fondateurs, issus d’expériences en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté l’absence de cadres structurés articulant droits humains, autonomisation, paix et développement durable.
-                </p>
-
-                {/* Values Grid */}
-                <div className="row g-4 mb-5">
-                  {[
-                    { icon: 'hand-holding-heart', color: '#ffc107', title: 'Dignité', desc: 'Chaque personne au cœur de l\'action' },
-                    { icon: 'users', color: '#0dcaf0', title: 'Équité de Genre', desc: 'L\'égalité comme condition à la paix' },
-                    { icon: 'link', color: '#198754', title: 'Partenariat', desc: 'Ensemble pour un impact durable' },
-                    { icon: 'shield-check', color: '#fd7e14', title: 'Intégrité', desc: 'Transparence & redevabilité' }
-                  ].map((val, idx) => (
-                    <div key={idx} className="col-sm-6">
-                      <div className="d-flex align-items-start p-3 rounded-4" style={{ backgroundColor: "#f8faff" }}>
-                        <div className="rounded-3 p-2 me-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: "white", boxShadow: "0 4px 10px rgba(0,0,0,0.05)" }}>
-                          <i className={`fa fa-${val.icon} fs-4`} style={{ color: val.color }}></i>
-                        </div>
-                        <div>
-                          <h6 className="fw-bold mb-1">{val.title}</h6>
-                          <small className="text-muted d-block" style={{ fontSize: "0.85rem" }}>{val.desc}</small>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <a href="#" className="btn btn-primary rounded-3 px-4 py-3 fw-bold d-inline-flex align-items-center shadow">
-                  En savoir plus <i className="fa fa-arrow-right ms-2"></i>
-                </a>
+            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
+                <img className="img-fluid w-100 mb-4" src="/571270432_1263128095856811_5608146033344449618_n.jpg" alt="Actualité Busola" />
+                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
+                <h3 className="h5 text-primary">48H contre le cancer du sein Edition 2025</h3>
+                <p className="small">Ce jeudi 23 octobre, la 2ème journée de notre initiative "48h contre le Cancer du Sein" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d’un deuxieme pole économique majeur de Parakou : Le marché dépôt</p>
+                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
+                <img className="img-fluid w-100 mb-4" src="/IMG_8811.jpg" alt="Actualité Busola" />
+                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
+                <h3 className="h5 text-primary">Renforcement de capacités en Plaidoyer et Redevabilité</h3>
+                <p className="small">Du 10 au 12 novembre 2025, l’Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l’appui de l’UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin.</p>
+                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
               </div>
             </div>
           </div>
@@ -392,44 +518,7 @@ function App() {
         </div>
       </div>
 
-      {/* NOS ACTUALITÉS */}
-      <div className="container-fluid py-5">
-        <div className="container">
-          <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
-            <p className="section-title fw-semi-bold text-center text-white px-3"><span className="bg-tertiary p-1">Actualités</span></p>
-            <h1 className="display-6 text-uppercase text-primary mb-4">Soyez au courant de notre actualités en temps réel.</h1>
-          </div>
-          <div className="row g-4">
-            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
-                <img className="img-fluid w-100 mb-4" src="/BUSOLA_39.jpg.jpeg" alt="Actualité Busola" />
-                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
-                <h3 className="h5 text-primary">Cérémonie de présentation des voeux au CA et aux PTF de Busola</h3>
-                <p className="small">10 Février, Busola ONG a vécu un instant d’exception à l’occasion de sa cérémonie de présentation des vœux à son Président d’Honneur, Monsieur Alain ASSANKPO, ainsi qu’à ses partenaires techniques et financiers locaux, nationaux et internationaux.</p>
-                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
-                <img className="img-fluid w-100 mb-4" src="/571270432_1263128095856811_5608146033344449618_n.jpg" alt="Actualité Busola" />
-                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
-                <h3 className="h5 text-primary">48H contre le cancer du sein Edition 2025</h3>
-                <p className="small">Ce jeudi 23 octobre, la 2ème journée de notre initiative "48h contre le Cancer du Sein" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d’un deuxieme pole économique majeur de Parakou : Le marché dépôt</p>
-                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-              <div className="event-item h-100 p-4 shadow-sm bg-white rounded">
-                <img className="img-fluid w-100 mb-4" src="/IMG_8811.jpg" alt="Actualité Busola" />
-                <p className="mb-1 text-tertiary"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
-                <h3 className="h5 text-primary">Renforcement de capacités en Plaidoyer et Redevabilité</h3>
-                <p className="small">Du 10 au 12 novembre 2025, l’Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l’appui de l’UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin.</p>
-                <a href="#!" className="text-secondary fw-bold small">Lire la suite...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Team */}
       <div className="container-fluid py-5">
@@ -459,7 +548,7 @@ function App() {
       </div>
 
       {/* Testimonials */}
-      <div className="container-fluid py-5 bg-light">
+      <div className="container-fluid py-5">
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-3">
@@ -522,14 +611,50 @@ function App() {
         <a className="btn btn-primary text-uppercase m-1 px-3 me-3" href="#!" style={{ borderRadius: "7px" }}>Nous soutenir</a>
       </div>
 
-      {/* Share Section */}
-      <div className="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div className="container text-center" style={{ maxWidth: "800px", margin: "40px auto" }}>
-          <h1 className="display-6 text-uppercase text-primary mb-4">S'ENGaGER <br /> c'est aussi partager</h1>
-          <div className="d-flex align-items-center justify-content-center p-3">
-            <a className="btn btn-square rounded-circle btn-secondary me-4 p-4 text-white" target="_blank" href="https://www.facebook.com/profile.php?id=100064788966440"><i className="fab fa-facebook-f"></i></a>
-            <a className="btn btn-square rounded-circle btn-secondary me-4 p-4 text-white" target="_blank" href="https://www.twitter.com/"><i className="fab fa-twitter"></i></a>
-            <a className="btn btn-square rounded-circle btn-secondary me-4 p-4 text-white" target="_blank" href="https://www.linkedin.com/company/ong-busola/"><i className="fab fa-linkedin-in"></i></a>
+      {/* RESTEZ BRANCHÉS ! (MdM Inspired) */}
+      <div className="container-fluid py-5 position-relative overflow-hidden">
+        {/* Background Decorative Text */}
+        <div className="position-absolute top-50 start-50 translate-middle opacity-5 text-uppercase fw-black d-none d-lg-block" 
+             style={{ fontSize: "15vw", zIndex: 0, whiteSpace: "nowrap", pointerEvents: "none" }}>
+          CONNECTEZ-VOUS
+        </div>
+
+        <div className="container py-5 position-relative" style={{ zIndex: 1 }}>
+          <div className="row align-items-center">
+            <div className="col-lg-6 mb-5 mb-lg-0 wow fadeIn" data-wow-delay="0.1s">
+              <h6 className="text-secondary text-uppercase fw-bold mb-3">Communauté</h6>
+              <h1 className="display-4 fw-black text-uppercase mb-4">Restez <br/> Branchés !</h1>
+              <p className="fs-5 text-muted mb-5">
+                Rejoignez-nous sur les réseaux sociaux pour suivre nos actions au quotidien, nos victoires et nos prochains défis.
+              </p>
+              <div className="d-flex gap-3">
+                {[
+                  { icon: 'facebook-f', color: '#1877F2', url: 'https://www.facebook.com/profile.php?id=100064788966440' },
+                  { icon: 'linkedin-in', color: '#0A66C2', url: 'https://www.linkedin.com/company/ong-busola/' },
+                  { icon: 'instagram', color: '#E4405F', url: '#' },
+                  { icon: 'twitter', color: '#1DA1F2', url: '#' }
+                ].map((social, i) => (
+                  <a key={social.icon} 
+                     href={social.url} 
+                     className="btn btn-lg btn-square rounded-circle shadow-sm transition-all hover-up" 
+                     style={{ backgroundColor: "white", color: social.color, width: "60px", height: "60px" }}>
+                    <i className={`fab fa-${social.icon} fs-4`}></i>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+              <div className="row g-3">
+                <div className="col-6 mt-5">
+                  <img src="/IMG_3463_yZbdIV5.JPG" className="img-fluid rounded-4 shadow-lg mb-3" alt="Social" />
+                  <img src="/IMG-20250926-WA0023_M0UP60m.jpg" className="img-fluid rounded-4 shadow-lg" alt="Social" />
+                </div>
+                <div className="col-6">
+                  <img src="/IMG-20251016-WA0099_cK78lYo.jpg" className="img-fluid rounded-4 shadow-lg mb-3" alt="Social" />
+                  <img src="/IMG_8811.jpg" className="img-fluid rounded-4 shadow-lg" alt="Social" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -539,15 +664,30 @@ function App() {
       <div className="container-fluid p-0 wow fadeIn" style={{ background: "url('/foot.jpeg') center/cover", height: "600px" }} data-wow-delay="0.1s"></div>
 
       {/* Newsletter */}
-      <div className="container-fluid bg-primary py-5 wow fadeIn" data-wow-delay="0.1s">
+      <div id="newsletter" className="container-fluid bg-primary py-5 wow fadeIn" data-wow-delay="0.1s">
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-lg-7">
               <h1 className="display-6 text-white mb-4">Inscrivez-vous à la Newsletter</h1>
-              <div className="position-relative w-100 mb-2">
-                <input className="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Entrez votre Email" style={{ height: "60px" }} />
-                <button type="button" className="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i className="fa fa-paper-plane text-primary fs-4"></i></button>
-              </div>
+              <form onSubmit={handleNewsletterSubmit} className="position-relative w-100 mb-2">
+                <input 
+                  className="form-control border-0 w-100 ps-4 pe-5" 
+                  type="email" 
+                  placeholder="Entrez votre Email" 
+                  style={{ height: "60px" }} 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button type="submit" className="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2">
+                  <i className="fa fa-paper-plane text-primary fs-4"></i>
+                </button>
+              </form>
+              {newsletterStatus.type && (
+                <div className={`mt-2 text-${newsletterStatus.type === 'success' ? 'white' : 'danger'} fw-bold`}>
+                  {newsletterStatus.message}
+                </div>
+              )}
               <p className="mb-0 text-white">N'ayez crainte vous ne reçevrez aucun Spam dans votre boîte mail.</p>
             </div>
           </div>
@@ -624,23 +764,65 @@ function App() {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title">Demande de partenariat</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" onClick={() => setContactStatus({ type: null, message: '' })}></button>
             </div>
-            <div className="modal-body">
-              {/* Simplifed Form for UI parity */}
-              <div className="mb-3">
-                <label className="form-label">Type de partenariat</label>
-                <select className="form-select"><option>Sélectionner</option></select>
+            <form onSubmit={(e) => handleContactSubmit(e, 'partenariat')}>
+              <div className="modal-body">
+                {contactStatus.type && (
+                  <div className={`alert alert-${contactStatus.type === 'success' ? 'success' : 'danger'} mb-3`}>
+                    {contactStatus.message}
+                  </div>
+                )}
+                <div className="mb-3">
+                  <label className="form-label">Type de partenariat</label>
+                  <select 
+                    className="form-select" 
+                    value={formData.subject} 
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    required
+                  >
+                    <option value="">Sélectionner</option>
+                    <option value="Financier">Financier</option>
+                    <option value="Technique">Technique</option>
+                    <option value="Médiatique">Médiatique</option>
+                  </select>
+                </div>
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <label className="form-label">Nom complet</label>
+                    <input 
+                      className="form-control" 
+                      value={formData.name} 
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required 
+                    />
+                  </div>
+                  <div className="col-md-6 mb-3">
+                    <label className="form-label">Email</label>
+                    <input 
+                      type="email" 
+                      className="form-control" 
+                      value={formData.email} 
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required 
+                    />
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Message</label>
+                  <textarea 
+                    className="form-control" 
+                    rows={4} 
+                    value={formData.message} 
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                  ></textarea>
+                </div>
               </div>
-              <div className="row">
-                <div className="col-md-6 mb-3"><label className="form-label">Nom</label><input className="form-control" /></div>
-                <div className="col-md-6 mb-3"><label className="form-label">Email</label><input className="form-control" /></div>
+              <div className="modal-footer">
+                <button type="submit" className="btn btn-secondary">Envoyer</button>
               </div>
-              <div className="mb-3"><label className="form-label">Message</label><textarea className="form-control" rows={4}></textarea></div>
-            </div>
-            <div className="modal-footer">
-              <button className="btn btn-secondary">Envoyer</button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -650,18 +832,60 @@ function App() {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title">Demande de Bénévolat</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" onClick={() => setContactStatus({ type: null, message: '' })}></button>
             </div>
-            <div className="modal-body">
-              <div className="row">
-                <div className="col-md-6 mb-3"><label className="form-label">Nom</label><input className="form-control" /></div>
-                <div className="col-md-6 mb-3"><label className="form-label">Compétences</label><input className="form-control" /></div>
+            <form onSubmit={(e) => handleContactSubmit(e, 'benevolat')}>
+              <div className="modal-body">
+                {contactStatus.type && (
+                  <div className={`alert alert-${contactStatus.type === 'success' ? 'success' : 'danger'} mb-3`}>
+                    {contactStatus.message}
+                  </div>
+                )}
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <label className="form-label">Nom complet</label>
+                    <input 
+                      className="form-control" 
+                      value={formData.name} 
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required 
+                    />
+                  </div>
+                  <div className="col-md-6 mb-3">
+                    <label className="form-label">Email</label>
+                    <input 
+                      type="email" 
+                      className="form-control" 
+                      value={formData.email} 
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required 
+                    />
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Compétences / Domaine d'intérêt</label>
+                  <input 
+                    className="form-control" 
+                    value={formData.subject} 
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    required 
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Message de motivation</label>
+                  <textarea 
+                    className="form-control" 
+                    rows={4} 
+                    value={formData.message} 
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                  ></textarea>
+                </div>
               </div>
-              <div className="mb-3"><label className="form-label">Message</label><textarea className="form-control" rows={4}></textarea></div>
-            </div>
-            <div className="modal-footer">
-              <button className="btn btn-secondary">S'engager</button>
-            </div>
+              <div className="modal-footer">
+                <button type="submit" className="btn btn-secondary">S'engager</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -692,6 +916,57 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Floating Chatbot */}
+      <div className="position-fixed bottom-0 end-0 m-4" style={{ zIndex: 1050 }}>
+        {!isChatOpen ? (
+          <button 
+            className="btn btn-primary rounded-circle shadow-lg p-3 d-flex align-items-center justify-content-center" 
+            style={{ width: '60px', height: '60px' }}
+            onClick={() => setIsChatOpen(true)}
+          >
+            <i className="bi bi-chat-dots-fill fs-3"></i>
+          </button>
+        ) : (
+          <div className="card shadow-lg border-0 rounded-4 overflow-hidden" style={{ width: '350px', maxHeight: '500px' }}>
+            <div className="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+              <div className="d-flex align-items-center">
+                <div className="bg-white rounded-circle p-1 me-2" style={{ width: '30px', height: '30px' }}>
+                  <img src="/ICON_LOGO-03.svg" className="img-fluid" alt="Bot" />
+                </div>
+                <h6 className="mb-0 fw-bold">Assistant Busola</h6>
+              </div>
+              <button className="btn-close btn-close-white" onClick={() => setIsChatOpen(false)}></button>
+            </div>
+            <div className="card-body p-3 overflow-auto" style={{ height: '300px', backgroundColor: '#f8f9fa' }}>
+              {chatHistory.map((chat, idx) => (
+                <div key={idx} className={`d-flex mb-3 ${chat.role === 'user' ? 'justify-content-end' : 'justify-content-start'}`}>
+                  <div 
+                    className={`p-3 rounded-4 shadow-sm ${chat.role === 'user' ? 'bg-primary text-white' : 'bg-white text-dark'}`}
+                    style={{ maxWidth: '85%', fontSize: '0.9rem' }}
+                  >
+                    {chat.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="card-footer bg-white border-0 p-3">
+              <form onSubmit={handleChatSubmit} className="d-flex">
+                <input 
+                  type="text" 
+                  className="form-control rounded-pill border-light bg-light px-3" 
+                  placeholder="Posez votre question..."
+                  value={chatMessage}
+                  onChange={(e) => setChatMessage(e.target.value)}
+                />
+                <button type="submit" className="btn btn-primary rounded-circle ms-2 p-0 d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px' }}>
+                  <i className="bi bi-send-fill"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
