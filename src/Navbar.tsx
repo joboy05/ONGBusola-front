@@ -36,11 +36,11 @@ export default function Navbar() {
                 <Link to="/about" className="dropdown-item d-lg-none">Aller à la page A propos</Link>
                 <Link to="/team" className="dropdown-item">LA TEAM</Link>
                 <Link to="/about#vision-mission" className="dropdown-item">GALERIE</Link>
-                <Link to="/about#axes-intervention" className="dropdown-item">CENTRE DE RESSOURCES</Link>
+                <Link to="/ressources" className="dropdown-item">CENTRE DE RESSOURCES</Link>
               </div>
             </div>
 
-            <a href="#!" className="nav-item nav-link">Nos actions</a>
+            <Link to="/actions" className="nav-item nav-link">Nos actions</Link>
             <a href="#!" className="nav-item nav-link">Nos actualités</a>
             <a href="#!" className="nav-item nav-link">Contact</a>
           </div>
