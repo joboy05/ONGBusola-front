@@ -171,39 +171,39 @@ function App() {
     {
       name: "Zoulfath ZIME ",
       role: "Chargé de Communauté ",
-      photo: "/NS1_8838_p9dGDR5.jpg",
+      photo: "/ONGBusola-front/cc.png",
       description: ""
     },
     {
       name: "Fadel KASSALI",
       role: "Assistant Projet",
-      photo: "/Fadel_QL0iHKL.jpg",
+      photo: "/ONGBusola-front/ap.png",
       email: "kassalifadel4@gmail.com",
       description: ""
     },
     {
       name: "Abouyaïdou MAMA",
       role: "Directeur Exécutif",
-      photo: "/IMG_8826a_uSwjVqX.jpg",
+      photo: "/ONGBusola-front/de.png",
       email: "mamaabouyaidou22@gmail.com",
       description: "MAMA Abouyaïdou est doctorant en relations internationales à l’Université de Parakou (Bénin), spécialisé en sécurité internationale, cohésion sociale et prévention du terrorisme au Sahel. Fort de plus de huit années d’expérience, il a coordonné et supervisé des projets communautaires majeurs financés par des partenaires internationaux tels que l’UNICEF, l’Union européenne et CARE International. Coordonnateur et Directeur exécutif de l’ONG Busola, il œuvre dans les domaines de la paix, des VBG, du développement rural et de la santé sexuelle et reproductive. Assistant de recherche et enseignant universitaire, il est certifié par le Peace Operations Training Institute des Nations Unies. Sa vision est de transformer la recherche en action pour une paix durable et inclusive."
     },
     {
       name: "BOUKO Chabi Dramane",
       role: "Président du Conseil de Surveillance",
-      photo: "/WhatsApp_Image_2026-02-11_at_13.24.20.jpeg",
+      photo: "/ONGBusola-front/pcs.png",
       description: ""
     },
     {
       name: "Alain ASSANKPON",
       role: "Président d'honneur",
-      photo: "/IMG_9787_1tS0sWp.JPG.jpeg",
+      photo: "/ONGBusola-front/ph.png",
       description: ""
     },
     {
       name: "Sybgath SANNI",
       role: "Présidente du Conseil d’Administration",
-      photo: "/pca.jpg",
+      photo: "/ONGBusola-front/pca.png",
       description: "Pionnière de la naissance de l'ONG BUSOLA, est une figure remarquable, dotée d'un esprit brillant, d'un talent indéniable et d'un esprit innovant. En tant qu'entrepreneuse émérite, elle a fondé plusieurs entreprises prospères telles que BUSOLA BUILDINGS SARL, SUPERMARCHÉ CHANCE GLORY et le restaurant AFRICAN'S DELICES by SYB. En tant que gestionnaire de projets de formation, Sybgath se spécialise dans le domaine du Droit à la Santé Sexuelle et Reproductive (DSSR) ainsi que dans les..."
     }
   ];

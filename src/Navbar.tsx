@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const isAbout = pathname === '/about';
 
   return (
@@ -23,13 +24,19 @@ export default function Navbar() {
                 to="/about"
                 className={`nav-link dropdown-toggle ${isAbout ? 'active' : ''}`}
                 data-bs-toggle="dropdown"
+                onClick={(e) => {
+                  if (window.innerWidth >= 992) {
+                    navigate('/about');
+                  }
+                }}
               >
                 A propos
               </Link>
               <div className="dropdown-menu border-0 m-0">
-                <Link to="/about#notre-histoire" className="dropdown-item">Qui sommes nous?</Link>
-                <Link to="/about#vision-mission" className="dropdown-item">Notre Vision</Link>
-                <Link to="/about#axes-intervention" className="dropdown-item">Nos Valeurs</Link>
+                <Link to="/about" className="dropdown-item d-lg-none">Aller à la page A propos</Link>
+                <Link to="/team" className="dropdown-item">LA TEAM</Link>
+                <Link to="/about#vision-mission" className="dropdown-item">GALERIE</Link>
+                <Link to="/about#axes-intervention" className="dropdown-item">CENTRE DE RESSOURCES</Link>
               </div>
             </div>
 

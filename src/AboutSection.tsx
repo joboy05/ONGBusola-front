@@ -239,7 +239,7 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
             zIndex: 100,
             transformOrigin: 'left center',
             transform: bannerVisible ? 'scaleX(1)' : 'scaleX(0)',
-            animation: bannerVisible ? 'unrollTape 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards' : 'none',
+            animation: bannerVisible ? 'unrollTape 2s cubic-bezier(0.22, 1, 0.36, 1) forwards' : 'none',
           }}
           onAnimationEnd={() => setContentVisible(true)}
         >
@@ -256,6 +256,7 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
           >
             {Array(6).fill('\u00a0\u00a0\u00a0\u00a0\u00a0 Nous privilégions des solutions ancrées dans les réalités locales. Notre approche repose sur l\'écoute, la co-construction et le renforcement des capacités communautaires. ').join('')}
           </div>
+
           <style>{`
             @keyframes marqueeScroll {
               0%   { transform: translateX(0); }
@@ -270,7 +271,7 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
           style={{
             opacity: contentVisible ? 1 : 0,
             transform: contentVisible ? 'translateY(0)' : 'translateY(16px)',
-            transition: 'opacity 0.5s ease, transform 0.5s ease',
+            transition: 'opacity 0.8s ease, transform 0.8s ease',
           }}
         >
           <div className="container py-3">
@@ -436,7 +437,32 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
               </div>
             ))}
           </div>
+        </div>
 
+        {/* Bandeau défilant sans effet scotch */}
+        <div
+          className="overflow-hidden py-2 mb-5 w-100"
+          style={{
+            backgroundColor: '#3ab074',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <div
+            style={{
+              display: 'inline-block',
+              animation: 'marqueeScroll 60s linear infinite',
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: '0.9rem',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+            }}
+          >
+            {Array(6).fill('\u00a0\u00a0\u00a0\u00a0\u00a0 L\'ONG Busola est une organisation structurée, dotée de procédures claires qui garantissent une gestion rigoureuse et redevable. ').join('')}
+          </div>
+        </div>
+
+        <div className="container pb-4">
           {/* ── Ressources à télécharger ── */}
           <div className="bg-light rounded-4 p-5">
             <div className="row align-items-center">
