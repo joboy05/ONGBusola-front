@@ -41,7 +41,7 @@ export default function ContactPage() {
         <div className="container py-5">
           <div className="row g-5">
             {/* Left Column: Map and Title */}
-            <div className="col-lg-5">
+            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
               <div className="d-flex align-items-center mb-3">
                 <span className="text-white text-uppercase px-2 py-1 me-3" style={{ fontSize: '0.8rem', letterSpacing: '1px', backgroundColor: '#3bb143' }}>CONTACT</span>
                 <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Contact Form */}
-            <div className="col-lg-7">
+            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
               <h3 className="fw-bold mb-3" style={{ color: '#000' }}>
                 Remplissez ce formulaire pour nous envoyer un message.
               </h3>

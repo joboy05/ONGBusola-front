@@ -94,7 +94,7 @@ export default function ActionDetailPage() {
         <div className="container py-5">
           <div className="row g-5">
             {/* Left Column: Text Content */}
-            <div className="col-lg-7">
+            <div className="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
               <h1 className="fw-bold mb-4" style={{ color: '#000', fontSize: '2.2rem' }}>{project.title}</h1>
               <p className="text-muted" style={{ fontSize: '0.85rem', lineHeight: '1.8', textAlign: 'justify' }}>
                 {project.fullText}
@@ -102,7 +102,7 @@ export default function ActionDetailPage() {
             </div>
 
             {/* Right Column: Image and Specs */}
-            <div className="col-lg-5">
+            <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
               <div className="mb-4">
                 <img src={project.img} alt={project.title} className="img-fluid w-100 shadow-sm" style={{ objectFit: 'cover' }} />
               </div>

@@ -82,7 +82,7 @@ export default function ResourcePage() {
         <div className="container py-5">
           <div className="row g-5">
             {resources.map((res, i) => (
-              <div key={i} className="col-md-6 col-lg-4">
+              <div key={i} className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay={`${0.1 + i * 0.1}s`}>
                 <div className="d-flex flex-column h-100 p-3">
                   {/* Icon */}
                   <div className="mb-4">

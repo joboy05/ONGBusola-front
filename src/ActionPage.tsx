@@ -75,7 +75,7 @@ export default function ActionPage() {
       <div className="container-fluid py-5 bg-white">
         <div className="container py-5">
           {/* Header */}
-          <div className="text-center mx-auto mb-5">
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div className="d-flex align-items-center justify-content-center mb-3">
               <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "50px" }}></div>
               <span className="bg-tertiary text-white text-uppercase p-1 mx-3" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>PROJETS</span>
@@ -89,7 +89,7 @@ export default function ActionPage() {
           {/* Cards Grid */}
           <div className="row g-4 d-flex align-items-stretch mb-5">
             {actions.map((proj, i) => (
-              <div key={i} className="col-md-6 col-lg-4 d-flex">
+              <div key={i} className="col-md-6 col-lg-4 d-flex wow fadeInUp" data-wow-delay={`${0.1 + i * 0.1}s`}>
                 <div className="bg-white shadow d-flex flex-column rounded w-100 overflow-hidden" style={{ border: '1px solid #f8f9fa' }}>
                   <div className="position-relative">
                     <img className="img-fluid w-100" src={proj.img} alt={proj.title} style={{ height: '220px', objectFit: 'cover' }} />
