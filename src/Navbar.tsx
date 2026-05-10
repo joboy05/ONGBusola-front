@@ -42,7 +42,7 @@ export default function Navbar() {
 
             <Link to="/actions" className="nav-item nav-link">Nos actions</Link>
             <a href="#!" className="nav-item nav-link">Nos actualités</a>
-            <a href="#!" className="nav-item nav-link">Contact</a>
+            <Link to="/contact" className="nav-item nav-link">Contact</Link>
           </div>
           <div className="ms-auto d-none d-lg-flex">
             <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="#!" style={{ borderRadius: '7px' }}>Nous soutenir</a>

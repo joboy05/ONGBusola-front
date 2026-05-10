@@ -7,6 +7,7 @@ import TeamPage from './TeamPage'
 import ResourcePage from './ResourcePage'
 import ActionPage from './ActionPage'
 import ActionDetailPage from './ActionDetailPage'
+import ContactPage from './ContactPage'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/ressources" element={<ResourcePage />} />
         <Route path="/actions" element={<ActionPage />} />
         <Route path="/actions/:id" element={<ActionDetailPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
