@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { Heart, Users, Handshake, ShieldCheck, MapPin, Phone, Mail, Facebook, Linkedin, Twitter, Youtube, ArrowRight, MessageCircle, Send, X, Menu, ArrowUp, BookOpen, Star, PlusCircle, ChevronDown } from 'lucide-react';
+=======
+import Navbar from './Navbar';
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
 
 declare global {
   interface Window {
@@ -247,45 +251,98 @@ function App() {
     setTimeout(() => setContactStatus({ type: null, message: '' }), 5000);
   };
 
+<<<<<<< HEAD
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+=======
+  const handleChatSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!chatMessage.trim()) return;
+
+    const userMsg = chatMessage.trim();
+    setChatHistory(prev => [...prev, { role: 'user', text: userMsg }]);
+    setChatMessage('');
+
+    // Simple Bot Logic (MVP)
+    setTimeout(() => {
+      let botResponse = "Je ne suis pas sûr de comprendre. Pourriez-vous préciser ? Vous pouvez aussi nous contacter directement.";
+      const lowerMsg = userMsg.toLowerCase();
+      
+      if (lowerMsg.includes('santé') || lowerMsg.includes('dssr')) {
+        botResponse = "Nous intervenons en Santé et Droits Sexuels et Reproductifs. Nos projets comme TEDIDJO accompagnent les jeunes. Voulez-vous en savoir plus ?";
+      } else if (lowerMsg.includes('contact') || lowerMsg.includes('adresse')) {
+        botResponse = "Nous sommes situés à Parakou, quartier Arafat. Vous pouvez nous appeler au +229 01 90 44 46 90.";
+      } else if (lowerMsg.includes('don') || lowerMsg.includes('soutenir')) {
+        botResponse = "Merci de votre intérêt ! Vous pouvez faire un don via le bouton 'Nous soutenir' ou nous contacter pour un partenariat.";
+      } else if (lowerMsg.includes('benevole') || lowerMsg.includes('membre')) {
+        botResponse = "Nous cherchons toujours des bénévoles ! Cliquez sur 'Je m'engage' dans la section 'Devenir Membre'.";
+      }
+
+      setChatHistory(prev => [...prev, { role: 'bot', text: botResponse }]);
+    }, 1000);
+  };
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
 
   const team: TeamMember[] = [
     {
       name: "Zoulfath ZIME ",
       role: "Chargé de Communauté ",
+<<<<<<< HEAD
       photo: "team-1.jpg",
+=======
+      photo: "/ONGBusola-front/cc.png",
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
       description: ""
     },
     {
       name: "Fadel KASSALI",
       role: "Assistant Projet",
+<<<<<<< HEAD
       photo: "team-2.jpg",
+=======
+      photo: "/ONGBusola-front/ap.png",
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
       email: "kassalifadel4@gmail.com",
       description: ""
     },
     {
       name: "Abouyaïdou MAMA",
       role: "Directeur Exécutif",
+<<<<<<< HEAD
       photo: "team-3.jpg",
+=======
+      photo: "/ONGBusola-front/de.png",
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
       email: "mamaabouyaidou22@gmail.com",
       description: "MAMA Abouyaïdou est doctorant en relations internationales à l’Université de Parakou (Bénin), spécialisé en sécurité internationale, cohésion sociale et prévention du terrorisme au Sahel. Fort de plus de huit années d’expérience, il a coordonné et supervisé des projets communautaires majeurs financés par des partenaires internationaux tels que l’UNICEF, l’Union européenne et CARE International. Coordonnateur et Directeur exécutif de l’ONG Busola, il œuvre dans les domaines de la paix, des VBG, du développement rural et de la santé sexuelle et reproductive. Assistant de recherche et enseignant universitaire, il est certifié par le Peace Operations Training Institute des Nations Unies. Sa vision est de transformer la recherche en action pour une paix durable et inclusive."
     },
     {
       name: "BOUKO Chabi Dramane",
       role: "Président du Conseil de Surveillance",
+<<<<<<< HEAD
       photo: "team-4.jpeg",
+=======
+      photo: "/ONGBusola-front/pcs.png",
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
       description: ""
     },
     {
       name: "Alain ASSANKPON",
       role: "Président d'honneur",
+<<<<<<< HEAD
       photo: "team-5.jpeg",
+=======
+      photo: "/ONGBusola-front/ph.png",
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
       description: ""
     },
     {
       name: "Sybgath SANNI",
       role: "Présidente du Conseil d’Administration",
+<<<<<<< HEAD
       photo: "team-6.jpg",
+=======
+      photo: "/ONGBusola-front/pca.png",
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
       description: "Pionnière de la naissance de l'ONG BUSOLA, est une figure remarquable, dotée d'un esprit brillant, d'un talent indéniable et d'un esprit innovant. En tant qu'entrepreneuse émérite, elle a fondé plusieurs entreprises prospères telles que BUSOLA BUILDINGS SARL, SUPERMARCHÉ CHANCE GLORY et le restaurant AFRICAN'S DELICES by SYB. En tant que gestionnaire de projets de formation, Sybgath se spécialise dans le domaine du Droit à la Santé Sexuelle et Reproductive (DSSR) ainsi que dans les..."
     }
   ];
@@ -295,6 +352,7 @@ function App() {
       <style>{brandStyles}</style>
       {/* Spinner is in index.html */}
 
+<<<<<<< HEAD
       {/* Navbar fixed */}
       <div className="nav-bar bg-primary p-0 sticky-top shadow">
         <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
@@ -326,6 +384,10 @@ function App() {
             </div>
         </nav>
       </div>
+=======
+      {/* Navbar */}
+      <Navbar />
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
 
       {/* Banner Section */}
       <div id="accueil" className="container-fluid top p-0 wow fadeIn" data-wow-delay="0.1s" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
@@ -360,6 +422,7 @@ function App() {
       {/* About Section - Balanced Magazine Design */}
       <div id="apropos" className="container-fluid py-5 bg-white" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
         <div className="container py-5">
+<<<<<<< HEAD
           <div className="row g-5">
             {/* Left Column: Image + Values (Tablet only) */}
             <div className="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.1s">
@@ -377,6 +440,22 @@ function App() {
                         <p className="mb-0 text-primary opacity-75 fw-bold" style={{ fontSize: "0.7rem", textTransform: 'uppercase' }}>Bénéficiaires</p>
                       </div>
                     </div>
+=======
+          <div className="row g-5 align-items-center">
+            {/* Left Decorative Card Column */}
+            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+              <div className="position-relative p-4">
+                <div className="rounded-5 shadow-sm d-flex align-items-center justify-content-center" 
+                     style={{ height: "500px", backgroundColor: "#eef4ff", position: "relative" }}>
+                  <div className="text-center">
+                    <i className="fa fa-globe-africa display-1 text-primary opacity-50"></i>
+                  </div>
+                  {/* Stats Badge */}
+                  <div className="position-absolute bottom-0 end-0 bg-white p-4 m-3 rounded-4 shadow-lg border" 
+                       style={{ minWidth: "200px", transform: "translate(20%, 20%)" }}>
+                    <h2 className="display-5 fw-bold text-primary mb-0">15 000+</h2>
+                    <p className="mb-0 text-muted fw-medium">Bénéficiaires directs</p>
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
                   </div>
                 </div>
               </div>
@@ -415,6 +494,7 @@ function App() {
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <div className="text-muted fs-5 mb-5" style={{ textAlign: 'justify', lineHeight: '1.8' }}>
                   <p className="mb-4">
                     Créée en <span className="text-primary fw-bold">2020 à Parakou</span>, l’ONG Busola est le fruit d’un engagement citoyen et associatif porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
@@ -423,6 +503,14 @@ function App() {
                     Les fondateurs et fondatrices, issus d’expériences de terrain en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté un manque de cadres structurés capables de relier droits humains, autonomisation, paix et développement durable.
                   </p>
                 </div>
+=======
+                <p className="text-muted mb-4 fs-6 leading-relaxed">
+                  Créée en 2020 à Parakou, l'ONG Busola est le fruit d'un engagement citoyen porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
+                </p>
+                <p className="text-muted mb-5 fs-6 leading-relaxed">
+                  Nos fondateurs, issus d'expériences en santé communautaire, éducation, prévention des violences et mobilisation sociale, ont constaté l'absence de cadres structurés articulant droits humains, autonomisation, paix et développement durable.
+                </p>
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
 
                 {/* Values Grid - Visible ONLY on Desktop */}
                 <div id="valeurs-desktop" className="row g-4 mb-5 d-none d-lg-flex">
@@ -446,11 +534,17 @@ function App() {
                   ))}
                 </div>
 
+<<<<<<< HEAD
                 <div className="d-flex align-items-center">
                   <a href="#!" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg transition-all hover-up me-4">
                     Notre histoire <ArrowRight size={20} className="ms-2" />
                   </a>
                 </div>
+=======
+                <a href="/about" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow transition-all hover-up">
+                  En savoir plus <i className="fa fa-arrow-right ms-2"></i>
+                </a>
+>>>>>>> 7bceee9e8bbc2797d070c662c5be8ec60ae98c98
               </div>
             </div>
           </div>
