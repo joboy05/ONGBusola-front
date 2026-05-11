@@ -105,25 +105,38 @@ function App() {
     setChatMessage('');
 
     setTimeout(() => {
-      let botResponse = "Je n'ai pas bien compris votre demande. Pourriez-vous préciser ? Vous pouvez aussi consulter nos rubriques d'actions ou de bénévolat.";
+      let botResponse = "Je n'ai pas bien compris votre demande. Pourriez-vous préciser ? Je peux vous renseigner sur nos programmes (PAGEDA, YES, TEDIDJO), notre équipe ou comment nous soutenir.";
       let suggestions: { label: string, target: string }[] = [];
 
       const input = userMsg.toLowerCase();
-      if (input.includes('action') || input.includes('programme') || input.includes('fait')) {
-        botResponse = "Nous menons plusieurs actions majeures : PAGEDA pour l'autonomisation, YES pour la jeunesse et TEDIDJO pour la santé reproductive.";
+      
+      if (input.includes('pageda')) {
+        botResponse = "Le programme PAGEDA se concentre sur l'autonomisation des femmes par l'alphabétisation fonctionnelle et l'accès aux droits fonciers au Nord-Bénin.";
         suggestions = [{ label: "Voir les programmes", target: "actions" }];
-      } else if (input.includes('equipe') || input.includes('team') || input.includes('membre')) {
-        botResponse = "Notre équipe est composée de professionnels passionnés. Voulez-vous voir la liste de nos membres ?";
-        suggestions = [{ label: "Voir l'équipe", target: "team" }];
-      } else if (input.includes('don') || input.includes('aider') || input.includes('soutenir')) {
-        botResponse = "Votre aide est précieuse ! Vous pouvez faire un don ou devenir partenaire pour soutenir nos actions.";
+      } else if (input.includes('yes') || input.includes('jeune')) {
+        botResponse = "Le projet YES (Youth Empowerment & Sexual Health) accompagne les adolescents et jeunes pour une meilleure santé sexuelle et une citoyenneté active.";
+        suggestions = [{ label: "Voir les programmes", target: "actions" }];
+      } else if (input.includes('tedidjo') || input.includes('santé')) {
+        botResponse = "TEDIDJO est notre initiative phare pour la santé de la reproduction et la lutte contre les violences basées sur le genre (VBG).";
+        suggestions = [{ label: "Voir les programmes", target: "actions" }];
+      } else if (input.includes('action') || input.includes('programme') || input.includes('fait')) {
+        botResponse = "L'ONG Busola mène trois programmes majeurs : PAGEDA (Alphabétisation), YES (Jeunesse) et TEDIDJO (Santé & VBG). Lequel vous intéresse ?";
+        suggestions = [{ label: "Tous nos programmes", target: "actions" }];
+      } else if (input.includes('equipe') || input.includes('team') || input.includes('membre') || input.includes('directeur')) {
+        botResponse = "Notre équipe est dirigée par M. Abouyaïdou MAMA (Directeur Exécutif). Elle compte des experts comme Zoulfath ZIME et Fadel KASSALI.";
+        suggestions = [{ label: "Voir l'équipe complète", target: "equipe" }];
+      } else if (input.includes('don') || input.includes('aider') || input.includes('soutenir') || input.includes('argent')) {
+        botResponse = "Merci pour votre générosité ! Vous pouvez soutenir nos actions via un don ou en devenant partenaire technique/financier.";
         suggestions = [
-          { label: "Faire un don", target: "soutenir" },
-          { label: "Devenir partenaire", target: "partenariat" }
+          { label: "Faire un don", target: "newsletter" },
+          { label: "Devenir partenaire", target: "partenaires" }
         ];
-      } else if (input.includes('contact') || input.includes('ou') || input.includes('adresse')) {
-        botResponse = "Nous sommes basés à Parakou, quartier Arafat. Vous pouvez nous joindre au +229 01 90 44 46 90.";
+      } else if (input.includes('contact') || input.includes('ou') || input.includes('adresse') || input.includes('parakou')) {
+        botResponse = "Notre siège est à Parakou, quartier Arafat. Vous pouvez nous écrire à contact@busola.org ou appeler le +229 01 90 44 46 90.";
         suggestions = [{ label: "Nous contacter", target: "footer" }];
+      } else if (input.includes('partenaire')) {
+        botResponse = "Nous travaillons avec des partenaires de renom tels que l'UNFPA, l'UNICEF, CARE International et l'Ambassade des Pays-Bas.";
+        suggestions = [{ label: "Nos partenaires", target: "partenaires" }];
       }
 
       setChatHistory(prev => [...prev, { role: 'bot', text: botResponse, actions: suggestions }]);
@@ -352,9 +365,6 @@ function App() {
                   </div>
                 </div>
               </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Values Grid - Visible ONLY on Tablet/Mobile */}
               <div id="valeurs-mobile" className="row g-4 d-lg-none">
@@ -541,7 +551,7 @@ function App() {
         </h1>
       </div>
       {/* Partenaires */}
-      <div className="container-fluid mt-0 pt-5 pb-5 partenaire wow fadeIn">
+      <div id="partenaires" className="container-fluid mt-0 pt-5 pb-5 partenaire wow fadeIn">
         <div className="container">
           <div className="d-flex justify-content-center mb-5">
             <span className="bg-secondary px-4 py-2 text-white fw-bold rounded-pill shadow-sm">Nos partenaires</span>

@@ -10,13 +10,13 @@ export default function Navbar() {
     <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
       <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
         <Link to="/" className="navbar-brand m-0">
-          <img width="170" height="50" src="/LOGO HORIZONTAL-02-02.png" alt="Logo" />
+          <img width="170" height="50" src="logo.png" alt="Logo" />
         </Link>
         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
-          <div className="navbar-nav align-items-center">
+          <div className="navbar-nav mx-auto align-items-center">
             <Link to="/" className={`nav-item nav-link ${!isAbout ? 'active' : ''}`}>Accueil</Link>
 
             <div className="nav-item dropdown">
