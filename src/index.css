@@ -1,0 +1,36 @@
+
+/* Centrage parfait de la Navbar sur Desktop */
+@media (min-width: 992px) {
+  .navbar-brand-fixed { width: 250px !important; }
+  .navbar-button-fixed { width: 250px !important; display: flex !important; justify-content: flex-end !important; }
+}
+
+/* Animations du Preloader */
+@keyframes pulse-custom {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes progress-custom {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-pulse {
+  animation: pulse-custom 2s ease-in-out infinite;
+}
+
+.animate-progress {
+  animation: progress-custom 2s forwards ease-in-out;
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

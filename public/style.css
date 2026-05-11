@@ -24,6 +24,31 @@
     font-weight: 400 !important;
 }
 
+.transition-all {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.hover-up:hover {
+    transform: translateY(-10px) !important;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05) !important;
+}
+
+.hover-color:hover {
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
+.leading-relaxed {
+    line-height: 1.8 !important;
+}
+
+.leading-tight {
+    line-height: 1.3 !important;
+}
+
 
 /*** Spinner ***/
 #spinner {
@@ -226,7 +251,7 @@ body{
 }
 
 .page-header {
-    background: url("MOTIF\ LOGO-54.png") center center no-repeat;
+    
     background-size: cover;
 }
 
@@ -415,7 +440,7 @@ body{
 
 .banner .banner-inner {
     position: relative;
-    background: url("bg.svg") center center no-repeat;
+    
     background-size: cover;
 }
 
@@ -456,7 +481,7 @@ body{
 /*** Donate ***/
 .donate .donate-text {
     position: relative;
-    background: url("bg.svg") center center no-repeat;
+    
     background-size: cover;
 }
 
@@ -532,7 +557,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url("MOTIF\ LOGO-54.png") center center no-repeat;
+    
     background-size: cover;
 }
 
@@ -593,7 +618,7 @@ body{
 .footer {
     color: white;
     position: relative;
-    background: url("MOTIF\ LOGO-54.png") center center no-repeat !important;
+    
     background-size: cover;
 }
 
