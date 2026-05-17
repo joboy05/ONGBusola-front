@@ -100,29 +100,31 @@ export default function NewsPage() {
           <div className="row g-4">
             {newsItems.map((item, i) => (
               <div key={item.id} className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay={`${0.1 + (i % 3) * 0.2}s`}>
-                <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
-                  <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                    <img 
-                      className="img-fluid w-100 h-100 transition-all hover-scale" 
-                      src={item.img} 
-                      style={{ objectFit: "cover" }} 
-                      alt={item.title} 
-                    />
+                <Link to={`/actualites/${item.id}`} className="text-decoration-none text-dark h-100 d-block">
+                  <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
+                    <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
+                      <img 
+                        className="img-fluid w-100 h-100 transition-all hover-scale" 
+                        src={item.img} 
+                        style={{ objectFit: "cover" }} 
+                        alt={item.title} 
+                      />
+                    </div>
+                    <p className="mb-2 text-tertiary fw-bold small">
+                      <i className="fa fa-calendar-alt me-2" style={{ color: '#27ae60' }}></i>
+                      {item.date}
+                    </p>
+                    <h3 className="h5 text-primary fw-bold mb-3" style={{ fontSize: '1.2rem', lineHeight: '1.4' }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
+                      {item.desc}
+                    </p>
+                    <div className="text-secondary fw-bold small d-inline-flex align-items-center transition-all hover-right">
+                      Lire la suite <i className="fa fa-arrow-right ms-2"></i>
+                    </div>
                   </div>
-                  <p className="mb-2 text-tertiary fw-bold small">
-                    <i className="fa fa-calendar-alt me-2" style={{ color: '#27ae60' }}></i>
-                    {item.date}
-                  </p>
-                  <h3 className="h5 text-primary fw-bold mb-3" style={{ fontSize: '1.2rem', lineHeight: '1.4' }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                    {item.desc}
-                  </p>
-                  <Link to={`/actualites/${item.id}`} className="text-secondary fw-bold small text-decoration-none d-inline-flex align-items-center transition-all hover-right">
-                    Lire la suite <i className="fa fa-arrow-right ms-2"></i>
-                  </Link>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
