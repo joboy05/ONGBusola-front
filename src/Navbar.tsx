@@ -10,7 +10,7 @@ export default function Navbar() {
     <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
       <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
         <Link to="/" className="navbar-brand m-0">
-          <img width="170" height="50" src="logo.png" alt="Logo" />
+          <img width="170" height="50" src="/ONGBusola-front/logo.png" alt="Logo" />
         </Link>
         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span className="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@ export default function Navbar() {
             </div>
 
             <Link to="/actions" className="nav-item nav-link">Nos actions</Link>
-            <a href="#!" className="nav-item nav-link">Nos actualités</a>
+            <Link to="/actualites" className="nav-item nav-link">Nos actualités</Link>
             <Link to="/contact" className="nav-item nav-link">Contact</Link>
           </div>
           <div className="ms-auto d-none d-lg-flex">

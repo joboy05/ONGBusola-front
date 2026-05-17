@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
 
@@ -46,6 +46,11 @@ const actionDetailsData: any = {
 };
 
 export default function ActionDetailPage() {
+  useEffect(() => {
+    if (window.WOW) new window.WOW().init();
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams<{ id: string }>();
   const project = id ? actionDetailsData[id] : null;
 
@@ -62,7 +67,7 @@ export default function ActionDetailPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/MOTIF%20LOGO-54.png') center/cover`,
+          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',
@@ -156,7 +161,7 @@ export default function ActionDetailPage() {
         <div className="container">
           <div className="row g-5 py-5">
             <div className="col-lg-3 col-md-6">
-              <img className="img-fluid w-75 bg-white p-2 rounded" src="/ONGBusola-front/LOGO HORIZONTAL-02-02.png" alt="Logo Busola" />
+              <img className="img-fluid w-75 bg-white p-2 rounded" src="/ONGBusola-front/logo.png" alt="Logo Busola" />
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-light mb-4">Liens rapides</h4>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
@@ -38,6 +38,11 @@ const actions = [
 ];
 
 export default function ActionPage() {
+  useEffect(() => {
+    if (window.WOW) new window.WOW().init();
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="wrapper">
       <Navbar />
@@ -47,7 +52,7 @@ export default function ActionPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/MOTIF%20LOGO-54.png') center/cover`,
+          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',
@@ -61,7 +66,7 @@ export default function ActionPage() {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
               <li className="breadcrumb-item">
-                <a href="/" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Accueil</a>
+                <Link to="/" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Accueil</Link>
               </li>
               <li className="breadcrumb-item active fw-medium" aria-current="page" style={{ color: '#2764AE', fontSize: '1.05rem' }}>
                 Actions
@@ -155,7 +160,7 @@ export default function ActionPage() {
         <div className="container">
           <div className="row g-5 py-5">
             <div className="col-lg-3 col-md-6">
-              <img className="img-fluid w-75 bg-white p-2 rounded" src="/ONGBusola-front/LOGO HORIZONTAL-02-02.png" alt="Logo Busola" />
+              <img className="img-fluid w-75 bg-white p-2 rounded" src="/ONGBusola-front/logo.png" alt="Logo Busola" />
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-light mb-4">Liens rapides</h4>

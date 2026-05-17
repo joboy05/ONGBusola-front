@@ -11,58 +11,6 @@ declare global {
 }
 
 // Couleurs institutionnelles de l'ONG Busola
-const brandStyles = `
-  :root {
-    --bs-primary: #2864ae !important;
-    --bs-secondary: #f39c12 !important;
-    --bs-tertiary: #27ae60 !important;
-  }
-  .bg-primary { background-color: var(--bs-primary) !important; }
-  .text-primary { color: var(--bs-primary) !important; }
-  .btn-primary { background-color: var(--bs-primary) !important; border-color: var(--bs-primary) !important; }
-  
-  .bg-secondary { background-color: var(--bs-secondary) !important; }
-  .text-secondary { color: var(--bs-secondary) !important; }
-  .btn-secondary { background-color: var(--bs-secondary) !important; border-color: var(--bs-secondary) !important; color: white !important; }
-  
-  .bg-tertiary { background-color: var(--bs-tertiary) !important; }
-  .text-tertiary { color: var(--bs-tertiary) !important; }
-  .border-tertiary { border-color: var(--bs-tertiary) !important; }
-  .btn-tertiary { background-color: var(--bs-tertiary) !important; border-color: var(--bs-tertiary) !important; color: white !important; }
-
-  .gradient-text {
-    background: linear-gradient(45deg, var(--bs-primary), var(--bs-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .animate-float {
-    animation: float 4s ease-in-out infinite;
-  }
-
-  @keyframes slowRotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  @keyframes move {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, 20px); }
-  }
-
-  .bg-shape {
-    position: absolute;
-    filter: blur(60px);
-    opacity: 0.1;
-    z-index: 0;
-    pointer-events: none;
-  }
-`;
 
 interface TeamMember {
   name: string;
@@ -306,7 +254,7 @@ function App() {
 
   return (
     <div className="wrapper">
-      <style>{brandStyles}</style>
+      
       {/* Spinner is in index.html */}
 
       {/* Navbar */}

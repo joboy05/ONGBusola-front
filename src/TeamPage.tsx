@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 interface TeamMember {
@@ -15,6 +16,11 @@ interface TeamMember {
 
 export default function TeamPage() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+
+  useEffect(() => {
+    if (window.WOW) new window.WOW().init();
+    window.scrollTo(0, 0);
+  }, []);
 
   const team: TeamMember[] = [
     {
@@ -66,7 +72,7 @@ export default function TeamPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/MOTIF%20LOGO-54.png') center/cover`,
+          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',
@@ -80,10 +86,10 @@ export default function TeamPage() {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb justify-content-center mb-0">
               <li className="breadcrumb-item">
-                <a href="/" className="text-decoration-none fw-medium" style={{ color: '#3ab074' }}>Accueil</a>
+                <Link to="/" className="text-decoration-none fw-medium" style={{ color: '#3ab074' }}>Accueil</Link>
               </li>
               <li className="breadcrumb-item">
-                <a href="/about" className="text-decoration-none fw-medium" style={{ color: '#3ab074' }}>A propos</a>
+                <Link to="/about" className="text-decoration-none fw-medium" style={{ color: '#3ab074' }}>A propos</Link>
               </li>
               <li className="breadcrumb-item active fw-medium" style={{ color: '#3ab074' }} aria-current="page">
                 Notre équipe

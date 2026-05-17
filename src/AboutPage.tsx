@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AboutSection from './AboutSection';
 import Navbar from './Navbar';
 
 export default function AboutPage() {
+  useEffect(() => {
+    if (window.WOW) new window.WOW().init();
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="wrapper">
       {/* Navbar */}
@@ -26,7 +32,7 @@ export default function AboutPage() {
           <nav aria-label="breadcrumb" className="mb-2">
             <ol className="breadcrumb justify-content-center mb-0" style={{ opacity: 0.8 }}>
               <li className="breadcrumb-item">
-                <a href="/" className="text-white text-decoration-none">Accueil</a>
+                <Link to="/" className="text-white text-decoration-none">Accueil</Link>
               </li>
               <li className="breadcrumb-item active text-secondary fw-bold" aria-current="page">
                 À propos
