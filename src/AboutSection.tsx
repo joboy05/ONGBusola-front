@@ -315,74 +315,57 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
                   color: '#f59f23',
                   title: 'SANTÉ ET DROITS SEXUELS ET REPRODUCTIFS (SDSR)',
                   desc: 'Garantir l\'accès des adolescent(e)s jeunes et des femmes à une information complète et à des services de santé de qualité pour leur permettre de faire des choix libres et éclairés.',
-                  position: 'center center',
+                  icon: 'fa-tint',
                 },
                 {
                   img: '/ONGBusola-front/axe3.png',
                   color: '#2764AE',
                   title: 'PRÉVENTION ET RÉPONSE AUX VIOLENCES BASÉES SUR LE GENRE (VBG)',
                   desc: 'Mettre en œuvre des programmes de prévention et de lutte contre les VBG, faciliter la prise en charge des survivantes et mener un plaidoyer pour des politiques de tolérance zéro.',
-                  position: 'center top',
+                  icon: 'fa-hospital',
                 },
                 {
                   img: '/ONGBusola-front/axe4.png',
                   color: '#3ab074',
                   title: 'LEADERSHIP ET AUTONOMISATION',
                   desc: 'Renforcer l\'indépendance économique des femmes et des filles et promouvoir leur participation active à tous les niveaux de la prise de décision.',
-                  position: 'center top',
+                  icon: 'fa-users',
                 },
                 {
                   img: '/ONGBusola-front/axe5.png',
                   color: '#f59f23',
                   title: 'PAIX ET JUSTICE CLIMATIQUE',
                   desc: 'Renforcer le dialogue intercommunautaire autour des enjeux climatiques et promouvoir l\'engagement des jeunes et des femmes pour une paix durable et équitable.',
-                  position: 'center top',
+                  icon: 'fa-leaf',
                 },
               ].map((axe, i) => (
-                <div key={i} className="col-md-6">
-                  <div
-                    className="position-relative overflow-hidden"
-                    style={{ borderRadius: '8px', height: '260px' }}
-                    onMouseEnter={e => {
-                      const overlay = e.currentTarget.querySelector('.axe-overlay') as HTMLElement;
-                      if (overlay) overlay.style.opacity = '0.92';
-                    }}
-                    onMouseLeave={e => {
-                      const overlay = e.currentTarget.querySelector('.axe-overlay') as HTMLElement;
-                      if (overlay) overlay.style.opacity = '0.82';
-                    }}
+                <div key={i} className="col-md-6 mb-4">
+                  <div 
+                    className="h-100 shadow-sm border-0 position-relative transition-all hover-up overflow-hidden" 
+                    style={{ borderRadius: '15px', backgroundColor: axe.color }}
                   >
-                    {/* Image bien recadrée */}
-                    <img
-                      src={axe.img}
-                      alt={axe.title}
-                      style={{
-                        width: '100%',
-                        height: '260px',
-                        objectFit: 'cover',
-                        objectPosition: axe.position,
-                        display: 'block',
-                        imageRendering: 'auto',
-                      }}
-                    />
-                    {/* Overlay coloré — couvre le bas (45%) */}
-                    <div
-                      className="axe-overlay position-absolute start-0 w-100"
-                      style={{
-                        backgroundColor: axe.color,
-                        opacity: 0.82,
-                        top: '45%',
-                        bottom: 0,
-                        transition: 'opacity 0.3s ease',
-                      }}
-                    />
-                    {/* Texte sur l'overlay */}
-                    <div
-                      className="position-absolute w-100 px-4 pb-4"
-                      style={{ bottom: 0, left: 0 }}
-                    >
-                      <h5 className="fw-bold text-white mb-2" style={{ fontSize: '0.9rem', textTransform: 'uppercase', lineHeight: 1.3 }}>{axe.title}</h5>
-                      <p className="mb-0 text-white small" style={{ lineHeight: 1.6, opacity: 0.95 }}>{axe.desc}</p>
+                    {/* Image (Top 40%) */}
+                    <div className="position-relative" style={{ height: '200px', overflow: 'hidden' }}>
+                      <img 
+                        src={axe.img} 
+                        className="w-100 h-100 transition-all hover-scale" 
+                        style={{ objectFit: 'cover' }} 
+                        alt={axe.title} 
+                      />
+                      {/* Icon overlay top left */}
+                      <div className="position-absolute top-0 start-0 m-3 d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '50px', height: '50px', zIndex: 10 }}>
+                        <i className={`fa ${axe.icon} fs-4`} style={{ color: axe.color }}></i>
+                      </div>
+                    </div>
+
+                    {/* Content (Bottom 60%) */}
+                    <div className="p-4 d-flex flex-column justify-content-start" style={{ minHeight: '260px' }}>
+                      <h2 className="fw-black text-white text-uppercase mb-4 mt-2" style={{ fontSize: '1.8rem', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-0.5px' }}>
+                        {axe.title}
+                      </h2>
+                      <p className="text-white opacity-90 fs-6 mb-0" style={{ lineHeight: 1.6, textAlign: 'justify' }}>
+                        {axe.desc}
+                      </p>
                     </div>
                   </div>
                 </div>
