@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Heart, Users, Handshake, ShieldCheck, MapPin, Phone, Mail, Facebook, Linkedin, Twitter, Youtube, ArrowRight, MessageCircle, Send, X, Menu, ArrowUp, BookOpen, Star, PlusCircle, ChevronDown } from 'lucide-react';
+import { Heart, Users, Handshake, ShieldCheck, MapPin, Phone, Mail, Facebook, Linkedin, Twitter, Youtube, ArrowRight, MessageCircle, Send, X, Menu, ArrowUp, BookOpen, Star, PlusCircle, ChevronDown, Quote } from 'lucide-react';
 import Navbar from './Navbar';
 
 declare global {
@@ -700,10 +700,15 @@ function App() {
                   <div key={i} className="testimonial-item p-5 bg-white rounded-5 shadow-sm mx-2">
                     <p className="fs-5 text-muted mb-4 italic leading-relaxed" style={{ fontStyle: 'italic' }}>"{t.text}"</p>
                     <div className="d-flex align-items-center">
-                      <img className="rounded-circle me-3" src={t.photo} style={{ width: '60px', height: '60px', objectFit: 'cover' }} alt="" />
+                      <div className="position-relative me-4">
+                        <img className="rounded-circle shadow-lg" src={t.photo} style={{ width: '100px', height: '100px', objectFit: 'cover', border: '6px solid white', outline: '1px solid rgba(0,0,0,0.05)' }} alt="" />
+                        <div className="position-absolute bottom-0 end-0 bg-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm" style={{ width: '30px', height: '30px', border: '2px solid white' }}>
+                          <Quote size={14} className="text-white" />
+                        </div>
+                      </div>
                       <div>
-                        <h6 className="fw-bold mb-0 text-dark">{t.name}</h6>
-                        <small className="text-primary fw-bold">{t.role}</small>
+                        <h5 className="fw-bold mb-1 text-dark text-uppercase" style={{ letterSpacing: '0.5px' }}>{t.name}</h5>
+                        <small className="text-primary fw-bold text-uppercase p-1 px-2 bg-light rounded-pill" style={{ fontSize: '0.7rem' }}>{t.role}</small>
                       </div>
                     </div>
                   </div>
