@@ -341,6 +341,12 @@ function App() {
         </div>
       </div>
 
+      <div className="container-fluid p-0 text-center py-5 bannere wow fadeInUp" data-wow-delay="0.1s" style={{ minHeight: "500px", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <h1 className="text-uppercase text-primary display-1 fw-bold px-3">
+          LE SILENCE PROTèGE <br /> <span className="text-white bg-primary px-1">L'aGRESSEUR</span>. <br className="d-md-none" /> NOTRE aCTION <br /> PROTèGE <span className="text-white bg-primary px-1">La VICTIME</span>
+        </h1>
+      </div>
+
 
       {/* About Section - Balanced Magazine Design */}
       <div id="apropos" className="container-fluid py-5 bg-white" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
@@ -366,25 +372,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Values Grid - Visible ONLY on Tablet/Mobile */}
-              <div id="valeurs-mobile" className="row g-4 d-lg-none">
-                {[
-                  { icon: <Heart className="text-primary" size={28} />, title: 'Dignité', desc: 'Chaque personne au cœur de l\'action' },
-                  { icon: <Users className="text-primary" size={28} />, title: 'Équité de Genre', desc: 'L\'égalité comme condition à la paix' },
-                  { icon: <Handshake className="text-primary" size={28} />, title: 'Partenariat', desc: 'Ensemble pour un impact durable' },
-                  { icon: <ShieldCheck className="text-primary" size={28} />, title: 'Intégrité', desc: 'Transparence & redevabilité' }
-                ].map((val, idx) => (
-                  <div key={idx} className="col-sm-6">
-                    <div className="p-4 rounded-4 h-100 border bg-light shadow-sm">
-                      <div className="d-flex align-items-center mb-3">
-                        <div className="me-3">{val.icon}</div>
-                        <h5 className="fw-bold mb-0">{val.title}</h5>
-                      </div>
-                      <p className="mb-0 text-muted">{val.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Right Column: Narrative Text + Values (Desktop) */}
@@ -409,27 +396,6 @@ function App() {
                   </p>
                 </div>
 
-                {/* Values Grid - Visible ONLY on Desktop */}
-                <div id="valeurs-desktop" className="row g-4 mb-5 d-none d-lg-flex">
-                  {[
-                    { icon: <Heart className="text-primary" size={32} />, title: 'Dignité', desc: 'Chaque personne au cœur de l\'action' },
-                    { icon: <Users className="text-primary" size={32} />, title: 'Équité de Genre', desc: 'L\'égalité comme condition à la paix' },
-                    { icon: <Handshake className="text-primary" size={32} />, title: 'Partenariat', desc: 'Ensemble pour un impact durable' },
-                    { icon: <ShieldCheck className="text-primary" size={32} />, title: 'Intégrité', desc: 'Transparence & redevabilité' }
-                  ].map((val, idx) => (
-                    <div key={idx} className="col-sm-6">
-                      <div className="p-4 rounded-4 border bg-white h-100 shadow-sm transition-all hover-up border-light">
-                        <div className="d-flex align-items-center mb-3">
-                          <div className="rounded-circle p-3 me-3 bg-light d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
-                            {val.icon}
-                          </div>
-                          <h5 className="fw-bold mb-0">{val.title}</h5>
-                        </div>
-                        <p className="mb-0 text-muted">{val.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
 
                 <div className="d-flex align-items-center">
                   <a href="#!" className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg transition-all hover-up me-4">
@@ -438,6 +404,28 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Unified Values Grid - Full Width */}
+          <div className="row g-4 mt-5 wow fadeInUp" data-wow-delay="0.5s">
+            {[
+              { icon: <Heart className="text-primary" size={32} />, title: 'Dignité', desc: 'Chaque personne au cœur de l\'action' },
+              { icon: <Users className="text-primary" size={32} />, title: 'Équité de Genre', desc: 'L\'égalité comme condition à la paix' },
+              { icon: <Handshake className="text-primary" size={32} />, title: 'Partenariat', desc: 'Ensemble pour un impact durable' },
+              { icon: <ShieldCheck className="text-primary" size={32} />, title: 'Intégrité', desc: 'Transparence & redevabilité' }
+            ].map((val, idx) => (
+              <div key={idx} className="col-lg-3 col-md-6">
+                <div className="p-4 rounded-4 border bg-white h-100 shadow-sm transition-all hover-up border-light">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="rounded-circle p-3 me-3 bg-light d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
+                      {val.icon}
+                    </div>
+                    <h5 className="fw-bold mb-0">{val.title}</h5>
+                  </div>
+                  <p className="mb-0 text-muted">{val.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -545,11 +533,6 @@ function App() {
       </div>
 
 
-      <div className="container-fluid p-0 text-center py-5 bannere wow fadeInUp" data-wow-delay="0.1s" style={{ minHeight: "500px", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <h1 className="text-uppercase text-primary display-1 fw-bold px-3">
-          LE SILENCE PROTèGE <br /> <span className="text-white bg-primary px-1">L'aGRESSEUR</span>. <br className="d-md-none" /> NOTRE aCTION <br /> PROTèGE <span className="text-white bg-primary px-1">La VICTIME</span>
-        </h1>
-      </div>
       {/* Partenaires */}
       <div id="partenaires" className="container-fluid mt-0 pt-5 pb-5 partenaire wow fadeIn">
         <div className="container">
