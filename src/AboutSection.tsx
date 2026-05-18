@@ -83,36 +83,60 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
       <div id="notre-histoire" className="container-fluid py-5 bg-white">
         <div className="container py-4">
           <div className="row g-5 align-items-center">
-            {/* Texte */}
-            <div className="col-lg-6">
-              <h1 className="fw-bold text-primary mb-4 text-uppercase">
-                NOTRE HISTOIRE
-              </h1>
+            {/* Colonne Gauche : Texte */}
+            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
+              <div className="mb-4">
+                {/* Badge style Référence */}
+                <div className="d-flex align-items-center mb-3">
+                  <span className="text-white text-uppercase px-3 py-1 fw-bold" style={{ backgroundColor: '#27ae60', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    QUI SOMMES-NOUS ?
+                  </span>
+                  <div className="ms-3 flex-grow-1 border-bottom border-2" style={{ borderColor: '#27ae60', opacity: 0.3 }}></div>
+                </div>
+                
+                {/* Titre Bloc Bleu */}
+                <div className="d-inline-block bg-primary px-4 py-3 mb-4 rounded-1 shadow-sm" style={{ borderLeft: '8px solid #f59f23' }}>
+                  <h1 className="fw-black text-white text-uppercase mb-0" style={{ fontSize: '2.5rem', fontWeight: 900 }}>
+                    ONG BUSOLA
+                  </h1>
+                </div>
+              </div>
 
-              <div className="text-muted fs-6 mb-4" style={{ lineHeight: 1.9, textAlign: 'justify' }}>
+              <div className="text-muted fs-5 mb-4" style={{ lineHeight: 1.8, textAlign: 'justify' }}>
                 {(historyExpanded ? historyFull : historyShort)
                   .split('\n\n')
-                  .map((para, i) => <p key={i}>{para}</p>)
+                  .map((para, i) => <p key={i} className="mb-3">{para}</p>)
                 }
               </div>
 
-              <a
-                href="#!"
-                className="text-primary fw-bold text-decoration-none"
-                onClick={(e) => { e.preventDefault(); setHistoryExpanded(!historyExpanded); }}
-              >
-                {historyExpanded ? 'Réduire' : 'Lire plus'}
-              </a>
+              <div className="d-flex align-items-center">
+                <a
+                  href="#!"
+                  className="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold text-decoration-none shadow-sm transition-all hover-up"
+                  onClick={(e) => { e.preventDefault(); setHistoryExpanded(!historyExpanded); }}
+                >
+                  {historyExpanded ? 'Réduire l\'histoire' : 'Lire toute notre histoire'}
+                  <i className={`fa fa-chevron-${historyExpanded ? 'up' : 'down'} ms-2`}></i>
+                </a>
+              </div>
             </div>
 
-            {/* Image avec forme about-img (découpée aux coins) */}
-            <div className="col-lg-6">
-              <div className="about-img">
-                <img
-                  src="/ONGBusola-front/about.jpeg"
-                  alt="Équipe Busola sur le terrain"
-                  className="img-fluid w-100"
-                />
+            {/* Colonne Droite : Image */}
+            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.3s">
+              <div className="position-relative">
+                <div className="overflow-hidden rounded-5 shadow-lg" style={{ height: "450px" }}>
+                  <img
+                    src="/ONGBusola-front/about.jpeg"
+                    alt="Équipe Busola"
+                    className="img-fluid w-100 h-100 transition-all hover-scale"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                {/* Ornement décoratif */}
+                <div className="position-absolute bottom-0 start-0 bg-secondary px-4 py-3 rounded-tr-5 shadow-lg d-none d-lg-block" style={{ borderTopRightRadius: '30px', zIndex: 1 }}>
+                  <h3 className="text-white fw-bold mb-0">2020</h3>
+                  <p className="text-white small mb-0 opacity-75">Date de création</p>
+                </div>
               </div>
             </div>
           </div>

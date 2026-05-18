@@ -339,12 +339,21 @@ function App() {
             <div className="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.3s">
               <div className="ps-lg-5">
                 <div className="position-relative mb-5">
-                  <div className="position-absolute" style={{ top: "-25px", left: "20px", zIndex: 2 }}>
-                    <span className="badge bg-tertiary text-white px-4 py-2 fw-bold text-uppercase" style={{ borderRadius: "4px", fontSize: "0.85rem", letterSpacing: "1px" }}>Qui sommes-nous ?</span>
-                  </div>
-                  <div className="bg-primary p-5 rounded-4 shadow-lg d-flex align-items-center justify-content-between" style={{ borderLeft: "10px solid var(--bs-secondary)" }}>
-                    <h2 className="fw-black mb-0 text-uppercase" style={{ fontSize: "3rem", color: "#fff", fontWeight: "900" }}>ONG BUSOLA</h2>
-                    <img src="logo-hands.png" className="img-fluid d-none d-lg-block" style={{ maxHeight: "100px", filter: "brightness(0) invert(1)" }} alt="Logo" />
+                  <div className="mb-4">
+                    {/* Badge style Référence */}
+                    <div className="d-flex align-items-center mb-3">
+                      <span className="text-white text-uppercase px-3 py-1 fw-bold" style={{ backgroundColor: '#27ae60', borderRadius: '4px', fontSize: '0.85rem' }}>
+                        QUI SOMMES-NOUS ?
+                      </span>
+                      <div className="ms-3 flex-grow-1 border-bottom border-2" style={{ borderColor: '#27ae60', opacity: 0.3 }}></div>
+                    </div>
+                    
+                    {/* Titre Bloc Bleu */}
+                    <div className="d-inline-block bg-primary px-4 py-3 mb-4 rounded-1 shadow-sm" style={{ borderLeft: '8px solid var(--bs-secondary)' }}>
+                      <h2 className="fw-black text-white text-uppercase mb-0" style={{ fontSize: '2.8rem', fontWeight: 900 }}>
+                        ONG BUSOLA
+                      </h2>
+                    </div>
                   </div>
                 </div>
 
