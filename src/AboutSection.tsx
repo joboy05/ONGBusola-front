@@ -311,7 +311,7 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
             <div className="row g-4">
               {[
                 {
-                  img: '/ONGBusola-front/IMG-20251016-WA0099_cK78lYo.jpg',
+                  img: '/ONGBusola-front/axe2.png',
                   color: '#f59f23',
                   title: 'SANTÉ ET DROITS SEXUELS ET REPRODUCTIFS (SDSR)',
                   desc: 'Garantir l\'accès des adolescent(e)s jeunes et des femmes à une information complète et à des services de santé de qualité pour leur permettre de faire des choix libres et éclairés.',
@@ -341,29 +341,31 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
               ].map((axe, i) => (
                 <div key={i} className="col-md-6 mb-4">
                   <div 
-                    className="h-100 shadow-sm border-0 position-relative transition-all hover-up overflow-hidden" 
-                    style={{ borderRadius: '15px', backgroundColor: axe.color }}
+                    className="h-100 border-0 transition-all hover-up shadow-sm d-flex flex-column" 
+                    style={{ borderRadius: '15px', overflow: 'hidden' }}
                   >
-                    {/* Image (Top 40%) */}
-                    <div className="position-relative" style={{ height: '200px', overflow: 'hidden' }}>
+                    {/* Partie Haute : Image (environ 45-50% de la carte) */}
+                    <div className="position-relative" style={{ height: '100px', flexShrink: 0 }}>
                       <img 
                         src={axe.img} 
-                        className="w-100 h-100 transition-all hover-scale" 
-                        style={{ objectFit: 'cover' }} 
+                        className="w-100 h-100" 
+                        style={{ objectFit: 'cover', objectPosition: 'center center' }} 
                         alt={axe.title} 
                       />
-                      {/* Icon overlay top left */}
-                      <div className="position-absolute top-0 start-0 m-3 d-flex align-items-center justify-content-center bg-white rounded-circle shadow" style={{ width: '50px', height: '50px', zIndex: 10 }}>
-                        <i className={`fa ${axe.icon} fs-4`} style={{ color: axe.color }}></i>
+                      {/* Icône (Rond Blanc - Style exact Image 1) */}
+                      <div className="position-absolute d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm" 
+                           style={{ width: '40px', height: '40px', top: '15px', left: '15px', zIndex: 10 }}>
+                        <i className={`fa ${axe.icon} fs-5`} style={{ color: axe.color }}></i>
                       </div>
                     </div>
 
-                    {/* Content (Bottom 60%) */}
-                    <div className="p-4 d-flex flex-column justify-content-start" style={{ minHeight: '260px' }}>
-                      <h2 className="fw-black text-white text-uppercase mb-4 mt-2" style={{ fontSize: '1.8rem', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-0.5px' }}>
+                    {/* Partie Basse : Bloc Couleur Unie avec texte (Taille très modérée) */}
+                    <div className="p-4 d-flex flex-column flex-grow-1 justify-content-start" style={{ backgroundColor: axe.color }}>
+                      <h4 className="fw-bold text-white text-uppercase mb-3" style={{ lineHeight: 1.3 }}>
                         {axe.title}
-                      </h2>
-                      <p className="text-white opacity-90 fs-6 mb-0" style={{ lineHeight: 1.6, textAlign: 'justify' }}>
+                      </h4>
+                      
+                      <p className="text-white mb-0" style={{ lineHeight: 1.6, opacity: 0.95, textAlign: 'justify', fontSize: '0.95rem' }}>
                         {axe.desc}
                       </p>
                     </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export const newsItems = [
   {
@@ -131,53 +132,7 @@ export default function NewsPage() {
         </div>
       </div>
 
-      {/* Footer Newsletter Section*/}
-      <div id="newsletter" className="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s" style={{ backgroundColor: '#2764AE' }}>
-        <div className="container text-center py-4">
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <h1 className="display-6 text-white mb-4 fw-bold">Inscrivez-vous à la Newsletter</h1>
-              <form className="position-relative w-100 mb-2">
-                <input 
-                  className="form-control border-0 w-100 ps-4 pe-5" 
-                  type="email" 
-                  placeholder="Entrez votre Email" 
-                  style={{ height: "60px", borderRadius: 0 }} 
-                  required
-                />
-                <button type="submit" className="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2">
-                  <i className="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </form>
-              <p className="mb-0 text-white">N'ayez crainte vous ne reçevrez aucun Spam dans votre boîte mail.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer Basic */}
-      <footer className="container-fluid footer py-5 mt-auto bg-dark">
-        <div className="container">
-          <div className="row g-5 py-5">
-            <div className="col-lg-3 col-md-6">
-              <img className="img-fluid w-75 bg-white p-2 rounded" src="/ONGBusola-front/logo.png" alt="Logo Busola" />
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h4 className="text-light mb-4">Liens rapides</h4>
-              <Link className="btn btn-link" to="/about">Qui sommes-nous?</Link>
-              <Link className="btn btn-link" to="/contact">Nous contacter</Link>
-              <Link className="btn btn-link" to="/actions">Nos actions</Link>
-            </div>
-          </div>
-          <div className="copyright pt-5 border-top border-secondary">
-            <div className="row">
-              <div className="col-md-6 text-center text-md-start mb-3 mb-md-0 text-white">
-                &copy; <a className="fw-semi-bold text-white text-decoration-none" href="#!">ONG BUSOLA</a>, Tous droits réservés.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
