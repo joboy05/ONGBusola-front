@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const actionDetailsData: any = {
   'projet-respect': {
@@ -46,6 +47,11 @@ const actionDetailsData: any = {
 };
 
 export default function ActionDetailPage() {
+  useEffect(() => {
+    if (window.WOW) new window.WOW().init();
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams<{ id: string }>();
   const project = id ? actionDetailsData[id] : null;
 
@@ -62,7 +68,7 @@ export default function ActionDetailPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/MOTIF%20LOGO-54.png') center/cover`,
+          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',
@@ -127,51 +133,6 @@ export default function ActionDetailPage() {
         </div>
       </div>
 
-      {/* Footer Newsletter Section*/}
-      <div id="newsletter" className="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s" style={{ backgroundColor: '#2764AE' }}>
-        <div className="container text-center py-4">
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <h1 className="display-6 text-white mb-4 fw-bold">Inscrivez-vous à la Newsletter</h1>
-              <form className="position-relative w-100 mb-2">
-                <input 
-                  className="form-control border-0 w-100 ps-4 pe-5" 
-                  type="email" 
-                  placeholder="Entrez votre Email" 
-                  style={{ height: "60px", borderRadius: 0 }} 
-                  required
-                />
-                <button type="submit" className="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2">
-                  <i className="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </form>
-              <p className="mb-0 text-white">N'ayez crainte vous ne reçevrez aucun Spam dans votre boîte mail.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer Basic */}
-      <footer className="container-fluid footer py-5 mt-auto bg-dark">
-        <div className="container">
-          <div className="row g-5 py-5">
-            <div className="col-lg-3 col-md-6">
-              <img className="img-fluid w-75 bg-white p-2 rounded" src="/ONGBusola-front/LOGO HORIZONTAL-02-02.png" alt="Logo Busola" />
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h4 className="text-light mb-4">Liens rapides</h4>
-              <a className="btn btn-link" href="/about">Qui sommes-nous?</a>
-            </div>
-          </div>
-          <div className="copyright pt-5 border-top border-secondary">
-            <div className="row">
-              <div className="col-md-6 text-center text-md-start mb-3 mb-md-0 text-white">
-                &copy; <a className="fw-semi-bold text-white text-decoration-none" href="#!">ONG BUSOLA</a>, Tous droits réservés.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <Footer />    </div>
   );
 }

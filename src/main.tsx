@@ -8,6 +8,8 @@ import ResourcePage from './ResourcePage'
 import ActionPage from './ActionPage'
 import ActionDetailPage from './ActionDetailPage'
 import ContactPage from './ContactPage'
+import NewsPage from './NewsPage'
+import NewsDetailPage from './NewsDetailPage'
 import ScrollToTop from './ScrollToTop'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -22,6 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/actions" element={<ActionPage />} />
         <Route path="/actions/:id" element={<ActionDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/actualites" element={<NewsPage />} />
+        <Route path="/actualites/:id" element={<NewsDetailPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

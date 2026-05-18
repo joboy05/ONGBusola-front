@@ -83,36 +83,60 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
       <div id="notre-histoire" className="container-fluid py-5 bg-white">
         <div className="container py-4">
           <div className="row g-5 align-items-center">
-            {/* Texte */}
-            <div className="col-lg-6">
-              <h1 className="fw-bold text-primary mb-4 text-uppercase">
-                NOTRE HISTOIRE
-              </h1>
+            {/* Colonne Gauche : Texte */}
+            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
+              <div className="mb-4">
+                {/* Badge style Référence */}
+                <div className="d-flex align-items-center mb-3">
+                  <span className="text-white text-uppercase px-3 py-1 fw-bold" style={{ backgroundColor: '#27ae60', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    QUI SOMMES-NOUS ?
+                  </span>
+                  <div className="ms-3 flex-grow-1 border-bottom border-2" style={{ borderColor: '#27ae60', opacity: 0.3 }}></div>
+                </div>
+                
+                {/* Titre Bloc Bleu */}
+                <div className="d-inline-block bg-primary px-4 py-3 mb-4 rounded-1 shadow-sm" style={{ borderLeft: '8px solid #f59f23' }}>
+                  <h1 className="fw-black text-white text-uppercase mb-0" style={{ fontSize: '2.5rem', fontWeight: 900 }}>
+                    ONG BUSOLA
+                  </h1>
+                </div>
+              </div>
 
-              <div className="text-muted fs-6 mb-4" style={{ lineHeight: 1.9, textAlign: 'justify' }}>
+              <div className="text-muted fs-5 mb-4" style={{ lineHeight: 1.8, textAlign: 'justify' }}>
                 {(historyExpanded ? historyFull : historyShort)
                   .split('\n\n')
-                  .map((para, i) => <p key={i}>{para}</p>)
+                  .map((para, i) => <p key={i} className="mb-3">{para}</p>)
                 }
               </div>
 
-              <a
-                href="#!"
-                className="text-primary fw-bold text-decoration-none"
-                onClick={(e) => { e.preventDefault(); setHistoryExpanded(!historyExpanded); }}
-              >
-                {historyExpanded ? 'Réduire' : 'Lire plus'}
-              </a>
+              <div className="d-flex align-items-center">
+                <a
+                  href="#!"
+                  className="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold text-decoration-none shadow-sm transition-all hover-up"
+                  onClick={(e) => { e.preventDefault(); setHistoryExpanded(!historyExpanded); }}
+                >
+                  {historyExpanded ? 'Réduire l\'histoire' : 'Lire toute notre histoire'}
+                  <i className={`fa fa-chevron-${historyExpanded ? 'up' : 'down'} ms-2`}></i>
+                </a>
+              </div>
             </div>
 
-            {/* Image avec forme about-img (découpée aux coins) */}
-            <div className="col-lg-6">
-              <div className="about-img">
-                <img
-                  src="/ONGBusola-front/about.jpeg"
-                  alt="Équipe Busola sur le terrain"
-                  className="img-fluid w-100"
-                />
+            {/* Colonne Droite : Image */}
+            <div className="col-lg-5 wow fadeIn" data-wow-delay="0.3s">
+              <div className="position-relative">
+                <div className="overflow-hidden rounded-5 shadow-lg" style={{ height: "450px" }}>
+                  <img
+                    src="/ONGBusola-front/about.jpeg"
+                    alt="Équipe Busola"
+                    className="img-fluid w-100 h-100 transition-all hover-scale"
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                {/* Ornement décoratif */}
+                <div className="position-absolute bottom-0 start-0 bg-secondary px-4 py-3 rounded-tr-5 shadow-lg d-none d-lg-block" style={{ borderTopRightRadius: '30px', zIndex: 1 }}>
+                  <h3 className="text-white fw-bold mb-0">2020</h3>
+                  <p className="text-white small mb-0 opacity-75">Date de création</p>
+                </div>
               </div>
             </div>
           </div>
@@ -287,78 +311,63 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
             <div className="row g-4">
               {[
                 {
-                  img: '/ONGBusola-front/IMG-20251016-WA0099_cK78lYo.jpg',
+                  img: '/ONGBusola-front/axe2.png',
                   color: '#f59f23',
                   title: 'SANTÉ ET DROITS SEXUELS ET REPRODUCTIFS (SDSR)',
                   desc: 'Garantir l\'accès des adolescent(e)s jeunes et des femmes à une information complète et à des services de santé de qualité pour leur permettre de faire des choix libres et éclairés.',
-                  position: 'center center',
+                  icon: 'fa-tint',
                 },
                 {
                   img: '/ONGBusola-front/axe3.png',
                   color: '#2764AE',
                   title: 'PRÉVENTION ET RÉPONSE AUX VIOLENCES BASÉES SUR LE GENRE (VBG)',
                   desc: 'Mettre en œuvre des programmes de prévention et de lutte contre les VBG, faciliter la prise en charge des survivantes et mener un plaidoyer pour des politiques de tolérance zéro.',
-                  position: 'center top',
+                  icon: 'fa-hospital',
                 },
                 {
                   img: '/ONGBusola-front/axe4.png',
                   color: '#3ab074',
                   title: 'LEADERSHIP ET AUTONOMISATION',
                   desc: 'Renforcer l\'indépendance économique des femmes et des filles et promouvoir leur participation active à tous les niveaux de la prise de décision.',
-                  position: 'center top',
+                  icon: 'fa-users',
                 },
                 {
                   img: '/ONGBusola-front/axe5.png',
                   color: '#f59f23',
                   title: 'PAIX ET JUSTICE CLIMATIQUE',
                   desc: 'Renforcer le dialogue intercommunautaire autour des enjeux climatiques et promouvoir l\'engagement des jeunes et des femmes pour une paix durable et équitable.',
-                  position: 'center top',
+                  icon: 'fa-leaf',
                 },
               ].map((axe, i) => (
-                <div key={i} className="col-md-6">
-                  <div
-                    className="position-relative overflow-hidden"
-                    style={{ borderRadius: '8px', height: '260px' }}
-                    onMouseEnter={e => {
-                      const overlay = e.currentTarget.querySelector('.axe-overlay') as HTMLElement;
-                      if (overlay) overlay.style.opacity = '0.92';
-                    }}
-                    onMouseLeave={e => {
-                      const overlay = e.currentTarget.querySelector('.axe-overlay') as HTMLElement;
-                      if (overlay) overlay.style.opacity = '0.82';
-                    }}
+                <div key={i} className="col-md-6 mb-4">
+                  <div 
+                    className="h-100 border-0 transition-all hover-up shadow-sm d-flex flex-column" 
+                    style={{ borderRadius: '15px', overflow: 'hidden' }}
                   >
-                    {/* Image bien recadrée */}
-                    <img
-                      src={axe.img}
-                      alt={axe.title}
-                      style={{
-                        width: '100%',
-                        height: '260px',
-                        objectFit: 'cover',
-                        objectPosition: axe.position,
-                        display: 'block',
-                        imageRendering: 'auto',
-                      }}
-                    />
-                    {/* Overlay coloré — couvre le bas (45%) */}
-                    <div
-                      className="axe-overlay position-absolute start-0 w-100"
-                      style={{
-                        backgroundColor: axe.color,
-                        opacity: 0.82,
-                        top: '45%',
-                        bottom: 0,
-                        transition: 'opacity 0.3s ease',
-                      }}
-                    />
-                    {/* Texte sur l'overlay */}
-                    <div
-                      className="position-absolute w-100 px-4 pb-4"
-                      style={{ bottom: 0, left: 0 }}
-                    >
-                      <h5 className="fw-bold text-white mb-2" style={{ fontSize: '0.9rem', textTransform: 'uppercase', lineHeight: 1.3 }}>{axe.title}</h5>
-                      <p className="mb-0 text-white small" style={{ lineHeight: 1.6, opacity: 0.95 }}>{axe.desc}</p>
+                    {/* Partie Haute : Image (environ 45-50% de la carte) */}
+                    <div className="position-relative" style={{ height: '100px', flexShrink: 0 }}>
+                      <img 
+                        src={axe.img} 
+                        className="w-100 h-100" 
+                        style={{ objectFit: 'cover', objectPosition: 'center center' }} 
+                        alt={axe.title} 
+                      />
+                      {/* Icône (Rond Blanc - Style exact Image 1) */}
+                      <div className="position-absolute d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm" 
+                           style={{ width: '40px', height: '40px', top: '15px', left: '15px', zIndex: 10 }}>
+                        <i className={`fa ${axe.icon} fs-5`} style={{ color: axe.color }}></i>
+                      </div>
+                    </div>
+
+                    {/* Partie Basse : Bloc Couleur Unie avec texte (Taille très modérée) */}
+                    <div className="p-4 d-flex flex-column flex-grow-1 justify-content-start" style={{ backgroundColor: axe.color }}>
+                      <h4 className="fw-bold text-white text-uppercase mb-3" style={{ lineHeight: 1.3 }}>
+                        {axe.title}
+                      </h4>
+                      
+                      <p className="text-white mb-0" style={{ lineHeight: 1.6, opacity: 0.95, textAlign: 'justify', fontSize: '0.95rem' }}>
+                        {axe.desc}
+                      </p>
                     </div>
                   </div>
                 </div>
