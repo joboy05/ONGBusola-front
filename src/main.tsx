@@ -14,7 +14,7 @@ import ScrollToTop from './ScrollToTop'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/ONGBusola-front">
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
