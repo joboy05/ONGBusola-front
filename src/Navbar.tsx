@@ -35,7 +35,7 @@ export default function Navbar() {
               <div className="dropdown-menu border-0 m-0">
                 <Link to="/about" className="dropdown-item d-lg-none">Aller à la page A propos</Link>
                 <Link to="/team" className="dropdown-item">LA TEAM</Link>
-                <Link to="/about#vision-mission" className="dropdown-item">GALERIE</Link>
+                <Link to="/galerie" className="dropdown-item">GALERIE</Link>
                 <Link to="/ressources" className="dropdown-item">CENTRE DE RESSOURCES</Link>
               </div>
             </div>

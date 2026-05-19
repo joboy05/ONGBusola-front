@@ -11,6 +11,7 @@ import ContactPage from './ContactPage'
 import NewsPage from './NewsPage'
 import NewsDetailPage from './NewsDetailPage'
 import ScrollToTop from './ScrollToTop'
+import GalleryPage from './GalleryPage'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/actualites" element={<NewsPage />} />
         <Route path="/actualites/:id" element={<NewsDetailPage />} />
+        <Route path="/galerie" element={<GalleryPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
