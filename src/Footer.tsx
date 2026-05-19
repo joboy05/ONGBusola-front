@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
         <div className="row g-5">
           <div className="col-lg-4 col-md-6">
             <div className="mb-4">
-              <img className="img-fluid w-75" src="/ONGBusola-front/logo.png" style={{ filter: "brightness(0) invert(1)" }} alt="Logo Busola" />
+              <img className="img-fluid w-75" src="/logo.png" style={{ filter: "brightness(0) invert(1)" }} alt="Logo Busola" />
             </div>
             <p className="text-white-50 fs-6 mb-4 leading-relaxed">
               Depuis 2020, nous œuvrons aux côtés des femmes et des jeunes du Nord-Bénin pour construire un avenir de dignité, d'égalité et de paix.
@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
           </div>
           <div className="col-lg-2 col-md-6">
             <h4 className="text-white fw-bold mb-4">Navigation</h4>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/#apropos">À Propos</a>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/#actions">Nos Actions</a>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/#equipe">Notre Équipe</a>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/news">Actualités</a>
-            <a className="btn btn-link text-white-50 text-decoration-none" href="/ONGBusola-front/contact">Contact</a>
+            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/#apropos">À Propos</a>
+            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/#actions">Nos Actions</a>
+            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/#equipe">Notre Équipe</a>
+            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/news">Actualités</a>
+            <a className="btn btn-link text-white-50 text-decoration-none" href="/contact">Contact</a>
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-white fw-bold mb-4">Newsletter</h4>

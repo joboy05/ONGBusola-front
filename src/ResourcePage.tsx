@@ -7,22 +7,22 @@ const resources = [
   {
     title: 'STATUTS',
     description: 'STATUTS',
-    file: '/ONGBusola-front/STATUTS.pdf'
+    file: '/STATUTS.pdf'
   },
   {
     title: 'PEAHS',
     description: "POLITIQUE DE PROTECTION CONTRE L'EXPLOITATION, LES ABUS ET LE HARCELEMENT SEXUEL (PEAHS)",
-    file: '/ONGBusola-front/PEAHS_Busola_hv3fXKQ.pdf'
+    file: '/PEAHS_Busola_hv3fXKQ.pdf'
   },
   {
     title: 'REGLEMENT',
     description: 'REGLEMENT INTERIEUR',
-    file: '/ONGBusola-front/Règlement_Interieur_ONG_BUSOLA_1.pdf'
+    file: '/Règlement_Interieur_ONG_BUSOLA_1.pdf'
   },
   {
     title: 'Rapport de capitalisation RESPECT_ONG Busola',
     description: '',
-    file: '/ONGBusola-front/RAPPORT_DE_CAPITALISATION__RESPECT_BUSOLA2026_VF.pdf'
+    file: '/RAPPORT_DE_CAPITALISATION__RESPECT_BUSOLA2026_VF.pdf'
   }
 ];
 
@@ -45,7 +45,7 @@ export default function ResourcePage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
+          background: `url('/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',

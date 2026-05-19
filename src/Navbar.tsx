@@ -4,25 +4,25 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 export default function Navbar() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const isAbout = pathname === '/about';
+  const isAboutGroup = ['/about', '/team', '/galerie', '/ressources'].includes(pathname);
 
   return (
     <div className="nav-bar bg-primary p-0 sticky-top shadow-sm">
       <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
         <Link to="/" className="navbar-brand m-0">
-          <img width="170" height="50" src="/ONGBusola-front/logo.png" alt="Logo" />
+          <img width="170" height="50" src="/logo.png" alt="Logo" />
         </Link>
         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav mx-auto align-items-center">
-            <Link to="/" className={`nav-item nav-link ${!isAbout ? 'active' : ''}`}>Accueil</Link>
+            <Link to="/" className={`nav-item nav-link ${pathname === '/' ? 'active' : ''}`}>Accueil</Link>
 
             <div className="nav-item dropdown">
               <Link
                 to="/about"
-                className={`nav-link dropdown-toggle ${isAbout ? 'active' : ''}`}
+                className={`nav-link dropdown-toggle ${isAboutGroup ? 'active' : ''}`}
                 data-bs-toggle="dropdown"
                 onClick={(e) => {
                   if (window.innerWidth >= 992) {
@@ -40,12 +40,12 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link to="/actions" className="nav-item nav-link">Nos actions</Link>
-            <Link to="/actualites" className="nav-item nav-link">Nos actualités</Link>
-            <Link to="/contact" className="nav-item nav-link">Contact</Link>
+            <Link to="/actions" className={`nav-item nav-link ${pathname.startsWith('/actions') ? 'active' : ''}`}>Nos actions</Link>
+            <Link to="/actualites" className={`nav-item nav-link ${pathname.startsWith('/actualites') ? 'active' : ''}`}>Nos actualités</Link>
+            <Link to="/contact" className={`nav-item nav-link ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
           </div>
           <div className="ms-auto d-none d-lg-flex">
-            <a className="btn btn-secondary m-1 px-3 text-white fw-bold" href="#!" style={{ borderRadius: '7px' }}>Nous soutenir</a>
+            <Link className="btn btn-secondary m-1 px-3 text-white fw-bold" to="/soutenir" style={{ borderRadius: '7px' }}>Nous soutenir</Link>
           </div>
         </div>
       </nav>

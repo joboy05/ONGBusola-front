@@ -12,6 +12,7 @@ import NewsPage from './NewsPage'
 import NewsDetailPage from './NewsDetailPage'
 import ScrollToTop from './ScrollToTop'
 import GalleryPage from './GalleryPage'
+import SupportPage from './SupportPage'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/actualites" element={<NewsPage />} />
         <Route path="/actualites/:id" element={<NewsDetailPage />} />
         <Route path="/galerie" element={<GalleryPage />} />
+        <Route path="/soutenir" element={<SupportPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -8,7 +8,7 @@ const actions = [
     id: 'projet-respect',
     title: 'PROJET RESPECT',
     tag: 'DSSR & VBG',
-    img: '/ONGBusola-front/projet_respect.png',
+    img: '/projet_respect.png',
     desc: "Le projet RESPECT est une initiative de promotion des droits en santé sexuelle et reproductive (SSR) des adolescentes et des jeunes, intégrant la prévention des violences basées sur le genre (VBG) et le renforcement de l'engagement communautaire.",
     financement: '3000000.00 Fcfa'
   },
@@ -16,7 +16,7 @@ const actions = [
     id: 'tedidjo',
     title: 'TEDIDJO',
     tag: 'DSSR & VBG',
-    img: '/ONGBusola-front/tedjido.png',
+    img: '/tedjido.png',
     desc: "Le projet TEDIDJO est une initiative de développement communautaire visant à améliorer la santé sexuelle et reproductive (SSR) des adolescents et des jeunes, à prévenir les violences basées sur le genre (VBG) et à renforcer l'autonomisation des filles et des jeunes femmes, notamment dans les départements du nord du Bénin.",
     financement: '13000000.00 Fcfa'
   },
@@ -24,7 +24,7 @@ const actions = [
     id: 'yes',
     title: 'YES',
     tag: 'Autonomisation des jeunes',
-    img: '/ONGBusola-front/yes.png',
+    img: '/yes.png',
     desc: "Le projet YES (Youth Engagement for Sexual and Reproductive Health Rights) est une initiative visant à renforcer l'autonomisation des jeunes, à promouvoir l'accès aux droits en santé sexuelle et reproductive (SSR) et à prévenir les violences basées sur le genre (VBG).",
     financement: '3000000.00 Fcfa'
   },
@@ -32,7 +32,7 @@ const actions = [
     id: 'pageda',
     title: 'PAGEDA',
     tag: 'Leadership et Autonomisation',
-    img: '/ONGBusola-front/pageda.png',
+    img: '/pageda.png',
     desc: "Le Programme PAGEDA a pour objectif de lutter contre la pauvreté par l'Alphabétisation fonctionnelle, en liant les cours à la formation professionnelle, elle s'étend sur 27 communes du Nord Bénin. Ce programme est financé par la Coopération Suisse et vise l'autonomisation de 30 000 apprenants dans le Nord Bénin.",
     financement: '11000000.00 Fcfa'
   }
@@ -53,7 +53,7 @@ export default function ActionPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
+          background: `url('/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',

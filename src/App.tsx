@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Heart, Users, Handshake, ShieldCheck, MapPin, Phone, Mail, Facebook, Linkedin, Twitter, Youtube, ArrowRight, MessageCircle, Send, X, Menu, ArrowUp, BookOpen, Star, PlusCircle, ChevronDown, Quote } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -251,7 +252,7 @@ function App() {
                     Depuis 2020, L'ONG Busola oeuvre aux côtés des femmes et des jeunes du Nord-Bénin pour construire un avenir de dignité, d'égalité et de paix à travers une approche intégrée et des patenariats solides favorisant l'autonomie, la santé, la citoyenneté active et la cohésion sociale.
                   </p>
                   <div className="d-flex">
-                    <a className="btn btn-secondary text-white fw-bold text-uppercase rounded-1 py-2 px-4 me-3" href="#!">Soutenez nous</a>
+                    <Link className="btn btn-secondary text-white fw-bold text-uppercase rounded-1 py-2 px-4 me-3" to="/soutenir">Soutenez nous</Link>
                     <a className="btn btn-tertiary text-white rounded-1 py-2 fw-bold text-uppercase px-4" href="#!">Découvrez nos actions</a>
                   </div>
                 </div>
@@ -668,7 +669,7 @@ function App() {
           <div className="col-md-4 bg-secondary text-white p-5 wow fadeIn" data-wow-delay="0.3s">
             <h2 className="text-white text-uppercase mb-3">Soutenir <span className="text-white bg-primary px-2">Busola</span></h2>
             <p className="small mb-4">Chaque don compte pour financer nos projets de terrain.</p>
-            <a className="btn btn-light text-primary fw-bold rounded-pill px-4" href="#!">FAIRE UN DON</a>
+            <Link className="btn btn-light text-primary fw-bold rounded-pill px-4" to="/soutenir">FAIRE UN DON</Link>
           </div>
         </div>
 

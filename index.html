@@ -33,6 +33,18 @@
     <div id="root"></div>
     <script type="module" src="src/main.tsx"></script>
 
+    <!-- Clear any ghost Service Workers (e.g. from other localhost PWA apps) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+            console.log('Unregistered ghost ServiceWorker:', registration);
+          }
+        });
+      }
+    </script>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>

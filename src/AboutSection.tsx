@@ -126,7 +126,7 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
               <div className="position-relative">
                 <div className="overflow-hidden rounded-5 shadow-lg" style={{ height: "450px" }}>
                   <img
-                    src="/ONGBusola-front/about.jpeg"
+                    src="/about.jpeg"
                     alt="Équipe Busola"
                     className="img-fluid w-100 h-100 transition-all hover-scale"
                     style={{ objectFit: 'cover' }}
@@ -311,28 +311,28 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
             <div className="row g-4">
               {[
                 {
-                  img: '/ONGBusola-front/axe2.png',
+                  img: '/axe2.png',
                   color: '#f59f23',
                   title: 'SANTÉ ET DROITS SEXUELS ET REPRODUCTIFS (SDSR)',
                   desc: 'Garantir l\'accès des adolescent(e)s jeunes et des femmes à une information complète et à des services de santé de qualité pour leur permettre de faire des choix libres et éclairés.',
                   icon: 'fa-tint',
                 },
                 {
-                  img: '/ONGBusola-front/axe3.png',
+                  img: '/axe3.png',
                   color: '#2764AE',
                   title: 'PRÉVENTION ET RÉPONSE AUX VIOLENCES BASÉES SUR LE GENRE (VBG)',
                   desc: 'Mettre en œuvre des programmes de prévention et de lutte contre les VBG, faciliter la prise en charge des survivantes et mener un plaidoyer pour des politiques de tolérance zéro.',
                   icon: 'fa-hospital',
                 },
                 {
-                  img: '/ONGBusola-front/axe4.png',
+                  img: '/axe4.png',
                   color: '#3ab074',
                   title: 'LEADERSHIP ET AUTONOMISATION',
                   desc: 'Renforcer l\'indépendance économique des femmes et des filles et promouvoir leur participation active à tous les niveaux de la prise de décision.',
                   icon: 'fa-users',
                 },
                 {
-                  img: '/ONGBusola-front/axe5.png',
+                  img: '/axe5.png',
                   color: '#f59f23',
                   title: 'PAIX ET JUSTICE CLIMATIQUE',
                   desc: 'Renforcer le dialogue intercommunautaire autour des enjeux climatiques et promouvoir l\'engagement des jeunes et des femmes pour une paix durable et équitable.',

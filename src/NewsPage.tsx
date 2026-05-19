@@ -8,35 +8,35 @@ export const newsItems = [
     id: 1,
     title: "Déjeuner de cohésion sociale - Edition 2024",
     date: "17 Décembre 2025",
-    img: "/ONGBusola-front/Dejeuner.png",
+    img: "/Dejeuner.png",
     desc: "À l’occasion de la célébration de son quatrième anniversaire, BUSOLA ONG a organisé, les 24 et 25 mai 2024, deux journées dédiées à la paix et à la cohésion sociale à Parakou."
   },
   {
     id: 2,
     title: "Mobilisation des zem et conducteurs de Taxi contre la désinformation en période électorale pour préserver la cohésion sociale",
     date: "08 Février 2026",
-    img: "/ONGBusola-front/mobilisation.png",
+    img: "/mobilisation.png",
     desc: "Busola ONG, en collaboration avec la Direction Départementale de l’Intérieur et de la Sécurité Publique du Borgou et de l’Alibori, mobilise Zém et conducteurs de taxi pour lutter contre la désinformation en période électorale et renforcer la cohésion sociale."
   },
   {
     id: 3,
     title: "Renforcement de capacités en Plaidoyer et Redevabilité",
     date: "08 Février 2026",
-    img: "/ONGBusola-front/news-3.jpg",
+    img: "/news-3.jpg",
     desc: "Du 10 au 12 novembre 2025, l’Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l’appui de l’UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin. Cette initiative a réuni vingt-cinq membres de Busola et acteurs de la société civile partenaires..."
   },
   {
     id: 4,
     title: "48H contre le cancer du sein Edition 2025",
     date: "23 Octobre 2025",
-    img: "/ONGBusola-front/news-2.jpg",
+    img: "/news-2.jpg",
     desc: "Ce jeudi 23 octobre, la 2ème journée de notre initiative \"48h contre le Cancer du Sein\" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d’un deuxieme pole économique majeur de Parakou : Le marché dépôt."
   },
   {
     id: 5,
     title: "Cérémonie de présentation des voeux au CA et aux PTF de Busola",
     date: "20 Février 2026",
-    img: "/ONGBusola-front/news-1.jpg",
+    img: "/news-1.jpg",
     desc: "10 Février, Busola ONG a vécu un instant d’exception à l’occasion de sa cérémonie de présentation des vœux à son Président d’Honneur, Monsieur Alain ASSANKPO, ainsi à ses partenaires techniques et financiers locaux, nationaux et internationaux."
   }
 ];
@@ -58,7 +58,7 @@ export default function NewsPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
+          background: `url('/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',

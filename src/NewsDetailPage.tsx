@@ -29,7 +29,7 @@ export default function NewsDetailPage() {
         className="container-fluid d-flex flex-column align-items-center justify-content-center"
         style={{
           minHeight: '280px',
-          background: `url('/ONGBusola-front/motif-logo.png') center/cover`,
+          background: `url('/motif-logo.png') center/cover`,
           opacity: 0.9,
           position: 'relative',
           paddingTop: '80px',
