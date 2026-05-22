@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Linkedin, Twitter, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -33,8 +34,8 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="footer" className="container-fluid footer py-5 bg-dark wow fadeIn" data-wow-delay="0.1s" style={{ borderTop: '8px solid var(--bs-secondary)' }}>
-      <div className="container py-5">
+    <footer id="footer" className="container-fluid footer pt-4 pb-4 bg-dark wow fadeIn" data-wow-delay="0.1s" style={{ borderTop: '8px solid var(--bs-secondary)' }}>
+      <div className="container pt-3 pb-4">
         <div className="row g-5">
           <div className="col-lg-4 col-md-6">
             <div className="mb-4">
@@ -65,11 +66,12 @@ const Footer: React.FC = () => {
           </div>
           <div className="col-lg-2 col-md-6">
             <h4 className="text-white fw-bold mb-4">Navigation</h4>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/#apropos">À Propos</a>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/#actions">Nos Actions</a>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/#equipe">Notre Équipe</a>
-            <a className="btn btn-link text-white-50 text-decoration-none mb-2" href="/ONGBusola-front/news">Actualités</a>
-            <a className="btn btn-link text-white-50 text-decoration-none" href="/ONGBusola-front/contact">Contact</a>
+            <Link className="btn btn-link text-white-50 text-decoration-none mb-2 d-block text-start" to="/about">À Propos</Link>
+            <Link className="btn btn-link text-white-50 text-decoration-none mb-2 d-block text-start" to="/actions">Nos Actions</Link>
+            <Link className="btn btn-link text-white-50 text-decoration-none mb-2 d-block text-start" to="/team">Notre Équipe</Link>
+            <Link className="btn btn-link text-white-50 text-decoration-none mb-2 d-block text-start" to="/galerie">Galerie</Link>
+            <Link className="btn btn-link text-white-50 text-decoration-none mb-2 d-block text-start" to="/actualites">Actualités</Link>
+            <Link className="btn btn-link text-white-50 text-decoration-none d-block text-start" to="/contact">Contact</Link>
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-white fw-bold mb-4">Newsletter</h4>

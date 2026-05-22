@@ -6,7 +6,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 1",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484528667_1076017081234581_5468232618266679322_n.jpg",
+    "img": "/gallery/484528667_1076017081234581_5468232618266679322_n.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 1/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -16,7 +16,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 2",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484555152_1076017031234586_8611261274879065372_n.jpg",
+    "img": "/gallery/484555152_1076017031234586_8611261274879065372_n.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 2/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -26,7 +26,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 3",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484783623_1076016857901270_2225617598526822804_n.jpg",
+    "img": "/gallery/484783623_1076016857901270_2225617598526822804_n.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 3/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -36,7 +36,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 4",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484072428_1076016864567936_3711715331058270339_n_Hke9aN0.jpg",
+    "img": "/gallery/484072428_1076016864567936_3711715331058270339_n_Hke9aN0.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 4/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -46,7 +46,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 5",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484091679_1076017064567916_7152508016239654659_n_zvV9l6N.jpg",
+    "img": "/gallery/484091679_1076017064567916_7152508016239654659_n_zvV9l6N.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 5/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -56,7 +56,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 6",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484149533_1076016914567931_4185037950618386607_n_p0wZbPv.jpg",
+    "img": "/gallery/484149533_1076016914567931_4185037950618386607_n_p0wZbPv.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 6/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -66,7 +66,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 7",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484164263_1076017021234587_6414870807836586091_n_zCxbPU2.jpg",
+    "img": "/gallery/484164263_1076017021234587_6414870807836586091_n_zCxbPU2.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 7/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -76,7 +76,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 8",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484191805_1076017091234580_1437664556009335235_n_XBjkrLD.jpg",
+    "img": "/gallery/484191805_1076017091234580_1437664556009335235_n_XBjkrLD.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 8/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -86,7 +86,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 9",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484244713_1076016861234603_5269455461605233138_n_ElDnkxg.jpg",
+    "img": "/gallery/484244713_1076016861234603_5269455461605233138_n_ElDnkxg.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 9/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -96,7 +96,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 10",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484269729_1076017331234556_6236149164847289170_n_Fh4q1ab.jpg",
+    "img": "/gallery/484269729_1076017331234556_6236149164847289170_n_Fh4q1ab.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 10/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -106,7 +106,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 11",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484320679_1076016027901353_4951928410946398074_n_uuidePd.jpg",
+    "img": "/gallery/484320679_1076016027901353_4951928410946398074_n_uuidePd.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 11/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -116,7 +116,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 12",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484342673_1076017034567919_3019854611157333233_n_nQYfxjQ.jpg",
+    "img": "/gallery/484342673_1076017034567919_3019854611157333233_n_nQYfxjQ.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 12/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -126,7 +126,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 13",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484348678_1076017051234584_137647462155535418_n_kN23w0y.jpg",
+    "img": "/gallery/484348678_1076017051234584_137647462155535418_n_kN23w0y.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 13/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -136,7 +136,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 14",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484355429_1076017041234585_6011780221015654228_n_0cGgYs9.jpg",
+    "img": "/gallery/484355429_1076017041234585_6011780221015654228_n_0cGgYs9.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 14/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -146,7 +146,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 15",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484491957_1076017087901247_335125118563590463_n_RWiaprX.jpg",
+    "img": "/gallery/484491957_1076017087901247_335125118563590463_n_RWiaprX.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 15/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -156,7 +156,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 16",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484493172_1076017024567920_3280376124762105683_n_aSlWX1A.jpg",
+    "img": "/gallery/484493172_1076017024567920_3280376124762105683_n_aSlWX1A.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 16/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -166,7 +166,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 17",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/484526147_1076017037901252_8213786220639388458_n_JRhM68I.jpg",
+    "img": "/gallery/484526147_1076017037901252_8213786220639388458_n_JRhM68I.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 17/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -176,7 +176,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de cohésion sociale - Vue 18",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/485143467_1076017017901254_1283306627836466384_n.jpg",
+    "img": "/gallery/485143467_1076017017901254_1283306627836466384_n.jpg",
     "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 18/19)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -196,7 +196,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 1",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0090.jpg",
+    "img": "/gallery/IMG-20251016-WA0090.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 1/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -206,7 +206,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 2",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0070.jpg",
+    "img": "/gallery/IMG-20251016-WA0070.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 2/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -216,7 +216,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 3",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0059.jpg",
+    "img": "/gallery/IMG-20251016-WA0059.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 3/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -226,7 +226,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 4",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0060.jpg",
+    "img": "/gallery/IMG-20251016-WA0060.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 4/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -236,7 +236,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 5",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0066.jpg",
+    "img": "/gallery/IMG-20251016-WA0066.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 5/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -246,7 +246,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 6",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0073.jpg",
+    "img": "/gallery/IMG-20251016-WA0073.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 6/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -256,7 +256,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 7",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0077.jpg",
+    "img": "/gallery/IMG-20251016-WA0077.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 7/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -266,7 +266,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 8",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0081.jpg",
+    "img": "/gallery/IMG-20251016-WA0081.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 8/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -276,7 +276,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 9",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0083.jpg",
+    "img": "/gallery/IMG-20251016-WA0083.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 9/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -286,7 +286,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 10",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0090_zrbKHfy.jpg",
+    "img": "/gallery/IMG-20251016-WA0090_zrbKHfy.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 10/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -296,7 +296,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 11",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0094.jpg",
+    "img": "/gallery/IMG-20251016-WA0094.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 11/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -306,7 +306,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 12",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0098.jpg",
+    "img": "/gallery/IMG-20251016-WA0098.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 12/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -316,7 +316,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 13",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0102.jpg",
+    "img": "/gallery/IMG-20251016-WA0102.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 13/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -326,7 +326,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 14",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251016-WA0103.jpg",
+    "img": "/gallery/IMG-20251016-WA0103.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 14/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -336,7 +336,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 15",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251017-WA0103.jpg",
+    "img": "/gallery/IMG-20251017-WA0103.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 15/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -346,7 +346,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 16",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251017-WA0104.jpg",
+    "img": "/gallery/IMG-20251017-WA0104.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 16/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -356,7 +356,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 17",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251017-WA0105.jpg",
+    "img": "/gallery/IMG-20251017-WA0105.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 17/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -366,7 +366,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 18",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251017-WA0106.jpg",
+    "img": "/gallery/IMG-20251017-WA0106.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 18/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -376,7 +376,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 19",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20251017-WA0108.jpg",
+    "img": "/gallery/IMG-20251017-WA0108.jpg",
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 19/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG"
@@ -386,7 +386,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 1",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0165.jpg",
+    "img": "/gallery/IMG-20250322-WA0165.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 1/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -396,7 +396,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 2",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0167.jpg",
+    "img": "/gallery/IMG-20250322-WA0167.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 2/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -406,7 +406,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 3",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0168.jpg",
+    "img": "/gallery/IMG-20250322-WA0168.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 3/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -416,7 +416,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 4",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0175.jpg",
+    "img": "/gallery/IMG-20250322-WA0175.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 4/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -426,7 +426,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 5",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0178.jpg",
+    "img": "/gallery/IMG-20250322-WA0178.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 5/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -436,7 +436,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 6",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0179.jpg",
+    "img": "/gallery/IMG-20250322-WA0179.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 6/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -446,7 +446,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 7",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0181.jpg",
+    "img": "/gallery/IMG-20250322-WA0181.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 7/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -456,7 +456,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 8",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0182.jpg",
+    "img": "/gallery/IMG-20250322-WA0182.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 8/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -466,7 +466,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 9",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0184.jpg",
+    "img": "/gallery/IMG-20250322-WA0184.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 9/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -476,7 +476,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 10",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0185.jpg",
+    "img": "/gallery/IMG-20250322-WA0185.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 10/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -486,7 +486,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 11",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0188.jpg",
+    "img": "/gallery/IMG-20250322-WA0188.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 11/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -496,7 +496,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 12",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0200.jpg",
+    "img": "/gallery/IMG-20250322-WA0200.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 12/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -506,7 +506,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 13",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0211.jpg",
+    "img": "/gallery/IMG-20250322-WA0211.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 13/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -516,7 +516,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 14",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0264.jpg",
+    "img": "/gallery/IMG-20250322-WA0264.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 14/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -526,7 +526,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 15",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250322-WA0268.jpg",
+    "img": "/gallery/IMG-20250322-WA0268.jpg",
     "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 15/15)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -536,7 +536,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 1",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1150.JPG",
+    "img": "/gallery/IMG_1150.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 1/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -546,7 +546,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 2",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1158.JPG",
+    "img": "/gallery/IMG_1158.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 2/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -556,7 +556,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 3",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1198.JPG",
+    "img": "/gallery/IMG_1198.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 3/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -566,7 +566,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 4",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1217.JPG",
+    "img": "/gallery/IMG_1217.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 4/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -576,7 +576,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 5",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1248.JPG",
+    "img": "/gallery/IMG_1248.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 5/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -586,7 +586,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 6",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1260.JPG",
+    "img": "/gallery/IMG_1260.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 6/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -596,7 +596,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 7",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_9311.jpg",
+    "img": "/gallery/IMG_9311.jpg",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 7/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -606,7 +606,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 8",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_9318.jpg",
+    "img": "/gallery/IMG_9318.jpg",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 8/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -616,7 +616,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 9",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_9339.jpg",
+    "img": "/gallery/IMG_9339.jpg",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 9/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -626,7 +626,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 10",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/7.JPG",
+    "img": "/gallery/7.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 10/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -636,7 +636,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 11",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/17.JPG",
+    "img": "/gallery/17.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 11/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -646,7 +646,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 12",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/21.JPG",
+    "img": "/gallery/21.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 12/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -656,7 +656,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 13",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/22.JPG",
+    "img": "/gallery/22.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 13/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -666,7 +666,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 14",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/26.JPG",
+    "img": "/gallery/26.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 14/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -676,7 +676,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 15",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/27.JPG",
+    "img": "/gallery/27.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 15/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -686,7 +686,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 16",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/31.JPG",
+    "img": "/gallery/31.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 16/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -696,7 +696,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 17",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/32.JPG",
+    "img": "/gallery/32.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 17/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -706,7 +706,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 18",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/34.JPG",
+    "img": "/gallery/34.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 18/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -716,7 +716,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 19",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/40.JPG",
+    "img": "/gallery/40.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 19/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -726,7 +726,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 20",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/42.JPG",
+    "img": "/gallery/42.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 20/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -736,7 +736,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 21",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1356.JPG",
+    "img": "/gallery/IMG_1356.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 21/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -746,7 +746,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 22",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1360.JPG",
+    "img": "/gallery/IMG_1360.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 22/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -756,7 +756,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 23",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1361.JPG",
+    "img": "/gallery/IMG_1361.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 23/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -766,7 +766,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 24",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1364.JPG",
+    "img": "/gallery/IMG_1364.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 24/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -776,7 +776,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 25",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1373.JPG",
+    "img": "/gallery/IMG_1373.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 25/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -786,7 +786,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 26",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1471.JPG",
+    "img": "/gallery/IMG_1471.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 26/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -796,7 +796,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 27",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1496.JPG",
+    "img": "/gallery/IMG_1496.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 27/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -806,7 +806,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 28",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1503.JPG",
+    "img": "/gallery/IMG_1503.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 28/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -816,7 +816,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 29",
     "category": "tedidjo",
     "categoryLabel": "TEDIDJO",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_1504.JPG",
+    "img": "/gallery/IMG_1504.JPG",
     "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 29/29)",
     "date": "2025/2026",
     "tag": "Droits des femmes"
@@ -826,7 +826,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 1",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0325.JPG",
+    "img": "/gallery/IMG_0325.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 1/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -836,7 +836,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 2",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0341.JPG",
+    "img": "/gallery/IMG_0341.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 2/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -846,7 +846,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 3",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0351.JPG",
+    "img": "/gallery/IMG_0351.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 3/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -856,7 +856,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 4",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0357.JPG",
+    "img": "/gallery/IMG_0357.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 4/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -866,7 +866,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 5",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0373.JPG",
+    "img": "/gallery/IMG_0373.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 5/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -876,7 +876,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 6",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0389.JPG",
+    "img": "/gallery/IMG_0389.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 6/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -886,7 +886,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 7",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0400.JPG",
+    "img": "/gallery/IMG_0400.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 7/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -896,7 +896,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 8",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0479.JPG",
+    "img": "/gallery/IMG_0479.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 8/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -906,7 +906,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 9",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0481.JPG",
+    "img": "/gallery/IMG_0481.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 9/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -916,7 +916,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 10",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0666.JPG",
+    "img": "/gallery/IMG_0666.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 10/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -926,7 +926,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 11",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0667.JPG",
+    "img": "/gallery/IMG_0667.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 11/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -936,7 +936,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 12",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0668.JPG",
+    "img": "/gallery/IMG_0668.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 12/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -946,7 +946,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 13",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0675.JPG",
+    "img": "/gallery/IMG_0675.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 13/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -956,7 +956,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 14",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0699.JPG",
+    "img": "/gallery/IMG_0699.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 14/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -966,7 +966,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 15",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0701.JPG",
+    "img": "/gallery/IMG_0701.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 15/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -976,7 +976,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 16",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0703.JPG",
+    "img": "/gallery/IMG_0703.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 16/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -986,7 +986,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 17",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0720.JPG",
+    "img": "/gallery/IMG_0720.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 17/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -996,7 +996,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 18",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0721.JPG",
+    "img": "/gallery/IMG_0721.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 18/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1006,7 +1006,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 19",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0723.JPG",
+    "img": "/gallery/IMG_0723.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 19/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1016,7 +1016,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 20",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0724.JPG",
+    "img": "/gallery/IMG_0724.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 20/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1026,7 +1026,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 21",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0730.JPG",
+    "img": "/gallery/IMG_0730.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 21/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1036,7 +1036,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 22",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0734.JPG",
+    "img": "/gallery/IMG_0734.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 22/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1046,7 +1046,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Déjeuner de plaidoyer - Vue 23",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG_0735.JPG",
+    "img": "/gallery/IMG_0735.JPG",
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 23/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1056,7 +1056,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 1",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250923-WA0043.jpg",
+    "img": "/gallery/IMG-20250923-WA0043.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 1/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1066,7 +1066,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 2",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250923-WA0044.jpg",
+    "img": "/gallery/IMG-20250923-WA0044.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 2/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1076,7 +1076,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 3",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250923-WA0045.jpg",
+    "img": "/gallery/IMG-20250923-WA0045.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 3/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1086,7 +1086,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 4",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250923-WA0046.jpg",
+    "img": "/gallery/IMG-20250923-WA0046.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 4/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1096,7 +1096,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 5",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0003.jpg",
+    "img": "/gallery/IMG-20250926-WA0003.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 5/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1106,7 +1106,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 6",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0004.jpg",
+    "img": "/gallery/IMG-20250926-WA0004.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 6/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1116,7 +1116,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 7",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0005.jpg",
+    "img": "/gallery/IMG-20250926-WA0005.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 7/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1126,7 +1126,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 8",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0006.jpg",
+    "img": "/gallery/IMG-20250926-WA0006.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 8/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1136,7 +1136,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 9",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0008.jpg",
+    "img": "/gallery/IMG-20250926-WA0008.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 9/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1146,7 +1146,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 10",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0009.jpg",
+    "img": "/gallery/IMG-20250926-WA0009.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 10/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1156,7 +1156,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 11",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0010.jpg",
+    "img": "/gallery/IMG-20250926-WA0010.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 11/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1166,7 +1166,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 12",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0011.jpg",
+    "img": "/gallery/IMG-20250926-WA0011.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 12/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1176,7 +1176,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 13",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0012.jpg",
+    "img": "/gallery/IMG-20250926-WA0012.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 13/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1186,7 +1186,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 14",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0013.jpg",
+    "img": "/gallery/IMG-20250926-WA0013.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 14/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1196,7 +1196,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 15",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0014.jpg",
+    "img": "/gallery/IMG-20250926-WA0014.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 15/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1206,7 +1206,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 16",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0015.jpg",
+    "img": "/gallery/IMG-20250926-WA0015.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 16/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1216,7 +1216,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 17",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0016.jpg",
+    "img": "/gallery/IMG-20250926-WA0016.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 17/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1226,7 +1226,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 18",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0017.jpg",
+    "img": "/gallery/IMG-20250926-WA0017.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 18/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1236,7 +1236,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 19",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0018.jpg",
+    "img": "/gallery/IMG-20250926-WA0018.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 19/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1246,7 +1246,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 20",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0019.jpg",
+    "img": "/gallery/IMG-20250926-WA0019.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 20/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1256,7 +1256,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 21",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0020.jpg",
+    "img": "/gallery/IMG-20250926-WA0020.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 21/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1266,7 +1266,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 22",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0022.jpg",
+    "img": "/gallery/IMG-20250926-WA0022.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 22/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1276,7 +1276,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Bootcamp Immersif - YES 2025 - Vue 23",
     "category": "yes",
     "categoryLabel": "YES",
-    "img": "https://busolaong.com/mediafiles/galerie/IMG-20250926-WA0023.jpg",
+    "img": "/gallery/IMG-20250926-WA0023.jpg",
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 23/23)",
     "date": "2025/2026",
     "tag": "Jeunesse"
@@ -1286,7 +1286,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 1",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_30.jpg.jpeg",
+    "img": "/gallery/BUSOLA_30.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 1/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1296,7 +1296,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 2",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_27.jpg.jpeg",
+    "img": "/gallery/BUSOLA_27.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 2/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1306,7 +1306,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 3",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_28.jpg.jpeg",
+    "img": "/gallery/BUSOLA_28.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 3/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1316,7 +1316,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 4",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_11.jpg.jpeg",
+    "img": "/gallery/BUSOLA_11.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 4/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1326,7 +1326,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 5",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_38.jpg.jpeg",
+    "img": "/gallery/BUSOLA_38.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 5/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1336,7 +1336,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 6",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_39.jpg.jpeg",
+    "img": "/gallery/BUSOLA_39.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 6/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1346,7 +1346,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 7",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_42.jpg.jpeg",
+    "img": "/gallery/BUSOLA_42.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 7/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1356,7 +1356,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 8",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_49.jpg.jpeg",
+    "img": "/gallery/BUSOLA_49.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 8/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1366,7 +1366,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 9",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_46.jpg.jpeg",
+    "img": "/gallery/BUSOLA_46.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 9/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1376,7 +1376,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 10",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_14.jpg.jpeg",
+    "img": "/gallery/BUSOLA_14.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 10/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1386,7 +1386,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 11",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_17.jpg.jpeg",
+    "img": "/gallery/BUSOLA_17.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 11/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1396,7 +1396,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 12",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_26.jpg.jpeg",
+    "img": "/gallery/BUSOLA_26.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 12/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1406,7 +1406,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 13",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_37.jpg.jpeg",
+    "img": "/gallery/BUSOLA_37.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 13/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1416,7 +1416,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 14",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_32.jpg.jpeg",
+    "img": "/gallery/BUSOLA_32.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 14/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1426,7 +1426,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 15",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_48.jpg.jpeg",
+    "img": "/gallery/BUSOLA_48.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 15/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1436,7 +1436,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 16",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_21.jpg.jpeg",
+    "img": "/gallery/BUSOLA_21.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 16/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1446,7 +1446,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 17",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_31.jpg.jpeg",
+    "img": "/gallery/BUSOLA_31.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 17/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1456,7 +1456,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 18",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_51.jpg.jpeg",
+    "img": "/gallery/BUSOLA_51.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 18/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1466,7 +1466,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 19",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_5.jpg.jpeg",
+    "img": "/gallery/BUSOLA_5.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 19/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1476,7 +1476,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 20",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_13.jpg.jpeg",
+    "img": "/gallery/BUSOLA_13.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 20/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1486,7 +1486,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 21",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_73.jpg.jpeg",
+    "img": "/gallery/BUSOLA_73.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 21/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1496,7 +1496,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 22",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_25.jpg.jpeg",
+    "img": "/gallery/BUSOLA_25.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 22/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"
@@ -1506,7 +1506,7 @@ export const galleryItems: GalleryItem[] = [
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 23",
     "category": "ngo",
     "categoryLabel": "Vie de l'ONG",
-    "img": "https://busolaong.com/mediafiles/galerie/BUSOLA_36.jpg.jpeg",
+    "img": "/gallery/BUSOLA_36.jpg.jpeg",
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 23/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG"

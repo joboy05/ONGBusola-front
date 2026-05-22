@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Users, Handshake, ShieldCheck, MapPin, Phone, Mail, Facebook, Linkedin, Twitter, Youtube, ArrowRight, MessageCircle, Send, X, Menu, ArrowUp, BookOpen, Star, PlusCircle, ChevronDown, Quote } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -301,21 +302,12 @@ function App() {
             <div className="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.3s">
               <div className="ps-lg-5">
                 <div className="position-relative mb-5">
-                  <div className="mb-4">
-                    {/* Badge style Référence */}
-                    <div className="d-flex align-items-center mb-3">
-                      <span className="text-white text-uppercase px-3 py-1 fw-bold" style={{ backgroundColor: '#27ae60', borderRadius: '4px', fontSize: '0.85rem' }}>
-                        QUI SOMMES-NOUS ?
-                      </span>
-                      <div className="ms-3 flex-grow-1 border-bottom border-2" style={{ borderColor: '#27ae60', opacity: 0.3 }}></div>
-                    </div>
-                    
-                    {/* Titre Bloc Bleu */}
-                    <div className="d-inline-block bg-primary px-4 py-3 mb-4 rounded-1 shadow-sm" style={{ borderLeft: '8px solid var(--bs-secondary)' }}>
-                      <h2 className="fw-black text-white text-uppercase mb-0" style={{ fontSize: '2.8rem', fontWeight: 900 }}>
-                        ONG BUSOLA
-                      </h2>
-                    </div>
+                  <div className="position-absolute" style={{ top: "-25px", left: "20px", zIndex: 2 }}>
+                    <span className="badge bg-tertiary text-white px-4 py-2 fw-bold text-uppercase" style={{ borderRadius: "4px", fontSize: "0.85rem", letterSpacing: "1px" }}>Qui sommes-nous ?</span>
+                  </div>
+                  <div className="bg-primary p-5 rounded-4 shadow-lg d-flex align-items-center justify-content-between" style={{ borderLeft: "10px solid var(--bs-secondary)" }}>
+                    <h2 className="fw-black mb-0 text-uppercase" style={{ fontSize: "3rem", color: "#fff", fontWeight: "900" }}>ONG BUSOLA</h2>
+                    <img src="logo-hands.png" className="img-fluid d-none d-lg-block" style={{ maxHeight: "100px", filter: "brightness(0) invert(1)" }} alt="Logo" />
                   </div>
                 </div>
 
@@ -365,10 +357,10 @@ function App() {
       {/* Principales Actions Menées (Programmes) */}
       <div id="actions" className="container-fluid py-5 bg-white position-relative overflow-hidden" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
         
-        {/* Animated Background Shapes */}
-        <div className="bg-shape bg-primary rounded-circle" style={{ width: '400px', height: '400px', top: '-100px', left: '-100px', animation: 'move 10s infinite alternate' }}></div>
-        <div className="bg-shape bg-secondary rounded-circle" style={{ width: '300px', height: '300px', bottom: '10%', right: '-50px', animation: 'move 12s infinite alternate-reverse' }}></div>
-        <div className="bg-shape bg-tertiary" style={{ width: '500px', height: '500px', top: '20%', right: '10%', animation: 'slowRotate 20s linear infinite' }}></div>
+        {/* Subtle Animated Background Shapes */}
+        <div className="position-absolute bg-primary rounded-circle" style={{ width: '600px', height: '600px', top: '-20%', left: '-10%', filter: 'blur(120px)', opacity: 0.08, animation: 'move 15s infinite alternate', zIndex: 0 }}></div>
+        <div className="position-absolute bg-secondary rounded-circle" style={{ width: '500px', height: '500px', bottom: '-10%', right: '-5%', filter: 'blur(120px)', opacity: 0.08, animation: 'move 20s infinite alternate-reverse', zIndex: 0 }}></div>
+        <div className="position-absolute bg-tertiary rounded-circle" style={{ width: '400px', height: '400px', top: '30%', right: '20%', filter: 'blur(120px)', opacity: 0.08, animation: 'slowRotate 25s linear infinite', zIndex: 0 }}></div>
 
         <div className="container py-5 position-relative" style={{ zIndex: 1 }}>
           <div className="d-flex justify-content-between align-items-end mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -378,85 +370,85 @@ function App() {
               <div style={{ width: '60px', height: '4px', background: 'var(--bs-secondary)', marginTop: '15px' }}></div>
             </div>
             <a href="#!" className="btn btn-outline-primary rounded-pill px-4 py-2 d-none d-md-block fw-bold">
-              Voir tous les programmes <i className="fa fa-arrow-right ms-2"></i>
+              Voir tous les programmes <ArrowRight size={16} className="ms-2" />
             </a>
           </div>
 
           <div className="row g-4">
             {/* Programme 1 - PAGEDA */}
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-              <div className="card border shadow-sm rounded-4 overflow-hidden h-100 transition-all hover-up">
+              <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
                 <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
                   <img src="action-1.jpg" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="PAGEDA" />
                   <span className="badge position-absolute top-0 start-0 m-3 bg-primary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>Autonomisation</span>
                 </div>
-                <div className="card-body p-4 bg-white border-top border-4 border-primary">
+                <div className="card-body p-4 bg-white">
                   <div className="mb-3">
-                    <BookOpen className="text-primary" size={32} />
+                    <BookOpen className="text-primary" size={28} />
                   </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#1a1a1a' }}>PAGEDA — Alphabétisation fonctionnelle</h4>
+                  <h5 className="fw-bold mb-3 text-dark">PAGEDA — Alphabétisation fonctionnelle</h5>
                   <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
                     Programme de lutte contre la pauvreté par l’alphabétisation fonctionnelle liée à la formation professionnelle. 27 communes couvertes, financement Coopération Suisse.
                   </p>
                   <div className="d-flex flex-wrap gap-2 mb-4">
-                    <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border">30 000 apprenants</span>
-                    <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border">Nord-Bénin</span>
+                    <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-primary)', opacity: 0.8 }}>30 000 apprenants</span>
+                    <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-primary)', opacity: 0.8 }}>Nord-Bénin</span>
                   </div>
-                  <a href="#!" className="text-primary fw-bold text-decoration-none small hover-right d-inline-flex align-items-center">
-                    En savoir plus <ArrowRight size={16} className="ms-2" />
-                  </a>
+                  <Link to="/galerie?filter=pageda" className="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                    Voir la galerie photos <ArrowRight size={16} className="ms-2" />
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Programme 2 - YES */}
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-              <div className="card border shadow-sm rounded-4 overflow-hidden h-100 transition-all hover-up">
+              <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
                 <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
                   <img src="action-2.jpg" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="YES" />
                   <span className="badge position-absolute top-0 start-0 m-3 bg-secondary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>Jeunesse</span>
                 </div>
-                <div className="card-body p-4 bg-white border-top border-4 border-secondary">
+                <div className="card-body p-4 bg-white">
                   <div className="mb-3">
-                    <Star className="text-secondary" size={32} />
+                    <Star className="text-secondary" size={28} />
                   </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#1a1a1a' }}>YES — Youth Engagement for SRH Rights</h4>
+                  <h5 className="fw-bold mb-3 text-dark">YES — Youth Engagement for SRH Rights</h5>
                   <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
                     Initiative renforçant l’autonomisation des jeunes, promouvant l’accès aux droits en santé sexuelle et reproductive et prévenant les violences basées sur le genre.
                   </p>
                   <div className="d-flex flex-wrap gap-2 mb-4">
-                    <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border">DSSR</span>
-                    <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border">VBG</span>
+                    <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-secondary)', opacity: 0.8 }}>DSSR</span>
+                    <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-secondary)', opacity: 0.8 }}>VBG</span>
                   </div>
-                  <a href="#!" className="text-secondary fw-bold text-decoration-none small hover-right d-inline-flex align-items-center">
-                    En savoir plus <ArrowRight size={16} className="ms-2" />
-                  </a>
+                  <Link to="/galerie?filter=yes" className="text-secondary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                    Voir la galerie photos <ArrowRight size={16} className="ms-2" />
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Programme 3 - TEDIDJO */}
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-              <div className="card border shadow-sm rounded-4 overflow-hidden h-100 transition-all hover-up">
+              <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
                 <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
                   <img src="action-3.jpg" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="TEDIDJO" />
                   <span className="badge position-absolute top-0 start-0 m-3 bg-tertiary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>DSSR & VBG</span>
                 </div>
-                <div className="card-body p-4 bg-white border-top border-4 border-tertiary">
+                <div className="card-body p-4 bg-white">
                   <div className="mb-3">
-                    <Heart className="text-tertiary" size={32} />
+                    <Heart className="text-tertiary" size={28} />
                   </div>
-                  <h4 className="fw-bold mb-3" style={{ color: '#1a1a1a' }}>TEDIDJO — Santé reproductive & protection</h4>
+                  <h5 className="fw-bold mb-3 text-dark">TEDIDJO — Santé reproductive & protection</h5>
                   <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
                     Amélioration de la santé sexuelle et reproductive des adolescents, prévention des VBG et renforcement de l’autonomisation des filles — Borgou & Alibori.
                   </p>
                   <div className="d-flex flex-wrap gap-2 mb-4">
-                    <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border">CARE Bénin</span>
-                    <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border">Borgou</span>
+                    <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-tertiary)', opacity: 0.8 }}>CARE Bénin</span>
+                    <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-tertiary)', opacity: 0.8 }}>Borgou</span>
                   </div>
-                  <a href="#!" className="text-tertiary fw-bold text-decoration-none small hover-right d-inline-flex align-items-center">
-                    En savoir plus <ArrowRight size={16} className="ms-2" />
-                  </a>
+                  <Link to="/galerie?filter=tedidjo" className="text-tertiary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                    Voir la galerie photos <ArrowRight size={16} className="ms-2" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -598,7 +590,7 @@ function App() {
         </div>
       </div>
 
-      {/* Testimonials - Premium Layout */}
+      {/* Testimonials - Original Split Layout with Large Photo */}
       <div className="container-fluid py-5 bg-light" id="temoignages">
         <div className="container py-5">
           <div className="row g-5 align-items-center">
@@ -614,37 +606,51 @@ function App() {
               </div>
             </div>
             <div className="col-lg-7">
-              <div className="owl-carousel testimonial-carousel position-relative wow fadeInRight" data-wow-delay="0.3s">
-                {[
-                  { 
-                    text: "Grâce à l’ONG Busola, j’ai pu participer à des ateliers de formation où les femmes et les jeunes étaient pleinement impliqués. C'est inspirant de voir une organisation aussi engagée pour notre autonomisation.",
-                    name: "Makou Menadèle Murielle",
-                    role: "Bénéficiaire du programme YES",
-                    photo: "testimony1.jpg"
-                  },
-                  { 
-                    text: "L'approche de Busola en matière de redevabilité et de plaidoyer est un exemple à suivre pour les organisations de la société civile au Bénin.",
-                    name: "Dr. Koffi A.",
-                    role: "Partenaire Technique",
-                    photo: "testimony1.jpg"
-                  }
-                ].map((t, i) => (
-                  <div key={i} className="testimonial-item p-5 bg-white rounded-5 shadow-sm mx-2">
-                    <p className="fs-5 text-muted mb-4 italic leading-relaxed" style={{ fontStyle: 'italic' }}>"{t.text}"</p>
-                    <div className="d-flex align-items-center">
-                      <div className="position-relative me-4">
-                        <img className="rounded-circle shadow-lg" src={t.photo} style={{ width: '100px', height: '100px', objectFit: 'cover', border: '6px solid white', outline: '1px solid rgba(0,0,0,0.05)' }} alt="" />
-                        <div className="position-absolute bottom-0 end-0 bg-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm" style={{ width: '30px', height: '30px', border: '2px solid white' }}>
-                          <Quote size={14} className="text-white" />
-                        </div>
+              <div className="wow fadeInRight" data-wow-delay="0.3s">
+                <div className="bg-white rounded-5 p-4 p-md-5 position-relative overflow-hidden" style={{ boxShadow: '0 15px 50px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.02)' }}>
+                  {/* Decorative Elements */}
+                  <div className="position-absolute bg-primary rounded-circle" style={{ width: '150px', height: '150px', top: '-50px', right: '-50px', opacity: 0.05 }}></div>
+                  <Quote size={100} className="position-absolute text-primary" style={{ bottom: '20px', right: '30px', opacity: 0.04, transform: 'rotate(10deg)' }} />
+                  
+                  <div className="d-flex flex-column flex-sm-row align-items-center align-items-sm-start mb-4 position-relative" style={{ zIndex: 1 }}>
+                    <div className="position-relative me-sm-4 mb-4 mb-sm-0 flex-shrink-0">
+                      <div className="rounded-circle p-1" style={{ background: 'linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%)' }}>
+                        <img 
+                          className="rounded-circle shadow-sm" 
+                          src="testimony1.jpg" 
+                          style={{ 
+                            width: '150px', 
+                            height: '150px', 
+                            objectFit: 'cover', 
+                            border: '4px solid white'
+                          }} 
+                          alt="Makou Menadèle Murielle" 
+                        />
                       </div>
-                      <div>
-                        <h5 className="fw-bold mb-1 text-dark text-uppercase" style={{ letterSpacing: '0.5px' }}>{t.name}</h5>
-                        <small className="text-primary fw-bold text-uppercase p-1 px-2 bg-light rounded-pill" style={{ fontSize: '0.7rem' }}>{t.role}</small>
+                      <div className="position-absolute bottom-0 end-0 bg-white rounded-circle d-flex align-items-center justify-content-center shadow-lg" style={{ width: '45px', height: '45px', transform: 'translate(10%, -10%)' }}>
+                        <Quote size={20} className="text-secondary" fill="var(--bs-secondary)" />
                       </div>
                     </div>
+                    
+                    <div className="text-center text-sm-start mt-sm-3">
+                      <div className="d-flex justify-content-center justify-content-sm-start mb-2">
+                        {[1,2,3,4,5].map(s => <Star key={s} size={16} fill="var(--bs-secondary)" stroke="none" />)}
+                      </div>
+                      <h4 className="fw-black mb-1 text-dark" style={{ letterSpacing: '-0.5px' }}>Makou Menadèle Murielle</h4>
+                      <span className="text-primary fw-bold text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '1px' }}>
+                        Bénéficiaire du programme YES
+                      </span>
+                    </div>
                   </div>
-                ))}
+                  
+                  <div className="position-relative px-sm-2 mt-2" style={{ zIndex: 1 }}>
+                    <p className="text-muted mb-0 position-relative" style={{ fontSize: '0.95rem', fontStyle: 'italic', lineHeight: '1.8', textAlign: 'justify' }}>
+                      <span className="text-primary fw-bold" style={{ fontSize: '1.8rem', fontFamily: 'serif', lineHeight: 0, position: 'relative', top: '10px', marginRight: '4px' }}>"</span>
+                      Grâce à l'ONG Busola, j'ai pu participer à des ateliers de formation où les femmes et les jeunes étaient pleinement impliqués. J'ai renforcé mes compétences en Plaidoyer, Redevabilité et Fake News. J'ai gagné en confiance et compris que notre voix peut réellement contribuer au changement dans notre communauté.
+                      <span className="text-primary fw-bold" style={{ fontSize: '1.8rem', fontFamily: 'serif', lineHeight: 0, position: 'relative', top: '10px', marginLeft: '4px' }}>"</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

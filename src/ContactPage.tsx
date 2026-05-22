@@ -1,13 +1,55 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [contactStatus, setContactStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     if (window.WOW) new window.WOW().init();
     window.scrollTo(0, 0);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setContactStatus({ type: 'error', message: 'Veuillez remplir tous les champs obligatoires.' });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'contact',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'Message depuis le site web',
+          message: formData.message
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setContactStatus({ type: 'success', message: data.message || 'Votre message a été envoyé avec succès !' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setContactStatus({ type: 'error', message: data.message || 'Une erreur est survenue lors de l\'envoi.' });
+      }
+    } catch (error) {
+      setContactStatus({ type: 'error', message: 'Erreur de connexion au serveur.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+
+    setTimeout(() => setContactStatus({ type: null, message: '' }), 5000);
+  };
 
   return (
     <div className="wrapper">
@@ -76,23 +118,65 @@ export default function ContactPage() {
                 Pour des besoin d'assistance, de soutient ou d'orientation; pour faire un don ou avoir plus de renseignement sur les projet et actions de l'organisation, vous avez toutes les informations qu'il vous faut pour entrer en contact avec nous.
               </p>
               
-              <form>
+              {contactStatus.type && (
+                <div className={`alert alert-${contactStatus.type === 'success' ? 'success' : 'danger'} mb-4`} role="alert">
+                  {contactStatus.message}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit}>
                 <div className="row g-3">
                   <div className="col-md-6">
-                    <input type="text" className="form-control px-3 border" placeholder="Votre Nom" style={{ height: '50px', borderRadius: '0' }} />
+                    <input 
+                      type="text" 
+                      className="form-control px-3 border" 
+                      placeholder="Votre Nom" 
+                      style={{ height: '50px', borderRadius: '0' }} 
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                    />
                   </div>
                   <div className="col-md-6">
-                    <input type="email" className="form-control px-3 border" placeholder="Votre Email" style={{ height: '50px', borderRadius: '0' }} />
+                    <input 
+                      type="email" 
+                      className="form-control px-3 border" 
+                      placeholder="Votre Email" 
+                      style={{ height: '50px', borderRadius: '0' }} 
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                    />
                   </div>
                   <div className="col-12">
-                    <input type="text" className="form-control px-3 border" placeholder="Objet" style={{ height: '50px', borderRadius: '0' }} />
+                    <input 
+                      type="text" 
+                      className="form-control px-3 border" 
+                      placeholder="Objet" 
+                      style={{ height: '50px', borderRadius: '0' }} 
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    />
                   </div>
                   <div className="col-12">
-                    <textarea className="form-control px-3 py-3 border" rows={6} placeholder="Message" style={{ borderRadius: '0' }}></textarea>
+                    <textarea 
+                      className="form-control px-3 py-3 border" 
+                      rows={6} 
+                      placeholder="Message" 
+                      style={{ borderRadius: '0' }}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      required
+                    ></textarea>
                   </div>
                   <div className="col-12 mt-4">
-                    <button className="btn text-white py-3 px-4" type="submit" style={{ backgroundColor: '#2764AE', borderRadius: '0', fontSize: '1rem' }}>
-                      Envoyer le Message
+                    <button 
+                      className="btn text-white py-3 px-4" 
+                      type="submit" 
+                      style={{ backgroundColor: '#2764AE', borderRadius: '0', fontSize: '1rem' }}
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer le Message'}
                     </button>
                   </div>
                 </div>
@@ -102,6 +186,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <Footer />    </div>
+      <Footer />
+    </div>
   );
 }

@@ -41,13 +41,14 @@
 }
 
 @keyframes slowRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  0% { transform: rotate(0deg) scale(1) translate(0, 0); }
+  50% { transform: rotate(180deg) scale(1.2) translate(50px, 50px); }
+  100% { transform: rotate(360deg) scale(1) translate(0, 0); }
 }
 
 @keyframes move {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(20px, 20px); }
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(150px, 100px) scale(1.15); }
 }
 
 .bg-shape {
