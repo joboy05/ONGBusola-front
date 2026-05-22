@@ -119,7 +119,7 @@ export default function NewsPage() {
                       {item.title}
                     </h3>
                     <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                      {item.desc}
+                      {item.desc.length > 150 ? item.desc.slice(0, 150) + '…' : item.desc}
                     </p>
                     <div className="text-secondary fw-bold small d-inline-flex align-items-center transition-all hover-right">
                       Lire la suite <i className="fa fa-arrow-right ms-2"></i>
