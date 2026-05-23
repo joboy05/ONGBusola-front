@@ -6,6 +6,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    
+    <!-- PWA configuration -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="apple-touch-icon" href="logo.png">
 
     <!-- Favicon -->
     <link href="ICON_LOGO-03.svg" rel="icon">
@@ -24,8 +29,6 @@
     <link href="owl.carousel.min.css" rel="stylesheet">
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-CUemHvEc.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Dp7zvqjI.css">
   </head>
   <body>
     <!-- Spinner Start -->
@@ -33,6 +36,18 @@
       <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <div id="root"></div>
+    <script type="module" src="src/main.tsx"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker enregistré avec succès !', reg.scope))
+            .catch(err => console.error('Échec de l\'enregistrement du Service Worker:', err));
+        });
+      }
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
