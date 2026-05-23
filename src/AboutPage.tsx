@@ -15,34 +15,43 @@ export default function AboutPage() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Page Header Banner */}
+      {/* Premium Hero Header Banner */}
       <div
-        className="container-fluid d-flex align-items-center justify-content-center text-white"
+        className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
-          minHeight: '220px',
-          background: '#2764AE',
-          position: 'relative',
-          overflow: 'hidden',
+          minHeight: '500px',
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('about.jpeg') center/cover`,
+          paddingTop: '120px',
+          paddingBottom: '60px',
+          overflow: 'visible'
         }}
       >
-        {/* Cercles décoratifs */}
-        <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', border: '35px solid rgba(255,255,255,0.06)' }} />
-        <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '250px', height: '250px', borderRadius: '50%', border: '35px solid rgba(255,255,255,0.06)' }} />
+        {/* Subtle decorative circles */}
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '200px', height: '200px', top: '-100px', left: '-100px', opacity: 0.08 }}></div>
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '300px', height: '300px', bottom: '-150px', right: '-150px', opacity: 0.08 }}></div>
 
-        <div className="text-center position-relative">
-          <nav aria-label="breadcrumb" className="mb-2">
-            <ol className="breadcrumb justify-content-center mb-0" style={{ opacity: 0.8 }}>
+        <div className="container text-center position-relative" style={{ zIndex: 2 }}>
+          {/* Breadcrumbs */}
+          <nav aria-label="breadcrumb" className="mb-3">
+            <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
               <li className="breadcrumb-item">
-                <Link to="/" className="text-white text-decoration-none">Accueil</Link>
+                <Link to="/" className="text-white text-decoration-none opacity-75 hover-opacity-100 fw-medium" style={{ fontSize: '0.95rem' }}>Accueil</Link>
               </li>
-              <li className="breadcrumb-item active text-secondary fw-bold" aria-current="page">
+              <li className="breadcrumb-item active fw-bold text-warning" aria-current="page" style={{ fontSize: '0.95rem' }}>
                 À propos
               </li>
             </ol>
           </nav>
-          <h1 className="display-4 fw-bold mb-0 text-uppercase" style={{ letterSpacing: '2px' }}>
-            À <span className="text-secondary">Propos</span>
+
+          <h1 className="display-4 fw-black text-uppercase text-white mb-3" style={{ letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
+            À propos
           </h1>
+          
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#f59f23', borderRadius: '2px' }}></div>
+
+          <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
+            Découvrez notre histoire, notre vision et les valeurs qui animent notre engagement au quotidien pour le développement communautaire.
+          </p>
         </div>
       </div>
 

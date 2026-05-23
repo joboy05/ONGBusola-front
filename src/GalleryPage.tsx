@@ -9,7 +9,7 @@ import { galleryItems, GalleryItem } from './galleryData';
 export default function GalleryPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialFilter = (searchParams.get('filter') as any) || 'all';
-  const [filter, setFilter] = useState<'all' | 'pageda' | 'yes' | 'tedidjo' | 'ngo'>(initialFilter);
+  const [filter, setFilter] = useState<'all' | 'dssr' | 'paix' | 'leadership'>(initialFilter);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -20,8 +20,18 @@ export default function GalleryPage() {
   // Sync state with URL parameters when it changes externally
   useEffect(() => {
     const f = searchParams.get('filter') || 'all';
-    if (['all', 'pageda', 'yes', 'tedidjo', 'ngo'].includes(f)) {
+    if (['all', 'dssr', 'paix', 'leadership'].includes(f)) {
       setFilter(f as any);
+    }
+    
+    // Auto-open photo if photoId is in URL
+    const photoId = searchParams.get('photoId');
+    if (photoId) {
+      const idNum = parseInt(photoId, 10);
+      const globalIdx = galleryItems.findIndex(i => i.id === idNum);
+      if (globalIdx !== -1) {
+        setLightboxIndex(globalIdx);
+      }
     }
   }, [searchParams]);
 
@@ -121,12 +131,12 @@ export default function GalleryPage() {
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
               <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-white text-uppercase px-3 py-1 mx-2" style={{ backgroundColor: '#3bb143', fontSize: '0.85rem', fontWeight: 700 }}>IMMERSION VISUELLE</span>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>IMMERSION VISUELLE</span>
               <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
             </div>
-            <h1 className="fw-bold mb-4" style={{ lineHeight: 1.4, fontSize: '2.5rem' }}>
-              <span className="text-uppercase text-white px-3 py-2" style={{ backgroundColor: '#2764AE' }}>Notre histoire s'écrit</span><br/>
-              <span className="text-uppercase text-white px-3 py-2 mt-2 d-inline-block" style={{ backgroundColor: '#2764AE' }}>au plus près des visages</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Notre histoire s'écrit</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>au plus près des visages</span>
             </h1>
             <p className="text-muted fs-5 mt-4">
               Explorez les moments marquants de nos projets auprès des filles, des adolescents et des communautés.
@@ -137,10 +147,9 @@ export default function GalleryPage() {
           <div className="d-flex flex-wrap justify-content-center gap-2 mb-5 wow fadeInUp" data-wow-delay="0.2s">
             {[
               { id: 'all', label: 'Toutes les photos', icon: <ImageIcon size={16} className="me-1" /> },
-              { id: 'yes', label: 'YES', icon: <Star size={16} className="me-1" /> },
-              { id: 'tedidjo', label: 'TEDIDJO & RESPECT', icon: <Heart size={16} className="me-1" /> },
-              { id: 'pageda', label: 'PAGEDA', icon: <BookOpen size={16} className="me-1" /> },
-              { id: 'ngo', label: "Vie de l'ONG", icon: <Users size={16} className="me-1" /> },
+              { id: 'dssr', label: 'DSSR et VBG', icon: <Heart size={16} className="me-1" /> },
+              { id: 'paix', label: 'Paix et Cohésion Sociale', icon: <Users size={16} className="me-1" /> },
+              { id: 'leadership', label: 'Leadership et Autonomisation', icon: <Star size={16} className="me-1" /> }
             ].map(pill => {
               const isActive = filter === pill.id;
               return (
@@ -167,18 +176,19 @@ export default function GalleryPage() {
           {/* Grouped Categories Layout */}
           <div className="wow fadeInUp" data-wow-delay="0.3s">
             {[
-              { id: 'yes', label: 'Programme YES (Youth Engagement for SRH)', desc: 'Moments forts du projet d’autonomisation et droits en santé sexuelle et reproductive des jeunes.', color: '#f39c12', icon: <Star size={24} className="text-warning" /> },
-              { id: 'tedidjo', label: 'Programme TEDIDJO & RESPECT', desc: 'Activités de prise en charge, sensibilisation à la santé de reproduction et lutte contre les VBG.', color: '#27ae60', icon: <Heart size={24} className="text-success" /> },
-              { id: 'pageda', label: 'Programme PAGEDA', desc: 'Alphabétisation fonctionnelle et formation professionnelle des femmes au Nord-Bénin.', color: '#2864ae', icon: <BookOpen size={24} className="text-primary" /> },
-              { id: 'ngo', label: "Vie de l'ONG & Événements", desc: 'Réunions, célébrations institutionnelles et coulisses de l’équipe de l’ONG Busola.', color: '#333333', icon: <Users size={24} className="text-dark" /> }
+              { id: 'dssr', label: 'DSSR et VBG', desc: 'Activités de prise en charge, sensibilisation à la santé de reproduction et lutte contre les VBG.', color: '#e74c3c', icon: <Heart size={24} className="text-danger" /> },
+              { id: 'paix', label: 'Paix et Cohésion Sociale', desc: 'Moments forts autour du vivre-ensemble et de la cohésion sociale.', color: '#3498db', icon: <Users size={24} className="text-info" /> },
+              { id: 'leadership', label: 'Leadership et Autonomisation', desc: 'Alphabétisation, formation professionnelle et vie de l’organisation.', color: '#f39c12', icon: <Star size={24} className="text-warning" /> }
             ]
               .filter(cat => filter === 'all' || filter === cat.id)
               .map(cat => {
                 const catItems = galleryItems.filter(item => item.category === cat.id);
                 if (catItems.length === 0) return null;
 
+                const sections = Array.from(new Set(catItems.map(item => item.section)));
+
                 return (
-                  <div key={cat.id} className="mb-5 pb-4">
+                  <div key={cat.id} className="mb-5 pb-4" id={`axis-${cat.id}`}>
                     {/* Category Header */}
                     <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 p-3 rounded-3" style={{ borderLeft: `6px solid ${cat.color}`, backgroundColor: '#fcfcfc' }}>
                       <div className="d-flex align-items-center gap-3">
@@ -193,85 +203,92 @@ export default function GalleryPage() {
                       </span>
                     </div>
 
-                    {/* Category Photo Grid */}
-                    <div className="row g-4">
-                      {catItems.map(item => {
-                        // Find global index in currently filtered items list for lightbox navigation
-                        const globalIdx = filteredItems.findIndex(i => i.id === item.id);
-                        return (
-                          <div key={item.id} className="col-md-6 col-lg-4 mb-4">
-                            <div 
-                              className="card border-0 h-100 shadow-sm overflow-hidden position-relative group cursor-pointer"
-                              style={{ borderRadius: '15px', border: '1px solid #f0f0f0' }}
-                              onClick={() => setLightboxIndex(globalIdx)}
-                            >
-                              {/* Image wrapper */}
-                              <div className="position-relative overflow-hidden" style={{ height: '280px' }}>
-                                <img 
-                                  src={item.img} 
-                                  alt={item.title} 
-                                  className="w-100 h-100 transition-all duration-500"
-                                  style={{ objectFit: 'cover' }}
-                                />
-                                
-                                {/* Hover overlay */}
-                                <div 
-                                  className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center transition-all duration-300"
-                                  style={{
-                                    backgroundColor: 'rgba(39, 100, 174, 0.9)',
-                                    opacity: 0,
-                                    zIndex: 2,
-                                  }}
-                                  onMouseEnter={(e) => {
-                                    e.currentTarget.style.opacity = '1';
-                                    const img = e.currentTarget.previousElementSibling as HTMLImageElement;
-                                    if (img) img.style.transform = 'scale(1.1)';
-                                  }}
-                                  onMouseLeave={(e) => {
-                                    e.currentTarget.style.opacity = '0';
-                                    const img = e.currentTarget.previousElementSibling as HTMLImageElement;
-                                    if (img) img.style.transform = 'scale(1)';
-                                  }}
-                                >
+                    {/* Sections Loop */}
+                    {sections.map(sec => {
+                      const secItems = catItems.filter(item => item.section === sec);
+                      return (
+                        <div key={sec} className="mb-4">
+                          <h4 className="fw-bold mb-3 text-secondary border-bottom pb-2" style={{ fontSize: '1.1rem' }}>{sec}</h4>
+                          <div className="row g-4">
+                            {secItems.map(item => {
+                              // Find global index in currently filtered items list for lightbox navigation
+                              const globalIdx = filteredItems.findIndex(i => i.id === item.id);
+                              return (
+                                <div key={item.id} className="col-md-6 col-lg-4 mb-4">
                                   <div 
-                                    className="rounded-circle d-flex align-items-center justify-content-center bg-white text-primary mb-3 shadow"
-                                    style={{ width: '55px', height: '55px' }}
+                                    className="card border-0 h-100 shadow-sm overflow-hidden position-relative group cursor-pointer"
+                                    style={{ borderRadius: '15px', border: '1px solid #f0f0f0' }}
+                                    onClick={() => setLightboxIndex(globalIdx)}
                                   >
-                                    <ZoomIn size={24} />
-                                  </div>
-                                  <span className="text-white text-uppercase small fw-bold tracking-wider">{item.categoryLabel}</span>
-                                </div>
+                                    {/* Image wrapper */}
+                                    <div className="position-relative overflow-hidden" style={{ height: '280px' }}>
+                                      <img 
+                                        src={item.img} 
+                                        alt={item.title} 
+                                        className="w-100 h-100 transition-all duration-500"
+                                        style={{ objectFit: 'cover' }}
+                                      />
+                                      
+                                      {/* Hover overlay */}
+                                      <div 
+                                        className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center transition-all duration-300"
+                                        style={{
+                                          backgroundColor: 'rgba(39, 100, 174, 0.9)',
+                                          opacity: 0,
+                                          zIndex: 2,
+                                        }}
+                                        onMouseEnter={(e) => {
+                                          e.currentTarget.style.opacity = '1';
+                                          const img = e.currentTarget.previousElementSibling as HTMLImageElement;
+                                          if (img) img.style.transform = 'scale(1.1)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                          e.currentTarget.style.opacity = '0';
+                                          const img = e.currentTarget.previousElementSibling as HTMLImageElement;
+                                          if (img) img.style.transform = 'scale(1)';
+                                        }}
+                                      >
+                                        <div 
+                                          className="rounded-circle d-flex align-items-center justify-content-center bg-white text-primary mb-3 shadow"
+                                          style={{ width: '55px', height: '55px' }}
+                                        >
+                                          <ZoomIn size={24} />
+                                        </div>
+                                        <span className="text-white text-uppercase small fw-bold tracking-wider text-center px-2">{item.categoryLabel}</span>
+                                      </div>
 
-                                {/* Tag badge top-left */}
-                                <span 
-                                  className="position-absolute top-0 start-0 m-3 px-3 py-1 text-white rounded-pill shadow-sm"
-                                  style={{ 
-                                    backgroundColor: cat.color, 
-                                    fontSize: '0.75rem', 
-                                    fontWeight: 'bold',
-                                    zIndex: 1
-                                  }}
-                                >
-                                  {item.tag}
-                                </span>
-                              </div>
+                                      {/* Tag badge top-left */}
+                                      <span 
+                                        className="position-absolute top-0 start-0 m-3 px-3 py-1 text-white rounded-pill shadow-sm"
+                                        style={{ 
+                                          backgroundColor: cat.color, 
+                                          fontSize: '0.75rem', 
+                                          fontWeight: 'bold',
+                                          zIndex: 1
+                                        }}
+                                      >
+                                        {item.tag}
+                                      </span>
+                                    </div>
 
-                              {/* Card Info */}
-                              <div className="card-body p-4 bg-white d-flex flex-column justify-content-between">
-                                <div>
-                                  <div className="d-flex justify-content-between align-items-center mb-2">
-                                    <small className="text-muted">{item.date}</small>
-                                    <span className="badge rounded-pill bg-light text-primary px-2.5 py-1" style={{ fontSize: '0.75rem' }}>{item.categoryLabel}</span>
+                                    {/* Card Info */}
+                                    <div className="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                                      <div>
+                                        <div className="d-flex justify-content-between align-items-center mb-2">
+                                          <small className="text-muted">{item.date}</small>
+                                        </div>
+                                        <h4 className="fw-bold text-dark text-uppercase mb-2" style={{ fontSize: '1.2rem', color: '#1a1a1a' }}>{item.title}</h4>
+                                        <p className="text-muted small mb-0" style={{ textAlign: 'justify', lineHeight: '1.5' }}>{item.desc}</p>
+                                      </div>
+                                    </div>
                                   </div>
-                                  <h4 className="fw-bold text-dark text-uppercase mb-2" style={{ fontSize: '1.2rem', color: '#1a1a1a' }}>{item.title}</h4>
-                                  <p className="text-muted small mb-0" style={{ textAlign: 'justify', lineHeight: '1.5' }}>{item.desc}</p>
                                 </div>
-                              </div>
-                            </div>
+                              );
+                            })}
                           </div>
-                        );
-                      })}
-                    </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 );
               })}

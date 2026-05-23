@@ -18,43 +18,62 @@ export default function SupportPage() {
     <div className="wrapper">
       <Navbar />
 
-      {/* Page Header Banner */}
+      {/* Premium Hero Header Banner */}
       <div
-        className="container-fluid d-flex flex-column align-items-center justify-content-center"
+        className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
-          minHeight: '280px',
-          background: `url('/motif-logo.png') center/cover`,
-          opacity: 0.9,
-          position: 'relative',
-          paddingTop: '80px',
-          paddingBottom: '40px'
+          minHeight: '500px',
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('testimony1.jpg') center/cover`,
+          paddingTop: '120px',
+          paddingBottom: '60px',
+          overflow: 'visible'
         }}
       >
-        <div className="text-center position-relative w-100" style={{ zIndex: 1 }}>
-          <h1 className="display-4 fw-bold mb-3 text-uppercase" style={{ color: '#2764AE' }}>
-            NOUS SOUTENIR
-          </h1>
-          <nav aria-label="breadcrumb">
+        {/* Subtle decorative circles */}
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '200px', height: '200px', top: '-100px', left: '-100px', opacity: 0.08 }}></div>
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '300px', height: '300px', bottom: '-150px', right: '-150px', opacity: 0.08 }}></div>
+
+        <div className="container text-center position-relative" style={{ zIndex: 2 }}>
+          {/* Breadcrumbs */}
+          <nav aria-label="breadcrumb" className="mb-3">
             <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
               <li className="breadcrumb-item">
-                <Link to="/" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Accueil</Link>
+                <Link to="/" className="text-white text-decoration-none opacity-75 hover-opacity-100 fw-medium" style={{ fontSize: '0.95rem' }}>Accueil</Link>
               </li>
-              <li className="breadcrumb-item active fw-medium" aria-current="page" style={{ color: '#2764AE', fontSize: '1.05rem' }}>
+              <li className="breadcrumb-item active fw-bold text-warning" aria-current="page" style={{ fontSize: '0.95rem' }}>
                 Soutenir Busola
               </li>
             </ol>
           </nav>
+
+          <h1 className="display-4 fw-black text-uppercase text-white mb-3" style={{ letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
+            Nous soutenir
+          </h1>
+          
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#f59f23', borderRadius: '2px' }}></div>
+
+          <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
+            Découvrez comment vous pouvez contribuer à nos actions. Faites un don, devenez bénévole ou partenaire pour amplifier notre impact.
+          </p>
         </div>
       </div>
 
       {/* Intro Section */}
-      <div className="container py-5 bg-white text-center">
-        <h2 className="display-6 fw-bold mb-4" style={{ color: '#2764AE' }}>
-          Ensemble, créons un impact durable
-        </h2>
-        <p className="fs-5 text-muted mx-auto" style={{ maxWidth: '800px', lineHeight: '1.8' }}>
-          Les actions de l'ONG Busola au Nord-Bénin reposent sur la solidarité de nos soutiens et de nos partenaires. Que vous souhaitiez faire un don ponctuel, offrir votre temps ou nouer un partenariat stratégique, chaque contribution nous aide à avancer vers plus de dignité et d'égalité.
-        </p>
+      <div className="container py-5 bg-white">
+        <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+          <div className="d-flex align-items-center justify-content-center mb-3">
+            <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>SOUTENIR BUSOLA</span>
+            <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+          </div>
+          <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+            <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ensemble, créons</span><br/>
+            <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>un impact durable</span>
+          </h1>
+          <p className="text-muted fs-5 mt-4 mx-auto" style={{ maxWidth: '800px', lineHeight: '1.8' }}>
+            Les actions de l'ONG Busola au Nord-Bénin reposent sur la solidarité de nos soutiens et de nos partenaires. Que vous souhaitiez faire un don ponctuel, offrir votre temps ou nouer un partenariat stratégique, chaque contribution nous aide à avancer vers plus de dignité et d'égalité.
+          </p>
+        </div>
       </div>
 
       {/* Toggles */}

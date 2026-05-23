@@ -48,32 +48,43 @@ export default function ActionPage() {
     <div className="wrapper">
       <Navbar />
 
-      {/* Page Header Banner */}
+      {/* Premium Hero Header Banner */}
       <div
-        className="container-fluid d-flex flex-column align-items-center justify-content-center"
+        className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
-          minHeight: '280px',
-          background: `url('/motif-logo.png') center/cover`,
-          opacity: 0.9,
-          position: 'relative',
-          paddingTop: '80px',
-          paddingBottom: '40px'
+          minHeight: '500px',
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(245, 159, 35, 0.85) 100%), url('action-1.jpg') center/cover`,
+          paddingTop: '120px',
+          paddingBottom: '60px',
+          overflow: 'visible'
         }}
       >
-        <div className="text-center position-relative w-100" style={{ zIndex: 1 }}>
-          <h1 className="display-4 fw-bold mb-3 text-uppercase" style={{ color: '#2764AE' }}>
-            ACTIONS MENÉES
-          </h1>
-          <nav aria-label="breadcrumb">
+        {/* Subtle decorative circles */}
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '200px', height: '200px', top: '-100px', left: '-100px', opacity: 0.08 }}></div>
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '300px', height: '300px', bottom: '-150px', right: '-150px', opacity: 0.08 }}></div>
+
+        <div className="container text-center position-relative" style={{ zIndex: 2 }}>
+          {/* Breadcrumbs */}
+          <nav aria-label="breadcrumb" className="mb-3">
             <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
               <li className="breadcrumb-item">
-                <Link to="/" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Accueil</Link>
+                <Link to="/" className="text-white text-decoration-none opacity-75 hover-opacity-100 fw-medium" style={{ fontSize: '0.95rem' }}>Accueil</Link>
               </li>
-              <li className="breadcrumb-item active fw-medium" aria-current="page" style={{ color: '#2764AE', fontSize: '1.05rem' }}>
-                Actions
+              <li className="breadcrumb-item active fw-bold text-warning" aria-current="page" style={{ fontSize: '0.95rem' }}>
+                Actions menées
               </li>
             </ol>
           </nav>
+
+          <h1 className="display-4 fw-black text-uppercase text-white mb-3" style={{ letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
+            Actions menées
+          </h1>
+          
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#3bb143', borderRadius: '2px' }}></div>
+
+          <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
+            Parcourez l'ensemble de nos projets et initiatives sur le terrain pour promouvoir la santé, l'éducation et l'autonomisation au sein des communautés.
+          </p>
         </div>
       </div>
 
@@ -81,14 +92,15 @@ export default function ActionPage() {
       <div className="container-fluid py-5 bg-white">
         <div className="container py-5">
           {/* Header */}
-          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "50px" }}></div>
-              <span className="bg-tertiary text-white text-uppercase p-1 mx-3" style={{ fontSize: '0.9rem', letterSpacing: '1px' }}>PROJETS</span>
-              <div className="flex-grow-1" style={{ height: "2px", background: "var(--bs-tertiary)", maxWidth: "50px" }}></div>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>PROJETS</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
             </div>
-            <h1 className="display-5 text-uppercase fw-bold text-white px-4 py-2" style={{ backgroundColor: '#2764AE', display: 'inline-block' }}>
-              PRINCIPALES RÉALISATIONS
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Principales</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Réalisations</span>
             </h1>
           </div>
 
@@ -97,8 +109,10 @@ export default function ActionPage() {
             {actions.map((proj, i) => (
               <div key={i} className="col-md-6 col-lg-4 d-flex wow fadeInUp" data-wow-delay={`${0.1 + i * 0.1}s`}>
                 <div className="bg-white shadow d-flex flex-column rounded w-100 overflow-hidden" style={{ border: '1px solid #f8f9fa' }}>
-                  <div className="position-relative">
-                    <img className="img-fluid w-100" src={proj.img} alt={proj.title} style={{ height: '220px', objectFit: 'cover' }} />
+                  <div className="position-relative overflow-hidden">
+                    <Link to={`/galerie?filter=${proj.id === 'tedidjo' || proj.id === 'projet-respect' ? 'dssr' : proj.id === 'yes' ? 'paix' : 'leadership'}#axis-${proj.id === 'tedidjo' || proj.id === 'projet-respect' ? 'dssr' : proj.id === 'yes' ? 'paix' : 'leadership'}`}>
+                      <img className="img-fluid w-100 transition-all hover-scale" src={proj.img} alt={proj.title} style={{ height: '220px', objectFit: 'cover' }} />
+                    </Link>
                     <span 
                       className="px-3 py-1 position-absolute top-0 end-0 text-white" 
                       style={{ backgroundColor: '#f59f23', fontSize: '0.85rem' }}
@@ -114,11 +128,7 @@ export default function ActionPage() {
                       {proj.desc}
                     </p>
                     
-                    {/* Financement Info */}
-                    <div className="text-center mt-3 pt-3">
-                      <h6 className="fw-bold text-dark mb-1" style={{ fontSize: '0.9rem' }}>Financement</h6>
-                      <p className="text-muted mb-0" style={{ fontSize: '0.95rem' }}>{proj.financement}</p>
-                    </div>
+                    {/* Financement Info removed as requested */}
                   </div>
                   
                   {/* En savoir plus Button */}

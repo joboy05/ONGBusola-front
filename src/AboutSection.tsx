@@ -85,23 +85,17 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
           <div className="row g-5 align-items-center">
             {/* Colonne Gauche : Texte */}
             <div className="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
-              <div className="mb-4">
                 {/* Badge style Référence */}
                 <div className="d-flex align-items-center mb-3">
-                  <span className="text-white text-uppercase px-3 py-1 fw-bold" style={{ backgroundColor: '#27ae60', borderRadius: '4px', fontSize: '0.85rem' }}>
-                    QUI SOMMES-NOUS ?
-                  </span>
-                  <div className="ms-3 flex-grow-1 border-bottom border-2" style={{ borderColor: '#27ae60', opacity: 0.3 }}></div>
+                  <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>QUI SOMMES-NOUS ?</span>
+                  <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
                 </div>
                 
-                {/* Titre Bloc Bleu */}
-                <div className="d-inline-block bg-primary px-4 py-3 mb-4 rounded-1 shadow-sm" style={{ borderLeft: '8px solid #f59f23' }}>
-                  <h1 className="fw-black text-white text-uppercase mb-0" style={{ fontSize: '2.5rem', fontWeight: 900 }}>
-                    ONG BUSOLA
-                  </h1>
-                </div>
-              </div>
-
+                <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+                  <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>ONG</span><br/>
+                  <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>BUSOLA</span>
+                </h1>
+                
               <div className="text-muted fs-5 mb-4" style={{ lineHeight: 1.8, textAlign: 'justify' }}>
                 {(historyExpanded ? historyFull : historyShort)
                   .split('\n\n')
@@ -385,9 +379,19 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
         className="container-fluid py-5"
       >
         <div className="container">
-          <div className="text-center mb-4">
-            <h2 className="display-6 fw-bold text-primary">Notre impact en chiffres</h2>
-            <p className="text-muted opacity-75">Des résultats concrets depuis 2020</p>
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE IMPACT</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            </div>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>En quelques</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>chiffres</span>
+            </h1>
+            <p className="text-muted fs-5 mt-4 mx-auto" style={{ maxWidth: '550px' }}>
+              Des résultats concrets depuis 2020
+            </p>
           </div>
           <div className="row justify-content-center">
             <StatItem value={15000} suffix="+" label="Bénéficiaires directs" trigger={statsVisible} icon="fa fa-list-check fa-3x text-primary" style={{ backgroundColor: "var(--bs-secondary)", color: "#2764AE" }} />
@@ -401,12 +405,17 @@ Entre 2021 et 2023, l'ONG a piloté les projets TEDIDJO 1, 2 et 3 en partenariat
       {/* ── 7. GOUVERNANCE ────────────────────────────────────────────────── */}
       <div id="gouvernance" className="container-fluid py-5 bg-white">
         <div className="container py-4">
-          <div className="text-center mb-5">
-            <span className="badge bg-primary text-white px-3 py-2 rounded-pill fw-bold text-uppercase mb-3" style={{ letterSpacing: '1px' }}>
-              Organisation
-            </span>
-            <h2 className="display-6 fw-bold text-primary">Notre gouvernance</h2>
-            <p className="text-muted mt-2 mx-auto" style={{ maxWidth: '550px' }}>
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>ORGANISATION</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            </div>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Notre</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Gouvernance</span>
+            </h1>
+            <p className="text-muted fs-5 mt-4 mx-auto" style={{ maxWidth: '550px' }}>
               Une structure transparente et rigoureuse au service de notre mission.
             </p>
           </div>

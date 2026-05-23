@@ -363,11 +363,16 @@ function App() {
         <div className="position-absolute bg-tertiary rounded-circle" style={{ width: '400px', height: '400px', top: '30%', right: '20%', filter: 'blur(120px)', opacity: 0.08, animation: 'slowRotate 25s linear infinite', zIndex: 0 }}></div>
 
         <div className="container py-5 position-relative" style={{ zIndex: 1 }}>
-          <div className="d-flex justify-content-between align-items-end mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div>
-              <p className="text-primary fw-bold mb-2 small tracking-widest">• NOS PROGRAMMES</p>
-              <h1 className="display-5 mb-0 fw-bold">Principales actions <span className="text-primary" style={{ fontStyle: 'italic', fontFamily: 'serif' }}>menées</span></h1>
-              <div style={{ width: '60px', height: '4px', background: 'var(--bs-secondary)', marginTop: '15px' }}></div>
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div className="mb-4 mb-md-0">
+              <div className="d-flex align-items-center mb-3">
+                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PROGRAMMES</span>
+                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              </div>
+              <h1 className="fw-bold mb-0" style={{ lineHeight: 1.4, fontSize: '2.5rem' }}>
+                <span className="gradient-ice fw-black" style={{ letterSpacing: '-0.5px' }}>Principales actions</span><br/>
+                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Menées</span>
+              </h1>
             </div>
             <a href="#!" className="btn btn-outline-primary rounded-pill px-4 py-2 d-none d-md-block fw-bold">
               Voir tous les programmes <ArrowRight size={16} className="ms-2" />
@@ -394,7 +399,7 @@ function App() {
                     <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-primary)', opacity: 0.8 }}>30 000 apprenants</span>
                     <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-primary)', opacity: 0.8 }}>Nord-Bénin</span>
                   </div>
-                  <Link to="/galerie?filter=pageda" className="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                  <Link to="/galerie?filter=leadership" className="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center">
                     Voir la galerie photos <ArrowRight size={16} className="ms-2" />
                   </Link>
                 </div>
@@ -420,7 +425,7 @@ function App() {
                     <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-secondary)', opacity: 0.8 }}>DSSR</span>
                     <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-secondary)', opacity: 0.8 }}>VBG</span>
                   </div>
-                  <Link to="/galerie?filter=yes" className="text-secondary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                  <Link to="/galerie?filter=paix" className="text-secondary fw-bold text-decoration-none small d-inline-flex align-items-center">
                     Voir la galerie photos <ArrowRight size={16} className="ms-2" />
                   </Link>
                 </div>
@@ -446,7 +451,7 @@ function App() {
                     <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-tertiary)', opacity: 0.8 }}>CARE Bénin</span>
                     <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-tertiary)', opacity: 0.8 }}>Borgou</span>
                   </div>
-                  <Link to="/galerie?filter=tedidjo" className="text-tertiary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                  <Link to="/galerie?filter=dssr" className="text-tertiary fw-bold text-decoration-none small d-inline-flex align-items-center">
                     Voir la galerie photos <ArrowRight size={16} className="ms-2" />
                   </Link>
                 </div>
@@ -460,8 +465,16 @@ function App() {
       {/* Partenaires */}
       <div id="partenaires" className="container-fluid mt-0 pt-5 pb-5 partenaire wow fadeIn">
         <div className="container">
-          <div className="d-flex justify-content-center mb-5">
-            <span className="bg-secondary px-4 py-2 text-white fw-bold rounded-pill shadow-sm">Nos partenaires</span>
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PARTENAIRES</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            </div>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ensemble, pour</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>un impact durable</span>
+            </h1>
           </div>
           <div className="row align-items-center justify-content-center">
             {[
@@ -510,8 +523,15 @@ function App() {
       <div id="actualites" className="container-fluid py-5 bg-white" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
         <div className="container">
           <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
-            <p className="section-title fw-semi-bold text-center text-white px-3"><span className="bg-tertiary p-1">Actualités</span></p>
-            <h1 className="display-6 text-uppercase text-primary mb-4">Soyez au courant de notre actualités en temps réel.</h1>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>ACTUALITÉS</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            </div>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Soyez au courant de</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Notre actualité en temps réel.</span>
+            </h1>
           </div>
           <div className="row g-4">
             <div className="col-md-4 wow fadeIn" data-wow-delay="0.1s">
@@ -561,9 +581,16 @@ function App() {
       <div id="equipe" className="container-fluid py-5 bg-white">
         <div className="container py-5">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
-            <span className="text-primary fw-bold text-uppercase tracking-widest">• NOTRE CAPITAL HUMAIN</span>
-            <h1 className="display-4 fw-black text-dark mb-4">L'ÉQUIPE <span className="text-primary">BUSOLA</span></h1>
-            <p className="text-muted fs-5">Des hommes et des femmes d'exception engagés pour la dignité et l'égalité au Nord-Bénin.</p>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE CAPITAL HUMAIN</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            </div>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>L'Équipe</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Busola</span>
+            </h1>
+            <p className="text-muted fs-5 mt-4">Des hommes et des femmes d'exception engagés pour la dignité et l'égalité au Nord-Bénin.</p>
           </div>
           <div className="row g-4">
             {team.map((m, i) => (
@@ -595,9 +622,15 @@ function App() {
         <div className="container py-5">
           <div className="row g-5 align-items-center">
             <div className="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-              <span className="text-primary fw-bold text-uppercase tracking-widest">• IMPACT RÉEL</span>
-              <h1 className="display-4 fw-black text-dark mb-4">ILS NOUS <br /><span className="text-primary">FONT CONFIANCE</span></h1>
-              <p className="text-muted fs-5 mb-4">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
+              <div className="d-flex align-items-center mb-3">
+                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>IMPACT RÉEL</span>
+                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              </div>
+              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ils nous</span><br/>
+                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>font confiance</span>
+              </h1>
+              <p className="text-muted fs-5 mb-4 mt-4">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
               <div className="d-flex align-items-center">
                 <div className="d-flex me-3">
                   {[1,2,3,4,5].map(s => <Star key={s} size={20} fill="var(--bs-secondary)" stroke="none" />)}
@@ -681,9 +714,15 @@ function App() {
         <div className="container py-5 mt-5">
           <div className="row g-5 align-items-center">
             <div className="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-              <span className="text-primary fw-bold text-uppercase tracking-widest">• COMMUNAUTÉ</span>
-              <h1 className="display-4 fw-black text-dark mb-4">RESTEZ <br /><span className="text-primary">BRANCHÉS !</span></h1>
-              <p className="text-muted fs-5 mb-5">Suivez nos victoires et nos prochains défis au quotidien sur nos plateformes numériques.</p>
+              <div className="d-flex align-items-center mb-3">
+                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>COMMUNAUTÉ</span>
+                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              </div>
+              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Restez</span><br/>
+                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Branchés !</span>
+              </h1>
+              <p className="text-muted fs-5 mb-5 mt-4">Suivez nos victoires et nos prochains défis au quotidien sur nos plateformes numériques.</p>
               
               <div className="d-flex gap-3">
                 {[
@@ -702,20 +741,32 @@ function App() {
             <div className="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
               <div className="row g-3">
                 <div className="col-6 mt-5">
-                  <div className="rounded-5 overflow-hidden shadow-sm mb-3" style={{ height: '250px' }}>
+                  <Link to="/galerie?filter=paix" className="d-block rounded-5 overflow-hidden shadow-sm mb-3 position-relative transition-all hover-scale" style={{ height: '250px' }}>
                     <img src="project-1.jpg" className="w-100 h-100 object-fit-cover" alt="" />
-                  </div>
-                  <div className="rounded-5 overflow-hidden shadow-sm" style={{ height: '180px' }}>
+                    <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
+                      <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
+                    </div>
+                  </Link>
+                  <Link to="/galerie?filter=leadership" className="d-block rounded-5 overflow-hidden shadow-sm position-relative transition-all hover-scale" style={{ height: '180px' }}>
                     <img src="project-2.jpg" className="w-100 h-100 object-fit-cover" alt="" />
-                  </div>
+                    <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
+                      <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
+                    </div>
+                  </Link>
                 </div>
                 <div className="col-6">
-                  <div className="rounded-5 overflow-hidden shadow-sm mb-3" style={{ height: '180px' }}>
+                  <Link to="/galerie?filter=dssr" className="d-block rounded-5 overflow-hidden shadow-sm mb-3 position-relative transition-all hover-scale" style={{ height: '180px' }}>
                     <img src="project-3.jpg" className="w-100 h-100 object-fit-cover" alt="" />
-                  </div>
-                  <div className="rounded-5 overflow-hidden shadow-sm" style={{ height: '250px' }}>
+                    <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
+                      <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
+                    </div>
+                  </Link>
+                  <Link to="/galerie?filter=paix" className="d-block rounded-5 overflow-hidden shadow-sm position-relative transition-all hover-scale" style={{ height: '250px' }}>
                     <img src="news-3.jpg" className="w-100 h-100 object-fit-cover" alt="" />
-                  </div>
+                    <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
+                      <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

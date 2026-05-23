@@ -24,12 +24,14 @@
 .border-tertiary { border-color: var(--bs-tertiary) !important; }
 .btn-tertiary { background-color: var(--bs-tertiary) !important; border-color: var(--bs-tertiary) !important; color: white !important; }
 
-.gradient-text {
-  background: linear-gradient(45deg, var(--bs-primary), var(--bs-secondary));
+.gradient-ice {
+  background: linear-gradient(135deg, #a0e7e5, #70c1b3);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
