@@ -122,7 +122,7 @@ export default function SupportPage() {
                       <span className="fw-semi-bold">Rapport d'impact partagé chaque année</span>
                     </div>
                     
-                    <a href="mailto:contact@busola.org?subject=Soutien%20Financier" className="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow">
+                    <a href="mailto:ongbusola@gmail.com?subject=Soutien%20Financier" className="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow">
                       Contactez-nous pour aider <ArrowRight className="ms-2" size={20} />
                     </a>
                   </div>
@@ -147,7 +147,7 @@ export default function SupportPage() {
                       <li className="mb-2"><i className="fa fa-check text-secondary me-2"></i>Actions de communication & événements</li>
                       <li className="mb-2"><i className="fa fa-check text-secondary me-2"></i>Expertise technique (Santé, Droit)</li>
                     </ul>
-                    <a href="mailto:contact@busola.org?subject=Candidature%20de%20Bénévolat" className="btn btn-secondary btn-lg w-100 text-white rounded-pill py-3 fw-bold shadow">
+                    <a href="mailto:ongbusola@gmail.com?subject=Candidature%20de%20Bénévolat" className="btn btn-secondary btn-lg w-100 text-white rounded-pill py-3 fw-bold shadow">
                       Soumettre mon profil <Mail className="ms-2" size={20} />
                     </a>
                   </div>
@@ -181,7 +181,7 @@ export default function SupportPage() {
                       <strong>► Technique</strong> (Appui et échange de compétences)<br/>
                       <strong>► Médiatique</strong> (Visibilité mutuelle et campagnes)
                     </p>
-                    <a href="mailto:contact@busola.org?subject=Proposition%20de%20Partenariat" className="btn btn-tertiary text-white btn-lg w-100 rounded-pill py-3 fw-bold shadow">
+                    <a href="mailto:ongbusola@gmail.com?subject=Proposition%20de%20Partenariat" className="btn btn-tertiary text-white btn-lg w-100 rounded-pill py-3 fw-bold shadow">
                       Discutons-en ensemble <Handshake className="ms-2" size={20} />
                     </a>
                   </div>

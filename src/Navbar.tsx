@@ -43,6 +43,7 @@ export default function Navbar() {
             <Link to="/actions" className={`nav-item nav-link ${pathname.startsWith('/actions') ? 'active' : ''}`}>Nos actions</Link>
             <Link to="/actualites" className={`nav-item nav-link ${pathname.startsWith('/actualites') ? 'active' : ''}`}>Nos actualités</Link>
             <Link to="/contact" className={`nav-item nav-link ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
+            <Link to="/soutenir" className="nav-item nav-link d-lg-none fw-bold text-warning">Nous soutenir</Link>
           </div>
           <div className="ms-auto d-none d-lg-flex">
             <Link className="btn btn-secondary m-1 px-3 text-white fw-bold" to="/soutenir" style={{ borderRadius: '7px' }}>Nous soutenir</Link>

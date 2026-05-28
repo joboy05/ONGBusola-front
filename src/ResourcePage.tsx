@@ -156,6 +156,7 @@ export default function ResourcePage() {
         </div>
       </div>
 
-      <Footer />    </div>
+      <Footer />
+    </div>
   );
 }

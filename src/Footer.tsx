@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white fw-bold mb-4">Contact Rapide</h4>
             <p className="mb-3 d-flex align-items-start"><MapPin className="me-3 text-secondary" size={20} /> <span>Parakou, Quartier Arafat, <br />République du Bénin</span></p>
             <p className="mb-3 d-flex align-items-center"><Phone className="me-3 text-secondary" size={20} /> +229 01 90 44 46 90</p>
-            <p className="mb-3 d-flex align-items-center"><Mail className="me-3 text-secondary" size={20} /> ongbusola@gmail.com</p>
+            <p className="mb-3 d-flex align-items-center"><a href="mailto:ongbusola@gmail.com" className="text-white-50 text-decoration-none"><Mail className="me-3 text-secondary" size={20} /> ongbusola@gmail.com</a></p>
           </div>
           <div className="col-lg-2 col-md-6">
             <h4 className="text-white fw-bold mb-4">Navigation</h4>

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, X, ShieldCheck, Mail, User, AlertCircle } from 'lucide-react';
+import { MessageCircle, Send, X, ShieldCheck, Mail, User, AlertCircle, BookOpen, HeartPulse, Zap, HandHeart, Heart, Phone, Home, Sparkles } from 'lucide-react';
 
 interface ChatMessage {
   id: string;
   role: 'bot' | 'user';
   text: string;
-  actions?: { label: string; action: string }[];
+  actions?: { label: string; icon?: React.ReactNode; action: string }[];
   isHtml?: boolean;
 }
 
@@ -37,14 +37,14 @@ export default function Chatbot() {
       {
         id: 'welcome',
         role: 'bot',
-        text: "Bonjour ! 🌟 Je suis l'assistant virtuel de l'ONG Busola. Comment puis-je vous aider aujourd'hui ? Choisissez une question fréquente ou écrivez-moi directement.",
+        text: "Bonjour ! Je suis l'assistant virtuel de l'ONG Busola. Comment puis-je vous aider aujourd'hui ? Choisissez une question fréquente ou écrivez-moi directement.",
         actions: [
-          { label: "📚 Projet PAGEDA (Femmes)", action: "pageda" },
-          { label: "🎗️ Projet TEDIDJO (Santé/VBG)", action: "tedidjo" },
-          { label: "⚡ Projet YES (Jeunesse)", action: "yes" },
-          { label: "🤝 Devenir Bénévole", action: "benevole" },
-          { label: "❤️ Faire un Don", action: "don" },
-          { label: "📞 Parler à un agent", action: "contact_agent" }
+          { label: "Projet PAGEDA (Femmes)", icon: <BookOpen size={14} />, action: "pageda" },
+          { label: "Projet TEDIDJO (Santé/VBG)", icon: <HeartPulse size={14} />, action: "tedidjo" },
+          { label: "Projet YES (Jeunesse)", icon: <Zap size={14} />, action: "yes" },
+          { label: "Devenir Bénévole", icon: <HandHeart size={14} />, action: "benevole" },
+          { label: "Faire un Don", icon: <Heart size={14} />, action: "don" },
+          { label: "Parler à un agent", icon: <Phone size={14} />, action: "contact_agent" }
         ]
       }
     ]);
@@ -65,7 +65,7 @@ export default function Chatbot() {
     setTimeout(() => {
       setIsTyping(false);
       let responseText = "";
-      let newActions: { label: string; action: string }[] = [];
+      let newActions: { label: string; icon?: React.ReactNode; action: string }[] = [];
 
       switch (action) {
         case 'pageda':
@@ -126,12 +126,12 @@ export default function Chatbot() {
         default:
           responseText = "Comment puis-je vous aider aujourd'hui ? Choisissez l'une des options ci-dessous :";
           newActions = [
-            { label: "📚 Projet PAGEDA", action: "pageda" },
-            { label: "🎗️ Projet TEDIDJO", action: "tedidjo" },
-            { label: "⚡ Projet YES", action: "yes" },
-            { label: "🤝 Devenir Bénévole", action: "benevole" },
-            { label: "❤️ Faire un Don", action: "don" },
-            { label: "📞 Parler à un agent", action: "contact_agent" }
+            { label: "Projet PAGEDA", icon: <BookOpen size={14} />, action: "pageda" },
+            { label: "Projet TEDIDJO", icon: <HeartPulse size={14} />, action: "tedidjo" },
+            { label: "Projet YES", icon: <Zap size={14} />, action: "yes" },
+            { label: "Devenir Bénévole", icon: <HandHeart size={14} />, action: "benevole" },
+            { label: "Faire un Don", icon: <Heart size={14} />, action: "don" },
+            { label: "Parler à un agent", icon: <Phone size={14} />, action: "contact_agent" }
           ];
           break;
       }
@@ -158,7 +158,7 @@ export default function Chatbot() {
       setIsTyping(false);
       const text = userText.toLowerCase();
       let responseText = "";
-      let newActions: { label: string; action: string }[] = [];
+      let newActions: { label: string; icon?: React.ReactNode; action: string }[] = [];
 
       if (text.includes('pageda') || text.includes('femme') || text.includes('alphabétisation') || text.includes('terre') || text.includes('foncier')) {
         responseText = "Le projet **PAGEDA** vise à renforcer l'autonomie socio-économique des femmes rurales du Nord-Bénin à travers l'alphabétisation fonctionnelle et l'accès à la propriété foncière.";
@@ -181,8 +181,8 @@ export default function Chatbot() {
       } else {
         responseText = "Je n'ai pas d'information exacte sur ce sujet. Souhaitez-vous laisser un message directement à notre équipe ? Un agent vous répondra sous 24h.";
         newActions = [
-          { label: "📞 Oui, laisser un message", action: "contact_agent" },
-          { label: "🏠 Retourner au menu", action: "menu" }
+          { label: "Oui, laisser un message", icon: <Phone size={14} />, action: "contact_agent" },
+          { label: "Retourner au menu", icon: <Home size={14} />, action: "menu" }
         ];
       }
 
@@ -330,7 +330,7 @@ export default function Chatbot() {
                             <button
                               key={index}
                               onClick={() => handleActionClick(act.action, act.label)}
-                              className="btn btn-sm btn-outline-primary rounded-pill px-3 py-1.5"
+                              className="btn btn-sm btn-outline-primary rounded-pill px-3 py-1.5 d-flex align-items-center gap-1"
                               style={{ 
                                 fontSize: '0.72rem', 
                                 fontWeight: 500,
@@ -340,6 +340,7 @@ export default function Chatbot() {
                                 borderWidth: '1px'
                               }}
                             >
+                              {act.icon && <span className="d-flex align-items-center">{act.icon}</span>}
                               {act.label}
                             </button>
                           ))}
