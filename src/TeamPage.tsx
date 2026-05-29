@@ -135,15 +135,42 @@ export default function TeamPage() {
               <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>LA TEAM BUSOLA</span>
               <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Découvrez la force de frappe de</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Busola ONG</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.5rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Découvrez quelques membres du C.A.</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>et la Direction Exécutive de BUSOLA</span>
             </h1>
           </div>
           
+          <h3 className="fw-bold mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ color: '#2764AE' }}>Conseil d'Administration (C.A.)</h3>
+          <div className="row g-4 justify-content-center mb-5">
+            {team.filter(m => m.name !== 'Zoulfath ZIME ' && m.name !== 'Fadel KASSALI' && m.name !== 'Abouyaïdou MAMA').map((m, i) => (
+              <div key={i} className="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay={`${0.1 * (i + 1)}s`}>
+                <div className="team-item bg-white h-100 d-flex flex-column shadow-sm" style={{ border: '1px solid #f0f0f0' }}>
+                  <div className="d-flex" style={{ height: '350px' }}>
+                    {/* Img Container */}
+                    <div className="w-100 position-relative overflow-hidden">
+                      <img className="img-fluid w-100 h-100" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name} />
+                    </div>
+                    {/* Social Container Beige */}
+                    <div className="d-flex flex-column justify-content-end align-items-center py-4 flex-shrink-0" style={{ width: '60px', backgroundColor: '#fcf8ec' }}>
+                      <a className="btn btn-primary btn-sm btn-square rounded-0 mb-3" href="#!"><i className="fab fa-facebook-f"></i></a>
+                      <a className="btn btn-primary btn-sm btn-square rounded-0" href="#!"><i className="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                  {/* Name and Role Section */}
+                  <div className="p-4 bg-white d-flex flex-column justify-content-center" style={{ minHeight: '120px' }}>
+                    <h5 className="text-primary fw-bold mb-2" style={{ fontSize: '1.2rem' }}>{m.name}</h5>
+                    <p className="text-secondary fw-bold mb-0" style={{ fontSize: '0.85rem', textTransform: 'uppercase' }}>{m.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="fw-bold mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ color: '#2764AE' }}>Direction Exécutive</h3>
           <div className="row g-4 justify-content-center">
-            {team.map((m, i) => (
-              <div key={i} className="col-md-6 col-lg-4 mb-4">
+            {team.filter(m => m.name === 'Zoulfath ZIME ' || m.name === 'Fadel KASSALI' || m.name === 'Abouyaïdou MAMA').map((m, i) => (
+              <div key={i} className="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay={`${0.1 * (i + 1)}s`}>
                 <div className="team-item bg-white h-100 d-flex flex-column shadow-sm" style={{ border: '1px solid #f0f0f0' }}>
                   <div className="d-flex" style={{ height: '350px' }}>
                     {/* Img Container */}

@@ -277,7 +277,7 @@ function App() {
         <div className="container py-5">
           <div className="row g-5">
             {/* Left Column: Image + Values (Tablet only) */}
-            <div className="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+            <div className="col-lg-5 wow fadeIn mb-5 mb-lg-0" data-wow-delay="0.1s">
               <div className="position-relative mb-5">
                 <div className="rounded-5 shadow-sm overflow-hidden" style={{ height: "550px", position: "relative" }}>
                   <img src="about.jpeg" className="w-100 h-100" style={{ objectFit: 'cover' }} alt="L'équipe Busola" />
@@ -299,7 +299,7 @@ function App() {
             </div>
 
             {/* Right Column: Narrative Text + Values (Desktop) */}
-            <div className="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+            <div className="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
               <div className="ps-lg-5">
                 <div className="position-relative mb-5">
                   <div className="position-absolute" style={{ top: "-25px", left: "20px", zIndex: 2 }}>
@@ -577,7 +577,7 @@ function App() {
 
 
 
-      {/* Team Section - Modern Redesign */}
+      {/* Team Section - Design from Team Page */}
       <div id="equipe" className="container-fluid py-5 bg-white">
         <div className="container py-5">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
@@ -592,23 +592,25 @@ function App() {
             </h1>
             <p className="text-muted fs-5 mt-4">Des hommes et des femmes d'exception engagés pour la dignité et l'égalité au Nord-Bénin.</p>
           </div>
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {team.map((m, i) => (
-              <div key={i} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`${0.1 * (i + 1)}s`}>
-                <div className="team-item position-relative rounded-5 overflow-hidden shadow-sm bg-light h-100 transition-all hover-up cursor-pointer" 
-                     onClick={() => setSelectedMember(m)}>
-                  <div className="overflow-hidden" style={{ height: '400px' }}>
-                    <img className="img-fluid w-100 h-100 transition-all hover-scale" 
-                         src={m.photo} 
-                         style={{ objectFit: 'cover' }} 
-                         alt={m.name} />
-                  </div>
-                  <div className="p-4 text-center">
-                    <h4 className="fw-bold mb-1 text-dark">{m.name}</h4>
-                    <p className="text-primary mb-0 fw-bold small text-uppercase tracking-wider">{m.role}</p>
-                    <div className="mt-3 pt-3 border-top d-flex justify-content-center gap-2">
-                       <span className="text-muted small">Voir le profil <ArrowRight size={14} className="ms-1" /></span>
+              <div key={i} className="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay={`${0.1 * (i + 1)}s`}>
+                <div className="team-item bg-white h-100 d-flex flex-column shadow-sm" style={{ border: '1px solid #f0f0f0' }}>
+                  <div className="d-flex" style={{ height: '350px' }}>
+                    {/* Img Container */}
+                    <div className="w-100 position-relative overflow-hidden cursor-pointer" onClick={() => setSelectedMember(m)}>
+                      <img className="img-fluid w-100 h-100 transition-all hover-scale" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name} />
                     </div>
+                    {/* Social Container Beige */}
+                    <div className="d-flex flex-column justify-content-end align-items-center py-4 flex-shrink-0" style={{ width: '60px', backgroundColor: '#fcf8ec' }}>
+                      <a className="btn btn-primary btn-sm btn-square rounded-0 mb-3" href="#!"><i className="fab fa-facebook-f"></i></a>
+                      <a className="btn btn-primary btn-sm btn-square rounded-0" href="#!"><i className="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                  {/* Name and Role Section */}
+                  <div className="p-4 bg-white d-flex flex-column justify-content-center cursor-pointer" style={{ minHeight: '120px' }} onClick={() => setSelectedMember(m)}>
+                    <h5 className="text-primary fw-bold mb-2" style={{ fontSize: '1.2rem' }}>{m.name}</h5>
+                    <p className="text-secondary fw-bold mb-0" style={{ fontSize: '0.85rem', textTransform: 'uppercase' }}>{m.role}</p>
                   </div>
                 </div>
               </div>
@@ -617,71 +619,78 @@ function App() {
         </div>
       </div>
 
-      {/* Testimonials - Original Split Layout with Large Photo */}
+      {/* Testimonials - Carousel */}
       <div className="container-fluid py-5 bg-light" id="temoignages">
         <div className="container py-5">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-              <div className="d-flex align-items-center mb-3">
-                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>IMPACT RÉEL</span>
-                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              </div>
-              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ils nous</span><br/>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>font confiance</span>
-              </h1>
-              <p className="text-muted fs-5 mb-4 mt-4">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
-              <div className="d-flex align-items-center">
-                <div className="d-flex me-3">
-                  {[1,2,3,4,5].map(s => <Star key={s} size={20} fill="var(--bs-secondary)" stroke="none" />)}
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>IMPACT RÉEL</span>
+              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+            </div>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ils nous</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>font confiance</span>
+            </h1>
+            <p className="text-muted fs-5 mb-4 mt-4">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
+          </div>
+
+          <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            {/* Testimonial 1 */}
+            <div className="testimonial-item">
+              <div className="row g-5 align-items-center">
+                <div className="col-lg-5">
+                  <div className="testimonial-img position-relative">
+                    <img className="img-fluid w-100" src="testimony1.jpg" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }} />
+                  </div>
                 </div>
-                <span className="fw-bold text-dark">Excellent</span>
+                <div className="col-lg-7">
+                  <div className="testimonial-title">
+                     <div className="d-flex mb-3">
+                       {[1,2,3,4,5].map(s => <Star key={s} size={20} fill="#f89d2a" stroke="none" />)}
+                     </div>
+                     <p className="text-muted mb-4 fs-5">
+                        Grâce à l'ONG Busola, j'ai pu participer à des ateliers de formation où les femmes et les jeunes étaient pleinement impliqués. J'ai renforcé mes compétences en Plaidoyer, Redevabilité et Fake News. J'ai gagné en confiance et compris que notre voix peut réellement contribuer au changement dans notre communauté.
+                     </p>
+                     <div className="d-flex align-items-center mt-4">
+                        <div className="bg-secondary d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
+                           <Quote size={30} className="text-white" />
+                        </div>
+                        <div className="ms-4">
+                           <h5 className="text-primary mb-1">Makou Menadèle Murielle</h5>
+                           <span className="text-secondary fw-bold text-uppercase" style={{ fontSize: '0.85rem' }}>Bénéficiaire du programme YES</span>
+                        </div>
+                     </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col-lg-7">
-              <div className="wow fadeInRight" data-wow-delay="0.3s">
-                <div className="bg-white rounded-5 p-4 p-md-5 position-relative overflow-hidden" style={{ boxShadow: '0 15px 50px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.02)' }}>
-                  {/* Decorative Elements */}
-                  <div className="position-absolute bg-primary rounded-circle" style={{ width: '150px', height: '150px', top: '-50px', right: '-50px', opacity: 0.05 }}></div>
-                  <Quote size={100} className="position-absolute text-primary" style={{ bottom: '20px', right: '30px', opacity: 0.04, transform: 'rotate(10deg)' }} />
-                  
-                  <div className="d-flex flex-column flex-sm-row align-items-center align-items-sm-start mb-4 position-relative" style={{ zIndex: 1 }}>
-                    <div className="position-relative me-sm-4 mb-4 mb-sm-0 flex-shrink-0">
-                      <div className="rounded-circle p-1" style={{ background: 'linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%)' }}>
-                        <img 
-                          className="rounded-circle shadow-sm" 
-                          src="testimony1.jpg" 
-                          style={{ 
-                            width: '150px', 
-                            height: '150px', 
-                            objectFit: 'cover', 
-                            border: '4px solid white'
-                          }} 
-                          alt="Makou Menadèle Murielle" 
-                        />
-                      </div>
-                      <div className="position-absolute bottom-0 end-0 bg-white rounded-circle d-flex align-items-center justify-content-center shadow-lg" style={{ width: '45px', height: '45px', transform: 'translate(10%, -10%)' }}>
-                        <Quote size={20} className="text-secondary" fill="var(--bs-secondary)" />
-                      </div>
-                    </div>
-                    
-                    <div className="text-center text-sm-start mt-sm-3">
-                      <div className="d-flex justify-content-center justify-content-sm-start mb-2">
-                        {[1,2,3,4,5].map(s => <Star key={s} size={16} fill="var(--bs-secondary)" stroke="none" />)}
-                      </div>
-                      <h4 className="fw-black mb-1 text-dark" style={{ letterSpacing: '-0.5px' }}>Makou Menadèle Murielle</h4>
-                      <span className="text-primary fw-bold text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '1px' }}>
-                        Bénéficiaire du programme YES
-                      </span>
-                    </div>
+
+            {/* Testimonial 2 */}
+            <div className="testimonial-item">
+              <div className="row g-5 align-items-center">
+                <div className="col-lg-5">
+                  <div className="testimonial-img position-relative">
+                    <img className="img-fluid w-100" src="team-1.jpg" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }} />
                   </div>
-                  
-                  <div className="position-relative px-sm-2 mt-2" style={{ zIndex: 1 }}>
-                    <p className="text-muted mb-0 position-relative" style={{ fontSize: '0.95rem', fontStyle: 'italic', lineHeight: '1.8', textAlign: 'justify' }}>
-                      <span className="text-primary fw-bold" style={{ fontSize: '1.8rem', fontFamily: 'serif', lineHeight: 0, position: 'relative', top: '10px', marginRight: '4px' }}>"</span>
-                      Grâce à l'ONG Busola, j'ai pu participer à des ateliers de formation où les femmes et les jeunes étaient pleinement impliqués. J'ai renforcé mes compétences en Plaidoyer, Redevabilité et Fake News. J'ai gagné en confiance et compris que notre voix peut réellement contribuer au changement dans notre communauté.
-                      <span className="text-primary fw-bold" style={{ fontSize: '1.8rem', fontFamily: 'serif', lineHeight: 0, position: 'relative', top: '10px', marginLeft: '4px' }}>"</span>
-                    </p>
+                </div>
+                <div className="col-lg-7">
+                  <div className="testimonial-title">
+                     <div className="d-flex mb-3">
+                       {[1,2,3,4,5].map(s => <Star key={s} size={20} fill="#f89d2a" stroke="none" />)}
+                     </div>
+                     <p className="text-muted mb-4 fs-5">
+                        L'accompagnement de Busola a été un véritable tremplin pour moi. J'ai pu acquérir des compétences concrètes grâce au programme d'alphabétisation fonctionnelle. Aujourd'hui, je gère ma propre activité de façon plus autonome et je participe activement aux décisions dans mon foyer.
+                     </p>
+                     <div className="d-flex align-items-center mt-4">
+                        <div className="bg-secondary d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
+                           <Quote size={30} className="text-white" />
+                        </div>
+                        <div className="ms-4">
+                           <h5 className="text-primary mb-1">Fadilatou Bani</h5>
+                           <span className="text-secondary fw-bold text-uppercase" style={{ fontSize: '0.85rem' }}>Bénéficiaire du programme PAGEDA</span>
+                        </div>
+                     </div>
                   </div>
                 </div>
               </div>
