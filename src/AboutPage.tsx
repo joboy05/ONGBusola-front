@@ -67,7 +67,7 @@ export default function AboutPage() {
             À propos
           </h1>
           
-          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#f59f23', borderRadius: '2px' }}></div>
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-secondary)', borderRadius: '2px' }}></div>
 
           <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
             Découvrez notre histoire, notre vision et les valeurs qui animent notre engagement au quotidien pour le développement communautaire.
@@ -95,7 +95,7 @@ export default function AboutPage() {
             {/* Left Column: Title and Description */}
             <div className="col-lg-5 p-5 d-flex flex-column justify-content-center">
               <div className="d-flex align-items-center mb-3">
-                <Folder className="me-2 text-warning" size={28} style={{ fill: '#f59f23', opacity: 0.15, color: '#f59f23' }} />
+                <Folder className="me-2 text-warning" size={28} style={{ fill: 'var(--brand-secondary)', opacity: 0.15, color: 'var(--brand-secondary)' }} />
                 <h2 
                   className="fw-bold mb-0 text-primary" 
                   style={{ 
@@ -143,7 +143,7 @@ export default function AboutPage() {
                     <div className="d-flex align-items-center gap-3">
                       <div 
                         className="d-flex align-items-center justify-content-center rounded-circle text-white flex-shrink-0"
-                        style={{ width: '46px', height: '46px', backgroundColor: '#2764AE' }}
+                        style={{ width: '46px', height: '46px', backgroundColor: 'var(--brand-primary)' }}
                       >
                         <FileText size={20} />
                       </div>

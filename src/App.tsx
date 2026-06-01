@@ -366,12 +366,12 @@ function App() {
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 wow fadeIn" data-wow-delay="0.1s">
             <div className="mb-4 mb-md-0">
               <div className="d-flex align-items-center mb-3">
-                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PROGRAMMES</span>
-                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+                <span className="text-uppercase me-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PROGRAMMES</span>
+                <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
               </div>
               <h1 className="fw-bold mb-0" style={{ lineHeight: 1.4, fontSize: '2.5rem' }}>
                 <span className="gradient-ice fw-black" style={{ letterSpacing: '-0.5px' }}>Principales actions</span><br/>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Menées</span>
+                <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Menées</span>
               </h1>
             </div>
             <a href="#!" className="btn btn-outline-primary rounded-pill px-4 py-2 d-none d-md-block fw-bold">
@@ -467,13 +467,13 @@ function App() {
         <div className="container">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PARTENAIRES</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PARTENAIRES</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ensemble, pour</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>un impact durable</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Ensemble, pour</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>un impact durable</span>
             </h1>
           </div>
           <div className="row align-items-center justify-content-center">
@@ -524,13 +524,13 @@ function App() {
         <div className="container">
           <div className="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>ACTUALITÉS</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>ACTUALITÉS</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Soyez au courant de</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Notre actualité en temps réel.</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Soyez au courant de</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Notre actualité en temps réel.</span>
             </h1>
           </div>
           <div className="row g-4">
@@ -582,13 +582,13 @@ function App() {
         <div className="container py-5">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE CAPITAL HUMAIN</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE CAPITAL HUMAIN</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>L'Équipe</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Busola</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>L'Équipe</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Busola</span>
             </h1>
             <p className="text-muted fs-5 mt-4">Des hommes et des femmes d'exception engagés pour la dignité et l'égalité au Nord-Bénin.</p>
           </div>
@@ -624,13 +624,13 @@ function App() {
         <div className="container py-5">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>IMPACT RÉEL</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>IMPACT RÉEL</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Ils nous</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>font confiance</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Ils nous</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>font confiance</span>
             </h1>
             <p className="text-muted fs-5 mb-4 mt-4">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
           </div>
@@ -724,12 +724,12 @@ function App() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
               <div className="d-flex align-items-center mb-3">
-                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>COMMUNAUTÉ</span>
-                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+                <span className="text-uppercase me-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>COMMUNAUTÉ</span>
+                <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
               </div>
-              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Restez</span><br/>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Branchés !</span>
+              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+                <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Restez</span><br/>
+                <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Branchés !</span>
               </h1>
               <p className="text-muted fs-5 mb-5 mt-4">Suivez nos victoires et nos prochains défis au quotidien sur nos plateformes numériques.</p>
               

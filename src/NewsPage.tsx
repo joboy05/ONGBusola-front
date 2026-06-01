@@ -85,7 +85,7 @@ export default function NewsPage() {
             Actualités
           </h1>
           
-          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#f59f23', borderRadius: '2px' }}></div>
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-secondary)', borderRadius: '2px' }}></div>
 
           <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
             Restez informé des dernières nouvelles, événements et avancées de nos différents programmes et actions sur le terrain.
@@ -99,13 +99,13 @@ export default function NewsPage() {
           {/* Section Header */}
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>ACTUALITÉS</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>ACTUALITÉS</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Soyez au courant de</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Notre actualité en temps réel</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Soyez au courant de</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Notre actualité en temps réel</span>
             </h1>
           </div>
 
@@ -124,7 +124,7 @@ export default function NewsPage() {
                       />
                     </div>
                     <p className="mb-2 text-tertiary fw-bold small">
-                      <i className="fa fa-calendar-alt me-2" style={{ color: '#27ae60' }}></i>
+                      <i className="fa fa-calendar-alt me-2" style={{ color: 'var(--brand-tertiary)' }}></i>
                       {item.date}
                     </p>
                     <h3 className="h5 text-primary fw-bold mb-3" style={{ fontSize: '1.2rem', lineHeight: '1.4' }}>

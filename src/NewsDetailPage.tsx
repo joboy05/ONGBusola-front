@@ -122,18 +122,18 @@ export default function NewsDetailPage() {
         }}
       >
         <div className="text-center position-relative w-100" style={{ zIndex: 1 }}>
-          <h1 className="display-4 fw-bold mb-3 text-uppercase" style={{ color: '#2764AE' }}>
+          <h1 className="display-4 fw-bold mb-3 text-uppercase" style={{ color: 'var(--brand-primary)' }}>
             ACTUALITÉS
           </h1>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
               <li className="breadcrumb-item">
-                <Link to="/" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Accueil</Link>
+                <Link to="/" className="text-decoration-none fw-medium" style={{ color: 'var(--brand-tertiary)', fontSize: '1.05rem' }}>Accueil</Link>
               </li>
               <li className="breadcrumb-item">
-                <Link to="/actualites" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Actualités</Link>
+                <Link to="/actualites" className="text-decoration-none fw-medium" style={{ color: 'var(--brand-tertiary)', fontSize: '1.05rem' }}>Actualités</Link>
               </li>
-              <li className="breadcrumb-item active fw-medium" aria-current="page" style={{ color: '#2764AE', fontSize: '1.05rem' }}>
+              <li className="breadcrumb-item active fw-medium" aria-current="page" style={{ color: 'var(--brand-primary)', fontSize: '1.05rem' }}>
                 Détails
               </li>
             </ol>
@@ -156,10 +156,10 @@ export default function NewsDetailPage() {
                 />
               </div>
               <p className="mb-3 text-tertiary fw-bold">
-                <i className="fa fa-calendar-alt me-2" style={{ color: '#27ae60' }}></i>
+                <i className="fa fa-calendar-alt me-2" style={{ color: 'var(--brand-tertiary)' }}></i>
                 {item.date}
               </p>
-              <h1 className="display-6 fw-bold mb-4" style={{ color: '#2764AE' }}>{item.title}</h1>
+              <h1 className="display-6 fw-bold mb-4" style={{ color: 'var(--brand-primary)' }}>{item.title}</h1>
               <div className="text-muted" style={{ lineHeight: '1.8', textAlign: 'justify', fontSize: '1rem' }}>
                 {(newsFullText[item.id] || item.desc)
                   .split('\n\n')
@@ -179,7 +179,7 @@ export default function NewsDetailPage() {
             {/* Sidebar */}
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
               <div className="p-4 bg-light rounded-4 shadow-sm">
-                <h4 className="fw-bold mb-4" style={{ color: '#2764AE' }}>Dernières Actualités</h4>
+                <h4 className="fw-bold mb-4" style={{ color: 'var(--brand-primary)' }}>Dernières Actualités</h4>
                 {newsItems.filter(n => n.id !== item.id).slice(0, 3).map(other => (
                   <div key={other.id} className="mb-4 border-bottom pb-3">
                     <p className="small text-muted mb-1">{other.date}</p>

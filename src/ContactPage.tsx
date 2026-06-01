@@ -87,7 +87,7 @@ export default function ContactPage() {
             Contact
           </h1>
           
-          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#3bb143', borderRadius: '2px' }}></div>
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-tertiary)', borderRadius: '2px' }}></div>
 
           <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
             Une question, une suggestion ou une envie de collaborer ? N'hésitez pas à nous écrire, notre équipe vous répondra dans les plus brefs délais.
@@ -102,12 +102,12 @@ export default function ContactPage() {
             {/* Left Column: Map and Title */}
             <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
               <div className="d-flex align-items-center mb-3">
-                <span className="text-uppercase me-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>CONTACT</span>
-                <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+                <span className="text-uppercase me-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>CONTACT</span>
+                <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
               </div>
-              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>En cas de besoin,</span><br/>
-                <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>N'hésitez pas à nous contacter.</span>
+              <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+                <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>En cas de besoin,</span><br/>
+                <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>N'hésitez pas à nous contacter.</span>
               </h1>
               
               <div className="w-100 mt-4 overflow-hidden shadow-sm" style={{ height: '350px' }}>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                     <button 
                       className="btn text-white py-3 px-4" 
                       type="submit" 
-                      style={{ backgroundColor: '#2764AE', borderRadius: '0', fontSize: '1rem' }}
+                      style={{ backgroundColor: 'var(--brand-primary)', borderRadius: '0', fontSize: '1rem' }}
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le Message'}

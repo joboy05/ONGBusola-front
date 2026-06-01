@@ -48,7 +48,7 @@ const cobalt = '#2864ae'; // Primary Blue
 const cobaltMid = '#205295';
 const cobaltBright = '#2864ae';
 const gold = '#f39c12'; // Secondary Gold/Orange
-const goldWarm = '#f59f23';
+const goldWarm = 'var(--brand-secondary)';
 const goldPale = '#f8f2e2';
 const sable = '#f8f9fa';
 const cream = '#ffffff';
@@ -220,10 +220,10 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#faf9f6', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               CE QUE NOUS FAISONS
             </span>
-            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: '#111827', marginBottom: '16px', letterSpacing: '-0.5px' }}>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
               Nos axes stratégiques
             </h2>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
@@ -236,44 +236,44 @@ export default function AboutSection() {
               {
                 title: "Santé Sexuelle & Reproductive",
                 desc: "Éducation complète à la sexualité, prévention des grossesses précoces, IST/VIH, accès aux services de santé adaptés pour les adolescentes et jeunes femmes de 10 à 24 ans.",
-                icon: <HeartPulse size={24} style={{ color: '#2764AE' }} />,
+                icon: <HeartPulse size={24} style={{ color: 'var(--brand-primary)' }} />,
                 bg: 'rgba(39, 100, 174, 0.08)',
-                borderColor: '#2764AE'
+                borderColor: 'var(--brand-primary)'
               },
               {
                 title: "Lutte contre les VBG",
                 desc: "Sensibilisation, collecte de données, plaidoyer pour l'ouverture des centres CIPEC-VBG, formation des acteurs communautaires et leaders religieux.",
-                icon: <Scale size={24} style={{ color: '#f59f23' }} />,
+                icon: <Scale size={24} style={{ color: 'var(--brand-secondary)' }} />,
                 bg: 'rgba(245, 159, 35, 0.08)',
-                borderColor: '#f59f23'
+                borderColor: 'var(--brand-secondary)'
               },
               {
                 title: "Alphabétisation & Éducation",
                 desc: "Gestion de centres d'alphabétisation en langues locales (Yom, Dendi, Fulfuldé, Lopka) pour l'autonomisation des adultes dans les communes rurales.",
-                icon: <GraduationCap size={24} style={{ color: '#3bb143' }} />,
+                icon: <GraduationCap size={24} style={{ color: 'var(--brand-tertiary)' }} />,
                 bg: 'rgba(59, 177, 67, 0.08)',
-                borderColor: '#3bb143'
+                borderColor: 'var(--brand-tertiary)'
               },
               {
                 title: "Cohésion Sociale & Paix",
                 desc: "Cadres de dialogue communautaire et intergénérationnel, prévention de la radicalisation et promotion du vivre-ensemble pacifique.",
-                icon: <Handshake size={24} style={{ color: '#2764AE' }} />,
+                icon: <Handshake size={24} style={{ color: 'var(--brand-primary)' }} />,
                 bg: 'rgba(39, 100, 174, 0.08)',
-                borderColor: '#2764AE'
+                borderColor: 'var(--brand-primary)'
               },
               {
                 title: "Autonomisation Économique",
                 desc: "Formations aux activités génératrices de revenus (AGR), techniques de pépinière, gestion financière de base et accès aux micro-crédits.",
-                icon: <TrendingUp size={24} style={{ color: '#f59f23' }} />,
+                icon: <TrendingUp size={24} style={{ color: 'var(--brand-secondary)' }} />,
                 bg: 'rgba(245, 159, 35, 0.08)',
-                borderColor: '#f59f23'
+                borderColor: 'var(--brand-secondary)'
               },
               {
                 title: "Plaidoyer & Communication",
                 desc: "Campagnes digitales, téléfilms éducatifs, théâtre communautaire, formation en plaidoyer pour amplifier la voix des sans-voix.",
-                icon: <Megaphone size={24} style={{ color: '#3bb143' }} />,
+                icon: <Megaphone size={24} style={{ color: 'var(--brand-tertiary)' }} />,
                 bg: 'rgba(59, 177, 67, 0.08)',
-                borderColor: '#3bb143'
+                borderColor: 'var(--brand-tertiary)'
               }
             ].map((axe, i) => (
               <div key={i} className="col-lg-4 col-md-6">
@@ -297,7 +297,7 @@ export default function AboutSection() {
                        style={{ width: '56px', height: '56px', backgroundColor: axe.bg }}>
                     {axe.icon}
                   </div>
-                  <h4 style={{ fontFamily: cond, fontSize: '1.4rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
+                  <h4 style={{ fontFamily: cond, fontSize: '1.4rem', fontWeight: 800, color: 'var(--brand-text)', marginBottom: '12px' }}>
                     {axe.title}
                   </h4>
                   <p className="text-muted mb-0" style={{ fontSize: '0.92rem', lineHeight: '1.6', textAlign: 'justify' }}>
@@ -314,10 +314,10 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#ffffff', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               NOS INTERVENTIONS ACTUELLES
             </span>
-            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: '#111827', marginBottom: '16px', letterSpacing: '-0.5px' }}>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
               Projets en cours
             </h2>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
@@ -331,48 +331,48 @@ export default function AboutSection() {
                 title: "Programme RESPECT - Année 4",
                 desc: "Accroître la jouissance des droits de santé pour les adolescentes et jeunes femmes (10-24 ans). Données VBG, plaidoyer, téléfilm éducatif, ouverture CIPEC-VBG.",
                 partner: "Médecins du Monde / ROAJELF Bénin",
-                headerBg: '#2764AE',
-                themeColor: '#2764AE',
+                headerBg: 'var(--brand-primary)',
+                themeColor: 'var(--brand-primary)',
                 icon: <FileText size={20} className="text-white" />
               },
               {
                 title: "PAGEDA II - Alphabétisation",
                 desc: "Renforcement de l'éducation non formelle dans la commune de Copargo. Reprise des cours, dotation en matériels pédagogiques, évaluation finale avec 100% de réussite.",
                 partner: "SIA N'SON ONG / Coopération Suisse",
-                headerBg: '#f59f23',
-                themeColor: '#f59f23',
+                headerBg: 'var(--brand-secondary)',
+                themeColor: 'var(--brand-secondary)',
                 icon: <BookOpen size={20} className="text-white" />
               },
               {
                 title: "TEDIDJO 3 - \"Baani Gordo\"",
                 desc: "Espaces sûrs pour 1500 adolescentes à Nikki et Karimama. Santé reproductive, prévention VBG, leadership féminin. Durée : Août 2025 – Juillet 2026.",
                 partner: "CARE Bénin/Togo / FJSI",
-                headerBg: '#3bb143',
-                themeColor: '#3bb143',
+                headerBg: 'var(--brand-tertiary)',
+                themeColor: 'var(--brand-tertiary)',
                 icon: <Home size={20} className="text-white" />
               },
               {
                 title: "Projet YES - Phase 3",
                 desc: "Bootcamp de 50 jeunes à Karigui et Fadama, théâtre communautaire, réseau d'ambassadeurs DSSR pour lutter contre les mariages précoces à Karimama.",
                 partner: "UNFPA Bénin / CARE Bénin-Togo",
-                headerBg: '#2764AE',
-                themeColor: '#2764AE',
+                headerBg: 'var(--brand-primary)',
+                themeColor: 'var(--brand-primary)',
                 icon: <Lightbulb size={20} className="text-white" />
               },
               {
                 title: "Grant UNFPA 2025",
                 desc: "Renforcement institutionnel : formation en plaidoyer/lobbying, lutte contre les Fake News, création d'une cellule de veille numérique interne.",
                 partner: "UNFPA / Ambassade des Pays-Bas",
-                headerBg: '#f59f23',
-                themeColor: '#f59f23',
+                headerBg: 'var(--brand-secondary)',
+                themeColor: 'var(--brand-secondary)',
                 icon: <Target size={20} className="text-white" />
               },
               {
                 title: "48H contre le Cancer du Sein",
                 desc: "2ème édition : 350 femmes sensibilisées aux marchés Arzeke et Dépôt, 96 femmes orientées vers les centres de dépistage en octobre 2025.",
                 partner: "Initiative sur fonds propres - ONG BUSOLA",
-                headerBg: '#3bb143',
-                themeColor: '#3bb143',
+                headerBg: 'var(--brand-tertiary)',
+                themeColor: 'var(--brand-tertiary)',
                 icon: <Heart size={20} className="text-white" />
               }
             ].map((proj, i) => (
@@ -428,10 +428,10 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#faf9f6', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               ZONE D'INTERVENTION
             </span>
-            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: '#111827', marginBottom: '16px', letterSpacing: '-0.5px' }}>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
               Sur le terrain au Bénin
             </h2>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
@@ -444,30 +444,30 @@ export default function AboutSection() {
               {
                 name: "Borgou",
                 sub: "Siège social - Parakou",
-                icon: <Building size={32} style={{ color: '#2764AE' }} />,
+                icon: <Building size={32} style={{ color: 'var(--brand-primary)' }} />,
                 bg: 'rgba(39, 100, 174, 0.08)',
-                borderColor: '#2764AE'
+                borderColor: 'var(--brand-primary)'
               },
               {
                 name: "Alibori",
                 sub: "Commune de Karimama",
-                icon: <Sprout size={32} style={{ color: '#f59f23' }} />,
+                icon: <Sprout size={32} style={{ color: 'var(--brand-secondary)' }} />,
                 bg: 'rgba(245, 159, 35, 0.08)',
-                borderColor: '#f59f23'
+                borderColor: 'var(--brand-secondary)'
               },
               {
                 name: "Atacora",
                 sub: "Commune de Copargo",
-                icon: <Mountain size={32} style={{ color: '#3bb143' }} />,
+                icon: <Mountain size={32} style={{ color: 'var(--brand-tertiary)' }} />,
                 bg: 'rgba(59, 177, 67, 0.08)',
-                borderColor: '#3bb143'
+                borderColor: 'var(--brand-tertiary)'
               },
               {
                 name: "Donga",
                 sub: "Communes rurales",
-                icon: <Trees size={32} style={{ color: '#2764AE' }} />,
+                icon: <Trees size={32} style={{ color: 'var(--brand-primary)' }} />,
                 bg: 'rgba(39, 100, 174, 0.08)',
-                borderColor: '#2764AE'
+                borderColor: 'var(--brand-primary)'
               }
             ].map((d, i) => (
               <div key={i} className="col-lg-3 col-sm-6">
@@ -492,7 +492,7 @@ export default function AboutSection() {
                        style={{ width: '64px', height: '64px', backgroundColor: d.bg }}>
                     {d.icon}
                   </div>
-                  <h4 className="fw-bold mb-1" style={{ fontFamily: cond, fontSize: '1.4rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: '#111827' }}>
+                  <h4 className="fw-bold mb-1" style={{ fontFamily: cond, fontSize: '1.4rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--brand-text)' }}>
                     {d.name}
                   </h4>
                   <span className="text-muted" style={{ fontSize: '0.85rem' }}>
@@ -510,7 +510,7 @@ export default function AboutSection() {
           >
             <div className="row g-4 align-items-center">
               <div className="col-lg-7">
-                <h3 style={{ fontFamily: cond, fontSize: '1.8rem', fontWeight: 900, textTransform: 'uppercase', color: '#2764AE', marginBottom: '16px' }}>
+                <h3 style={{ fontFamily: cond, fontSize: '1.8rem', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-primary)', marginBottom: '16px' }}>
                   Nos communautés d'intervention
                 </h3>
                 <p className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.7', textAlign: 'justify' }}>
@@ -520,15 +520,15 @@ export default function AboutSection() {
               <div className="col-lg-5">
                 <div className="d-flex flex-wrap gap-2 justify-content-lg-end">
                   {[
-                    { name: "Karimama-centre", bg: '#2764AE' },
-                    { name: "Kompa", bg: '#2764AE' },
-                    { name: "Birni-Lafia", bg: '#f59f23' },
-                    { name: "Karigui", bg: '#f59f23' },
-                    { name: "Copargo", bg: '#3bb143' },
-                    { name: "Nikki", bg: '#3bb143' },
-                    { name: "Fakara", bg: '#2764AE' },
-                    { name: "Fadama", bg: '#f59f23' },
-                    { name: "Parakou", bg: '#3bb143' }
+                    { name: "Karimama-centre", bg: 'var(--brand-primary)' },
+                    { name: "Kompa", bg: 'var(--brand-primary)' },
+                    { name: "Birni-Lafia", bg: 'var(--brand-secondary)' },
+                    { name: "Karigui", bg: 'var(--brand-secondary)' },
+                    { name: "Copargo", bg: 'var(--brand-tertiary)' },
+                    { name: "Nikki", bg: 'var(--brand-tertiary)' },
+                    { name: "Fakara", bg: 'var(--brand-primary)' },
+                    { name: "Fadama", bg: 'var(--brand-secondary)' },
+                    { name: "Parakou", bg: 'var(--brand-tertiary)' }
                   ].map((c, i) => (
                     <span 
                       key={i} 
@@ -575,10 +575,10 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#ffffff', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               NOS PARTENAIRES
             </span>
-            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: '#111827', marginBottom: '16px', letterSpacing: '-0.5px' }}>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
               Ils nous font confiance
             </h2>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
@@ -597,10 +597,10 @@ export default function AboutSection() {
               { name: "Ambassade du Canada", logo: "/canada.png" },
               { name: "Royaume-Uni", logo: "/logo-uk.jpg" },
               { name: "UNICEF", logo: "/unicef.png" },
-              { name: "Ambassade des Pays-Bas", logo: null, color: '#2764AE' },
-              { name: "Vie et Environnement", logo: null, color: '#f59f23' },
-              { name: "FJSI International", logo: null, color: '#3bb143' },
-              { name: "DDISP Borgou-Alibori", logo: null, color: '#2764AE' }
+              { name: "Ambassade des Pays-Bas", logo: null, color: 'var(--brand-primary)' },
+              { name: "Vie et Environnement", logo: null, color: 'var(--brand-secondary)' },
+              { name: "FJSI International", logo: null, color: 'var(--brand-tertiary)' },
+              { name: "DDISP Borgou-Alibori", logo: null, color: 'var(--brand-primary)' }
             ].map((p, i) => (
               <div 
                 key={i}
@@ -641,7 +641,7 @@ export default function AboutSection() {
                   />
                 ) : (
                   <div className="d-flex align-items-center gap-2">
-                    <div className="rounded-circle" style={{ width: '8px', height: '8px', backgroundColor: p.color || '#f59f23' }}></div>
+                    <div className="rounded-circle" style={{ width: '8px', height: '8px', backgroundColor: p.color || 'var(--brand-secondary)' }}></div>
                     <span className="fw-bold text-dark" style={{ fontSize: '0.9rem' }}>
                       {p.name}
                     </span>
@@ -666,7 +666,7 @@ export default function AboutSection() {
               </p>
             </div>
             {/* Mission */}
-            <div style={{ background: '#27ae60', padding: '48px 40px' }}>
+            <div style={{ background: 'var(--brand-tertiary)', padding: '48px 40px' }}>
               <div style={{ ...labelStyle, color: 'rgba(255,255,255,.85)' }}>
                 <span style={{ ...labelBeforeStyle, background: '#ffffff' }}></span>Notre engagement
               </div>
@@ -757,20 +757,20 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#ffffff', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               DES RÉSULTATS CONCRETS DEPUIS 2020
             </span>
-            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: '#111827', marginBottom: '16px', letterSpacing: '-0.5px' }}>
-              NOTRE IMPACT<br /><span style={{ color: '#f59f23' }}>EN QUELQUES CHIFFRES</span>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
+              NOTRE IMPACT<br /><span style={{ color: 'var(--brand-secondary)' }}>EN QUELQUES CHIFFRES</span>
             </h2>
           </div>
 
           <div className="row g-4">
             {[
-              { n: count1, suffix: '+', label: 'Bénéficiaires directs', sub: 'depuis 2020', icon: <FileText size={32} style={{ color: '#f59f23' }} />, bg: 'rgba(245, 159, 35, 0.1)', borderColor: '#f59f23' },
-              { n: count2, suffix: '+', label: 'Projets et actions de terrain', sub: 'interventions', icon: <HeartPulse size={32} style={{ color: '#2764AE' }} />, bg: 'rgba(39, 100, 174, 0.1)', borderColor: '#2764AE' },
-              { n: count3, suffix: '+', label: 'Autorités locales mobilisées', sub: 'partenaires', icon: <Users size={32} style={{ color: '#f59f23' }} />, bg: 'rgba(245, 159, 35, 0.1)', borderColor: '#f59f23' },
-              { n: count4, suffix: '', label: 'Membres actifs', sub: 'équipe engagée', icon: <FileText size={32} style={{ color: '#2764AE' }} />, bg: 'rgba(39, 100, 174, 0.1)', borderColor: '#2764AE' },
+              { n: count1, suffix: '+', label: 'Bénéficiaires directs', sub: 'depuis 2020', icon: <FileText size={32} style={{ color: 'var(--brand-secondary)' }} />, bg: 'rgba(245, 159, 35, 0.1)', borderColor: 'var(--brand-secondary)' },
+              { n: count2, suffix: '+', label: 'Projets et actions de terrain', sub: 'interventions', icon: <HeartPulse size={32} style={{ color: 'var(--brand-primary)' }} />, bg: 'rgba(39, 100, 174, 0.1)', borderColor: 'var(--brand-primary)' },
+              { n: count3, suffix: '+', label: 'Autorités locales mobilisées', sub: 'partenaires', icon: <Users size={32} style={{ color: 'var(--brand-secondary)' }} />, bg: 'rgba(245, 159, 35, 0.1)', borderColor: 'var(--brand-secondary)' },
+              { n: count4, suffix: '', label: 'Membres actifs', sub: 'équipe engagée', icon: <FileText size={32} style={{ color: 'var(--brand-primary)' }} />, bg: 'rgba(39, 100, 174, 0.1)', borderColor: 'var(--brand-primary)' },
             ].map((item, i) => (
               <div key={i} className="col-lg-3 col-md-6">
                 <div 
@@ -794,10 +794,10 @@ export default function AboutSection() {
                        style={{ width: '64px', height: '64px', backgroundColor: item.bg }}>
                     {item.icon}
                   </div>
-                  <h3 className="fw-bold mb-2" style={{ fontFamily: cond, fontSize: '2.5rem', color: '#111827', lineHeight: 1 }}>
+                  <h3 className="fw-bold mb-2" style={{ fontFamily: cond, fontSize: '2.5rem', color: 'var(--brand-text)', lineHeight: 1 }}>
                     {item.n}{item.suffix}
                   </h3>
-                  <h4 className="fw-bold mb-1" style={{ fontFamily: cond, fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: '#111827' }}>
+                  <h4 className="fw-bold mb-1" style={{ fontFamily: cond, fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--brand-text)' }}>
                     {item.label}
                   </h4>
                   <span className="text-muted" style={{ fontSize: '0.9rem' }}>

@@ -115,7 +115,7 @@ export default function GalleryPage() {
             Galerie d'impact
           </h1>
           
-          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#f59f23', borderRadius: '2px' }}></div>
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-secondary)', borderRadius: '2px' }}></div>
 
           <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
             Découvrez nos actions sur le terrain à travers nos réalisations en images. Visualisez l'impact concret de nos projets YES, TEDIDJO et PAGEDA au sein des communautés.
@@ -130,13 +130,13 @@ export default function GalleryPage() {
           {/* Header */}
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>IMMERSION VISUELLE</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>IMMERSION VISUELLE</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Notre histoire s'écrit</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>au plus près des visages</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.75rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Notre histoire s'écrit</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>au plus près des visages</span>
             </h1>
             <p className="text-muted fs-5 mt-4">
               Explorez les moments marquants de nos projets auprès des filles, des adolescents et des communautés.

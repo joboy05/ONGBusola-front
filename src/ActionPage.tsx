@@ -84,7 +84,7 @@ export default function ActionPage() {
             NOS ACTIONS
           </h1>
           
-          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#f59f23', borderRadius: '2px' }}></div>
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-secondary)', borderRadius: '2px' }}></div>
 
           <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.25rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
             Transformer le potentiel en puissance. Nous ne voyons pas des bénéficiaires — nous voyons des actrices et acteurs du changement.
@@ -123,10 +123,10 @@ export default function ActionPage() {
                 01
               </span>
               <div className="position-relative" style={{ zIndex: 1 }}>
-                <span className="text-uppercase fw-bold" style={{ color: '#2764AE', fontSize: '0.85rem', letterSpacing: '2px' }}>
+                <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-primary)', fontSize: '0.85rem', letterSpacing: '2px' }}>
                   Première Étape
                 </span>
-                <h3 className="fw-black text-uppercase mt-2 mb-0" style={{ fontSize: '2.8rem', color: '#0E2A5C', letterSpacing: '-0.5px', lineHeight: '1.1' }}>
+                <h3 className="fw-black text-uppercase mt-2 mb-0" style={{ fontSize: '2.8rem', color: 'var(--brand-dark)', letterSpacing: '-0.5px', lineHeight: '1.1' }}>
                   ÉDUQUER<br/>pour libérer l'esprit
                 </h3>
               </div>
@@ -149,7 +149,7 @@ export default function ActionPage() {
                   className="d-flex align-items-center gap-3 py-3"
                   style={{ borderBottom: '1px solid rgba(14, 42, 92, 0.08)' }}
                 >
-                  <span className="fw-bold" style={{ color: '#f59f23', fontSize: '1.2rem' }}>→</span>
+                  <span className="fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '1.2rem' }}>→</span>
                   <span className="text-dark fw-medium" style={{ fontSize: '0.98rem' }}>{item}</span>
                 </li>
               ))}
@@ -182,7 +182,7 @@ export default function ActionPage() {
             className="col-lg-6 order-lg-2 order-1 d-flex flex-column justify-content-center"
             style={{ 
               padding: '6% 8%', 
-              backgroundColor: '#F8F5EF' 
+              backgroundColor: 'var(--brand-light)' 
             }}
           >
             <div className="position-relative mb-4">
@@ -202,10 +202,10 @@ export default function ActionPage() {
                 02
               </span>
               <div className="position-relative" style={{ zIndex: 1 }}>
-                <span className="text-uppercase fw-bold" style={{ color: '#f59f23', fontSize: '0.85rem', letterSpacing: '2px' }}>
+                <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.85rem', letterSpacing: '2px' }}>
                   Deuxième Étape
                 </span>
-                <h3 className="fw-black text-uppercase mt-2 mb-0" style={{ fontSize: '2.8rem', color: '#0E2A5C', letterSpacing: '-0.5px', lineHeight: '1.1' }}>
+                <h3 className="fw-black text-uppercase mt-2 mb-0" style={{ fontSize: '2.8rem', color: 'var(--brand-dark)', letterSpacing: '-0.5px', lineHeight: '1.1' }}>
                   PROTÉGER<br/>pour garantir la sécurité
                 </h3>
               </div>
@@ -228,7 +228,7 @@ export default function ActionPage() {
                   className="d-flex align-items-center gap-3 py-3"
                   style={{ borderBottom: '1px solid rgba(14, 42, 92, 0.08)' }}
                 >
-                  <span className="fw-bold" style={{ color: '#f59f23', fontSize: '1.2rem' }}>→</span>
+                  <span className="fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '1.2rem' }}>→</span>
                   <span className="text-dark fw-medium" style={{ fontSize: '0.98rem' }}>{item}</span>
                 </li>
               ))}
@@ -263,10 +263,10 @@ export default function ActionPage() {
                 03
               </span>
               <div className="position-relative" style={{ zIndex: 1 }}>
-                <span className="text-uppercase fw-bold" style={{ color: '#3bb143', fontSize: '0.85rem', letterSpacing: '2px' }}>
+                <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.85rem', letterSpacing: '2px' }}>
                   Troisième Étape
                 </span>
-                <h3 className="fw-black text-uppercase mt-2 mb-0" style={{ fontSize: '2.8rem', color: '#0E2A5C', letterSpacing: '-0.5px', lineHeight: '1.1' }}>
+                <h3 className="fw-black text-uppercase mt-2 mb-0" style={{ fontSize: '2.8rem', color: 'var(--brand-dark)', letterSpacing: '-0.5px', lineHeight: '1.1' }}>
                   AUTONOMISER<br/>pour bâtir l'avenir
                 </h3>
               </div>
@@ -289,7 +289,7 @@ export default function ActionPage() {
                   className="d-flex align-items-center gap-3 py-3"
                   style={{ borderBottom: '1px solid rgba(14, 42, 92, 0.08)' }}
                 >
-                  <span className="fw-bold" style={{ color: '#f59f23', fontSize: '1.2rem' }}>→</span>
+                  <span className="fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '1.2rem' }}>→</span>
                   <span className="text-dark fw-medium" style={{ fontSize: '0.98rem' }}>{item}</span>
                 </li>
               ))}
@@ -313,13 +313,13 @@ export default function ActionPage() {
         <div className="container py-5">
           {/* Header */}
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#2764AE', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-primary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               PRINCIPALES RÉALISATIONS
             </span>
             <h2 className="fw-black text-uppercase text-dark mb-3" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.5px' }}>
               Nos grands projets menés
             </h2>
-            <div className="mx-auto" style={{ width: '60px', height: '3px', backgroundColor: '#f59f23' }}></div>
+            <div className="mx-auto" style={{ width: '60px', height: '3px', backgroundColor: 'var(--brand-secondary)' }}></div>
           </div>
 
           {/* Cards Grid */}
@@ -333,7 +333,7 @@ export default function ActionPage() {
                     </Link>
                     <span 
                       className="px-3 py-1 position-absolute top-0 end-0 text-white fw-bold" 
-                      style={{ backgroundColor: '#f59f23', fontSize: '0.85rem' }}
+                      style={{ backgroundColor: 'var(--brand-secondary)', fontSize: '0.85rem' }}
                     >
                       {proj.tag}
                     </span>
@@ -341,14 +341,14 @@ export default function ActionPage() {
                   
                   {/* Content block */}
                   <div className="p-4 d-flex flex-column flex-grow-1">
-                    <h3 className="h5 fw-bold text-uppercase mb-3" style={{ color: '#111827', fontFamily: sans }}>{proj.title}</h3>
+                    <h3 className="h5 fw-bold text-uppercase mb-3" style={{ color: 'var(--brand-text)', fontFamily: sans }}>{proj.title}</h3>
                     <p className="text-muted flex-grow-1" style={{ fontSize: '0.93rem', lineHeight: '1.6', textAlign: 'justify' }}>
                       {proj.desc}
                     </p>
                   </div>
                   
                   {/* En savoir plus Button */}
-                  <Link to={`/actions/${proj.id}`} className="btn text-white w-100 border-0 rounded-0 py-3 d-flex align-items-center justify-content-center gap-2" style={{ backgroundColor: '#2764AE', fontSize: '0.95rem', fontWeight: 'bold' }}>
+                  <Link to={`/actions/${proj.id}`} className="btn text-white w-100 border-0 rounded-0 py-3 d-flex align-items-center justify-content-center gap-2" style={{ backgroundColor: 'var(--brand-primary)', fontSize: '0.95rem', fontWeight: 'bold' }}>
                     <Plus size={16} /> En savoir plus
                   </Link>
                 </div>
@@ -360,16 +360,16 @@ export default function ActionPage() {
 
       {/* ── HUMAN IMPACT / TESTIMONY SECTION (Mariam's story) ── */}
       {/* Implemented inside a centered box of var(--cobalt) as defined in legacy style.css */}
-      <section className="container-fluid py-5" style={{ background: '#F8F5EF' }}>
+      <section className="container-fluid py-5" style={{ background: 'var(--brand-light)' }}>
         <div className="container py-4">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
+            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
               IMPACT HUMAIN
             </span>
             <h2 className="fw-black text-uppercase text-dark mb-3" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.5px' }}>
               Une vie transformée
             </h2>
-            <div className="mx-auto" style={{ width: '60px', height: '3px', backgroundColor: '#3bb143' }}></div>
+            <div className="mx-auto" style={{ width: '60px', height: '3px', backgroundColor: 'var(--brand-tertiary)' }}></div>
           </div>
 
           <div 
@@ -377,7 +377,7 @@ export default function ActionPage() {
             data-wow-delay="0.2s"
             style={{ 
               maxWidth: '950px', 
-              backgroundColor: '#0E2A5C', 
+              backgroundColor: 'var(--brand-dark)', 
               borderRadius: '8px', 
               overflow: 'hidden',
               boxShadow: '0 20px 50px rgba(14, 42, 92, 0.18)'
@@ -387,7 +387,7 @@ export default function ActionPage() {
             <div 
               className="col-md-4 d-flex flex-column align-items-center justify-content-center text-center text-white" 
               style={{ 
-                background: 'linear-gradient(180deg, #1A3F80 0%, #0E2A5C 100%)',
+                background: 'linear-gradient(180deg, #1A3F80 0%, var(--brand-dark) 100%)',
                 padding: '48px 32px'
               }}
             >
@@ -397,7 +397,7 @@ export default function ActionPage() {
                   width: '100px', 
                   height: '100px', 
                   borderRadius: '50%', 
-                  border: '3px solid #f59f23'
+                  border: '3px solid var(--brand-secondary)'
                 }}
               >
                 <img 
@@ -446,7 +446,7 @@ export default function ActionPage() {
                 }}
               >
                 Quand nous avons rencontré Mariam, elle était déscolarisée et sans perspective. Grâce à nos sessions d'
-                <b style={{ fontStyle: 'normal', color: '#f59f23' }}>éducation</b>, elle a repris confiance en elle et compris ses droits fondamentaux. Intégrée dans un espace <b style={{ fontStyle: 'normal', color: '#3bb143' }}>protégé</b>, elle a pu parler des violences qu'elle subissait et bénéficier d'un accompagnement juridique. Aujourd'hui, grâce à une formation en couture et gestion, elle est <b style={{ fontStyle: 'normal', color: '#2764AE' }}>autonome</b>. Elle a monté sa propre petite activité et est devenue une source d'inspiration pour les autres jeunes filles de son quartier. Son histoire, c'est la raison d'être de notre action.
+                <b style={{ fontStyle: 'normal', color: 'var(--brand-secondary)' }}>éducation</b>, elle a repris confiance en elle et compris ses droits fondamentaux. Intégrée dans un espace <b style={{ fontStyle: 'normal', color: 'var(--brand-tertiary)' }}>protégé</b>, elle a pu parler des violences qu'elle subissait et bénéficier d'un accompagnement juridique. Aujourd'hui, grâce à une formation en couture et gestion, elle est <b style={{ fontStyle: 'normal', color: 'var(--brand-primary)' }}>autonome</b>. Elle a monté sa propre petite activité et est devenue une source d'inspiration pour les autres jeunes filles de son quartier. Son histoire, c'est la raison d'être de notre action.
               </p>
             </div>
           </div>

@@ -104,7 +104,7 @@ export default function TeamPage() {
             Notre équipe
           </h1>
           
-          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: '#3bb143', borderRadius: '2px' }}></div>
+          <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-tertiary)', borderRadius: '2px' }}></div>
 
           <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
             Rencontrez les personnes engagées et passionnées qui travaillent chaque jour pour la réalisation des objectifs de l'ONG Busola.
@@ -113,7 +113,7 @@ export default function TeamPage() {
       </div>
 
       {/* Blue Sub-banner */}
-      <div className="container-fluid p-0 d-flex position-relative shadow-sm" style={{ backgroundColor: '#2764AE', minHeight: '120px' }}>
+      <div className="container-fluid p-0 d-flex position-relative shadow-sm" style={{ backgroundColor: 'var(--brand-primary)', minHeight: '120px' }}>
         <div className="container d-flex align-items-center justify-content-center text-white text-center px-4" style={{ minHeight: '120px' }}>
           <h5 className="mb-0 fw-bold" style={{ fontSize: '1.25rem', lineHeight: 1.5 }}>
              - Contribuer a l'émergence des dynamiques du développement communautaire
@@ -121,7 +121,7 @@ export default function TeamPage() {
         </div>
         <div 
           className="d-none d-lg-flex flex-column align-items-center justify-content-center position-absolute end-0 h-100"
-          style={{ width: '80px', backgroundColor: '#f59f23', writingMode: 'vertical-lr', transform: 'rotate(180deg)' }}
+          style={{ width: '80px', backgroundColor: 'var(--brand-secondary)', writingMode: 'vertical-lr', transform: 'rotate(180deg)' }}
         >
           <span className="text-white fw-bold" style={{ fontSize: '1rem', letterSpacing: '1px' }}>Découvrez</span>
         </div>
@@ -146,11 +146,11 @@ export default function TeamPage() {
         <div className="container py-4">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#f59f23", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE STRUCTURE</span>
-              <div style={{ height: "1px", background: "#f59f23", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-secondary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE STRUCTURE</span>
+              <div style={{ height: "1px", background: "var(--brand-secondary)", width: "40px" }}></div>
             </div>
-            <h2 className="fw-black mb-4 text-uppercase" style={{ lineHeight: 1.2, fontSize: '2.5rem', color: '#111827', fontFamily: '"Barlow Condensed", sans-serif' }}>
+            <h2 className="fw-black mb-4 text-uppercase" style={{ lineHeight: 1.2, fontSize: '2.5rem', color: 'var(--brand-text)', fontFamily: '"Barlow Condensed", sans-serif' }}>
               Organes de Gouvernance
             </h2>
             <p className="text-muted" style={{ fontSize: '1.05rem' }}>
@@ -163,7 +163,7 @@ export default function TeamPage() {
             <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
               <div className="h-100 p-4 bg-white border shadow-sm transition-all" 
                    style={{ 
-                     borderTop: '5px solid #2764AE', 
+                     borderTop: '5px solid var(--brand-primary)', 
                      transition: 'all 0.3s ease',
                      borderRadius: '16px'
                    }}
@@ -178,7 +178,7 @@ export default function TeamPage() {
               >
                 <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" 
                      style={{ width: '70px', height: '70px', backgroundColor: '#eef4fc' }}>
-                  <ClipboardCheck size={32} style={{ color: '#2764AE' }} />
+                  <ClipboardCheck size={32} style={{ color: 'var(--brand-primary)' }} />
                 </div>
                 <div className="d-flex align-items-center gap-2 mb-3">
                   <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: '1.35rem', fontFamily: '"Barlow Condensed", sans-serif', textTransform: 'uppercase' }}>
@@ -195,7 +195,7 @@ export default function TeamPage() {
             <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
               <div className="h-100 p-4 bg-white border shadow-sm transition-all" 
                    style={{ 
-                     borderTop: '5px solid #f59f23', 
+                     borderTop: '5px solid var(--brand-secondary)', 
                      transition: 'all 0.3s ease',
                      borderRadius: '16px'
                    }}
@@ -210,7 +210,7 @@ export default function TeamPage() {
               >
                 <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" 
                      style={{ width: '70px', height: '70px', backgroundColor: '#fdf5e8' }}>
-                  <Settings size={32} style={{ color: '#f59f23' }} />
+                  <Settings size={32} style={{ color: 'var(--brand-secondary)' }} />
                 </div>
                 <div className="d-flex align-items-center gap-2 mb-3">
                   <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: '1.35rem', fontFamily: '"Barlow Condensed", sans-serif', textTransform: 'uppercase' }}>
@@ -227,7 +227,7 @@ export default function TeamPage() {
             <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
               <div className="h-100 p-4 bg-white border shadow-sm transition-all" 
                    style={{ 
-                     borderTop: '5px solid #3bb143', 
+                     borderTop: '5px solid var(--brand-tertiary)', 
                      transition: 'all 0.3s ease',
                      borderRadius: '16px'
                    }}
@@ -242,7 +242,7 @@ export default function TeamPage() {
               >
                 <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" 
                      style={{ width: '70px', height: '70px', backgroundColor: '#eefcf0' }}>
-                  <Briefcase size={32} style={{ color: '#3bb143' }} />
+                  <Briefcase size={32} style={{ color: 'var(--brand-tertiary)' }} />
                 </div>
                 <div className="d-flex align-items-center gap-2 mb-3">
                   <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: '1.35rem', fontFamily: '"Barlow Condensed", sans-serif', textTransform: 'uppercase' }}>
@@ -263,17 +263,17 @@ export default function TeamPage() {
         <div className="container py-5">
           <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
-              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#3bb143', fontSize: '0.9rem', letterSpacing: '2px' }}>LA TEAM BUSOLA</span>
-              <div style={{ height: "1px", background: "#3bb143", width: "40px" }}></div>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>LA TEAM BUSOLA</span>
+              <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
             </div>
-            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.5rem', color: '#111827' }}>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>Découvrez quelques membres du C.A.</span><br/>
-              <span className="text-uppercase fw-black" style={{ color: '#111827', letterSpacing: '-0.5px' }}>et la Direction Exécutive de BUSOLA</span>
+            <h1 className="fw-black mb-4" style={{ lineHeight: 1.2, fontSize: '2.5rem', color: 'var(--brand-text)' }}>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Découvrez quelques membres du C.A.</span><br/>
+              <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>et la Direction Exécutive de BUSOLA</span>
             </h1>
           </div>
           
-          <h3 className="fw-bold mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ color: '#2764AE' }}>Conseil d'Administration (C.A.)</h3>
+          <h3 className="fw-bold mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ color: 'var(--brand-primary)' }}>Conseil d'Administration (C.A.)</h3>
           <div className="row g-4 justify-content-center mb-5">
             {team.filter(m => m.name !== 'Zoulfath ZIME ' && m.name !== 'Fadel KASSALI' && m.name !== 'Abouyaïdou MAMA').map((m, i) => (
               <div key={i} className="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay={`${0.1 * (i + 1)}s`}>
@@ -299,7 +299,7 @@ export default function TeamPage() {
             ))}
           </div>
 
-          <h3 className="fw-bold mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ color: '#2764AE' }}>Direction Exécutive</h3>
+          <h3 className="fw-bold mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ color: 'var(--brand-primary)' }}>Direction Exécutive</h3>
           <div className="row g-4 justify-content-center">
             {team.filter(m => m.name === 'Zoulfath ZIME ' || m.name === 'Fadel KASSALI' || m.name === 'Abouyaïdou MAMA').map((m, i) => (
               <div key={i} className="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay={`${0.1 * (i + 1)}s`}>

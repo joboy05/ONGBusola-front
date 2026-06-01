@@ -9,6 +9,13 @@
   --bs-primary: #2864ae !important;
   --bs-secondary: #f39c12 !important;
   --bs-tertiary: #27ae60 !important;
+  --brand-primary: #2864ae;
+  --brand-secondary: #f39c12;
+  --brand-tertiary: #27ae60;
+  --brand-dark: #0e2a5c;
+  --brand-sand: #faf9f6;
+  --brand-light: #f8f5ef;
+  --brand-text: #111827;
 }
 
 .bg-primary { background-color: var(--bs-primary) !important; }

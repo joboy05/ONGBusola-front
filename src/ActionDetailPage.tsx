@@ -76,18 +76,18 @@ export default function ActionDetailPage() {
         }}
       >
         <div className="text-center position-relative w-100" style={{ zIndex: 1 }}>
-          <h1 className="display-4 fw-bold mb-3 text-uppercase" style={{ color: '#2764AE' }}>
+          <h1 className="display-4 fw-bold mb-3 text-uppercase" style={{ color: 'var(--brand-primary)' }}>
             {project.title}
           </h1>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
               <li className="breadcrumb-item">
-                <Link to="/" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Accueil</Link>
+                <Link to="/" className="text-decoration-none fw-medium" style={{ color: 'var(--brand-tertiary)', fontSize: '1.05rem' }}>Accueil</Link>
               </li>
               <li className="breadcrumb-item">
-                <Link to="/actions" className="text-decoration-none fw-medium" style={{ color: '#3bb143', fontSize: '1.05rem' }}>Actions</Link>
+                <Link to="/actions" className="text-decoration-none fw-medium" style={{ color: 'var(--brand-tertiary)', fontSize: '1.05rem' }}>Actions</Link>
               </li>
-              <li className="breadcrumb-item active fw-medium text-uppercase" aria-current="page" style={{ color: '#2764AE', fontSize: '1.05rem' }}>
+              <li className="breadcrumb-item active fw-medium text-uppercase" aria-current="page" style={{ color: 'var(--brand-primary)', fontSize: '1.05rem' }}>
                 {project.title}
               </li>
             </ol>
@@ -113,7 +113,7 @@ export default function ActionDetailPage() {
                 <img src={project.img} alt={project.title} className="img-fluid w-100 shadow-sm" style={{ objectFit: 'cover' }} />
               </div>
               
-              <div className="p-4" style={{ backgroundColor: '#f59f23', color: 'white' }}>
+              <div className="p-4" style={{ backgroundColor: 'var(--brand-secondary)', color: 'white' }}>
                 <h4 className="fw-bold text-white mb-4">Détails du projet</h4>
                 <div className="mb-2" style={{ fontSize: '0.9rem' }}>
                   <span className="fw-bold">Secteur: </span>{project.secteur}
