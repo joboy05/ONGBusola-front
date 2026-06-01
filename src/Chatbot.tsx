@@ -230,7 +230,7 @@ export default function Chatbot() {
           setMessages(prev => [...prev, {
             id: Math.random().toString(),
             role: 'bot',
-            text: "✅ Votre demande de contact a été transmise avec succès à nos agents. Un courriel de confirmation vous a été envoyé. Comment puis-je vous aider d'autre ?",
+            text: "Votre demande de contact a été transmise avec succès à nos agents. Un courriel de confirmation vous a été envoyé. Comment puis-je vous aider d'autre ?",
             actions: [{ label: "Retour au menu principal", action: "menu" }]
           }]);
         }, 3000);

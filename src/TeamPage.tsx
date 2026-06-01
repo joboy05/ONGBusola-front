@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { ClipboardCheck, Settings, Briefcase } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -123,6 +124,137 @@ export default function TeamPage() {
           style={{ width: '80px', backgroundColor: '#f59f23', writingMode: 'vertical-lr', transform: 'rotate(180deg)' }}
         >
           <span className="text-white fw-bold" style={{ fontSize: '1rem', letterSpacing: '1px' }}>Découvrez</span>
+        </div>
+      </div>
+
+      {/* Green Rolling Band */}
+      <div 
+        className="container-fluid bg-tertiary text-white py-3 overflow-hidden shadow-sm"
+        style={{ whiteSpace: 'nowrap', zIndex: 5 }}
+      >
+        <marquee behavior="scroll" direction="left" scrollamount="6" style={{ fontSize: '1.05rem', fontWeight: 'bold', letterSpacing: '0.5px' }}>
+          {[1, 2, 3, 4].map(i => (
+            <span key={i} className="mx-5 text-uppercase">
+              L'ONG BUSOLA EST UNE ORGANISATION STRUCTURÉE, DOTÉE DE PROCÉDURES CLAIRES QUI GARANTISSENT UNE GESTION RIGOUREUSE ET REDEVABLE.
+            </span>
+          ))}
+        </marquee>
+      </div>
+
+      {/* Organes de Gouvernance */}
+      <div className="container-fluid py-5" style={{ backgroundColor: '#faf9f6' }}>
+        <div className="container py-4">
+          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+            <div className="d-flex align-items-center justify-content-center mb-3">
+              <div style={{ height: "1px", background: "#f59f23", width: "40px" }}></div>
+              <span className="text-uppercase mx-2 fw-bold" style={{ color: '#f59f23', fontSize: '0.9rem', letterSpacing: '2px' }}>NOTRE STRUCTURE</span>
+              <div style={{ height: "1px", background: "#f59f23", width: "40px" }}></div>
+            </div>
+            <h2 className="fw-black mb-4 text-uppercase" style={{ lineHeight: 1.2, fontSize: '2.5rem', color: '#111827', fontFamily: '"Barlow Condensed", sans-serif' }}>
+              Organes de Gouvernance
+            </h2>
+            <p className="text-muted" style={{ fontSize: '1.05rem' }}>
+              La structure organisationnelle de l’ONG Busola garantit l’orientation stratégique, la rigueur de gestion et l’efficacité de nos actions sur le terrain.
+            </p>
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            {/* Card 1: Assemblée Générale */}
+            <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="h-100 p-4 bg-white border shadow-sm transition-all" 
+                   style={{ 
+                     borderTop: '5px solid #2764AE', 
+                     transition: 'all 0.3s ease',
+                     borderRadius: '16px'
+                   }}
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.transform = 'translateY(-8px)';
+                     e.currentTarget.style.boxShadow = '0 15px 30px rgba(39, 100, 174, 0.15)';
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.transform = 'translateY(0)';
+                     e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0,0,0,.075)';
+                   }}
+              >
+                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" 
+                     style={{ width: '70px', height: '70px', backgroundColor: '#eef4fc' }}>
+                  <ClipboardCheck size={32} style={{ color: '#2764AE' }} />
+                </div>
+                <div className="d-flex align-items-center gap-2 mb-3">
+                  <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: '1.35rem', fontFamily: '"Barlow Condensed", sans-serif', textTransform: 'uppercase' }}>
+                    Assemblée Générale
+                  </h4>
+                </div>
+                <p className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6', textAlign: 'justify' }}>
+                  Organe suprême garantissant l'orientation stratégique et la légitimité des choix organisationnels.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: Conseil d'Administration */}
+            <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div className="h-100 p-4 bg-white border shadow-sm transition-all" 
+                   style={{ 
+                     borderTop: '5px solid #f59f23', 
+                     transition: 'all 0.3s ease',
+                     borderRadius: '16px'
+                   }}
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.transform = 'translateY(-8px)';
+                     e.currentTarget.style.boxShadow = '0 15px 30px rgba(245, 159, 35, 0.15)';
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.transform = 'translateY(0)';
+                     e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0,0,0,.075)';
+                   }}
+              >
+                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" 
+                     style={{ width: '70px', height: '70px', backgroundColor: '#fdf5e8' }}>
+                  <Settings size={32} style={{ color: '#f59f23' }} />
+                </div>
+                <div className="d-flex align-items-center gap-2 mb-3">
+                  <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: '1.35rem', fontFamily: '"Barlow Condensed", sans-serif', textTransform: 'uppercase' }}>
+                    Conseil d'Administration
+                  </h4>
+                </div>
+                <p className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6', textAlign: 'justify' }}>
+                  Leaders et experts en paix, droit, santé et finances assurant une vision stratégique et une gestion rigoureuse.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: Direction Exécutive */}
+            <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div className="h-100 p-4 bg-white border shadow-sm transition-all" 
+                   style={{ 
+                     borderTop: '5px solid #3bb143', 
+                     transition: 'all 0.3s ease',
+                     borderRadius: '16px'
+                   }}
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.transform = 'translateY(-8px)';
+                     e.currentTarget.style.boxShadow = '0 15px 30px rgba(59, 177, 67, 0.15)';
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.transform = 'translateY(0)';
+                     e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0,0,0,.075)';
+                   }}
+              >
+                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" 
+                     style={{ width: '70px', height: '70px', backgroundColor: '#eefcf0' }}>
+                  <Briefcase size={32} style={{ color: '#3bb143' }} />
+                </div>
+                <div className="d-flex align-items-center gap-2 mb-3">
+                  <h4 className="fw-bold mb-0 text-dark" style={{ fontSize: '1.35rem', fontFamily: '"Barlow Condensed", sans-serif', textTransform: 'uppercase' }}>
+                    Direction Exécutive
+                  </h4>
+                </div>
+                <p className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6', textAlign: 'justify' }}>
+                  Organe opérationnel intégrant des compétences en gestion, communication, plaidoyer et redevabilité.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
