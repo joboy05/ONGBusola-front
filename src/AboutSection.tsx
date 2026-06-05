@@ -117,20 +117,19 @@ export default function AboutSection() {
             {/* Texte */}
             <div>
               <p style={{ fontSize: '16px', color: muted, lineHeight: 1.85, marginBottom: '20px' }}>
-                L'ONG Busola n'est pas née d'un concept, mais d'un constat. Fondée en mars 2020 par des acteurs du développement social profondément attachés au Nord-Bénin, notre organisation est une réponse citoyenne aux défis rencontrés par les femmes et les jeunes de nos communautés.
+                Créée en 2020 à Parakou, BUSOLA est le fruit d'un engagement citoyen et associatif porté par des femmes et des jeunes acteurs du développement, convaincus que les réponses aux défis sociaux devaient être locales, inclusives et ancrées dans les communautés.
               </p>
               <p style={{ fontSize: '16px', color: muted, lineHeight: 1.85, marginBottom: '20px' }}>
-                Le nom <strong>« Busola »</strong>, la boussole en yoruba, incarne notre vocation : guider, orienter et accompagner chaque individu vers un avenir où il a le plein pouvoir d'agir. Nous sommes une organisation née du terrain, pour le terrain, enregistrée sous le numéro <strong>2020-4/016/PDB/SG/SAG</strong>.
-              </p>
+                Le nom <strong>Busola</strong>, qui signifie <strong>augmenter le prestige</strong> en yoruba, incarne notre vocation : accompagner chaque individu vers un avenir où il dispose pleinement du pouvoir d'agir, de décider et de transformer positivement sa communauté. Nous sommes une organisation née du terrain, pour le terrain, guidée par la promesse de : Unir, Eduquer, Protéger et Autonomiser.              </p>
               <p style={{ fontSize: '16px', color: muted, lineHeight: 1.85, marginBottom: '28px' }}>
-                En 5 ans d'existence, nous avons prouvé qu'une ONG jeune, locale et engagée peut porter des projets à impact réel, mobiliser des partenaires de confiance et transformer des vies concrètes dans les communes les plus éloignées du Bénin.
+                En 6 ans d'existence, nous avons prouvé qu'une ONG jeune, locale et engagée peut porter des projets à impact réel, mobiliser des partenaires de confiance et transformer des vies concrètes dans les communes les plus éloignées du Bénin.
               </p>
 
               {/* Stats mini */}
               <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
                 {[
                   { n: '2020', label: 'Année de création', suffix: '' },
-                  { n: '5', suffix: 'ans', label: "d'impact continu" },
+                  { n: '6', suffix: 'ans', label: "d'impact continu" },
                   { n: '9', label: 'projets en 2025', suffix: '' },
                 ].map((s, i) => (
                   <div key={i}>
@@ -178,12 +177,15 @@ export default function AboutSection() {
             position: 'relative',
             zIndex: 1
           }}>
-            LA PAIX COMMENCE<br />
-            QUAND LA VIOLENCE<br />
             <span style={{
               color: '#f89d2a',
               fontStyle: 'italic'
-            }}>S'ARRÊTE</span>
+            }}>LA PAIX </span> COMMENCE<br />
+            QUAND <br />
+            <span style={{
+              color: '#f89d2a',
+              fontStyle: 'italic'
+            }}>LA VIOLENCE </span>S'ARRÊTE
           </h2>
 
           <p style={{ 
@@ -197,7 +199,7 @@ export default function AboutSection() {
             position: 'relative', 
             zIndex: 1 
           }}>
-            « Nous sommes Busola ONG. Nous sommes la lumière qui oriente et le moteur qui transforme. »
+            « Nous sommes <strong>BUSOLA</strong>. Nous sommes la lumière qui oriente et le moteur qui transforme. »
           </p>
         </div>
       </section>
@@ -319,6 +321,7 @@ export default function AboutSection() {
                 title: "Programme RESPECT - Année 4",
                 desc: "Accroître la jouissance des droits de santé pour les adolescentes et jeunes femmes (10-24 ans). Données VBG, plaidoyer, téléfilm éducatif, ouverture CIPEC-VBG.",
                 partner: "Médecins du Monde / ROAJELF Bénin",
+                partnerLogos: ['/logo-mdm.png', '/roajelf.jpeg'],
                 headerBg: 'var(--brand-primary)',
                 themeColor: 'var(--brand-primary)',
                 icon: <FileText size={20} className="text-white" />
@@ -327,6 +330,7 @@ export default function AboutSection() {
                 title: "PAGEDA II - Alphabétisation",
                 desc: "Renforcement de l'éducation non formelle dans la commune de Copargo. Reprise des cours, dotation en matériels pédagogiques, évaluation finale avec 100% de réussite.",
                 partner: "SIA N'SON ONG / Coopération Suisse",
+                partnerLogos: ['/logo-suisse.png'],
                 headerBg: 'var(--brand-secondary)',
                 themeColor: 'var(--brand-secondary)',
                 icon: <BookOpen size={20} className="text-white" />
@@ -335,6 +339,7 @@ export default function AboutSection() {
                 title: "TEDIDJO 3 - \"Baani Gordo\"",
                 desc: "Espaces sûrs pour 1500 adolescentes à Nikki et Karimama. Santé reproductive, prévention VBG, leadership féminin. Durée : Août 2025 – Juillet 2026.",
                 partner: "CARE Bénin/Togo / FJSI",
+                partnerLogos: ['/logo-care.png'],
                 headerBg: 'var(--brand-tertiary)',
                 themeColor: 'var(--brand-tertiary)',
                 icon: <Home size={20} className="text-white" />
@@ -343,25 +348,19 @@ export default function AboutSection() {
                 title: "Projet YES - Phase 3",
                 desc: "Bootcamp de 50 jeunes à Karigui et Fadama, théâtre communautaire, réseau d'ambassadeurs DSSR pour lutter contre les mariages précoces à Karimama.",
                 partner: "UNFPA Bénin / CARE Bénin-Togo",
+                partnerLogos: ['/unfpa.png', '/logo-care.png'],
                 headerBg: 'var(--brand-primary)',
                 themeColor: 'var(--brand-primary)',
                 icon: <Lightbulb size={20} className="text-white" />
               },
               {
-                title: "Grant UNFPA 2025",
-                desc: "Renforcement institutionnel : formation en plaidoyer/lobbying, lutte contre les Fake News, création d'une cellule de veille numérique interne.",
-                partner: "UNFPA / Ambassade des Pays-Bas",
-                headerBg: 'var(--brand-secondary)',
-                themeColor: 'var(--brand-secondary)',
-                icon: <Target size={20} className="text-white" />
-              },
-              {
-                title: "48H contre le Cancer du Sein",
-                desc: "2ème édition : 350 femmes sensibilisées aux marchés Arzeke et Dépôt, 96 femmes orientées vers les centres de dépistage en octobre 2025.",
-                partner: "Initiative sur fonds propres - ONG BUSOLA",
+                title: "Résilience des Jeunes de Matéri (RéJeM)",
+                desc: "Offrir aux jeunes de Matéri des alternatives concrètes et locales face aux activités illicites, en transformant les défis sécuritaires en opportunités de développement.",
+                partner: "Commune de Matéri / Partenaires locaux",
+                partnerLogos: ['/logo-hands.png', '/unicri.svg'],
                 headerBg: 'var(--brand-tertiary)',
                 themeColor: 'var(--brand-tertiary)',
-                icon: <Heart size={20} className="text-white" />
+                icon: <HeartPulse size={20} className="text-white" />
               }
             ].map((proj, i) => (
               <div key={i} className="col-lg-4 col-md-6">
@@ -386,11 +385,11 @@ export default function AboutSection() {
                     className="p-3 d-flex align-items-center gap-3 text-white"
                     style={{ backgroundColor: proj.headerBg }}
                   >
-                    <div className="d-flex align-items-center justify-content-center rounded bg-white bg-opacity-20"
-                         style={{ width: '38px', height: '38px' }}>
+                    <div className="d-flex align-items-center justify-content-center rounded"
+                         style={{ width: '38px', height: '38px', backgroundColor: proj.themeColor }}>
                       {proj.icon}
                     </div>
-                    <h5 className="mb-0 fw-bold" style={{ fontFamily: cond, fontSize: '1.15rem', letterSpacing: '0.3px', textTransform: 'uppercase' }}>
+                    <h5 className="mb-0 fw-bold" style={{ fontFamily: cond, fontSize: '1.15rem', letterSpacing: '0.3px', textTransform: 'uppercase', color: '#ffffff' }}>
                       {proj.title}
                     </h5>
                   </div>
@@ -400,9 +399,19 @@ export default function AboutSection() {
                     </p>
                     <div className="pt-3 border-top d-flex align-items-center gap-2" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
                       <Handshake size={16} style={{ color: proj.themeColor }} />
-                      <span className="fw-bold" style={{ fontSize: '0.82rem', color: proj.themeColor }}>
-                        {proj.partner}
-                      </span>
+                      <div className="d-flex align-items-center gap-2 flex-wrap">
+                        {proj.partnerLogos?.map((logo, li) => (
+                          <img
+                            key={li}
+                            src={logo}
+                            alt="Logo partenaire"
+                            style={{ height: '18px', width: 'auto', objectFit: 'contain', maxWidth: '70px' }}
+                          />
+                        ))}
+                        <span className="fw-bold" style={{ fontSize: '0.82rem', color: proj.themeColor }}>
+                          {proj.partner}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -415,6 +424,11 @@ export default function AboutSection() {
       {/* Section 3: Sur le terrain au Bénin */}
       <section style={{ padding: '80px 0', background: '#faf9f6', fontFamily: sans }}>
         <div className="container">
+          <div className="mb-4 overflow-hidden rounded-4" style={{ background: '#198754', color: '#fff', boxShadow: '0 12px 30px rgba(0,0,0,0.12)' }}>
+            <marquee behavior="scroll" direction="left" scrollamount="6" style={{ padding: '16px 24px', fontSize: '1rem', fontWeight: 700, letterSpacing: '0.6px' }}>
+              Busola ONG agit sur le terrain au Bénin : Borgou, Alibori, Atacora, Donga. Nos équipes apportent santé, prévention et autonomisation au plus près des communautés.
+            </marquee>
+          </div>
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
             <div style={{ ...labelStyle, justifyContent: 'center' }}>
               <span style={labelBeforeStyle}></span>Zone d'intervention<span style={labelBeforeStyle}></span>
@@ -543,19 +557,6 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* Green Rolling Band */}
-      <div 
-        className="container-fluid bg-tertiary text-white py-3 overflow-hidden shadow-sm"
-        style={{ whiteSpace: 'nowrap', zIndex: 5 }}
-      >
-        <marquee behavior="scroll" direction="left" scrollamount="6" style={{ fontSize: '1.05rem', fontWeight: 'bold', letterSpacing: '0.5px' }}>
-          {[1, 2, 3, 4].map(i => (
-            <span key={i} className="mx-5 text-uppercase">
-              L'ONG BUSOLA EST UNE ORGANISATION STRUCTURÉE, DOTÉE DE PROCÉDURES CLAIRES QUI GARANTISSENT UNE GESTION RIGOUREUSE ET REDEVABLE.
-            </span>
-          ))}
-        </marquee>
-      </div>
       {/* ── 2. VISION & MISSION ──────────────────────────────────────────────── */}
       <section style={{ background: sable, fontFamily: sans }}>
         <div style={{ maxWidth: '1260px', margin: 'auto' }}>

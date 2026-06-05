@@ -59,31 +59,32 @@ export default function ResourcePage() {
         <div className="position-absolute bg-white rounded-circle" style={{ width: '200px', height: '200px', top: '-100px', left: '-100px', opacity: 0.08 }}></div>
         <div className="position-absolute bg-white rounded-circle" style={{ width: '300px', height: '300px', bottom: '-150px', right: '-150px', opacity: 0.08 }}></div>
 
-        <div className="container position-relative text-white" style={{ zIndex: 2 }}>
-          <nav aria-label="breadcrumb" className="mb-4">
-            <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
-              <li className="breadcrumb-item">
-                <Link to="/" className="text-white text-decoration-none opacity-80 fw-medium" style={{ fontSize: '0.95rem' }}>Accueil</Link>
-              </li>
-              <li className="breadcrumb-item">
-                <Link to="/about" className="text-white text-decoration-none opacity-80 fw-medium" style={{ fontSize: '0.95rem' }}>À propos</Link>
-              </li>
-              <li className="breadcrumb-item active fw-bold text-warning" aria-current="page" style={{ fontSize: '0.95rem' }}>
-                Centre de ressources
-              </li>
-            </ol>
-          </nav>
-
-          <div className="text-center mx-auto" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold text-white mb-3 d-block" style={{ fontSize: '0.85rem', letterSpacing: '2px' }}>
-              Centre de ressources
-            </span>
-            <h1 className="display-4 fw-black text-uppercase text-white mb-4" style={{ letterSpacing: '2px', lineHeight: '1.05', textShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
-              Tous les documents officiels de Busola ONG
-            </h1>
-            <div className="mx-auto" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-secondary)', borderRadius: '2px' }}></div>
-          </div>
-        </div>
+                <div className="container text-center position-relative" style={{ zIndex: 2 }}>
+                  {/* Breadcrumbs */}
+                  <nav aria-label="breadcrumb" className="mb-3">
+                    <ol className="breadcrumb justify-content-center mb-0 bg-transparent p-0">
+                      <li className="breadcrumb-item">
+                        <Link to="/" className="text-white text-decoration-none opacity-75 hover-opacity-100 fw-medium" style={{ fontSize: '0.95rem' }}>Accueil</Link>
+                      </li>
+                      <li className="breadcrumb-item">
+                        <Link to="/about" className="text-white text-decoration-none opacity-75 hover-opacity-100 fw-medium" style={{ fontSize: '0.95rem' }}>À propos</Link>
+                      </li>
+                      <li className="breadcrumb-item active fw-bold text-warning" aria-current="page" style={{ fontSize: '0.95rem' }}>
+                        Centre de ressources
+                      </li>
+                    </ol>
+                  </nav>
+        
+                  <h1 className="display-4 fw-black text-uppercase text-white mb-3" style={{ letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
+                    Centre de ressources
+                  </h1>
+                  
+                  <div className="mx-auto mb-4" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-tertiary)', borderRadius: '2px' }}></div>
+        
+                  <p className="lead text-white opacity-95 mx-auto" style={{ maxWidth: '850px', fontSize: '1.15rem', lineHeight: '1.7', textShadow: '0 1px 5px rgba(0,0,0,0.1)' }}>
+                    Tous les documents officiels de Busola ONG
+                  </p>
+                </div>
       </div>
 
       <div className="container-fluid bg-white py-5">
