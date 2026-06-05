@@ -339,7 +339,7 @@ export default function AboutSection() {
                 title: "TEDIDJO 3 - \"Baani Gordo\"",
                 desc: "Espaces sûrs pour 1500 adolescentes à Nikki et Karimama. Santé reproductive, prévention VBG, leadership féminin. Durée : Août 2025 – Juillet 2026.",
                 partner: "CARE Bénin/Togo / FJSI",
-                partnerLogos: ['/logo-care.png'],
+                partnerLogos: ['/logo-care.png', '/LOGO FJSI.jpg(1).jpeg'],
                 headerBg: 'var(--brand-tertiary)',
                 themeColor: 'var(--brand-tertiary)',
                 icon: <Home size={20} className="text-white" />
@@ -398,20 +398,25 @@ export default function AboutSection() {
                       {proj.desc}
                     </p>
                     <div className="pt-3 border-top d-flex align-items-center gap-2" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
-                      <Handshake size={16} style={{ color: proj.themeColor }} />
-                      <div className="d-flex align-items-center gap-2 flex-wrap">
-                        {proj.partnerLogos?.map((logo, li) => (
-                          <img
-                            key={li}
-                            src={logo}
-                            alt="Logo partenaire"
-                            style={{ height: '18px', width: 'auto', objectFit: 'contain', maxWidth: '70px' }}
-                          />
-                        ))}
-                        <span className="fw-bold" style={{ fontSize: '0.82rem', color: proj.themeColor }}>
-                          {proj.partner}
-                        </span>
-                      </div>
+                      {proj.partnerLogos ? (
+                        <div className="d-flex align-items-center gap-2 flex-wrap">
+                          {proj.partnerLogos.map((logo, li) => (
+                            <img
+                              key={li}
+                              src={logo}
+                              alt="Logo partenaire"
+                              style={{ height: '18px', width: 'auto', objectFit: 'contain', maxWidth: '70px' }}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <>
+                          <Handshake size={16} style={{ color: proj.themeColor }} />
+                          <span className="fw-bold" style={{ fontSize: '0.82rem', color: proj.themeColor }}>
+                            {proj.partner}
+                          </span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
