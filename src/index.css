@@ -18,6 +18,11 @@
   --brand-text: #111827;
 }
 
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+
 .bg-primary { background-color: var(--bs-primary) !important; }
 .text-primary { color: var(--bs-primary) !important; }
 .btn-primary { background-color: var(--bs-primary) !important; border-color: var(--bs-primary) !important; }

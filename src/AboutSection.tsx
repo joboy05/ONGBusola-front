@@ -54,7 +54,7 @@ const sable = '#f8f9fa';
 const cream = '#ffffff';
 const muted = '#555555';
 const border = 'rgba(40, 100, 174, 0.1)';
-const serif = '"Cormorant Garamond", Georgia, serif';
+const serif = '"Poppins", Georgia, serif';
 const cond = '"Barlow Condensed", "Arial Black", Impact, sans-serif';
 const sans = '"Inter", system-ui, sans-serif';
 
@@ -91,6 +91,17 @@ export default function AboutSection() {
       {/* ── 1. NOTRE HISTOIRE ────────────────────────────────────────────────── */}
       <section style={{ padding: 'clamp(64px,8vh,110px) clamp(1.5rem,5vw,3rem)', background: cream, fontFamily: sans }}>
         <div style={{ maxWidth: '1260px', margin: 'auto' }}>
+          
+          {/* Centered header */}
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <div style={{ ...labelStyle, justifyContent: 'center' }}>
+              <span style={labelBeforeStyle}></span>Notre origine<span style={labelBeforeStyle}></span>
+            </div>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(38px,5vw,62px)', fontWeight: 900, lineHeight: .95, textTransform: 'uppercase', letterSpacing: '-1px', color: cobalt }}>
+              Notre histoire : une conviction née à Parakou
+            </h2>
+          </div>
+
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}
                className="story-layout-responsive">
 
@@ -105,13 +116,6 @@ export default function AboutSection() {
 
             {/* Texte */}
             <div>
-              <div style={labelStyle}>
-                <span style={labelBeforeStyle}></span>
-                Notre origine
-              </div>
-              <h2 style={{ fontFamily: serif, fontSize: 'clamp(32px,4vw,48px)', fontWeight: 700, color: cobalt, lineHeight: 1.2, marginBottom: '20px' }}>
-                Notre histoire : une conviction née à Parakou
-              </h2>
               <p style={{ fontSize: '16px', color: muted, lineHeight: 1.85, marginBottom: '20px' }}>
                 L'ONG Busola n'est pas née d'un concept, mais d'un constat. Fondée en mars 2020 par des acteurs du développement social profondément attachés au Nord-Bénin, notre organisation est une réponse citoyenne aux défis rencontrés par les femmes et les jeunes de nos communautés.
               </p>
@@ -147,70 +151,54 @@ export default function AboutSection() {
         <div style={{
           maxWidth: '900px',
           margin: 'auto',
-          background: 'linear-gradient(160deg, #2864ae 0%, #205295 50%, #2864ae 100%)',
+          background: 'linear-gradient(135deg, #2864ae 0%, #1e4b83 50%, #27b074 100%), url(/images/motif-logo-54.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           borderRadius: '24px',
-          border: '1px solid rgba(255,255,255,.08)',
+          border: '2px solid rgba(255,255,255,0.15)',
           padding: 'clamp(50px,8vh,90px) clamp(30px,5vw,60px)',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 20px 60px rgba(10,20,50,.35)'
+          boxShadow: '0 25px 70px rgba(10,20,50,.4)'
         }}>
           {/* Subtle glow */}
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '500px', height: '500px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(40,100,174,.12) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '600px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,255,255,.15) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
 
           <h2 style={{
             fontFamily: cond,
-            fontSize: 'clamp(36px, 5.5vw, 60px)',
+            fontSize: 'clamp(40px, 6.5vw, 72px)',
             fontWeight: 900,
             fontStyle: 'italic',
             textTransform: 'uppercase',
             color: '#ffffff',
-            lineHeight: 1.1,
-            letterSpacing: '-1px',
-            marginBottom: '20px',
+            lineHeight: 0.95,
+            letterSpacing: '-2px',
+            marginBottom: '24px',
             position: 'relative',
             zIndex: 1
           }}>
             LA PAIX COMMENCE<br />
-            QUAND LA <span style={{
-              color: goldWarm,
+            QUAND LA VIOLENCE<br />
+            <span style={{
+              color: '#f89d2a',
               fontStyle: 'italic'
-            }}>VIOLENCE</span> S'ARRÊTE
+            }}>S'ARRÊTE</span>
           </h2>
 
-          <p style={{ color: 'rgba(255,255,255,.6)', fontSize: '15px', lineHeight: 1.7, maxWidth: '500px', margin: '0 auto 32px', position: 'relative', zIndex: 1 }}>
-            Depuis 2020, ONG BUSOLA œuvre aux côtés des femmes et des jeunes du Nord-Bénin pour construire un avenir de dignité et d'égalité.
+          <p style={{ 
+            color: 'rgba(255,255,255,.85)', 
+            fontSize: '17px', 
+            fontWeight: 500,
+            fontStyle: 'italic', 
+            lineHeight: 1.7, 
+            maxWidth: '550px', 
+            margin: '0 auto', 
+            position: 'relative', 
+            zIndex: 1 
+          }}>
+            « Nous sommes Busola ONG. Nous sommes la lumière qui oriente et le moteur qui transforme. »
           </p>
-
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-            <span 
-              style={{
-                background: gold,
-                color: '#ffffff',
-                padding: '14px 36px',
-                borderRadius: '50px',
-                fontWeight: 700,
-                fontSize: '14px',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                boxShadow: '0 4px 16px rgba(243, 156, 18, 0.3)',
-                display: 'inline-block',
-                cursor: 'pointer',
-                transition: 'all 0.25s ease'
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 24px rgba(243, 156, 18, 0.5)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 16px rgba(243, 156, 18, 0.3)';
-              }}
-            >
-              Notre Profil
-            </span>
-          </div>
         </div>
       </section>
 
@@ -220,9 +208,9 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#faf9f6', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
-              CE QUE NOUS FAISONS
-            </span>
+            <div style={{ ...labelStyle, justifyContent: 'center' }}>
+              <span style={labelBeforeStyle}></span>Ce que nous faisons<span style={labelBeforeStyle}></span>
+            </div>
             <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
               Nos axes stratégiques
             </h2>
@@ -428,14 +416,14 @@ export default function AboutSection() {
       <section style={{ padding: '80px 0', background: '#faf9f6', fontFamily: sans }}>
         <div className="container">
           <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
-              ZONE D'INTERVENTION
-            </span>
+            <div style={{ ...labelStyle, justifyContent: 'center' }}>
+              <span style={labelBeforeStyle}></span>Zone d'intervention<span style={labelBeforeStyle}></span>
+            </div>
             <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
               Sur le terrain au Bénin
             </h2>
             <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-              L'ONG BUSOLA intervient principalement dans quatre départements du nord du Bénin, avec un ancrage particulier dans les communes de Parakou, Karimama, Copargo et Nikki.
+              L'ONG BUSOLA intervient principalement dans quatre départements du nord du Bénin, avec un ancrage particulier au coeur des communes et des villages.
             </p>
           </div>
 
@@ -514,21 +502,19 @@ export default function AboutSection() {
                   Nos communautés d'intervention
                 </h3>
                 <p className="text-muted mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.7', textAlign: 'justify' }}>
-                  Nous travaillons au cœur des villages les plus reculés, là où les services de base sont insuffisants et où les jeunes filles sont les plus vulnérables aux violences et aux mariages précoces. Nos équipes de bénévoles, formées et accompagnées, constituent le premier point de contact avec les communautés de Karimama-centre, Kompa, Birni-Lafia, Karigui, Fakara et Nikki.
+                  Nous travaillons au cœur des villages les plus reculés, là où les services de base sont insuffisants et où les jeunes filles sont les plus vulnérables aux violences et aux mariages précoces. Nos équipes de bénévoles, formées et accompagnées, constituent le premier point de contact avec les communautés de Karimama, Malanville, Gogounou, Nikki, Parakou, Copargo et Tchaourou.
                 </p>
               </div>
               <div className="col-lg-5">
                 <div className="d-flex flex-wrap gap-2 justify-content-lg-end">
                   {[
-                    { name: "Karimama-centre", bg: 'var(--brand-primary)' },
-                    { name: "Kompa", bg: 'var(--brand-primary)' },
-                    { name: "Birni-Lafia", bg: 'var(--brand-secondary)' },
-                    { name: "Karigui", bg: 'var(--brand-secondary)' },
+                    { name: "Karimama", bg: 'var(--brand-primary)' },
+                    { name: "Malanville", bg: 'var(--brand-primary)' },
+                    { name: "Gogounou", bg: 'var(--brand-secondary)' },
+                    { name: "Nikki", bg: 'var(--brand-secondary)' },
+                    { name: "Parakou", bg: 'var(--brand-tertiary)' },
                     { name: "Copargo", bg: 'var(--brand-tertiary)' },
-                    { name: "Nikki", bg: 'var(--brand-tertiary)' },
-                    { name: "Fakara", bg: 'var(--brand-primary)' },
-                    { name: "Fadama", bg: 'var(--brand-secondary)' },
-                    { name: "Parakou", bg: 'var(--brand-tertiary)' }
+                    { name: "Tchaourou", bg: 'var(--brand-primary)' }
                   ].map((c, i) => (
                     <span 
                       key={i} 
@@ -570,105 +556,24 @@ export default function AboutSection() {
           ))}
         </marquee>
       </div>
-
-      {/* Section 4: Ils nous font confiance */}
-      <section style={{ padding: '80px 0', background: '#ffffff', fontFamily: sans }}>
-        <div className="container">
-          <div className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px', display: 'block', marginBottom: '8px' }}>
-              NOS PARTENAIRES
-            </span>
-            <h2 style={{ fontFamily: cond, fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', color: 'var(--brand-text)', marginBottom: '16px', letterSpacing: '-0.5px' }}>
-              Ils nous font confiance
-            </h2>
-            <p className="text-muted" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-              Des organisations nationales et internationales s'associent à BUSOLA pour amplifier l'impact de nos actions sur le terrain.
-            </p>
-          </div>
-
-          <div className="d-flex flex-wrap gap-3 justify-content-center align-items-center">
-            {[
-              { name: "CARE Bénin/Togo", logo: "/logo-care.png" },
-              { name: "Médecins du Monde", logo: "/logo-mdm.png" },
-              { name: "UNFPA Bénin", logo: "/unfpa.png" },
-              { name: "Coopération Suisse", logo: "/logo-suisse.png" },
-              { name: "SIA N'SON ONG", logo: "/sianson.png" },
-              { name: "ROAJELF Bénin", logo: "/roajelf.jpeg" },
-              { name: "Ambassade du Canada", logo: "/canada.png" },
-              { name: "Royaume-Uni", logo: "/logo-uk.jpg" },
-              { name: "UNICEF", logo: "/unicef.png" },
-              { name: "Ambassade des Pays-Bas", logo: null, color: 'var(--brand-primary)' },
-              { name: "Vie et Environnement", logo: null, color: 'var(--brand-secondary)' },
-              { name: "FJSI International", logo: null, color: 'var(--brand-tertiary)' },
-              { name: "DDISP Borgou-Alibori", logo: null, color: 'var(--brand-primary)' }
-            ].map((p, i) => (
-              <div 
-                key={i}
-                className="px-4 py-3 bg-white border shadow-sm transition-all d-flex align-items-center justify-content-center"
-                style={{ 
-                  borderRadius: '15px',
-                  cursor: 'pointer',
-                  borderColor: 'rgba(0,0,0,0.05)',
-                  minHeight: '80px',
-                  minWidth: '180px'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.08)';
-                  e.currentTarget.style.borderColor = 'rgba(39, 100, 174, 0.15)';
-                  const img = e.currentTarget.querySelector('img');
-                  if (img) img.style.filter = 'grayscale(0%) opacity(1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 .125rem .25rem rgba(0,0,0,.075)';
-                  e.currentTarget.style.borderColor = 'rgba(0,0,0,0.05)';
-                  const img = e.currentTarget.querySelector('img');
-                  if (img) img.style.filter = 'grayscale(100%) opacity(0.7)';
-                }}
-              >
-                {p.logo ? (
-                  <img 
-                    src={p.logo} 
-                    alt={p.name} 
-                    style={{ 
-                      maxHeight: '45px', 
-                      maxWidth: '140px', 
-                      objectFit: 'contain',
-                      filter: 'grayscale(100%) opacity(0.7)',
-                      transition: 'all 0.3s ease'
-                    }} 
-                  />
-                ) : (
-                  <div className="d-flex align-items-center gap-2">
-                    <div className="rounded-circle" style={{ width: '8px', height: '8px', backgroundColor: p.color || 'var(--brand-secondary)' }}></div>
-                    <span className="fw-bold text-dark" style={{ fontSize: '0.9rem' }}>
-                      {p.name}
-                    </span>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── 2. VISION & MISSION ──────────────────────────────────────────────── */}
       <section style={{ background: sable, fontFamily: sans }}>
         <div style={{ maxWidth: '1260px', margin: 'auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', background: border }} className="story-layout-responsive">
             {/* Vision */}
-            <div style={{ background: cream, padding: '48px 40px' }}>
-              <div style={labelStyle}><span style={labelBeforeStyle}></span>Notre cap</div>
+            <div style={{ background: cream, padding: '48px 40px', textAlign: 'center' }}>
+              <div style={{ ...labelStyle, justifyContent: 'center' }}>
+                <span style={labelBeforeStyle}></span>Notre cap<span style={labelBeforeStyle}></span>
+              </div>
               <h3 style={{ fontFamily: cond, fontSize: '32px', fontWeight: 900, textTransform: 'uppercase', color: cobalt, marginBottom: '16px', letterSpacing: '-0.5px' }}>Notre Vision</h3>
               <p style={{ fontSize: '15px', color: muted, lineHeight: 1.85 }}>
                 Un Bénin où le potentiel de chaque femme et de chaque jeune est libéré pour bâtir des communautés justes, pacifiques et autonomes.
               </p>
             </div>
             {/* Mission */}
-            <div style={{ background: 'var(--brand-tertiary)', padding: '48px 40px' }}>
-              <div style={{ ...labelStyle, color: 'rgba(255,255,255,.85)' }}>
-                <span style={{ ...labelBeforeStyle, background: '#ffffff' }}></span>Notre engagement
+            <div style={{ background: 'var(--brand-tertiary)', padding: '48px 40px', textAlign: 'center' }}>
+              <div style={{ ...labelStyle, color: 'rgba(255,255,255,.85)', justifyContent: 'center' }}>
+                <span style={{ ...labelBeforeStyle, background: '#ffffff' }}></span>Notre engagement<span style={{ ...labelBeforeStyle, background: '#ffffff' }}></span>
               </div>
               <h3 style={{ fontFamily: cond, fontSize: '32px', fontWeight: 900, textTransform: 'uppercase', color: '#fff', marginBottom: '16px', letterSpacing: '-0.5px' }}>Notre Mission</h3>
               <p style={{ fontSize: '15px', color: 'rgba(255,255,255,.9)', lineHeight: 1.85 }}>
@@ -691,14 +596,13 @@ export default function AboutSection() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0, marginTop: '56px' }}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, marginTop: '56px' }}
                className="valeurs-grid-responsive">
             {[
-              { icon: faLandmark, titre: 'Dignité', desc: "Placer chaque personne au cœur de l'action, sans exception." },
-              { icon: faSearch, titre: 'Intégrité', desc: "Agir avec transparence et redevabilité envers nos partenaires et bénéficiaires." },
-              { icon: faHandshake, titre: 'Collaboration', desc: "Ensemble, pour un impact durable et une intelligence collective." },
-              { icon: faBolt, titre: 'Engagement', desc: "Être une force audacieuse pour la justice et l'égalité de genre." },
-              { icon: faRocket, titre: 'Autonomisation', desc: "Libérer les potentiels, inspirer et transmettre pour un avenir durable.", last: true },
+              { icon: faLandmark, titre: 'Centralité humaine', desc: "Nous plaçons l’individu au cœur du changement, sans jamais imposer." },
+              { icon: faBolt, titre: 'Équité de genre', desc: "Nous œuvrons pour un monde où les femmes et les hommes bénéficient des mêmes opportunités." },
+              { icon: faHandshake, titre: 'Partenariats', desc: "Nous agissons en synergie avec les communautés et organisations." },
+              { icon: faSearch, titre: 'Excellence & Intégrité', desc: "Nous défendons la rigueur, la transparence et la qualité dans tout ce que nous faisons.", last: true },
             ].map((v, i) => (
               <div key={i} style={{
                 padding: '40px 24px', textAlign: 'center',
@@ -709,7 +613,7 @@ export default function AboutSection() {
                   <FontAwesomeIcon icon={v.icon} />
                 </div>
                 <h4 style={{ fontFamily: cond, fontSize: '16px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.5px', color: cobalt, marginBottom: '8px' }}>{v.titre}</h4>
-                <p style={{ fontSize: '12.5px', color: muted, lineHeight: 1.6 }}>{v.desc}</p>
+                <p style={{ fontSize: '13px', color: muted, lineHeight: 1.6 }}>{v.desc}</p>
               </div>
             ))}
           </div>
@@ -719,13 +623,17 @@ export default function AboutSection() {
       {/* ── 4. NOTRE APPROCHE ────────────────────────────────────────────────── */}
       <section style={{ padding: 'clamp(64px,8vh,110px) clamp(1.5rem,5vw,3rem)', background: sable, fontFamily: sans }}>
         <div style={{ maxWidth: '1260px', margin: 'auto' }}>
-          <div style={labelStyle}><span style={labelBeforeStyle}></span>Méthodologie</div>
-          <h2 style={{ fontFamily: cond, fontSize: 'clamp(38px,5vw,62px)', fontWeight: 900, lineHeight: .95, textTransform: 'uppercase', letterSpacing: '-1px', color: cobalt, marginBottom: '16px' }}>
-            NOTRE APPROCHE :<br />FAIRE « AVEC »,<br />PAS « POUR »
-          </h2>
-          <p style={{ fontSize: '17px', color: muted, lineHeight: 1.8, maxWidth: '620px', marginBottom: '48px' }}>
-            Nous ne croyons pas aux solutions importées. Notre approche est celle de l'ingénierie du développement social, fondée sur l'écoute et la co-construction.
-          </p>
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <div style={{ ...labelStyle, justifyContent: 'center' }}>
+              <span style={labelBeforeStyle}></span>Méthodologie<span style={labelBeforeStyle}></span>
+            </div>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(38px,5vw,62px)', fontWeight: 900, lineHeight: .95, textTransform: 'uppercase', letterSpacing: '-1px', color: cobalt, marginBottom: '16px' }}>
+              NOTRE APPROCHE : FAIRE « AVEC », PAS « POUR »
+            </h2>
+            <p className="mx-auto" style={{ fontSize: '17px', color: muted, lineHeight: 1.8, maxWidth: '620px', marginBottom: 0 }}>
+              Nous ne croyons pas aux solutions importées. Notre approche est celle de l'ingénierie du développement social, fondée sur l'écoute et la co-construction.
+            </p>
+          </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginTop: '52px' }}
                className="approach-grid-responsive">
@@ -813,13 +721,17 @@ export default function AboutSection() {
       {/* ── 6. GOUVERNANCE ────────────────────────────────────────────────────── */}
       <section style={{ padding: 'clamp(64px,8vh,110px) clamp(1.5rem,5vw,3rem)', background: cream, fontFamily: sans }}>
         <div style={{ maxWidth: '1260px', margin: 'auto' }}>
-          <div style={labelStyle}><span style={labelBeforeStyle}></span>Structure</div>
-          <h2 style={{ fontFamily: cond, fontSize: 'clamp(38px,5vw,62px)', fontWeight: 900, lineHeight: .95, textTransform: 'uppercase', letterSpacing: '-1px', color: cobalt, marginBottom: '16px' }}>
-            GOUVERNANCE<br />& TRANSPARENCE
-          </h2>
-          <p style={{ fontSize: '17px', color: muted, lineHeight: 1.8, maxWidth: '620px', marginBottom: '52px' }}>
-            Une gouvernance solide, une gestion rigoureuse et redevable. Nous croyons que la confiance se bâtit sur la transparence.
-          </p>
+          <div style={{ textAlign: 'center', marginBottom: '52px' }}>
+            <div style={{ ...labelStyle, justifyContent: 'center' }}>
+              <span style={labelBeforeStyle}></span>Structure<span style={labelBeforeStyle}></span>
+            </div>
+            <h2 style={{ fontFamily: cond, fontSize: 'clamp(38px,5vw,62px)', fontWeight: 900, lineHeight: .95, textTransform: 'uppercase', letterSpacing: '-1px', color: cobalt, marginBottom: '16px' }}>
+              GOUVERNANCE & TRANSPARENCE
+            </h2>
+            <p className="mx-auto" style={{ fontSize: '17px', color: muted, lineHeight: 1.8, maxWidth: '620px', marginBottom: 0 }}>
+              Une gouvernance solide, une gestion rigoureuse et redevable. Nous croyons que la confiance se bâtit sur la transparence.
+            </p>
+          </div>
 
           {/* Org chart */}
           <div style={{ maxWidth: '600px', margin: '0 auto 64px' }}>

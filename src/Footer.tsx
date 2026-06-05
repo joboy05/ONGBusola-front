@@ -34,8 +34,23 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="footer" className="container-fluid footer pt-4 pb-4 bg-dark wow fadeIn" data-wow-delay="0.1s" style={{ borderTop: '8px solid var(--bs-secondary)' }}>
-      <div className="container pt-3 pb-4">
+    <footer 
+      id="footer" 
+      className="container-fluid footer pt-4 pb-4 bg-primary wow fadeIn position-relative" 
+      data-wow-delay="0.1s" 
+      style={{ 
+        borderTop: '8px solid var(--bs-secondary)',
+        backgroundImage: 'url(/images/motif-logo-54.png)',
+        backgroundSize: 'auto',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'scroll',
+        backgroundRepeat: 'repeat'
+      }}
+    >
+      {/* Blue overlay for contrast */}
+      <div className="position-absolute top-0 start-0 w-100 h-100" style={{ backgroundColor: 'rgba(40, 100, 174, 0.92)', zIndex: 0 }}></div>
+      
+      <div className="container pt-3 pb-4 position-relative" style={{ zIndex: 1 }}>
         <div className="row g-5">
           <div className="col-lg-4 col-md-6">
             <div className="mb-4">

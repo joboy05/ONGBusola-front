@@ -47,16 +47,17 @@ export default function ResourcePage() {
       <Navbar />
 
       <div
-        className="container-fluid position-relative overflow-hidden"
+        className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
-          minHeight: '520px',
+          minHeight: '500px',
           background: `linear-gradient(135deg, rgba(40, 100, 174, 0.9) 0%, rgba(39, 176, 116, 0.85) 100%), url('hero-slider.jpeg') center/cover`,
-          paddingTop: '110px',
-          paddingBottom: '90px'
+          paddingTop: '120px',
+          paddingBottom: '60px',
+          overflow: 'visible'
         }}
       >
-        <div className="position-absolute rounded-circle bg-white opacity-10" style={{ width: '240px', height: '240px', top: '-80px', left: '-80px' }}></div>
-        <div className="position-absolute rounded-circle bg-white opacity-10" style={{ width: '320px', height: '320px', bottom: '-120px', right: '-120px' }}></div>
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '200px', height: '200px', top: '-100px', left: '-100px', opacity: 0.08 }}></div>
+        <div className="position-absolute bg-white rounded-circle" style={{ width: '300px', height: '300px', bottom: '-150px', right: '-150px', opacity: 0.08 }}></div>
 
         <div className="container position-relative text-white" style={{ zIndex: 2 }}>
           <nav aria-label="breadcrumb" className="mb-4">
@@ -73,15 +74,14 @@ export default function ResourcePage() {
             </ol>
           </nav>
 
-          <div className="row">
-            <div className="col-lg-8">
-              <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.85rem', letterSpacing: '2px' }}>
-                Centre de ressources
-              </span>
-              <h1 className="display-5 fw-black text-uppercase mt-3 mb-4" style={{ letterSpacing: '1px', lineHeight: '1.05' }}>
-                Tous les documents officiels de Busola ONG
-              </h1>
-            </div>
+          <div className="text-center mx-auto" style={{ maxWidth: '800px' }}>
+            <span className="text-uppercase fw-bold text-white mb-3 d-block" style={{ fontSize: '0.85rem', letterSpacing: '2px' }}>
+              Centre de ressources
+            </span>
+            <h1 className="display-4 fw-black text-uppercase text-white mb-4" style={{ letterSpacing: '2px', lineHeight: '1.05', textShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
+              Tous les documents officiels de Busola ONG
+            </h1>
+            <div className="mx-auto" style={{ width: '85px', height: '4px', backgroundColor: 'var(--brand-secondary)', borderRadius: '2px' }}></div>
           </div>
         </div>
       </div>
@@ -129,23 +129,22 @@ export default function ResourcePage() {
             </div>
           </div>
 
-          <div className="row align-items-center mb-5">
-            <div className="col-lg-7">
-              <span className="text-uppercase fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.85rem', letterSpacing: '2px' }}>
-                Documents officiels
-              </span>
-              <h2 className="fw-black mb-3" style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', color: 'var(--brand-text)', lineHeight: '1.05' }}>
-                Accédez à nos ressources certifiées
-              </h2>
-              <p className="text-muted" style={{ maxWidth: '700px', lineHeight: '1.8' }}>
-                Chaque document est validé par notre équipe de gouvernance. Téléchargez les outils et rapports qui vous permettent de mieux comprendre Busola ONG.
-              </p>
-            </div>
-            <div className="col-lg-5">
-              <div className="rounded-4 p-4" style={{ background: 'var(--brand-light)' }}>
-                <h5 className="fw-bold mb-3" style={{ color: 'var(--brand-dark)' }}>Comment utiliser les ressources ?</h5>
-                <p className="mb-2 text-muted">Cliquez sur « Télécharger » pour ouvrir le document. Vous pouvez ensuite enregistrer ou imprimer chaque PDF.</p>
-                <p className="mb-0 text-muted">Tous les documents sont mis à jour régulièrement afin de rester en conformité avec nos engagements.</p>
+          <div className="row mb-5 justify-content-center">
+            <div className="col-12">
+              <div className="text-center mx-auto" style={{ maxWidth: '800px' }}>
+                <div className="d-flex align-items-center justify-content-center mb-3">
+                  <div style={{ height: "1px", background: "var(--brand-secondary)", width: "40px" }}></div>
+                  <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-secondary)', fontSize: '0.9rem', letterSpacing: '2px' }}>
+                    DOCUMENTS OFFICIELS
+                  </span>
+                  <div style={{ height: "1px", background: "var(--brand-secondary)", width: "40px" }}></div>
+                </div>
+                <h2 className="fw-black mb-4 text-uppercase" style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', color: 'var(--brand-text)', lineHeight: '1.05', fontFamily: '"Barlow Condensed", sans-serif' }}>
+                  Accédez à nos ressources certifiées
+                </h2>
+                <p className="text-muted mx-auto" style={{ maxWidth: '700px', lineHeight: '1.8' }}>
+                  Chaque document est validé par notre équipe de gouvernance. Cliquez sur « Télécharger » pour ouvrir, enregistrer ou imprimer le PDF de votre choix. Tous les documents sont régulièrement mis à jour pour rester en conformité avec nos engagements.
+                </p>
               </div>
             </div>
           </div>

@@ -12,7 +12,8 @@ export default {
         accent: "#3ab074",
       },
       fontFamily: {
-        sans: ["Outfit", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
       },
     },
   },

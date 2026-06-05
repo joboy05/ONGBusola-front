@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Handshake, Users, ShieldCheck, Mail, ArrowRight } from 'lucide-react';
+import { Heart, Handshake, Users, ShieldCheck, Mail, ArrowRight, Star, Megaphone } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -136,7 +136,7 @@ export default function SupportPage() {
           <div className="row gy-4">
             <div className="col-md-4">
               <div className="rounded-4 p-4 h-100 shadow-sm" style={{ border: '1px solid rgba(40,100,174,0.1)' }}>
-                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '72px', height: '72px', background: '#2864ae', color: '#f39c12', fontSize: '1.5rem' }}>🤝</div>
+                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '72px', height: '72px', background: '#2864ae', color: '#f39c12' }}><Handshake size={32} /></div>
                 <h3 className="fw-bold mb-3" style={{ color: '#2864ae' }}>Devenir Partenaire</h3>
                 <p className="text-muted" style={{ lineHeight: '1.8' }}>
                   Vous êtes une entreprise, une fondation, une institution ? Collaborons pour démultiplier notre impact. Mettons en commun nos expertises, nos réseaux et nos ressources pour concevoir et déployer des projets innovants.
@@ -149,7 +149,7 @@ export default function SupportPage() {
 
             <div className="col-md-4">
               <div className="rounded-4 p-4 h-100 shadow-sm" style={{ border: '1px solid rgba(40,100,174,0.1)' }}>
-                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '72px', height: '72px', background: '#f39c12', color: '#2864ae', fontSize: '1.5rem' }}>🌟</div>
+                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '72px', height: '72px', background: '#f39c12', color: '#2864ae' }}><Star size={32} /></div>
                 <h3 className="fw-bold mb-3" style={{ color: '#2864ae' }}>Devenir Bénévole</h3>
                 <p className="text-muted" style={{ lineHeight: '1.8' }}>
                   Notre plus grande richesse, c'est notre capital humain. Compétences en animation, communication, gestion de projet, santé — votre engagement est précieux. Rejoignez une équipe dynamique et diverse.
@@ -162,7 +162,7 @@ export default function SupportPage() {
 
             <div className="col-md-4">
               <div className="rounded-4 p-4 h-100 shadow-sm" style={{ border: '1px solid rgba(40,100,174,0.1)' }}>
-                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '72px', height: '72px', background: 'var(--brand-tertiary)', color: '#fff', fontSize: '1.5rem' }}>📣</div>
+                <div className="d-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '72px', height: '72px', background: 'var(--brand-tertiary)', color: '#fff' }}><Megaphone size={32} /></div>
                 <h3 className="fw-bold mb-3" style={{ color: '#2864ae' }}>Sensibiliser autour de vous</h3>
                 <p className="text-muted" style={{ lineHeight: '1.8' }}>
                   Partagez nos actions sur les réseaux sociaux, parlez de nous à votre entourage. Amplifiez nos messages sur les droits des femmes et des jeunes. Chaque partage compte et peut changer une vie.
@@ -176,15 +176,27 @@ export default function SupportPage() {
         </div>
       </div>
 
-      <div className="container py-5">
-        <p className="text-center text-uppercase fw-bold mb-4" style={{ color: '#6B7280', letterSpacing: '1.5px', fontSize: '0.8rem' }}>
-          Ils nous font déjà confiance — rejoignez-les
-        </p>
-        <div className="d-flex flex-wrap justify-content-center gap-3">
-          {['CARE Bénin/Togo', 'UNFPA Bénin', 'Médecins du Monde', 'Coopération Suisse', 'ROAJELF Bénin', 'Vie et Environnement', 'SIA N\'SON ONG', 'Ambassade des Pays-Bas'].map((partner) => (
-            <span key={partner} className="px-4 py-3 rounded-pill border" style={{ borderColor: 'rgba(40,100,174,0.12)', color: '#2864ae', background: '#ffffff', minWidth: '180px', textAlign: 'center', fontSize: '0.9rem' }}>
-              {partner}
-            </span>
+      <div className="container py-5 text-center wow fadeIn">
+        <div className="d-flex align-items-center justify-content-center mb-3">
+          <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+          <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>NOS PARTENAIRES</span>
+          <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
+        </div>
+        
+        <div className="row align-items-center justify-content-center mt-4">
+          {[
+            'unfpa.png', 'unicef.png', 'unicri.svg', 
+            'logo-uk.jpg', 'canada.png', 'logo-suisse.png', 
+            'logo-mdm.png', 'logo-care.png', 'engender.png', 
+            'roajelf.jpeg', 'sianson.png', 'barika.jpg', 'wendia.jpg'
+          ].map((img, i) => (
+            <div key={i} className="col-4 col-md-3 col-lg-2 p-3 text-center">
+              <img src={`/${img}`} className="img-fluid transition-all" 
+                   style={{ maxHeight: "120px", objectFit: "contain", cursor: "pointer" }} 
+                   onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.1)'; }}
+                   onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; }}
+                   alt="partner" />
+            </div>
           ))}
         </div>
       </div>
