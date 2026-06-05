@@ -59,9 +59,9 @@ export default function ActionPage() {
       <div
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white"
         style={{
-          minHeight: '100vh',
+          minHeight: '500px',
           background: `linear-gradient(135deg, rgba(40,100,174,0.92) 0%, rgba(30,75,131,0.92) 100%), url('/action-1.jpg') center/cover no-repeat`,
-          paddingTop: '80px',
+          paddingTop: '120px',
           paddingBottom: '60px',
         }}
       >
@@ -457,12 +457,11 @@ export default function ActionPage() {
           >
             {/* Photo card */}
             <div
-              className="col-md-4 d-flex flex-column align-items-center justify-content-center text-center text-white"
+              className="col-md-4 d-flex flex-column align-items-center justify-content-center text-center"
               style={{
-                background: 'rgba(0,0,0,0.3)',
-                backdropFilter: 'blur(10px)',
+                background: '#ffffff',
                 padding: '48px 32px',
-                borderRight: '1px solid rgba(255,255,255,0.1)'
+                borderRight: '1px solid rgba(40,100,174,0.12)'
               }}
             >
               <div
@@ -482,11 +481,11 @@ export default function ActionPage() {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <h4 className="fw-bold mb-1" style={{ fontSize: '1.25rem', color: '#fff', fontFamily: cond }}>Mariam, 24 ans</h4>
+              <h4 className="fw-bold mb-1" style={{ fontSize: '1.25rem', color: cobalt, fontFamily: cond }}>Mariam, 24 ans</h4>
               <span className="fw-bold text-uppercase d-block mb-1" style={{ fontSize: '0.72rem', letterSpacing: '1px', color: gold }}>
                 Bénéficiaire TEDIDJO 2
               </span>
-              <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>
+              <span style={{ fontSize: '0.78rem', color: '#6b7280' }}>
                 Karimama, Nord-Bénin
               </span>
             </div>
@@ -494,7 +493,7 @@ export default function ActionPage() {
             {/* Quote card */}
             <div
               className="col-md-8 d-flex flex-column justify-content-center position-relative"
-              style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(8px)', padding: '48px' }}
+              style={{ background: '#ffffff', padding: '48px' }}
             >
               <span
                 className="position-absolute"
@@ -502,7 +501,7 @@ export default function ActionPage() {
                   fontFamily: cond,
                   fontSize: '120px',
                   fontWeight: 900,
-                  color: 'rgba(243,156,18,0.2)',
+                  color: 'rgba(243,156,18,0.15)',
                   top: '-10px',
                   left: '20px',
                   lineHeight: 1,
@@ -518,15 +517,15 @@ export default function ActionPage() {
                   fontSize: '1.05rem',
                   lineHeight: '1.85',
                   fontStyle: 'italic',
-                  color: 'rgba(255,255,255,0.92)',
+                  color: '#374151',
                   textAlign: 'justify',
                   zIndex: 1
                 }}
               >
                 Quand nous avons rencontré Mariam, elle était déscolarisée et sans perspective. Grâce à nos sessions d'{' '}
-                <b style={{ fontStyle: 'normal', color: '#fff' }}>éducation</b>, elle a repris confiance en elle et compris ses droits fondamentaux. Intégrée dans un espace{' '}
+                <b style={{ fontStyle: 'normal', color: cobalt }}>éducation</b>, elle a repris confiance en elle et compris ses droits fondamentaux. Intégrée dans un espace{' '}
                 <b style={{ fontStyle: 'normal', color: gold }}>protégé</b>, elle a pu parler des violences qu'elle subissait et bénéficier d'un accompagnement juridique. Aujourd'hui, grâce à une formation en couture et gestion, elle est{' '}
-                <b style={{ fontStyle: 'normal', color: '#6ee7b7' }}>autonome</b>. Elle a monté sa propre petite activité et est devenue une source d'inspiration pour les autres jeunes filles de son quartier. Son histoire, c'est la raison d'être de notre action.
+                <b style={{ fontStyle: 'normal', color: green }}>autonome</b>. Elle a monté sa propre petite activité et est devenue une source d'inspiration pour les autres jeunes filles de son quartier. Son histoire, c'est la raison d'être de notre action.
               </p>
             </div>
           </div>
