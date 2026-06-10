@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import { Plus } from 'lucide-react';
 
-const actions = [
+export const staticActions = [
   {
     id: 'projet-respect',
     title: 'PROJET RESPECT',
@@ -39,6 +39,8 @@ const actions = [
   }
 ];
 
+export let dynamicActions = [...staticActions];
+
 const cond = "'Barlow Condensed', sans-serif";
 const serif = "'Poppins', sans-serif";
 const cobalt = '#2864ae';
@@ -46,9 +48,36 @@ const gold = '#f39c12';
 const green = '#27b074';
 
 export default function ActionPage() {
+  const [actionsList, setActionsList] = useState(staticActions);
+
   useEffect(() => {
     if (window.WOW) new window.WOW().init();
     window.scrollTo(0, 0);
+
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    fetch(`${API_URL}/api/actions`)
+      .then(res => {
+        if (!res.ok) throw new Error('API unavailable');
+        return res.json();
+      })
+      .then(data => {
+        if (data && data.length > 0) {
+          const normalizedActions = data.map((item: any) => ({
+            id: item._id, // Utiliser _id de MongoDB
+            title: item.title,
+            tag: item.category || 'Non catégorisé',
+            img: (item.images && item.images.length > 0) ? item.images[0] : '/projet_respect.png', // Première image ou fallback
+            desc: item.description || '',
+            financement: 'N/A' // L'API ne semble pas avoir de champ financement, on pourrait l'ajouter plus tard
+          }));
+          setActionsList(normalizedActions);
+          dynamicActions = normalizedActions; // Mettre à jour pour ActionDetailPage
+        }
+      })
+      .catch(() => {
+        console.log("⚠️ API actions indisponible, utilisation des données statiques");
+      });
+
   }, []);
 
   return (
@@ -371,7 +400,7 @@ export default function ActionPage() {
 
           {/* Cards Grid */}
           <div className="row g-4 d-flex align-items-stretch mb-4">
-            {actions.map((proj, i) => (
+            {actionsList.map((proj, i) => (
               <div key={i} className="col-md-6 col-lg-3 d-flex wow fadeInUp" data-wow-delay={`${0.1 + i * 0.1}s`}>
                 <div className="bg-white d-flex flex-column rounded-3 w-100 overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(40,100,174,0.1)', border: '1px solid rgba(40,100,174,0.08)' }}>
                   <div className="position-relative overflow-hidden">

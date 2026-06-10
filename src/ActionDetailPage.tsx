@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const actionDetailsData: any = {
+const staticActionDetailsData: any = {
   'projet-respect': {
     title: 'PROJET RESPECT',
     tag: 'DSSR & VBG',
@@ -47,15 +47,72 @@ const actionDetailsData: any = {
 };
 
 export default function ActionDetailPage() {
+  const { id } = useParams<{ id: string }>();
+  const [project, setProject] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
+
   useEffect(() => {
     if (window.WOW) new window.WOW().init();
     window.scrollTo(0, 0);
-  }, []);
 
-  const { id } = useParams<{ id: string }>();
-  const project = id ? actionDetailsData[id] : null;
+    if (!id) {
+      setNotFound(true);
+      setLoading(false);
+      return;
+    }
 
-  if (!project) {
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const isMongoId = /^[a-f\d]{24}$/i.test(id);
+
+    if (isMongoId) {
+      // Fetch dynamic project from API
+      fetch(`${API_URL}/api/actions/${id}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Not found');
+          return res.json();
+        })
+        .then(data => {
+          setProject({
+            title: data.title,
+            tag: data.category || 'Non catégorisé',
+            img: (data.images && data.images.length > 0) ? data.images[0] : '/projet_respect.png',
+            fullText: data.description || '',
+            secteur: data.category || 'Non catégorisé',
+            partenaires: data.beneficiaries || 'Non spécifié',
+            tauxRealisation: data.status === 'Terminé' ? '100%' : data.status === 'En cours' ? '50%' : '0%',
+            financement: 'N/A'
+          });
+        })
+        .catch(() => setNotFound(true))
+        .finally(() => setLoading(false));
+    } else {
+      // Use static data
+      const staticProj = actionDetailsData[id];
+      if (staticProj) {
+        setProject(staticProj);
+      } else {
+        setNotFound(true);
+      }
+      setLoading(false);
+    }
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="wrapper">
+        <Navbar />
+        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Chargement...</span>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (notFound || !project) {
     return <Navigate to="/actions" />;
   }
 
@@ -102,9 +159,11 @@ export default function ActionDetailPage() {
             {/* Left Column: Text Content */}
             <div className="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
               <h1 className="fw-bold mb-4" style={{ color: '#000', fontSize: '2.2rem' }}>{project.title}</h1>
-              <p className="text-muted" style={{ fontSize: '0.85rem', lineHeight: '1.8', textAlign: 'justify' }}>
-                {project.fullText}
-              </p>
+              <div className="text-muted" style={{ fontSize: '0.85rem', lineHeight: '1.8', textAlign: 'justify' }}>
+                {project.fullText.split('\n').map((paragraph: string, i: number) => (
+                  <p key={i} className="mb-3">{paragraph}</p>
+                ))}
+              </div>
             </div>
 
             {/* Right Column: Image and Specs */}
@@ -133,6 +192,7 @@ export default function ActionDetailPage() {
         </div>
       </div>
 
-      <Footer />    </div>
+      <Footer />
+    </div>
   );
 }

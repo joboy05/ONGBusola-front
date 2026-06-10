@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { newsItems } from './NewsPage';
+import { newsItems, staticNewsItems } from './NewsPage';
 
-// Real article full-text content from busolaong.com
+// Real article full-text content from busolaong.com (fallback for static items)
 const newsFullText: Record<number, string> = {
   1: `À l'occasion de la célébration de son quatrième anniversaire, BUSOLA ONG a organisé, les 24 et 25 mai 2024, deux journées dédiées à la paix et à la cohésion sociale à Parakou. Cet événement a mis en lumière l'engagement constant de l'organisation envers le développement communautaire et le vivre-ensemble. Il a permis de renforcer les liens entre les acteurs locaux, les autorités et la société civile.
 
@@ -89,21 +89,117 @@ Ensemble, nous ne formulons pas seulement des vœux. Nous construisons des actio
 Nos partenaires : UNFPA Benin | UNICEF Benin | CARE Bénin/Togo | Médecins du Monde Suisse au Bénin | Association Barika | Wendia Fáabà | Compagnie Ola culture | ABPF/MAJ Parakou | Association Jeunesse pour la Santé Préventive - AJSP | CEDH | FeD ONG | Jeunesse et Développement | OCPM | Préfecture du Borgou | CIMIC | Direction Départementale de la Santé du Borgou | Direction Départementale des Affaires Sociales et de la Microfinance du Borgou | Direction Départementale de la Police Républicaine du Borgou.`,
 };
 
+interface NewsArticle {
+  _id?: string;
+  id?: number;
+  title: string;
+  content?: string;
+  summary?: string;
+  image?: string;
+  img?: string;
+  category?: string;
+  author?: string;
+  date: string;
+  desc?: string;
+}
+
 export default function NewsDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const newsId = id ? parseInt(id) : null;
-  const item = newsItems.find(n => n.id === newsId);
+  const [article, setArticle] = useState<NewsArticle | null>(null);
+  const [allNews, setAllNews] = useState<NewsArticle[]>(newsItems.length > 0 ? newsItems : staticNewsItems);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     if (window.WOW) {
       new window.WOW().init();
     }
     window.scrollTo(0, 0);
-  }, []);
 
-  if (!item) {
+    if (!id) {
+      setNotFound(true);
+      setLoading(false);
+      return;
+    }
+
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+    // Essayer de fetch depuis l'API si l'ID ressemble à un ObjectId MongoDB
+    const isMongoId = /^[a-f\d]{24}$/i.test(id);
+
+    if (isMongoId) {
+      // C'est un ID MongoDB → fetch depuis l'API
+      fetch(`${API_URL}/api/news/${id}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Not found');
+          return res.json();
+        })
+        .then((data) => {
+          setArticle({
+            _id: data._id,
+            title: data.title,
+            content: data.content,
+            summary: data.summary,
+            image: data.image,
+            img: data.image,
+            category: data.category,
+            author: data.author,
+            date: new Date(data.date || data.createdAt).toLocaleDateString('fr-FR', {
+              day: '2-digit', month: 'long', year: 'numeric'
+            }),
+          });
+          // Aussi charger la liste complète pour la sidebar
+          fetch(`${API_URL}/api/news`)
+            .then(res => res.json())
+            .then(allData => {
+              setAllNews(allData.map((item: any, i: number) => ({
+                _id: item._id,
+                id: i + 1,
+                title: item.title,
+                date: new Date(item.date || item.createdAt).toLocaleDateString('fr-FR', {
+                  day: '2-digit', month: 'long', year: 'numeric'
+                }),
+                img: item.image || '/news-1.jpg',
+              })));
+            })
+            .catch(() => {});
+        })
+        .catch(() => setNotFound(true))
+        .finally(() => setLoading(false));
+    } else {
+      // C'est un ID numérique → données statiques
+      const newsId = parseInt(id);
+      const item = staticNewsItems.find(n => n.id === newsId);
+      if (item) {
+        setArticle(item);
+        setAllNews(staticNewsItems);
+      } else {
+        setNotFound(true);
+      }
+      setLoading(false);
+    }
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="wrapper">
+        <Navbar />
+        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Chargement...</span>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (notFound || !article) {
     return <Navigate to="/actualites" />;
   }
+
+  // Déterminer le texte complet à afficher
+  const fullText = article.content || (article.id ? newsFullText[article.id] : null) || article.desc || '';
 
   return (
     <div className="wrapper">
@@ -149,19 +245,31 @@ export default function NewsDetailPage() {
             <div className="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
               <div className="mb-4 overflow-hidden rounded-4 shadow-sm" style={{ maxHeight: '500px' }}>
                 <img 
-                  src={item.img} 
-                  alt={item.title} 
+                  src={article.img || article.image || '/news-1.jpg'} 
+                  alt={article.title} 
                   className="img-fluid w-100" 
                   style={{ objectFit: 'cover' }} 
                 />
               </div>
-              <p className="mb-3 text-tertiary fw-bold">
-                <i className="fa fa-calendar-alt me-2" style={{ color: 'var(--brand-tertiary)' }}></i>
-                {item.date}
-              </p>
-              <h1 className="display-6 fw-bold mb-4" style={{ color: 'var(--brand-primary)' }}>{item.title}</h1>
+              <div className="d-flex align-items-center gap-3 mb-3">
+                <p className="mb-0 text-tertiary fw-bold">
+                  <i className="fa fa-calendar-alt me-2" style={{ color: 'var(--brand-tertiary)' }}></i>
+                  {article.date}
+                </p>
+                {article.category && (
+                  <span className="badge" style={{ backgroundColor: 'var(--brand-primary)' }}>
+                    {article.category}
+                  </span>
+                )}
+                {article.author && (
+                  <span className="text-muted small">
+                    <i className="fa fa-user me-1"></i> {article.author}
+                  </span>
+                )}
+              </div>
+              <h1 className="display-6 fw-bold mb-4" style={{ color: 'var(--brand-primary)' }}>{article.title}</h1>
               <div className="text-muted" style={{ lineHeight: '1.8', textAlign: 'justify', fontSize: '1rem' }}>
-                {(newsFullText[item.id] || item.desc)
+                {fullText
                   .split('\n\n')
                   .map((para, idx) => (
                     <p key={idx} className="mb-3">{para}</p>
@@ -180,20 +288,28 @@ export default function NewsDetailPage() {
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
               <div className="p-4 bg-light rounded-4 shadow-sm">
                 <h4 className="fw-bold mb-4" style={{ color: 'var(--brand-primary)' }}>Dernières Actualités</h4>
-                {newsItems.filter(n => n.id !== item.id).slice(0, 3).map(other => (
-                  <div key={other.id} className="mb-4 border-bottom pb-3">
-                    <p className="small text-muted mb-1">{other.date}</p>
-                    <Link to={`/actualites/${other.id}`} className="text-decoration-none text-dark fw-bold h6 d-block mb-0 hover-text-primary">
-                      {other.title}
-                    </Link>
-                  </div>
-                ))}
+                {allNews
+                  .filter(n => (n._id || n.id) !== (article._id || article.id))
+                  .slice(0, 3)
+                  .map(other => (
+                    <div key={other._id || other.id} className="mb-4 border-bottom pb-3">
+                      <p className="small text-muted mb-1">{other.date}</p>
+                      <Link 
+                        to={`/actualites/${other._id || other.id}`} 
+                        className="text-decoration-none text-dark fw-bold h6 d-block mb-0 hover-text-primary"
+                      >
+                        {other.title}
+                      </Link>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <Footer />    </div>
+      <Footer />
+    </div>
   );
 }
