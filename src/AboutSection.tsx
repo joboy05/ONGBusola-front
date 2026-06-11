@@ -108,10 +108,10 @@ export default function AboutSection() {
             {/* Image */}
             <div style={{ aspectRatio: '4/3', background: sable, borderRadius: '4px', border: `1px solid ${border}`, overflow: 'hidden' }}>
               <img
-                src="/about.jpeg"
+                src="/optimized/about.webp"
                 alt="Équipe Busola"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
+               loading="lazy" decoding="async" />
             </div>
 
             {/* Texte */}
@@ -406,7 +406,7 @@ export default function AboutSection() {
                               src={logo}
                               alt="Logo partenaire"
                               style={{ height: '18px', width: 'auto', objectFit: 'contain', maxWidth: '70px' }}
-                            />
+                             loading="lazy" decoding="async" />
                           ))}
                         </div>
                       ) : (

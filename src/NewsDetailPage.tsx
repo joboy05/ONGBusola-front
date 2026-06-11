@@ -159,7 +159,7 @@ export default function NewsDetailPage() {
                 date: new Date(item.date || item.createdAt).toLocaleDateString('fr-FR', {
                   day: '2-digit', month: 'long', year: 'numeric'
                 }),
-                img: item.image || '/news-1.jpg',
+                img: item.image || '/optimized/news-1.webp',
               })));
             })
             .catch(() => {});
@@ -245,11 +245,11 @@ export default function NewsDetailPage() {
             <div className="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
               <div className="mb-4 overflow-hidden rounded-4 shadow-sm" style={{ maxHeight: '500px' }}>
                 <img 
-                  src={article.img || article.image || '/news-1.jpg'} 
+                  src={article.img || article.image || '/optimized/news-1.webp'} 
                   alt={article.title} 
                   className="img-fluid w-100" 
                   style={{ objectFit: 'cover' }} 
-                />
+                 loading="lazy" decoding="async" />
               </div>
               <div className="d-flex align-items-center gap-3 mb-3">
                 <p className="mb-0 text-tertiary fw-bold">

@@ -23,21 +23,21 @@ export const staticNewsItems = [
     id: 3,
     title: "Renforcement de capacités en Plaidoyer et Redevabilité",
     date: "08 Février 2026",
-    img: "/news-3.jpg",
+    img: "/optimized/news-3.webp",
     desc: "Du 10 au 12 novembre 2025, l'Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l'appui de l'UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin. Cette initiative a réuni vingt-cinq membres de Busola et acteurs de la société civile partenaires, engagés pour renforcer leur #influence en faveur des Droits en Santé Sexuelle et Reproductive (DSSR) au Bénin. L'objectif de la formation était de permettre aux participants de maîtriser les concepts, outils et stratégies du plaidoyer, afin de transformer leur #engagement citoyen en actions d'impact durable. Sous la facilitation de Mme Nadia ELHADJI BOUEYE, Consultante de l'UNFPA, les travaux se sont articulés autour de trois axes : Clarification des concepts : distinction entre plaidoyer et #lobbying, identification des approches et outils d'influence adaptés aux contextes d'intervention ; Planification stratégique : élaboration de cartographies d'acteurs, définition des messages clés et formulation de stratégies de #mobilisation efficaces ; Production et mise en pratique : co-rédaction et production de la première version du guide de plaidoyer de Busola ONG, suivies de simulations de négociation face à des décideurs. Ces trois journées ont permis aux participants d'acquérir des compétences pratiques, de renforcer leur confiance collective et de développer un cadre stratégique commun, matérialisé par le guide de #plaidoyer établi, qui servira de référence pour les futures campagnes de l'organisation. Cet atelier constitue une étape majeure dans la démarche de Busola ONG visant à structurer et professionnaliser son action citoyenne. Les travaux se poursuivront avec le module sur la #redevabilité sociale, afin de consolider cette dynamique d'apprentissage et d'engagement au service du changement social. "
   },
   {
     id: 4,
     title: "48H contre le cancer du sein Edition 2025",
     date: "23 Octobre 2025",
-    img: "/news-2.jpg",
+    img: "/optimized/news-2.webp",
     desc: "Ce jeudi 23 octobre, la 2ème journée de notre initiative \"48h contre le Cancer du Sein\" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d'un deuxieme pole économique majeur de Parakou : Le marché dépôt L'accueil a été tout aussi chaleureux, et les discussions encore plus profondes. Mais hier, nous avons ajouté une étape clé à notre mission. Car après l'information, vient souvent la question qui paralyse : \"Et si je sens quelque chose d'anormal je vais où ?\" Informer ne suffit pas. Il faut orienter. Pour briser l'isolement et la peur, chaque femme sensibilisée hier est repartie avec des connaissances, mais aussi avec une orientation claire. Nous avons partagé les contacts et les lieux des centres de santé partenaires à Parakou où elles peuvent se rendre pour un dépistage, un conseil ou une consultation en toute confiance. Aujourd'hui, plus de 100 femmes du marché dépôt savent non seulement comment se protéger, mais aussi où trouver de l'aide. C'est ça, notre plus grande victoire. Le succès de cette seconde journée démontre la scalabilité et la pertinence de notre modèle d'action mobile et ciblé. Il confirme l'urgence d'intégrer des stratégies de santé communautaire adaptatives dans kes politiques de santé publique pour ne laisser aucune femme de côté. La sensibilisation doit aller là où se trouve le besoin.."
   },
   {
     id: 5,
     title: "Cérémonie de présentation des voeux au CA et aux PTF de Busola",
     date: "20 Février 2026",
-    img: "/news-1.jpg",
+    img: "/optimized/news-1.webp",
     desc: "Un moment fort. Une vision partagée. Une énergie renouvelée. 10 Février, Busola ONG a vécu un instant d'exception à l'occasion de sa cérémonie de présentation des vœux à son Président d'Honneur, Monsieur Alain ASSANKPO, ainsi qu'à ses partenaires techniques et financiers locaux, nationaux et internationaux. Au-delà du protocole, c'était un moment de chaleur humaine, de regards complices, de sourires sincères et d'engagement renouvelé. Les mots prononcés n'étaient pas de simples vœux. Ils portaient une vision. Ils racontaient un parcours. Ils dessinaient l'avenir. Les réalisations présentées ont témoigné du chemin parcouru avec détermination. Les perspectives annoncées ont ravivé l'espoir et l'ambition d'aller plus loin,ensemble. Cette cérémonie n'était pas seulement un rendez-vous institutionnel. C'était la célébration d'un partenariat solide, d'une confiance mutuelle et d'une volonté commune d'impacter durablement nos communautés. Busola adresse sa profonde gratitude à son Président d'Honneur et à l'ensemble de ses partenaires pour leur soutien constant et leur engagement indéfectible. Ensemble, nous ne formulons pas seulement des vœux. Nous construisons des actions. Nous changeons des vies. Nous inspirons l'avenir. Nos partenaires : UNFPA Benin | UNICEF Benin | CARE Bénin/Togo | Médecins du Monde Suisse au Bénin | Association Barika | Wendia Fáabà | Compagnie Ola culture | ABPF/MAJ Parakou | Association Jeunesse pour la Santé Préventive - AJSP | CEDH | FeD ONG | Jeunesse et Développement | OCPM | Préfecture du Borgou | CIMIC | Direction Départementale de la Santé du Borgou | Direction Départementale des Affaires Sociales et de la Microfinance du Borgou | Direction Départementale de la Police Republicaine du Borgou | ..."
   }
 ];
@@ -71,7 +71,7 @@ function normalizeNewsItem(item: any, index: number): NewsItem {
         month: 'long',
         year: 'numeric'
       }),
-      img: item.image || '/news-1.jpg',
+      img: item.image || '/optimized/news-1.webp',
       desc: item.content || item.summary || '',
       summary: item.summary,
       content: item.content,
@@ -131,7 +131,7 @@ export default function NewsPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('news-3.jpg') center/cover`,
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('/optimized/news-3.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'
@@ -205,10 +205,10 @@ export default function NewsPage() {
                       <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
                         <img 
                           className="img-fluid w-100 h-100 transition-all hover-scale" 
-                          src={item.img || item.image || '/news-1.jpg'} 
+                          src={item.img || item.image || '/optimized/news-1.webp'} 
                           style={{ objectFit: "cover" }} 
                           alt={item.title} 
-                        />
+                         loading="lazy" decoding="async" />
                       </div>
                       <p className="mb-2 text-tertiary fw-bold small">
                         <i className="fa fa-calendar-alt me-2" style={{ color: 'var(--brand-tertiary)' }}></i>

@@ -40,7 +40,7 @@ export default function AboutPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('about.jpeg') center/cover`,
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('/optimized/about.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'
@@ -102,7 +102,8 @@ export default function AboutPage() {
                     fontSize: '2.2rem', 
                     fontFamily: '"Barlow Condensed", sans-serif',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.5px'
+                    letterSpacing: '0.5px',
+                    color: 'var(--brand-primary)'
                   }}
                 >
                   Nos ressources
@@ -132,7 +133,7 @@ export default function AboutPage() {
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-3px)';
                       e.currentTarget.style.boxShadow = '0 10px 20px rgba(39, 100, 174, 0.08)';
-                      e.currentTarget.style.borderColor = 'rgba(39, 100, 174, 0.2)';
+                      e.currentTarget.style.borderColor = 'var(--brand-primary)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
@@ -152,7 +153,7 @@ export default function AboutPage() {
                       </span>
                     </div>
                     <div className="d-flex align-items-center justify-content-center flex-shrink-0" style={{ width: '36px', height: '36px' }}>
-                      <Download size={18} className="text-secondary" />
+                      <Download size={18} style={{ color: 'var(--brand-secondary)' }} />
                     </div>
                   </a>
                 ))}

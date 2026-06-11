@@ -191,39 +191,39 @@ function App() {
     {
       name: "Zoulfath ZIME ",
       role: "Chargé de Communauté ",
-      photo: "team-1.jpg",
+      photo: "/optimized/team-1.webp",
       description: ""
     },
     {
       name: "Fadel KASSALI",
       role: "Assistant Projet",
-      photo: "team-2.jpg",
+      photo: "/optimized/team-2.webp",
       email: "kassalifadel4@gmail.com",
       description: ""
     },
     {
       name: "Abouyaïdou MAMA",
       role: "Directeur Exécutif",
-      photo: "team-3.jpg",
+      photo: "/optimized/team-3.webp",
       email: "mamaabouyaidou22@gmail.com",
       description: "MAMA Abouyaïdou est doctorant en relations internationales à l’Université de Parakou (Bénin), spécialisé en sécurité internationale, cohésion sociale et prévention du terrorisme au Sahel. Fort de plus de huit années d’expérience, il a coordonné et supervisé des projets communautaires majeurs financés par des partenaires internationaux tels que l’UNICEF, l’Union européenne et CARE International. Coordonnateur et Directeur exécutif de l’ONG Busola, il œuvre dans les domaines de la paix, des VBG, du développement rural et de la santé sexuelle et reproductive. Assistant de recherche et enseignant universitaire, il est certifié par le Peace Operations Training Institute des Nations Unies. Sa vision est de transformer la recherche en action pour une paix durable et inclusive."
     },
     {
       name: "BOUKO Chabi Dramane",
       role: "Président du Conseil de Surveillance",
-      photo: "team-4.jpeg",
+      photo: "/optimized/team-4.webp",
       description: ""
     },
     {
       name: "Alain ASSANKPON",
       role: "Président d'honneur",
-      photo: "team-5.jpeg",
+      photo: "/optimized/team-5.webp",
       description: ""
     },
     {
       name: "Sybgath SANNI",
       role: "Présidente du Conseil d’Administration",
-      photo: "team-6.jpg",
+      photo: "/optimized/team-6.webp",
       description: "Pionnière de la naissance de l'ONG BUSOLA, est une figure remarquable, dotée d'un esprit brillant, d'un talent indéniable et d'un esprit innovant. En tant qu'entrepreneuse émérite, elle a fondé plusieurs entreprises prospères telles que BUSOLA BUILDINGS SARL, SUPERMARCHÉ CHANCE GLORY et le restaurant AFRICAN'S DELICES by SYB. En tant que gestionnaire de projets de formation, Sybgath se spécialise dans le domaine du Droit à la Santé Sexuelle et Reproductive (DSSR) ainsi que dans les..."
     }
   ];
@@ -246,7 +246,7 @@ function App() {
               <div className="col-lg-8">
                 <div className="carousel-text">
                   <h1 className="display-1 text-uppercase text-primary mb-3" style={{ fontWeight: 300 }}>
-                    LE <span style={{ fontWeight: "bold" }}>POUVOIR D'AGIR</span> <br /> aU COEUR DE <br /> CHaQUE <span style={{ fontWeight: "bold" }}>COMMUNaUTE</span>
+                    LE <span style={{ fontWeight: "bold" }}>POUVOIR D'AGIR</span> <br /> AU COEUR DE <br /> CHAQUE <span style={{ fontWeight: "bold" }}>COMMUNAUTÉ</span>
                   </h1>
                   <p className="mb-5 fs-5">
                     Depuis 2020, L'ONG Busola oeuvre aux côtés des femmes et des jeunes du Nord-Bénin pour construire un avenir de dignité, d'égalité et de paix à travers une approche intégrée et des patenariats solides favorisant l'autonomie, la santé, la citoyenneté active et la cohésion sociale.
@@ -258,7 +258,7 @@ function App() {
                 </div>
               </div>
               <div className="col-lg-4 p-0 text-center">
-                <img className="w-100 shadow-lg" style={{ borderRadius: "50%", border: "10px solid white" }} src="hero-slider.jpeg" alt="Busola" />
+                <img className="w-100 shadow-lg" style={{ borderRadius: "50%", border: "10px solid white" }} src="/optimized/hero-slider.webp" alt="Busola"  loading="eager" decoding="async" />
               </div>
             </div>
           </div>
@@ -280,7 +280,7 @@ function App() {
             <div className="col-lg-5 wow fadeIn mb-5 mb-lg-0" data-wow-delay="0.1s">
               <div className="position-relative mb-5">
                 <div className="rounded-5 shadow-sm overflow-hidden" style={{ height: "550px", position: "relative" }}>
-                  <img src="about.jpeg" className="w-100 h-100" style={{ objectFit: 'cover' }} alt="L'équipe Busola" />
+                  <img src="/optimized/about.webp" className="w-100 h-100" style={{ objectFit: 'cover' }} alt="L'équipe Busola"  loading="lazy" decoding="async" />
                   {/* Compact & Impactful Stats Badge */}
                   <div className="position-absolute bottom-0 end-0 m-4 shadow-lg" style={{ zIndex: 10 }}>
                     <div className="bg-white rounded-4 d-flex align-items-center p-3" style={{ borderLeft: "8px solid var(--bs-primary)", minWidth: "180px" }}>
@@ -307,7 +307,7 @@ function App() {
                   </div>
                   <div className="bg-primary p-5 rounded-4 shadow-lg d-flex align-items-center justify-content-between" style={{ borderLeft: "10px solid var(--bs-secondary)" }}>
                     <h2 className="fw-black mb-0 text-uppercase" style={{ fontSize: "3rem", color: "#fff", fontWeight: "900" }}>ONG BUSOLA</h2>
-                    <img src="logo-hands.png" className="img-fluid d-none d-lg-block" style={{ maxHeight: "100px", filter: "brightness(0) invert(1)" }} alt="Logo" />
+                    <img src="logo-hands.png" className="img-fluid d-none d-lg-block" style={{ maxHeight: "100px", filter: "brightness(0) invert(1)" }} alt="Logo"  loading="lazy" decoding="async" />
                   </div>
                 </div>
 
@@ -384,7 +384,7 @@ function App() {
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
               <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
                 <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src="action-1.jpg" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="PAGEDA" />
+                  <img src="/optimized/action-1.webp" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="PAGEDA"  loading="lazy" decoding="async" />
                   <span className="badge position-absolute top-0 start-0 m-3 bg-primary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>Autonomisation</span>
                 </div>
                 <div className="card-body p-4 bg-white">
@@ -410,7 +410,7 @@ function App() {
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
               <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
                 <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src="action-2.jpg" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="YES" />
+                  <img src="/optimized/action-2.webp" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="YES"  loading="lazy" decoding="async" />
                   <span className="badge position-absolute top-0 start-0 m-3 bg-secondary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>Jeunesse</span>
                 </div>
                 <div className="card-body p-4 bg-white">
@@ -436,7 +436,7 @@ function App() {
             <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
               <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
                 <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src="action-3.jpg" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="TEDIDJO" />
+                  <img src="/optimized/action-3.webp" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="TEDIDJO"  loading="lazy" decoding="async" />
                   <span className="badge position-absolute top-0 start-0 m-3 bg-tertiary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>DSSR & VBG</span>
                 </div>
                 <div className="card-body p-4 bg-white">
@@ -537,7 +537,7 @@ function App() {
             <div className="col-md-4 wow fadeIn" data-wow-delay="0.1s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
                 <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="news-1.jpg" style={{ objectFit: "cover" }} alt="Actualité Busola" />
+                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="/optimized/news-1.webp" style={{ objectFit: "cover" }} alt="Actualité Busola"  loading="lazy" decoding="async" />
                 </div>
                 <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
                 <h3 className="h5 text-primary fw-bold mb-3">Cérémonie de présentation des voeux au CA et aux PTF de Busola</h3>
@@ -548,7 +548,7 @@ function App() {
             <div className="col-md-4 wow fadeIn" data-wow-delay="0.3s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
                 <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="news-2.jpg" style={{ objectFit: "cover" }} alt="Actualité Busola" />
+                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="/optimized/news-2.webp" style={{ objectFit: "cover" }} alt="Actualité Busola"  loading="lazy" decoding="async" />
                 </div>
                 <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
                 <h3 className="h5 text-primary fw-bold mb-3">48H contre le cancer du sein Edition 2025</h3>
@@ -559,7 +559,7 @@ function App() {
             <div className="col-md-4 wow fadeIn" data-wow-delay="0.5s">
               <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
                 <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="news-3.jpg" style={{ objectFit: "cover" }} alt="Actualité Busola" />
+                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="/optimized/news-3.webp" style={{ objectFit: "cover" }} alt="Actualité Busola"  loading="lazy" decoding="async" />
                 </div>
                 <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
                 <h3 className="h5 text-primary fw-bold mb-3">Renforcement de capacités en Plaidoyer et Redevabilité</h3>
@@ -599,7 +599,7 @@ function App() {
                   <div className="d-flex" style={{ height: '350px' }}>
                     {/* Img Container */}
                     <div className="w-100 position-relative overflow-hidden cursor-pointer" onClick={() => setSelectedMember(m)}>
-                      <img className="img-fluid w-100 h-100 transition-all hover-scale" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name} />
+                      <img className="img-fluid w-100 h-100 transition-all hover-scale" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name}  loading="lazy" decoding="async" />
                     </div>
                     {/* Social Container Beige */}
                     <div className="d-flex flex-column justify-content-end align-items-center py-4 flex-shrink-0" style={{ width: '60px', backgroundColor: '#fcf8ec' }}>
@@ -641,7 +641,7 @@ function App() {
               <div className="row g-5 align-items-center">
                 <div className="col-lg-5">
                   <div className="testimonial-img position-relative">
-                    <img className="img-fluid w-100" src="testimony1.jpg" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }} />
+                    <img className="img-fluid w-100" src="/optimized/testimony1.webp" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="col-lg-7">
@@ -671,7 +671,7 @@ function App() {
               <div className="row g-5 align-items-center">
                 <div className="col-lg-5">
                   <div className="testimonial-img position-relative">
-                    <img className="img-fluid w-100" src="team-1.jpg" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }} />
+                    <img className="img-fluid w-100" src="/optimized/team-1.webp" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="col-lg-7">
@@ -751,13 +751,13 @@ function App() {
               <div className="row g-3">
                 <div className="col-6 mt-5">
                   <Link to="/galerie?filter=paix" className="d-block rounded-5 overflow-hidden shadow-sm mb-3 position-relative transition-all hover-scale" style={{ height: '250px' }}>
-                    <img src="project-1.jpg" className="w-100 h-100 object-fit-cover" alt="" />
+                    <img src="/optimized/project-1.webp" className="w-100 h-100 object-fit-cover" alt=""  loading="lazy" decoding="async" />
                     <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
                       <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
                     </div>
                   </Link>
                   <Link to="/galerie?filter=leadership" className="d-block rounded-5 overflow-hidden shadow-sm position-relative transition-all hover-scale" style={{ height: '180px' }}>
-                    <img src="project-2.jpg" className="w-100 h-100 object-fit-cover" alt="" />
+                    <img src="/optimized/project-2.webp" className="w-100 h-100 object-fit-cover" alt=""  loading="lazy" decoding="async" />
                     <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
                       <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
                     </div>
@@ -765,13 +765,13 @@ function App() {
                 </div>
                 <div className="col-6">
                   <Link to="/galerie?filter=dssr" className="d-block rounded-5 overflow-hidden shadow-sm mb-3 position-relative transition-all hover-scale" style={{ height: '180px' }}>
-                    <img src="project-3.jpg" className="w-100 h-100 object-fit-cover" alt="" />
+                    <img src="/optimized/project-3.webp" className="w-100 h-100 object-fit-cover" alt=""  loading="lazy" decoding="async" />
                     <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
                       <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
                     </div>
                   </Link>
                   <Link to="/galerie?filter=paix" className="d-block rounded-5 overflow-hidden shadow-sm position-relative transition-all hover-scale" style={{ height: '250px' }}>
-                    <img src="news-3.jpg" className="w-100 h-100 object-fit-cover" alt="" />
+                    <img src="/optimized/news-3.webp" className="w-100 h-100 object-fit-cover" alt=""  loading="lazy" decoding="async" />
                     <div className="position-absolute bottom-0 start-0 w-100 p-2" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.7))' }}>
                       <span className="text-white small fw-bold"><i className="fa fa-image me-1"></i> Voir plus</span>
                     </div>
@@ -935,7 +935,7 @@ function App() {
               </div>
               <div className="modal-body">
                 <div className="row">
-                  <div className="col-md-4"><img src={selectedMember.photo} className="img-fluid rounded" alt={selectedMember.name} /></div>
+                  <div className="col-md-4"><img src={selectedMember.photo} className="img-fluid rounded" alt={selectedMember.name}  loading="lazy" decoding="async" /></div>
                   <div className="col-md-8">
                     <h4 className="text-primary">{selectedMember.role}</h4>
                     <p className="mt-3">{selectedMember.description || "Pas de description disponible."}</p>

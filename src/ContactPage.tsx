@@ -60,7 +60,7 @@ export default function ContactPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(245, 159, 35, 0.85) 100%), url('cta-1.jpeg') center/cover`,
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(245, 159, 35, 0.85) 100%), url('/optimized/cta-1.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'

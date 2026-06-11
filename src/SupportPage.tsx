@@ -23,7 +23,7 @@ export default function SupportPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('testimony1.jpg') center/cover`,
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('/optimized/testimony1.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'
@@ -231,7 +231,7 @@ export default function SupportPage() {
               <div className="bg-light p-5 rounded-5 shadow-sm animate-fade-in border" style={{ borderColor: 'rgba(40,100,174,0.1)' }}>
                 <div className="row g-5 align-items-center">
                   <div className="col-md-6">
-                    <img src="/action-3.jpg" className="img-fluid rounded-4 shadow" alt="Impact du don" style={{ objectFit: 'cover', height: '100%', minHeight: '350px' }} />
+                    <img src="/optimized/action-3.webp" className="img-fluid rounded-4 shadow" alt="Impact du don" style={{ objectFit: 'cover', height: '100%', minHeight: '350px' }}  loading="lazy" decoding="async" />
                   </div>
                   <div className="col-md-6">
                     <h3 className="fw-bold mb-4" style={{ color: 'var(--brand-primary)' }}>Soutenez nos actions sur le terrain</h3>
@@ -260,7 +260,7 @@ export default function SupportPage() {
               <div className="bg-light p-5 rounded-5 shadow-sm animate-fade-in border" style={{ borderColor: 'rgba(243,156,18,0.1)' }}>
                 <div className="row g-5 align-items-center">
                   <div className="col-md-6 order-md-2">
-                    <img src="/team-1.jpg" className="img-fluid rounded-4 shadow" alt="Bénévolat" style={{ objectFit: 'cover', height: '100%', minHeight: '350px' }} />
+                    <img src="/optimized/team-1.webp" className="img-fluid rounded-4 shadow" alt="Bénévolat" style={{ objectFit: 'cover', height: '100%', minHeight: '350px' }}  loading="lazy" decoding="async" />
                   </div>
                   <div className="col-md-6 order-md-1">
                     <h3 className="fw-bold mb-4" style={{ color: '#f39c12' }}>Rejoignez notre équipe d'action</h3>
@@ -289,7 +289,7 @@ export default function SupportPage() {
                       {['unfpa.png', 'unicef.png', 'canada.png', 'logo-uk.jpg'].map((p, i) => (
                         <div className="col-6" key={i}>
                           <div className="bg-white p-3 rounded-4 shadow-sm h-100 d-flex align-items-center justify-content-center">
-                            <img src={`/${p}`} className="img-fluid" style={{ maxHeight: '80px', objectFit: 'contain' }} alt="Partner" />
+                            <img src={`/${p}`} className="img-fluid" style={{ maxHeight: '80px', objectFit: 'contain' }} alt="Partner"  loading="lazy" decoding="async" />
                           </div>
                         </div>
                       ))}

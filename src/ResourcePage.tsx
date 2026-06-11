@@ -50,7 +50,7 @@ export default function ResourcePage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(40, 100, 174, 0.9) 0%, rgba(39, 176, 116, 0.85) 100%), url('hero-slider.jpeg') center/cover`,
+          background: `linear-gradient(135deg, rgba(40, 100, 174, 0.9) 0%, rgba(39, 176, 116, 0.85) 100%), url('/optimized/hero-slider.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'

@@ -6,12 +6,12 @@
 }
 
 :root {
-  --bs-primary: #2864ae !important;
-  --bs-secondary: #f39c12 !important;
-  --bs-tertiary: #27ae60 !important;
-  --brand-primary: #2864ae;
-  --brand-secondary: #f39c12;
-  --brand-tertiary: #27ae60;
+  --bs-primary: #2764ae !important;
+  --bs-secondary: #f79e1b !important;
+  --bs-tertiary: #3ab074 !important;
+  --brand-primary: #2764ae;
+  --brand-secondary: #f79e1b;
+  --brand-tertiary: #3ab074;
   --brand-dark: #0e2a5c;
   --brand-sand: #faf9f6;
   --brand-light: #f8f5ef;

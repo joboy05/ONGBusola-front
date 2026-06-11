@@ -46,7 +46,7 @@ export default function TeamPage() {
     {
       name: "Abouyaïdou MAMA",
       role: "Directeur Exécutif",
-      photo: "/de.png",
+      photo: "/optimized/de.webp",
       email: "mamaabouyaidou22@gmail.com",
       description: "MAMA Abouyaïdou est doctorant en relations internationales à l’Université de Parakou (Bénin), spécialisé en sécurité internationale, cohésion sociale et prévention du terrorisme au Sahel. Fort de plus de huit années d’expérience, il a coordonné et supervisé des projets communautaires majeurs financés par des partenaires internationaux tels que l’UNICEF, l’Union européenne et CARE International. Coordonnateur et Directeur exécutif de l’ONG Busola, il œuvre dans les domaines de la paix, des VBG, du développement rural et de la santé sexuelle et reproductive. Assistant de recherche et enseignant universitaire, il est certifié par le Peace Operations Training Institute des Nations Unies. Sa vision est de transformer la recherche en action pour une paix durable et inclusive."
     },
@@ -60,7 +60,7 @@ export default function TeamPage() {
     {
       name: "Zoulfath ZIME ",
       role: "Chargé de Communauté ",
-      photo: "/cc.png",
+      photo: "/optimized/cc.webp",
       description: ""
     }
   ];
@@ -74,7 +74,7 @@ export default function TeamPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(245, 159, 35, 0.85) 100%), url('team-3.jpg') center/cover`,
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(245, 159, 35, 0.85) 100%), url('/optimized/team-3.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'
@@ -281,7 +281,7 @@ export default function TeamPage() {
                   <div className="d-flex" style={{ height: '350px' }}>
                     {/* Img Container */}
                     <div className="w-100 position-relative overflow-hidden">
-                      <img className="img-fluid w-100 h-100" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name} />
+                      <img className="img-fluid w-100 h-100" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name}  loading="lazy" decoding="async" />
                     </div>
                     {/* Social Container Beige */}
                     <div className="d-flex flex-column justify-content-end align-items-center py-4 flex-shrink-0" style={{ width: '60px', backgroundColor: '#fcf8ec' }}>
@@ -307,7 +307,7 @@ export default function TeamPage() {
                   <div className="d-flex" style={{ height: '350px' }}>
                     {/* Img Container */}
                     <div className="w-100 position-relative overflow-hidden">
-                      <img className="img-fluid w-100 h-100" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name} />
+                      <img className="img-fluid w-100 h-100" src={m.photo} style={{ objectFit: 'cover', objectPosition: 'top center' }} alt={m.name}  loading="lazy" decoding="async" />
                     </div>
                     {/* Social Container Beige */}
                     <div className="d-flex flex-column justify-content-end align-items-center py-4 flex-shrink-0" style={{ width: '60px', backgroundColor: '#fcf8ec' }}>

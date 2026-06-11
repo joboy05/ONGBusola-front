@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="nav-bar bg-primary p-0 sticky-top shadow-sm" style={{ zIndex: 1050 }}>
         <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-lg-0 container-fluid px-3 px-lg-5">
           <Link to="/" className="navbar-brand m-0">
-            <img width="170" height="50" src="/logo.png" alt="Logo" />
+            <img width="170" height="50" src="/LOGO SANS FOND-02.png" alt="Logo"  loading="lazy" decoding="async" />
           </Link>
 
           {/* Desktop Nav */}
@@ -99,7 +99,7 @@ export default function Navbar() {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          <img src="/logo.png" alt="Logo" height="38" />
+          <img src="/LOGO SANS FOND-02.png" alt="Logo" height="38"  loading="lazy" decoding="async" />
           <button
             onClick={closeDrawer}
             style={{ background: 'rgba(255,255,255,0.15)', border: 'none', borderRadius: '8px', color: '#fff', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}

@@ -6,6 +6,16 @@ import Footer from './Footer';
 
 import { galleryItems, GalleryItem } from './galleryData';
 
+function optimizedGalleryImage(src: string, size: 'thumbs' | 'large') {
+  if (!src.startsWith('/gallery/')) return src;
+
+  const filename = src.split('/').pop();
+  if (!filename) return src;
+
+  const basename = filename.replace(/\.[^.]+$/, '');
+  return '/optimized/gallery/' + size + '/' + basename + '.webp';
+}
+
 export default function GalleryPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialFilter = (searchParams.get('filter') as any) || 'all';
@@ -85,7 +95,7 @@ export default function GalleryPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white py-5 shadow-sm"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('cta-2.jpeg') center/cover`,
+          background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(39, 176, 116, 0.85) 100%), url('/optimized/cta-2.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
           overflow: 'visible'
@@ -223,10 +233,12 @@ export default function GalleryPage() {
                                     {/* Image wrapper */}
                                     <div className="position-relative overflow-hidden" style={{ height: '280px' }}>
                                       <img 
-                                        src={item.img} 
+                                        src={optimizedGalleryImage(item.img, 'thumbs')} 
                                         alt={item.title} 
                                         className="w-100 h-100 transition-all duration-500"
                                         style={{ objectFit: 'cover' }}
+                                        loading="lazy"
+                                        decoding="async"
                                       />
                                       
                                       {/* Hover overlay */}
@@ -348,10 +360,11 @@ export default function GalleryPage() {
             {/* Image container */}
             <div className="position-relative overflow-hidden mb-3" style={{ maxWidth: '100%', maxHeight: '70vh' }}>
               <img 
-                src={filteredItems[lightboxIndex].img} 
+                src={optimizedGalleryImage(filteredItems[lightboxIndex].img, 'large')} 
                 alt={filteredItems[lightboxIndex].title} 
                 className="img-fluid rounded"
                 style={{ objectFit: 'contain', maxHeight: '70vh', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
+                decoding="async"
               />
             </div>
 

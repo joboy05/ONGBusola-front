@@ -271,7 +271,7 @@ export default function Chatbot() {
             >
               <div className="d-flex align-items-center">
                 <div className="bg-white rounded-circle p-1 me-2 shadow-sm d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px' }}>
-                  <img src="logo.png" className="img-fluid rounded-circle" alt="Bot" />
+                  <img src="logo.png" className="img-fluid rounded-circle" alt="Bot"  loading="lazy" decoding="async" />
                 </div>
                 <div>
                   <h6 className="mb-0 fw-bold" style={{ fontSize: '0.9rem' }}>Assistant Busola</h6>

@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
         <div className="row g-5">
           <div className="col-lg-4 col-md-6">
             <div className="mb-4">
-              <img className="img-fluid w-75" src="/logo.png" style={{ filter: "brightness(0) invert(1)" }} alt="Logo Busola" />
+              <img className="img-fluid w-75" src="/logo.png" style={{ filter: "brightness(0) invert(1)" }} alt="Logo Busola"  loading="lazy" decoding="async" />
             </div>
             <p className="text-white-50 fs-6 mb-4 leading-relaxed">
               Depuis 2020, nous œuvrons aux côtés des femmes et des jeunes du Nord-Bénin pour construire un avenir de dignité, d'égalité et de paix.

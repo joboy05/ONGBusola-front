@@ -9,7 +9,7 @@ export const staticActions = [
     id: 'projet-respect',
     title: 'PROJET RESPECT',
     tag: 'DSSR & VBG',
-    img: '/projet_respect.png',
+    img: '/optimized/projet_respect.webp',
     desc: "Le projet RESPECT est une initiative de promotion des droits en santé sexuelle et reproductive (SSR) des adolescentes et des jeunes, intégrant la prévention des violences basées sur le genre (VBG) et le renforcement de l'engagement communautaire.",
     financement: '3000000.00 Fcfa'
   },
@@ -17,7 +17,7 @@ export const staticActions = [
     id: 'tedidjo',
     title: 'TEDIDJO',
     tag: 'DSSR & VBG',
-    img: '/tedjido.png',
+    img: '/optimized/tedjido.webp',
     desc: "Le projet TEDIDJO est une initiative de développement communautaire visant à améliorer la santé sexuelle et reproductive (SSR) des adolescents et des jeunes, à prévenir les violences basées sur le genre (VBG) et à renforcer l'autonomisation des filles et des jeunes femmes, notamment dans les départements du nord du Bénin.",
     financement: '13000000.00 Fcfa'
   },
@@ -25,7 +25,7 @@ export const staticActions = [
     id: 'yes',
     title: 'YES',
     tag: 'Autonomisation des jeunes',
-    img: '/yes.png',
+    img: '/optimized/yes.webp',
     desc: "Le projet YES (Youth Engagement for Sexual and Reproductive Health Rights) est une initiative visant à renforcer l'autonomisation des jeunes, à promouvoir l'accès aux droits en santé sexuelle et reproductive (SSR) et à prévenir les violences basées sur le genre (VBG).",
     financement: '3000000.00 Fcfa'
   },
@@ -33,7 +33,7 @@ export const staticActions = [
     id: 'pageda',
     title: 'PAGEDA',
     tag: 'Leadership et Autonomisation',
-    img: '/pageda.png',
+    img: '/optimized/pageda.webp',
     desc: "Le Programme PAGEDA a pour objectif de lutter contre la pauvreté par l'Alphabétisation fonctionnelle, en liant les cours à la formation professionnelle, elle s'étend sur 27 communes du Nord Bénin. Ce programme est financé par la Coopération Suisse et vise l'autonomisation de 30 000 apprenants dans le Nord Bénin.",
     financement: '11000000.00 Fcfa'
   }
@@ -43,9 +43,9 @@ export let dynamicActions = [...staticActions];
 
 const cond = "'Barlow Condensed', sans-serif";
 const serif = "'Poppins', sans-serif";
-const cobalt = '#2864ae';
-const gold = '#f39c12';
-const green = '#27b074';
+const cobalt = "var(--brand-primary)";
+const gold = "var(--brand-secondary)";
+const green = "var(--brand-tertiary)";
 
 export default function ActionPage() {
   const [actionsList, setActionsList] = useState(staticActions);
@@ -66,7 +66,7 @@ export default function ActionPage() {
             id: item._id, // Utiliser _id de MongoDB
             title: item.title,
             tag: item.category || 'Non catégorisé',
-            img: (item.images && item.images.length > 0) ? item.images[0] : '/projet_respect.png', // Première image ou fallback
+            img: (item.images && item.images.length > 0) ? item.images[0] : '/optimized/projet_respect.webp', // Première image ou fallback
             desc: item.description || '',
             financement: 'N/A' // L'API ne semble pas avoir de champ financement, on pourrait l'ajouter plus tard
           }));
@@ -89,7 +89,7 @@ export default function ActionPage() {
         className="container-fluid position-relative d-flex align-items-center justify-content-center text-white"
         style={{
           minHeight: '500px',
-          background: `linear-gradient(135deg, rgba(40,100,174,0.92) 0%, rgba(30,75,131,0.92) 100%), url('/action-1.jpg') center/cover no-repeat`,
+          background: `linear-gradient(135deg, rgba(40,100,174,0.92) 0%, rgba(30,75,131,0.92) 100%), url('/optimized/action-1.webp') center/cover no-repeat`,
           paddingTop: '120px',
           paddingBottom: '60px',
         }}
@@ -219,7 +219,7 @@ export default function ActionPage() {
             className="col-lg-6"
             style={{
               minHeight: '50vh',
-              background: `url('/action-1.jpg') center/cover no-repeat`
+              background: `url('/optimized/action-1.webp') center/cover no-repeat`
             }}
           />
         </div>
@@ -233,7 +233,7 @@ export default function ActionPage() {
             className="col-lg-6 order-lg-1 order-2"
             style={{
               minHeight: '50vh',
-              background: `url('/action-2.jpg') center/cover no-repeat`
+              background: `url('/optimized/action-2.webp') center/cover no-repeat`
             }}
           />
 
@@ -361,7 +361,7 @@ export default function ActionPage() {
             className="col-lg-6"
             style={{
               minHeight: '50vh',
-              background: `url('/action-3.jpg') center/cover no-repeat`
+              background: `url('/optimized/action-3.webp') center/cover no-repeat`
             }}
           />
         </div>
@@ -504,11 +504,11 @@ export default function ActionPage() {
                 }}
               >
                 <img
-                  src="/testimony1.jpg"
+                  src="/optimized/testimony1.webp"
                   alt="Mariam"
                   className="w-100 h-100"
                   style={{ objectFit: 'cover' }}
-                />
+                 loading="lazy" decoding="async" />
               </div>
               <h4 className="fw-bold mb-1" style={{ fontSize: '1.25rem', color: cobalt, fontFamily: cond }}>Mariam, 24 ans</h4>
               <span className="fw-bold text-uppercase d-block mb-1" style={{ fontSize: '0.72rem', letterSpacing: '1px', color: gold }}>
