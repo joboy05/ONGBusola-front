@@ -47,6 +47,7 @@ function App() {
   const [contactStatus, setContactStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
   const [latestNews, setLatestNews] = useState<any[]>([]);
   const [latestActions, setLatestActions] = useState<any[]>([]);
+  const [latestTestimonials, setLatestTestimonials] = useState<any[]>([]);
   const [loadingContent, setLoadingContent] = useState(true);
 
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -181,8 +182,42 @@ function App() {
       }
     };
 
-    Promise.all([fetchNews(), fetchActions()]).finally(() => setLoadingContent(false));
+    // 3. Fetch Testimonials
+    const fetchTestimonials = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/testimonials`);
+        if (!res.ok) throw new Error('API unavailable');
+        const data = await res.json();
+        const homeTestimonials = data.filter((t: any) => t.showOnHome && !t.archived);
+        if (homeTestimonials.length > 0) {
+          setLatestTestimonials(homeTestimonials);
+        } else {
+          setLatestTestimonials(staticTestimonialsFallback);
+        }
+      } catch (error) {
+        setLatestTestimonials(staticTestimonialsFallback);
+      }
+    };
+
+    Promise.all([fetchNews(), fetchActions(), fetchTestimonials()]).finally(() => setLoadingContent(false));
   }, []);
+
+  const staticTestimonialsFallback = [
+    {
+      name: 'Makou Menadèle Murielle',
+      role: 'Bénéficiaire du programme YES',
+      message: "Grâce à l'ONG Busola, j'ai pu participer à des ateliers de formation où les femmes et les jeunes étaient pleinement impliqués. J'ai renforcé mes compétences en Plaidoyer, Redevabilité et Fake News. J'ai gagné en confiance et compris que notre voix peut réellement contribuer au changement dans notre communauté.",
+      image: "/optimized/testimony1.webp",
+      rating: 5
+    },
+    {
+      name: 'Fadilatou Bani',
+      role: 'Bénéficiaire du programme PAGEDA',
+      message: "L'accompagnement de Busola a été un véritable tremplin pour moi. J'ai pu acquérir des compétences concrètes grâce au programme d'alphabétisation fonctionnelle. Aujourd'hui, je gère ma propre activité de façon plus autonome et je participe activement aux décisions dans mon foyer.",
+      image: "/optimized/team-1.webp",
+      rating: 5
+    }
+  ];
 
   useEffect(() => {
     const initJS = () => {
@@ -239,6 +274,35 @@ function App() {
     const timer = setTimeout(initJS, 500);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (latestTestimonials.length > 0) {
+      const timer = setTimeout(() => {
+        if (window.$ && window.$(".testimonial-carousel").length) {
+          const $carousel = window.$(".testimonial-carousel");
+          if ($carousel.data('owl.carousel')) {
+            $carousel.owlCarousel('destroy');
+            $carousel.removeClass('owl-loaded owl-drag owl-responsive');
+          }
+          $carousel.owlCarousel({
+            items: 1,
+            autoplay: true,
+            smartSpeed: 1000,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+            dots: false,
+            loop: latestTestimonials.length > 1,
+            nav: true,
+            navText: [
+              '<i class="bi bi-chevron-left"></i>',
+              '<i class="bi bi-chevron-right"></i>'
+            ]
+          });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [latestTestimonials]);
 
 
   const handleContactSubmit = async (e: React.FormEvent, type: string) => {
@@ -659,65 +723,36 @@ function App() {
           </div>
 
           <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            {/* Testimonial 1 */}
-            <div className="testimonial-item">
-              <div className="row g-5 align-items-center">
-                <div className="col-lg-5">
-                  <div className="testimonial-img position-relative">
-                    <img className="img-fluid w-100" src="/optimized/testimony1.webp" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  loading="lazy" decoding="async" />
+            {latestTestimonials.map((t, index) => (
+              <div key={t._id || index} className="testimonial-item">
+                <div className="row g-5 align-items-center">
+                  <div className="col-lg-5">
+                    <div className="testimonial-img position-relative">
+                      <img className="img-fluid w-100" src={t.image || "/optimized/testimony1.webp"} alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  loading="lazy" decoding="async" />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-7">
-                  <div className="testimonial-title">
-                     <div className="d-flex mb-3">
-                       {[1,2,3,4,5].map(s => <Star key={s} size={20} fill="#f89d2a" stroke="none" />)}
-                     </div>
-                     <p className="text-muted mb-4 fs-5">
-                        Grâce à l'ONG Busola, j'ai pu participer à des ateliers de formation où les femmes et les jeunes étaient pleinement impliqués. J'ai renforcé mes compétences en Plaidoyer, Redevabilité et Fake News. J'ai gagné en confiance et compris que notre voix peut réellement contribuer au changement dans notre communauté.
-                     </p>
-                     <div className="d-flex align-items-center mt-4">
-                        <div className="bg-secondary d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
-                           <Quote size={30} className="text-white" />
-                        </div>
-                        <div className="ms-4">
-                           <h5 className="text-primary mb-1">Makou Menadèle Murielle</h5>
-                           <span className="text-secondary fw-bold text-uppercase" style={{ fontSize: '0.85rem' }}>Bénéficiaire du programme YES</span>
-                        </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="testimonial-item">
-              <div className="row g-5 align-items-center">
-                <div className="col-lg-5">
-                  <div className="testimonial-img position-relative">
-                    <img className="img-fluid w-100" src="/optimized/team-1.webp" alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  loading="lazy" decoding="async" />
-                  </div>
-                </div>
-                <div className="col-lg-7">
-                  <div className="testimonial-title">
-                     <div className="d-flex mb-3">
-                       {[1,2,3,4,5].map(s => <Star key={s} size={20} fill="#f89d2a" stroke="none" />)}
-                     </div>
-                     <p className="text-muted mb-4 fs-5">
-                        L'accompagnement de Busola a été un véritable tremplin pour moi. J'ai pu acquérir des compétences concrètes grâce au programme d'alphabétisation fonctionnelle. Aujourd'hui, je gère ma propre activité de façon plus autonome et je participe activement aux décisions dans mon foyer.
-                     </p>
-                     <div className="d-flex align-items-center mt-4">
-                        <div className="bg-secondary d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
-                           <Quote size={30} className="text-white" />
-                        </div>
-                        <div className="ms-4">
-                           <h5 className="text-primary mb-1">Fadilatou Bani</h5>
-                           <span className="text-secondary fw-bold text-uppercase" style={{ fontSize: '0.85rem' }}>Bénéficiaire du programme PAGEDA</span>
-                        </div>
-                     </div>
+                  <div className="col-lg-7">
+                    <div className="testimonial-title">
+                       <div className="d-flex mb-3">
+                         {[...Array(t.rating || 5)].map((_, i) => <Star key={i} size={20} fill="#f89d2a" stroke="none" />)}
+                       </div>
+                       <p className="text-muted mb-4 fs-5">
+                          {t.message}
+                       </p>
+                       <div className="d-flex align-items-center mt-4">
+                          <div className="bg-secondary d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
+                             <Quote size={30} className="text-white" />
+                          </div>
+                          <div className="ms-4">
+                             <h5 className="text-primary mb-1">{t.name}</h5>
+                             <span className="text-secondary fw-bold text-uppercase" style={{ fontSize: '0.85rem' }}>{t.role}</span>
+                          </div>
+                       </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
