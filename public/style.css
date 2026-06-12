@@ -660,8 +660,15 @@ body{
     box-shadow: none;
 }
 
-.footer .copyright {
-    border-top: 1px solid rgba(255, 255, 255, .1);
+.footer .form-control {
+    height: auto !important;
+    line-height: normal !important;
+}
+
+.footer .form-control:focus {
+    box-shadow: none;
+    border-color: var(--bs-secondary) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 

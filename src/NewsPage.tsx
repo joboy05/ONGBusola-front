@@ -84,8 +84,7 @@ function normalizeNewsItem(item: any, index: number): NewsItem {
 }
 
 // ── Export pour utilisation par NewsDetailPage ──
-// Cette variable sera mise à jour après le fetch
-export let newsItems: NewsItem[] = [...staticNewsItems];
+export let newsItems: NewsItem[] = staticNewsItems;
 
 export default function NewsPage() {
   const [items, setItems] = useState<NewsItem[]>(staticNewsItems);
@@ -108,10 +107,12 @@ export default function NewsPage() {
       .then((data: any[]) => {
         if (data && data.length > 0) {
           const normalized = data.map((item, i) => normalizeNewsItem(item, i + 1));
-          setItems(normalized);
+          // Fusionner les news de l'API avec les news statiques
+          const merged = [...normalized, ...staticNewsItems];
+          setItems(merged);
           setIsFromApi(true);
           // Met à jour l'export pour NewsDetailPage
-          newsItems = normalized;
+          newsItems = merged;
         }
         // Si pas de données API, on garde les statiques
       })

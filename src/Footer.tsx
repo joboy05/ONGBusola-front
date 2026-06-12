@@ -100,9 +100,10 @@ const Footer: React.FC = () => {
 
             <form onSubmit={handleNewsletterSubmit} className="position-relative w-100">
               <input 
-                className="form-control bg-transparent border-light w-100 py-3 ps-4 pe-5 text-white" 
+                className="form-control bg-transparent border-light w-100 py-3 ps-4 text-white" 
                 type="email" 
                 placeholder="Votre email" 
+                style={{ paddingRight: '110px' }}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
