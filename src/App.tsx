@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { Heart, Users, Handshake, ShieldCheck, MapPin, Phone, Mail, Facebook, Linkedin, Twitter, Youtube, ArrowRight, MessageCircle, Send, X, Menu, ArrowUp, BookOpen, Star, PlusCircle, ChevronDown, Quote } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { staticNewsItems } from './NewsPage';
+import { staticActions } from './ActionPage';
+import { galleryItems } from './galleryData';
+import { groupItemsBySection } from './galleryUtils';
 
 declare global {
   interface Window {
@@ -12,7 +16,18 @@ declare global {
   }
 }
 
-// Couleurs institutionnelles de l'ONG Busola
+// ── Interface pour les news/actions ──
+interface DynamicItem {
+  id: string | number;
+  _id?: string;
+  title: string;
+  tag: string;
+  img: string;
+  desc: string;
+  date?: string;
+  category?: string;
+  isGallery?: boolean;
+}
 
 interface TeamMember {
   name: string;
@@ -30,6 +45,10 @@ function App() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '', type: '' });
   const [contactStatus, setContactStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
+  const [latestNews, setLatestNews] = useState<any[]>([]);
+  const [latestActions, setLatestActions] = useState<any[]>([]);
+  const [loadingContent, setLoadingContent] = useState(true);
+
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatMessage, setChatMessage] = useState('');
   const [chatHistory, setChatHistory] = useState<{ role: 'bot' | 'user', text: string, actions?: { label: string, target: string }[] }[]>([
@@ -101,6 +120,69 @@ function App() {
       if (target === 'soutenir') window.scrollTo({ top: 3500, behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+    // 1. Fetch News
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/news`);
+        if (!res.ok) throw new Error('API unavailable');
+        const data = await res.json();
+        const normalized = data.map((item: any) => ({
+          ...item,
+          id: item._id,
+          date: new Date(item.date || item.createdAt).toLocaleDateString('fr-FR', {
+            day: '2-digit', month: 'long', year: 'numeric'
+          }),
+          img: item.image || '/optimized/news-1.webp',
+          desc: item.content || item.summary || ''
+        }));
+        setLatestNews([...normalized, ...staticNewsItems].slice(0, 3));
+      } catch (error) {
+        setLatestNews(staticNewsItems.slice(0, 3));
+      }
+    };
+
+    // 2. Fetch Actions
+    const fetchActions = async () => {
+      try {
+        // Prepare Gallery Actions
+        const groupedGallery = groupItemsBySection(galleryItems);
+        const galleryActions = Array.from(groupedGallery.entries()).map(([sectionName, items]) => ({
+          id: sectionName,
+          title: sectionName,
+          tag: items[0].categoryLabel,
+          img: items[0].img,
+          desc: items[0].desc.split('. (Image')[0].replace("Photo prise lors de l'activité: ", ""),
+          isGallery: true,
+          category: items[0].category
+        }));
+
+        const res = await fetch(`${API_URL}/api/actions`);
+        let combined: any[] = [];
+        if (res.ok) {
+          const data = await res.json();
+          const normalizedActions = data.map((item: any) => ({
+            id: item._id,
+            title: item.title,
+            tag: item.category || 'Non catégorisé',
+            img: (item.images && item.images.length > 0) ? item.images[0] : '/optimized/action-1.webp',
+            desc: item.description || ''
+          }));
+          combined = [...normalizedActions, ...galleryActions];
+        } else {
+          combined = [...staticActions, ...galleryActions];
+        }
+        setLatestActions(combined.slice(0, 3));
+      } catch (error) {
+        setLatestActions(staticActions.slice(0, 3));
+      }
+    };
+
+    Promise.all([fetchNews(), fetchActions()]).finally(() => setLoadingContent(false));
+  }, []);
 
   useEffect(() => {
     const initJS = () => {
@@ -380,83 +462,40 @@ function App() {
           </div>
 
           <div className="row g-4">
-            {/* Programme 1 - PAGEDA */}
-            <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-              <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
-                <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src="/optimized/action-1.webp" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="PAGEDA"  loading="lazy" decoding="async" />
-                  <span className="badge position-absolute top-0 start-0 m-3 bg-primary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>Autonomisation</span>
-                </div>
-                <div className="card-body p-4 bg-white">
-                  <div className="mb-3">
-                    <BookOpen className="text-primary" size={28} />
-                  </div>
-                  <h5 className="fw-bold mb-3 text-dark">PAGEDA — Alphabétisation fonctionnelle</h5>
-                  <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                    Programme de lutte contre la pauvreté par l’alphabétisation fonctionnelle liée à la formation professionnelle. 27 communes couvertes, financement Coopération Suisse.
-                  </p>
-                  <div className="d-flex flex-wrap gap-2 mb-4">
-                    <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-primary)', opacity: 0.8 }}>30 000 apprenants</span>
-                    <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-primary)', opacity: 0.8 }}>Nord-Bénin</span>
-                  </div>
-                  <Link to="/galerie?filter=leadership" className="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center">
-                    Voir la galerie photos <ArrowRight size={16} className="ms-2" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+            {latestActions.map((action, i) => {
+              const detailLink = action.isGallery 
+                ? `/galerie/album/${encodeURIComponent(action.id)}`
+                : `/actions/${action.id}`;
+              
+              const galleryShortcut = action.isGallery
+                ? `/galerie/${action.category}`
+                : `/galerie?filter=${action.id === 'tedidjo' || action.id === 'projet-respect' ? 'dssr' : action.id === 'yes' ? 'paix' : 'leadership'}`;
 
-            {/* Programme 2 - YES */}
-            <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-              <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
-                <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src="/optimized/action-2.webp" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="YES"  loading="lazy" decoding="async" />
-                  <span className="badge position-absolute top-0 start-0 m-3 bg-secondary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>Jeunesse</span>
-                </div>
-                <div className="card-body p-4 bg-white">
-                  <div className="mb-3">
-                    <Star className="text-secondary" size={28} />
+              return (
+                <div key={action.id} className="col-lg-4 wow fadeInUp" data-wow-delay={`${0.1 + i * 0.2}s`}>
+                  <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
+                    <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
+                      <img src={action.img} className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt={action.title}  loading="lazy" decoding="async" />
+                      <span className="badge position-absolute top-0 start-0 m-3 bg-primary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>
+                        {action.tag}
+                      </span>
+                    </div>
+                    <div className="card-body p-4 bg-white">
+                      <div className="mb-3">
+                        <BookOpen className="text-primary" size={28} />
+                      </div>
+                      <h5 className="fw-bold mb-3 text-dark">{action.title}</h5>
+                      <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
+                        {action.desc.length > 160 ? action.desc.slice(0, 160) + '...' : action.desc}
+                      </p>
+                      <Link to={detailLink} className="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center">
+                        En savoir plus <ArrowRight size={16} className="ms-2" />
+                      </Link>
+                    </div>
                   </div>
-                  <h5 className="fw-bold mb-3 text-dark">YES — Youth Engagement for SRH Rights</h5>
-                  <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                    Initiative renforçant l’autonomisation des jeunes, promouvant l’accès aux droits en santé sexuelle et reproductive et prévenant les violences basées sur le genre.
-                  </p>
-                  <div className="d-flex flex-wrap gap-2 mb-4">
-                    <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-secondary)', opacity: 0.8 }}>DSSR</span>
-                    <span className="badge bg-white text-secondary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-secondary)', opacity: 0.8 }}>VBG</span>
-                  </div>
-                  <Link to="/galerie?filter=paix" className="text-secondary fw-bold text-decoration-none small d-inline-flex align-items-center">
-                    Voir la galerie photos <ArrowRight size={16} className="ms-2" />
-                  </Link>
                 </div>
-              </div>
-            </div>
-
-            {/* Programme 3 - TEDIDJO */}
-            <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-              <div className="card border rounded-0 overflow-hidden h-100 transition-all hover-up" style={{ borderColor: '#eaeaea' }}>
-                <div className="position-relative" style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src="/optimized/action-3.webp" className="img-fluid w-100 h-100 transition-all hover-scale" style={{ objectFit: 'cover' }} alt="TEDIDJO"  loading="lazy" decoding="async" />
-                  <span className="badge position-absolute top-0 start-0 m-3 bg-tertiary text-white text-uppercase small px-3 py-2 rounded-pill" style={{ fontSize: '10px', letterSpacing: '1px', zIndex: 2 }}>DSSR & VBG</span>
-                </div>
-                <div className="card-body p-4 bg-white">
-                  <div className="mb-3">
-                    <Heart className="text-tertiary" size={28} />
-                  </div>
-                  <h5 className="fw-bold mb-3 text-dark">TEDIDJO — Santé reproductive & protection</h5>
-                  <p className="text-muted small mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                    Amélioration de la santé sexuelle et reproductive des adolescents, prévention des VBG et renforcement de l’autonomisation des filles — Borgou & Alibori.
-                  </p>
-                  <div className="d-flex flex-wrap gap-2 mb-4">
-                    <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-tertiary)', opacity: 0.8 }}>CARE Bénin</span>
-                    <span className="badge bg-white text-tertiary px-3 py-2 rounded-pill fw-normal border" style={{ borderColor: 'var(--bs-tertiary)', opacity: 0.8 }}>Borgou</span>
-                  </div>
-                  <Link to="/galerie?filter=dssr" className="text-tertiary fw-bold text-decoration-none small d-inline-flex align-items-center">
-                    Voir la galerie photos <ArrowRight size={16} className="ms-2" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -534,39 +573,23 @@ function App() {
             </h1>
           </div>
           <div className="row g-4">
-            <div className="col-md-4 wow fadeIn" data-wow-delay="0.1s">
-              <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
-                <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="/optimized/news-1.webp" style={{ objectFit: "cover" }} alt="Actualité Busola"  loading="lazy" decoding="async" />
+            {latestNews.map((news, i) => (
+              <div key={news.id} className="col-md-4 wow fadeIn" data-wow-delay={`${0.1 + i * 0.2}s`}>
+                <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
+                  <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
+                    <img className="img-fluid w-100 h-100 transition-all hover-scale" src={news.img} style={{ objectFit: "cover" }} alt={news.title}  loading="lazy" decoding="async" />
+                  </div>
+                  <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>{news.date}</p>
+                  <h3 className="h5 text-primary fw-bold mb-3">{news.title}</h3>
+                  <p className="text-muted small mb-4">
+                    {news.desc.length > 200 ? news.desc.slice(0, 200) + '...' : news.desc}
+                  </p>
+                  <Link to={`/actualites/${news.id}`} className="text-secondary fw-bold small text-decoration-none hover-right">
+                    Lire la suite <i className="fa fa-arrow-right ms-1"></i>
+                  </Link>
                 </div>
-                <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>20 Février 2026</p>
-                <h3 className="h5 text-primary fw-bold mb-3">Cérémonie de présentation des voeux au CA et aux PTF de Busola</h3>
-                <p className="text-muted small mb-4">10 Février, Busola ONG a vécu un instant d’exception à l’occasion de sa cérémonie de présentation des vœux à son Président d’Honneur, Monsieur Alain ASSANKPO, ainsi à ses partenaires techniques et financiers locaux, nationaux et internationaux.</p>
-                <a href="#!" className="text-secondary fw-bold small text-decoration-none hover-right">Lire la suite <i className="fa fa-arrow-right ms-1"></i></a>
               </div>
-            </div>
-            <div className="col-md-4 wow fadeIn" data-wow-delay="0.3s">
-              <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
-                <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="/optimized/news-2.webp" style={{ objectFit: "cover" }} alt="Actualité Busola"  loading="lazy" decoding="async" />
-                </div>
-                <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
-                <h3 className="h5 text-primary fw-bold mb-3">48H contre le cancer du sein Edition 2025</h3>
-                <p className="text-muted small mb-4">Ce jeudi 23 octobre, la 2ème journée de notre initiative "48h contre le Cancer du Sein" a été consacrée à l'extension de notre périmètre d'intervention, en déployant nos équipes au sein d’un deuxieme pole économique majeur de Parakou : Le marché dépôt</p>
-                <a href="#!" className="text-secondary fw-bold small text-decoration-none hover-right">Lire la suite <i className="fa fa-arrow-right ms-1"></i></a>
-              </div>
-            </div>
-            <div className="col-md-4 wow fadeIn" data-wow-delay="0.5s">
-              <div className="event-item h-100 p-4 shadow-sm bg-white rounded-4 border transition-all hover-up overflow-hidden">
-                <div className="overflow-hidden rounded-4 mb-4" style={{ height: "220px" }}>
-                  <img className="img-fluid w-100 h-100 transition-all hover-scale" src="/optimized/news-3.webp" style={{ objectFit: "cover" }} alt="Actualité Busola"  loading="lazy" decoding="async" />
-                </div>
-                <p className="mb-2 text-tertiary fw-bold small"><i className="fa fa-calendar-alt me-2"></i>8 Février 2026</p>
-                <h3 className="h5 text-primary fw-bold mb-3">Renforcement de capacités en Plaidoyer et Redevabilité</h3>
-                <p className="text-muted small mb-4">Du 10 au 12 novembre 2025, l’Hôtel SOUNON SERO de Parakou a accueilli un atelier de renforcement de capacités sur le plaidoyer, organisé par Busola ONG avec l’appui de l’UNFPA Benin et de l'Ambassade des Pays-Bas au Bénin.</p>
-                <a href="#!" className="text-secondary fw-bold small text-decoration-none hover-right">Lire la suite <i className="fa fa-arrow-right ms-1"></i></a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
