@@ -712,7 +712,7 @@ function App() {
       {/* Testimonials - Carousel */}
       <div className="container-fluid py-5 bg-light" id="temoignages">
         <div className="container py-5">
-          <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
+          <div className="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '800px' }}>
             <div className="d-flex align-items-center justify-content-center mb-3">
               <div style={{ height: "1px", background: "var(--brand-tertiary)", width: "40px" }}></div>
               <span className="text-uppercase mx-2 fw-bold" style={{ color: 'var(--brand-tertiary)', fontSize: '0.9rem', letterSpacing: '2px' }}>IMPACT RÉEL</span>
@@ -722,16 +722,23 @@ function App() {
               <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>Ils nous</span><br/>
               <span className="text-uppercase fw-black" style={{ color: 'var(--brand-text)', letterSpacing: '-0.5px' }}>font confiance</span>
             </h1>
-            <p className="text-muted fs-5 mb-4 mt-4">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
+            <p className="text-muted fs-5 mb-0">La voix de nos bénéficiaires et partenaires est notre plus belle récompense et notre moteur au quotidien.</p>
           </div>
 
-          <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+          <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s" style={{ minHeight: '400px' }}>
             {latestTestimonials.map((t, index) => (
               <div key={t._id || index} className="testimonial-item">
                 <div className="row g-5 align-items-center">
                   <div className="col-lg-5">
-                    <div className="testimonial-img position-relative">
-                      <img className="img-fluid w-100" src={t.image || "/optimized/testimony1.webp"} alt="" style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  loading="lazy" decoding="async" />
+                    <div className="testimonial-img position-relative rounded-4 overflow-hidden shadow-sm" style={{ background: '#e2e8f0' }}>
+                      <img 
+                        className="img-fluid w-100" 
+                        src={t.image || "/optimized/testimony1.webp"} 
+                        alt={t.name} 
+                        style={{ height: "400px", objectFit: "cover", objectPosition: "top" }}  
+                        loading={index === 0 ? "eager" : "lazy"} 
+                        decoding="async" 
+                      />
                     </div>
                   </div>
                   <div className="col-lg-7">

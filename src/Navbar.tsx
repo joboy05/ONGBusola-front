@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { X, Menu, ChevronDown } from 'lucide-react';
 
@@ -8,6 +8,11 @@ export default function Navbar() {
   const isAboutGroup = ['/about', '/team', '/galerie', '/ressources'].includes(pathname);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+
+  useEffect(() => {
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    fetch(`${API_URL}/api/traffic/track`, { method: 'POST' }).catch(() => {});
+  }, []);
 
   const closeDrawer = () => {
     setDrawerOpen(false);
