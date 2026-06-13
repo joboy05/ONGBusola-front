@@ -189,13 +189,10 @@ function App() {
         if (!res.ok) throw new Error('API unavailable');
         const data = await res.json();
         const homeTestimonials = data.filter((t: any) => t.showOnHome && !t.archived);
-        if (homeTestimonials.length > 0) {
-          setLatestTestimonials(homeTestimonials);
-        } else {
-          setLatestTestimonials(staticTestimonialsFallback);
-        }
+        const merged = [...homeTestimonials, ...staticTestimonialsFallback];
+        setLatestTestimonials(merged.slice(0, 3));
       } catch (error) {
-        setLatestTestimonials(staticTestimonialsFallback);
+        setLatestTestimonials(staticTestimonialsFallback.slice(0, 3));
       }
     };
 
