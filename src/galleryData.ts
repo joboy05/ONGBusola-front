@@ -1,215 +1,9 @@
 export interface GalleryItem { id: number; title: string; category: 'dssr' | 'paix' | 'leadership'; categoryLabel: string; section: string; img: string; desc: string; date: string; tag: string; }
 
 export const galleryItems: GalleryItem[] = [
-  {
-    "id": 1,
-    "title": "Déjeuner de cohésion sociale - Vue 1",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484528667_1076017081234581_5468232618266679322_n.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 1/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 2,
-    "title": "Déjeuner de cohésion sociale - Vue 2",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484555152_1076017031234586_8611261274879065372_n.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 2/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 3,
-    "title": "Déjeuner de cohésion sociale - Vue 3",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484783623_1076016857901270_2225617598526822804_n.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 3/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 4,
-    "title": "Déjeuner de cohésion sociale - Vue 4",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484072428_1076016864567936_3711715331058270339_n_Hke9aN0.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 4/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 5,
-    "title": "Déjeuner de cohésion sociale - Vue 5",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484091679_1076017064567916_7152508016239654659_n_zvV9l6N.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 5/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 6,
-    "title": "Déjeuner de cohésion sociale - Vue 6",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484149533_1076016914567931_4185037950618386607_n_p0wZbPv.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 6/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 7,
-    "title": "Déjeuner de cohésion sociale - Vue 7",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484164263_1076017021234587_6414870807836586091_n_zCxbPU2.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 7/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 8,
-    "title": "Déjeuner de cohésion sociale - Vue 8",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484191805_1076017091234580_1437664556009335235_n_XBjkrLD.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 8/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 9,
-    "title": "Déjeuner de cohésion sociale - Vue 9",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484244713_1076016861234603_5269455461605233138_n_ElDnkxg.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 9/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 10,
-    "title": "Déjeuner de cohésion sociale - Vue 10",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484269729_1076017331234556_6236149164847289170_n_Fh4q1ab.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 10/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 11,
-    "title": "Déjeuner de cohésion sociale - Vue 11",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484320679_1076016027901353_4951928410946398074_n_uuidePd.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 11/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 12,
-    "title": "Déjeuner de cohésion sociale - Vue 12",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484342673_1076017034567919_3019854611157333233_n_nQYfxjQ.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 12/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 13,
-    "title": "Déjeuner de cohésion sociale - Vue 13",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484348678_1076017051234584_137647462155535418_n_kN23w0y.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 13/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 14,
-    "title": "Déjeuner de cohésion sociale - Vue 14",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484355429_1076017041234585_6011780221015654228_n_0cGgYs9.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 14/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 15,
-    "title": "Déjeuner de cohésion sociale - Vue 15",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484491957_1076017087901247_335125118563590463_n_RWiaprX.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 15/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 16,
-    "title": "Déjeuner de cohésion sociale - Vue 16",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484493172_1076017024567920_3280376124762105683_n_aSlWX1A.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 16/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 17,
-    "title": "Déjeuner de cohésion sociale - Vue 17",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/484526147_1076017037901252_8213786220639388458_n_JRhM68I.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 17/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 18,
-    "title": "Déjeuner de cohésion sociale - Vue 18",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "/gallery/485143467_1076017017901254_1283306627836466384_n.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 18/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
-  {
-    "id": 19,
-    "title": "Déjeuner de cohésion sociale - Vue 19",
-    "category": "paix",
-    "categoryLabel": "Paix et Cohésion Sociale",
-    "img": "https://busolaong.com/mediafiles/galerie/WhatsApp_Image_2025-05-14_%C3%A0_00.32.19_7533ab1e.jpg",
-    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 19/19)",
-    "date": "2025/2026",
-    "tag": "Jeunesse",
-    "section": "Programme YES"
-  },
+  // PROJECT 1: DSSR et VBG (3 ACTIONS)
+  
+  // Action 1: Atelier TEDIJO3
   {
     "id": 20,
     "title": "Atelier de lancement du projet TEDIJO3 - Vue 1",
@@ -219,7 +13,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 1/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 21,
@@ -230,7 +24,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 2/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 22,
@@ -241,7 +35,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 3/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 23,
@@ -252,7 +46,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 4/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 24,
@@ -263,7 +57,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 5/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 25,
@@ -274,7 +68,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 6/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 26,
@@ -285,7 +79,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 7/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 27,
@@ -296,7 +90,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 8/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 28,
@@ -307,7 +101,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 9/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 29,
@@ -318,7 +112,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 10/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 30,
@@ -329,7 +123,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 11/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 31,
@@ -340,7 +134,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 12/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 32,
@@ -351,7 +145,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 13/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 33,
@@ -362,7 +156,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 14/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 34,
@@ -373,7 +167,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 15/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 35,
@@ -384,7 +178,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 16/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 36,
@@ -395,7 +189,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 17/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 37,
@@ -406,7 +200,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 18/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
   },
   {
     "id": 38,
@@ -417,183 +211,143 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Atelier de lancement du projet TEDIJO3. (Image 19/19)",
     "date": "2025/2026",
     "tag": "DSSR & VBG",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Atelier de lancement TEDIJO3"
+  },
+
+  // Action 2: Programme RESPECT (extracted from 8 Mars images naming set 2)
+  {
+    "id": 63,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 1",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/7.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 1/11)",
+    "date": "2025/2026",
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 39,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 1",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0165.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 1/15)",
+    "id": 64,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 2",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/17.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 2/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 40,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 2",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0167.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 2/15)",
+    "id": 65,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 3",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/21.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 3/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 41,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 3",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0168.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 3/15)",
+    "id": 66,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 4",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/22.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 4/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 42,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 4",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0175.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 4/15)",
+    "id": 67,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 5",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/26.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 5/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 43,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 5",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0178.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 5/15)",
+    "id": 68,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 6",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/27.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 6/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 44,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 6",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0179.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 6/15)",
+    "id": 69,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 7",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/31.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 7/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 45,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 7",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0181.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 7/15)",
+    "id": 70,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 8",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/32.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 8/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 46,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 8",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0182.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 8/15)",
+    "id": 71,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 9",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/34.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 9/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 47,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 9",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0184.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 9/15)",
+    "id": 72,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 10",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/40.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 10/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
   {
-    "id": 48,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 10",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0185.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 10/15)",
+    "id": 73,
+    "title": "Programme RESPECT - Sensibilisation et Plaidoyer - Vue 11",
+    "category": "dssr",
+    "categoryLabel": "DSSR et VBG",
+    "img": "/gallery/42.JPG",
+    "desc": "Photo prise lors des activités de sensibilisation du Programme RESPECT. (Image 11/11)",
     "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "tag": "DSSR & VBG",
+    "section": "Programme RESPECT"
   },
-  {
-    "id": 49,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 11",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0188.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 11/15)",
-    "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
-  },
-  {
-    "id": 50,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 12",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0200.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 12/15)",
-    "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
-  },
-  {
-    "id": 51,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 13",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0211.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 13/15)",
-    "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
-  },
-  {
-    "id": 52,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 14",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0264.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 14/15)",
-    "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
-  },
-  {
-    "id": 53,
-    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 15",
-    "category": "leadership",
-    "categoryLabel": "Leadership et Autonomisation",
-    "img": "/gallery/IMG-20250322-WA0268.jpg",
-    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 15/15)",
-    "date": "2025/2026",
-    "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
-  },
+
+  // Action 3: 8 Mars
   {
     "id": 54,
     "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 1",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1150.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 1/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 1/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 55,
@@ -601,10 +355,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1158.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 2/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 2/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 56,
@@ -612,10 +366,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1198.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 3/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 3/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 57,
@@ -623,10 +377,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1217.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 4/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 4/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 58,
@@ -634,10 +388,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1248.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 5/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 5/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 59,
@@ -645,10 +399,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1260.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 6/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 6/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 60,
@@ -656,10 +410,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_9311.jpg",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 7/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 7/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 61,
@@ -667,10 +421,10 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_9318.jpg",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 8/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 8/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 62,
@@ -678,231 +432,325 @@ export const galleryItems: GalleryItem[] = [
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_9339.jpg",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 9/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 9/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 63,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 10",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/7.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 10/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 64,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 11",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/17.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 11/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 65,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 12",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/21.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 12/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 66,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 13",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/22.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 13/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 67,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 14",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/26.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 14/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 68,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 15",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/27.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 15/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 69,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 16",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/31.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 16/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 70,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 17",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/32.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 17/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 71,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 18",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/34.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 18/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 72,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 19",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/40.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 19/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
-  },
-  {
-    "id": 73,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 20",
-    "category": "dssr",
-    "categoryLabel": "DSSR et VBG",
-    "img": "/gallery/42.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 20/29)",
-    "date": "2025/2026",
-    "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 74,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 21",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 10",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1356.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 21/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 10/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 75,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 22",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 11",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1360.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 22/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 11/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 76,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 23",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 12",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1361.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 23/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 12/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 77,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 24",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 13",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1364.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 24/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 13/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 78,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 25",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 14",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1373.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 25/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 14/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 79,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 26",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 15",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1471.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 26/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 15/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 80,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 27",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 16",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1496.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 27/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 16/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 81,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 28",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 17",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1503.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 28/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 17/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
   {
     "id": 82,
-    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 29",
+    "title": "8 Mars - Autonomiser et défendre les droits des femmes - Vue 18",
     "category": "dssr",
     "categoryLabel": "DSSR et VBG",
     "img": "/gallery/IMG_1504.JPG",
-    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 29/29)",
+    "desc": "Photo prise lors de l'activité: 8 Mars - Autonomiser et défendre les droits des femmes. (Image 18/18)",
     "date": "2025/2026",
     "tag": "Droits des femmes",
-    "section": "Programme TEDIDJO & RESPECT"
+    "section": "Célébration du 8 Mars"
   },
+
+  // PROJECT 2: Paix et Cohésion Sociale (3 ACTIONS)
+
+  // Action 1: Déjeuner de cohésion sociale
+  {
+    "id": 1,
+    "title": "Déjeuner de cohésion sociale - Vue 1",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484528667_1076017081234581_5468232618266679322_n.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 1/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 2,
+    "title": "Déjeuner de cohésion sociale - Vue 2",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484555152_1076017031234586_8611261274879065372_n.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 2/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 3,
+    "title": "Déjeuner de cohésion sociale - Vue 3",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484783623_1076016857901270_2225617598526822804_n.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 3/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 4,
+    "title": "Déjeuner de cohésion sociale - Vue 4",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484072428_1076016864567936_3711715331058270339_n_Hke9aN0.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 4/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 5,
+    "title": "Déjeuner de cohésion sociale - Vue 5",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484091679_1076017064567916_7152508016239654659_n_zvV9l6N.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 5/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 6,
+    "title": "Déjeuner de cohésion sociale - Vue 6",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484149533_1076016914567931_4185037950618386607_n_p0wZbPv.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 6/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 7,
+    "title": "Déjeuner de cohésion sociale - Vue 7",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484164263_1076017021234587_6414870807836586091_n_zCxbPU2.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 7/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 8,
+    "title": "Déjeuner de cohésion sociale - Vue 8",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484191805_1076017091234580_1437664556009335235_n_XBjkrLD.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 8/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 9,
+    "title": "Déjeuner de cohésion sociale - Vue 9",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484244713_1076016861234603_5269455461605233138_n_ElDnkxg.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 9/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 10,
+    "title": "Déjeuner de cohésion sociale - Vue 10",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484269729_1076017331234556_6236149164847289170_n_Fh4q1ab.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 10/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 11,
+    "title": "Déjeuner de cohésion sociale - Vue 11",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484320679_1076016027901353_4951928410946398074_n_uuidePd.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 11/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 12,
+    "title": "Déjeuner de cohésion sociale - Vue 12",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484342673_1076017034567919_3019854611157333233_n_nQYfxjQ.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 12/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 13,
+    "title": "Déjeuner de cohésion sociale - Vue 13",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484348678_1076017051234584_137647462155535418_n_kN23w0y.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 13/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 14,
+    "title": "Déjeuner de cohésion sociale - Vue 14",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484355429_1076017041234585_6011780221015654228_n_0cGgYs9.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 14/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 15,
+    "title": "Déjeuner de cohésion sociale - Vue 15",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484491957_1076017087901247_335125118563590463_n_RWiaprX.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 15/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 16,
+    "title": "Déjeuner de cohésion sociale - Vue 16",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484493172_1076017024567920_3280376124762105683_n_aSlWX1A.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 16/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 17,
+    "title": "Déjeuner de cohésion sociale - Vue 17",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/484526147_1076017037901252_8213786220639388458_n_JRhM68I.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 17/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 18,
+    "title": "Déjeuner de cohésion sociale - Vue 18",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "/gallery/485143467_1076017017901254_1283306627836466384_n.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 18/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+  {
+    "id": 19,
+    "title": "Déjeuner de cohésion sociale - Vue 19",
+    "category": "paix",
+    "categoryLabel": "Paix et Cohésion Sociale",
+    "img": "https://busolaong.com/mediafiles/galerie/WhatsApp_Image_2025-05-14_%C3%A0_00.32.19_7533ab1e.jpg",
+    "desc": "Photo prise lors de l'activité: Déjeuner de cohésion sociale. (Image 19/19)",
+    "date": "2025/2026",
+    "tag": "Jeunesse",
+    "section": "Déjeuner de cohésion sociale"
+  },
+
+  // Action 2: Déjeuner de plaidoyer
   {
     "id": 83,
     "title": "Déjeuner de plaidoyer - Vue 1",
@@ -912,7 +760,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 1/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 84,
@@ -923,7 +771,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 2/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 85,
@@ -934,7 +782,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 3/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 86,
@@ -945,7 +793,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 4/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 87,
@@ -956,7 +804,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 5/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 88,
@@ -967,7 +815,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 6/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 89,
@@ -978,7 +826,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 7/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 90,
@@ -989,7 +837,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 8/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 91,
@@ -1000,7 +848,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 9/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 92,
@@ -1011,7 +859,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 10/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 93,
@@ -1022,7 +870,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 11/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 94,
@@ -1033,7 +881,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 12/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 95,
@@ -1044,7 +892,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 13/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 96,
@@ -1055,7 +903,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 14/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 97,
@@ -1066,7 +914,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 15/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 98,
@@ -1077,7 +925,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 16/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 99,
@@ -1088,7 +936,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 17/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 100,
@@ -1099,7 +947,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 18/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 101,
@@ -1110,7 +958,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 19/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 102,
@@ -1121,7 +969,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 20/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 103,
@@ -1132,7 +980,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 21/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 104,
@@ -1143,7 +991,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 22/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
   {
     "id": 105,
@@ -1154,8 +1002,10 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Déjeuner de plaidoyer. (Image 23/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Déjeuner de plaidoyer"
   },
+
+  // Action 3: Bootcamp Immersif
   {
     "id": 106,
     "title": "Bootcamp Immersif - YES 2025 - Vue 1",
@@ -1165,7 +1015,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 1/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 107,
@@ -1176,7 +1026,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 2/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 108,
@@ -1187,7 +1037,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 3/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 109,
@@ -1198,7 +1048,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 4/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 110,
@@ -1209,7 +1059,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 5/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 111,
@@ -1220,7 +1070,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 6/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 112,
@@ -1231,7 +1081,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 7/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 113,
@@ -1242,7 +1092,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 8/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 114,
@@ -1253,7 +1103,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 9/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 115,
@@ -1264,7 +1114,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 10/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 116,
@@ -1275,7 +1125,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 11/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 117,
@@ -1286,7 +1136,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 12/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 118,
@@ -1297,7 +1147,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 13/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 119,
@@ -1308,7 +1158,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 14/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 120,
@@ -1319,7 +1169,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 15/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 121,
@@ -1330,7 +1180,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 16/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 122,
@@ -1341,7 +1191,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 17/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 123,
@@ -1352,7 +1202,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 18/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 124,
@@ -1363,7 +1213,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 19/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 125,
@@ -1374,7 +1224,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 20/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 126,
@@ -1385,7 +1235,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 21/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 127,
@@ -1396,7 +1246,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 22/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
   {
     "id": 128,
@@ -1407,8 +1257,179 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Bootcamp Immersif - YES 2025. (Image 23/23)",
     "date": "2025/2026",
     "tag": "Jeunesse",
-    "section": "Programme YES"
+    "section": "Bootcamp Immersif YES"
   },
+
+  // PROJECT 3: Leadership et Autonomisation (2 ACTIONS)
+
+  // Action 1: 5 ans d'engagement et d'Impact
+  {
+    "id": 39,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 1",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0165.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 1/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 40,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 2",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0167.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 2/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 41,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 3",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0168.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 3/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 42,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 4",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0175.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 4/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 43,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 5",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0178.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 5/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 44,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 6",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0179.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 6/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 45,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 7",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0181.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 7/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 46,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 8",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0182.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 8/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 47,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 9",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0184.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 9/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 48,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 10",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0185.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 10/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 49,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 11",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0188.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 11/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 50,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 12",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0200.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 12/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 51,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 13",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0211.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 13/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 52,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 14",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0264.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 14/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+  {
+    "id": 53,
+    "title": "5 ans d&#x27;engagement et d&#x27;Impact - Vue 15",
+    "category": "leadership",
+    "categoryLabel": "Leadership et Autonomisation",
+    "img": "/gallery/IMG-20250322-WA0268.jpg",
+    "desc": "Photo prise lors de l'activité: 5 ans d&#x27;engagement et d&#x27;Impact. (Image 15/15)",
+    "date": "2025/2026",
+    "tag": "Vie de l'ONG",
+    "section": "5 ans d'engagement et d'Impact"
+  },
+
+  // Action 2: Cérémonie de présentation des voeux
   {
     "id": 129,
     "title": "Cérémonie de présentation des voeux au CA et aux PTF de Busola - Vue 1",
@@ -1418,7 +1439,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 1/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 130,
@@ -1429,7 +1450,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 2/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 131,
@@ -1440,7 +1461,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 3/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 132,
@@ -1451,7 +1472,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 4/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 133,
@@ -1462,7 +1483,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 5/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 134,
@@ -1473,7 +1494,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 6/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 135,
@@ -1484,7 +1505,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 7/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 136,
@@ -1495,7 +1516,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 8/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 137,
@@ -1506,7 +1527,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 9/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 138,
@@ -1517,7 +1538,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 10/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 139,
@@ -1528,7 +1549,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 11/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 140,
@@ -1539,7 +1560,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 12/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 141,
@@ -1550,7 +1571,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 13/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 142,
@@ -1561,7 +1582,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 14/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 143,
@@ -1572,7 +1593,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 15/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 144,
@@ -1583,7 +1604,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 16/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 145,
@@ -1594,7 +1615,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 17/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 146,
@@ -1605,7 +1626,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 18/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 147,
@@ -1616,7 +1637,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 19/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 148,
@@ -1627,7 +1648,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 20/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 149,
@@ -1638,7 +1659,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 21/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 150,
@@ -1649,7 +1670,7 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 22/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   },
   {
     "id": 151,
@@ -1660,6 +1681,6 @@ export const galleryItems: GalleryItem[] = [
     "desc": "Photo prise lors de l'activité: Cérémonie de présentation des voeux au CA et aux PTF de Busola. (Image 23/23)",
     "date": "2025/2026",
     "tag": "Vie de l'ONG",
-    "section": "Vie de l'ONG & Événements"
+    "section": "Cérémonie de présentation des voeux"
   }
 ];

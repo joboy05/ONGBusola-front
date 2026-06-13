@@ -169,6 +169,7 @@
     
 })(jQuery);
 
+/*
 $(document).ready(function(){
     $(".fancybox").fancybox({
           openEffect: "none",
@@ -183,6 +184,7 @@ $(document).ready(function(){
           $(this).removeClass('transition');
       });
   });
+*/
     
 
   

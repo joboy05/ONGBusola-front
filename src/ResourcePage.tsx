@@ -53,7 +53,7 @@ export default function ResourcePage() {
           background: `linear-gradient(135deg, rgba(40, 100, 174, 0.9) 0%, rgba(39, 176, 116, 0.85) 100%), url('/optimized/hero-slider.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
-          overflow: 'visible'
+          overflow: 'hidden'
         }}
       >
         <div className="position-absolute bg-white rounded-circle" style={{ width: '200px', height: '200px', top: '-100px', left: '-100px', opacity: 0.08 }}></div>

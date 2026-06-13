@@ -63,7 +63,7 @@ export default function ContactPage() {
           background: `linear-gradient(135deg, rgba(39, 100, 174, 0.85) 0%, rgba(245, 159, 35, 0.85) 100%), url('/optimized/cta-1.webp') center/cover`,
           paddingTop: '120px',
           paddingBottom: '60px',
-          overflow: 'visible'
+          overflow: 'hidden'
         }}
       >
         {/* Subtle decorative circles */}

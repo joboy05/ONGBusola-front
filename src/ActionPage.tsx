@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import { Plus } from 'lucide-react';
+import { Plus, Image as ImageIcon } from 'lucide-react';
+import { galleryItems } from './galleryData';
+import { groupItemsBySection } from './galleryUtils';
 
 export const staticActions = [
   {
@@ -47,12 +49,62 @@ const cobalt = "var(--brand-primary)";
 const gold = "var(--brand-secondary)";
 const green = "var(--brand-tertiary)";
 
+const staticActionTestimonials = [
+  {
+    _id: 'static-action-1',
+    name: 'Mariam, 24 ans',
+    role: 'Bénéficiaire TEDIDJO 2',
+    location: 'Karimama, Nord-Bénin',
+    message: "Quand nous avons rencontré Mariam, elle était déscolarisée et sans perspective. Grâce à nos sessions d'éducation, elle a repris confiance en elle et compris ses droits fondamentaux. Intégrée dans un espace protégé, elle a pu parler des violences qu'elle subissait et bénéficier d'un accompagnement juridique. Aujourd'hui, grâce à une formation en couture et gestion, elle est autonome. Elle a monté sa propre petite activité et est devenue une source d'inspiration pour les autres jeunes filles de son quartier. Son histoire, c'est la raison d'être de notre action.",
+    image: '/optimized/testimony1.webp'
+  }
+];
+
 export default function ActionPage() {
-  const [actionsList, setActionsList] = useState(staticActions);
+  const [actionsList, setActionsList] = useState<any[]>([]);
+  const [actionsTestimonialsList, setActionsTestimonialsList] = useState<any[]>(staticActionTestimonials);
+
+  useEffect(() => {
+    if (actionsTestimonialsList.length > 0) {
+      const timer = setTimeout(() => {
+        if (window.$ && window.$(".action-testimonial-carousel").length) {
+          const $carousel = window.$(".action-testimonial-carousel");
+          if ($carousel.data('owl.carousel')) {
+            $carousel.owlCarousel('destroy');
+            $carousel.removeClass('owl-loaded owl-drag owl-responsive');
+          }
+          $carousel.owlCarousel({
+            items: 1,
+            autoplay: true,
+            smartSpeed: 1000,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
+            dots: true,
+            loop: actionsTestimonialsList.length > 1,
+            nav: false
+          });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [actionsTestimonialsList]);
 
   useEffect(() => {
     if (window.WOW) new window.WOW().init();
     window.scrollTo(0, 0);
+
+    // 1. Prepare Gallery Actions (Albums)
+    const groupedGallery = groupItemsBySection(galleryItems);
+    const galleryActions = Array.from(groupedGallery.entries()).map(([sectionName, items]) => ({
+      id: sectionName,
+      title: sectionName,
+      tag: items[0].categoryLabel,
+      img: items[0].img,
+      desc: items[0].desc.split('. (Image')[0].replace("Photo prise lors de l'activité: ", ""),
+      financement: 'N/A',
+      isGallery: true,
+      category: items[0].category
+    }));
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     fetch(`${API_URL}/api/actions`)
@@ -61,21 +113,43 @@ export default function ActionPage() {
         return res.json();
       })
       .then(data => {
+        let combined: any[] = [];
         if (data && data.length > 0) {
           const normalizedActions = data.map((item: any) => ({
-            id: item._id, // Utiliser _id de MongoDB
+            id: item._id,
             title: item.title,
             tag: item.category || 'Non catégorisé',
-            img: (item.images && item.images.length > 0) ? item.images[0] : '/optimized/projet_respect.webp', // Première image ou fallback
+            img: (item.images && item.images.length > 0) ? item.images[0] : '/optimized/projet_respect.webp',
             desc: item.description || '',
-            financement: 'N/A' // L'API ne semble pas avoir de champ financement, on pourrait l'ajouter plus tard
+            financement: 'N/A'
           }));
-          setActionsList(normalizedActions);
-          dynamicActions = normalizedActions; // Mettre à jour pour ActionDetailPage
+          combined = [...normalizedActions, ...galleryActions];
+          dynamicActions = normalizedActions;
+        } else {
+          combined = [...staticActions, ...galleryActions];
         }
+        setActionsList(combined);
       })
       .catch(() => {
         console.log("⚠️ API actions indisponible, utilisation des données statiques");
+        setActionsList([...staticActions, ...galleryActions]);
+      });
+
+    fetch(`${API_URL}/api/testimonials`)
+      .then(res => {
+        if (!res.ok) throw new Error('API unavailable');
+        return res.json();
+      })
+      .then(data => {
+        const actionTestimonials = data.filter((t: any) => t.showOnActions && !t.archived);
+        if (actionTestimonials.length > 0) {
+          setActionsTestimonialsList([...actionTestimonials, ...staticActionTestimonials]);
+        } else {
+          setActionsTestimonialsList(staticActionTestimonials);
+        }
+      })
+      .catch(() => {
+        setActionsTestimonialsList(staticActionTestimonials);
       });
 
   }, []);
@@ -400,43 +474,59 @@ export default function ActionPage() {
 
           {/* Cards Grid */}
           <div className="row g-4 d-flex align-items-stretch mb-4">
-            {actionsList.map((proj, i) => (
-              <div key={i} className="col-md-6 col-lg-3 d-flex wow fadeInUp" data-wow-delay={`${0.1 + i * 0.1}s`}>
-                <div className="bg-white d-flex flex-column rounded-3 w-100 overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(40,100,174,0.1)', border: '1px solid rgba(40,100,174,0.08)' }}>
-                  <div className="position-relative overflow-hidden">
-                    <Link to={`/galerie?filter=${proj.id === 'tedidjo' || proj.id === 'projet-respect' ? 'dssr' : proj.id === 'yes' ? 'paix' : 'leadership'}#axis-${proj.id === 'tedidjo' || proj.id === 'projet-respect' ? 'dssr' : proj.id === 'yes' ? 'paix' : 'leadership'}`}>
-                      <img className="img-fluid w-100" src={proj.img} alt={proj.title} style={{ height: '200px', objectFit: 'cover', transition: 'transform .4s ease' }}
-                        onMouseOver={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)'; }}
-                        onMouseOut={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
-                      />
-                    </Link>
-                    <span
-                      className="px-3 py-1 position-absolute top-0 end-0 fw-bold"
-                      style={{ background: cobalt, color: '#fff', fontSize: '0.78rem', letterSpacing: '0.5px' }}
+            {actionsList.map((proj, i) => {
+              const detailLink = proj.isGallery 
+                ? `/galerie/album/${encodeURIComponent(proj.id)}`
+                : `/actions/${proj.id}`;
+              
+              const galleryShortcut = proj.isGallery
+                ? `/galerie/${proj.category}`
+                : `/galerie?filter=${proj.id === 'tedidjo' || proj.id === 'projet-respect' ? 'dssr' : proj.id === 'yes' ? 'paix' : 'leadership'}`;
+
+              return (
+                <div key={i} className="col-md-6 col-lg-3 d-flex wow fadeInUp" data-wow-delay={`${0.1 + i * 0.1}s`}>
+                  <div className="bg-white d-flex flex-column rounded-3 w-100 overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(40,100,174,0.1)', border: '1px solid rgba(40,100,174,0.08)' }}>
+                    <div className="position-relative overflow-hidden">
+                      <Link to={galleryShortcut}>
+                        <img className="img-fluid w-100" src={proj.img} alt={proj.title} style={{ height: '200px', objectFit: 'cover', transition: 'transform .4s ease' }}
+                          onMouseOver={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)'; }}
+                          onMouseOut={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                        />
+                      </Link>
+                      <span
+                        className="px-3 py-1 position-absolute top-0 end-0 fw-bold"
+                        style={{ background: proj.isGallery ? green : cobalt, color: '#fff', fontSize: '0.78rem', letterSpacing: '0.5px' }}
+                      >
+                        {proj.tag}
+                      </span>
+                      {proj.isGallery && (
+                        <span className="position-absolute top-0 start-0 m-2 badge bg-dark bg-opacity-50">
+                          <ImageIcon size={12} className="me-1" /> Galerie
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="p-4 d-flex flex-column flex-grow-1">
+                      <h3 className="h6 fw-bold text-uppercase mb-3" style={{ color: cobalt, fontFamily: cond, letterSpacing: '0.5px' }}>{proj.title}</h3>
+                      <p className="text-muted flex-grow-1" style={{ fontFamily: serif, fontSize: '0.9rem', lineHeight: '1.6', textAlign: 'justify' }}>
+                        {proj.desc}
+                      </p>
+                    </div>
+
+                    <Link
+                      to={detailLink}
+                      className="d-flex align-items-center justify-content-center gap-2 py-3 text-decoration-none fw-bold"
+                      style={{ background: cobalt, color: '#fff', fontSize: '0.9rem', fontFamily: cond, letterSpacing: '0.5px', transition: 'background .2s' }}
+                      onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#1e4b83'; }}
+                      onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.background = cobalt; }}
                     >
-                      {proj.tag}
-                    </span>
+                      {proj.isGallery ? <ImageIcon size={16} /> : <Plus size={16} />} 
+                      {proj.isGallery ? "Voir l'album" : "En savoir plus"}
+                    </Link>
                   </div>
-
-                  <div className="p-4 d-flex flex-column flex-grow-1">
-                    <h3 className="h6 fw-bold text-uppercase mb-3" style={{ color: cobalt, fontFamily: cond, letterSpacing: '0.5px' }}>{proj.title}</h3>
-                    <p className="text-muted flex-grow-1" style={{ fontFamily: serif, fontSize: '0.9rem', lineHeight: '1.6', textAlign: 'justify' }}>
-                      {proj.desc}
-                    </p>
-                  </div>
-
-                  <Link
-                    to={`/actions/${proj.id}`}
-                    className="d-flex align-items-center justify-content-center gap-2 py-3 text-decoration-none fw-bold"
-                    style={{ background: cobalt, color: '#fff', fontSize: '0.9rem', fontFamily: cond, letterSpacing: '0.5px', transition: 'background .2s' }}
-                    onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#1e4b83'; }}
-                    onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.background = cobalt; }}
-                  >
-                    <Plus size={16} /> En savoir plus
-                  </Link>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -472,91 +562,94 @@ export default function ActionPage() {
             </h2>
           </div>
 
-          {/* Testimony card */}
-          <div
-            className="row g-0 mx-auto wow fadeInUp"
-            data-wow-delay="0.2s"
-            style={{
-              maxWidth: '900px',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 30px 80px rgba(10,20,50,0.35)',
-              border: '1px solid rgba(255,255,255,0.15)'
-            }}
-          >
-            {/* Photo card */}
-            <div
-              className="col-md-4 d-flex flex-column align-items-center justify-content-center text-center"
-              style={{
-                background: '#ffffff',
-                padding: '48px 32px',
-                borderRight: '1px solid rgba(40,100,174,0.12)'
-              }}
-            >
+          <div className="owl-carousel action-testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+            {actionsTestimonialsList.map((t, index) => (
               <div
-                className="overflow-hidden mb-4 shadow"
+                key={t._id || index}
+                className="row g-0 mx-auto"
                 style={{
-                  width: '110px',
-                  height: '110px',
-                  borderRadius: '50%',
-                  border: `3px solid ${gold}`,
-                  flexShrink: 0
+                  maxWidth: '900px',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  boxShadow: '0 30px 80px rgba(10,20,50,0.35)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  background: '#ffffff'
                 }}
               >
-                <img
-                  src="/optimized/testimony1.webp"
-                  alt="Mariam"
-                  className="w-100 h-100"
-                  style={{ objectFit: 'cover' }}
-                 loading="lazy" decoding="async" />
+                {/* Photo card */}
+                <div
+                  className="col-md-4 d-flex flex-column align-items-center justify-content-center text-center animate-fade-in"
+                  style={{
+                    background: '#ffffff',
+                    padding: '48px 32px',
+                    borderRight: '1px solid rgba(40,100,174,0.12)'
+                  }}
+                >
+                  <div
+                    className="overflow-hidden mb-4 shadow"
+                    style={{
+                      width: '110px',
+                      height: '110px',
+                      borderRadius: '50%',
+                      border: `3px solid ${gold}`,
+                      flexShrink: 0
+                    }}
+                  >
+                    <img
+                      src={t.image || "/optimized/testimony1.webp"}
+                      alt={t.name}
+                      className="w-100 h-100"
+                      style={{ objectFit: 'cover' }}
+                     loading="lazy" decoding="async" />
+                  </div>
+                  <h4 className="fw-bold mb-1" style={{ fontSize: '1.25rem', color: cobalt, fontFamily: cond }}>{t.name}</h4>
+                  <span className="fw-bold text-uppercase d-block mb-1" style={{ fontSize: '0.72rem', letterSpacing: '1px', color: gold }}>
+                    {t.role}
+                  </span>
+                  {t.location && (
+                    <span style={{ fontSize: '0.78rem', color: '#6b7280' }}>
+                      {t.location}
+                    </span>
+                  )}
+                </div>
+
+                {/* Quote card */}
+                <div
+                  className="col-md-8 d-flex flex-column justify-content-center position-relative bg-white"
+                  style={{ padding: '48px' }}
+                >
+                  <span
+                    className="position-absolute text-orange-200"
+                    style={{
+                      fontFamily: cond,
+                      fontSize: '120px',
+                      fontWeight: 900,
+                      color: 'rgba(243,156,18,0.12)',
+                      top: '-10px',
+                      left: '20px',
+                      lineHeight: 1,
+                      pointerEvents: 'none',
+                      userSelect: 'none'
+                    }}
+                  >"</span>
+
+                  <p
+                    className="m-0 position-relative"
+                    style={{
+                      fontFamily: serif,
+                      fontSize: '1.05rem',
+                      lineHeight: '1.85',
+                      fontStyle: 'italic',
+                      color: '#374151',
+                      textAlign: 'justify',
+                      zIndex: 1
+                    }}
+                  >
+                    {t.message}
+                  </p>
+                </div>
               </div>
-              <h4 className="fw-bold mb-1" style={{ fontSize: '1.25rem', color: cobalt, fontFamily: cond }}>Mariam, 24 ans</h4>
-              <span className="fw-bold text-uppercase d-block mb-1" style={{ fontSize: '0.72rem', letterSpacing: '1px', color: gold }}>
-                Bénéficiaire TEDIDJO 2
-              </span>
-              <span style={{ fontSize: '0.78rem', color: '#6b7280' }}>
-                Karimama, Nord-Bénin
-              </span>
-            </div>
-
-            {/* Quote card */}
-            <div
-              className="col-md-8 d-flex flex-column justify-content-center position-relative"
-              style={{ background: '#ffffff', padding: '48px' }}
-            >
-              <span
-                className="position-absolute"
-                style={{
-                  fontFamily: cond,
-                  fontSize: '120px',
-                  fontWeight: 900,
-                  color: 'rgba(243,156,18,0.15)',
-                  top: '-10px',
-                  left: '20px',
-                  lineHeight: 1,
-                  pointerEvents: 'none',
-                  userSelect: 'none'
-                }}
-              >"</span>
-
-              <p
-                className="m-0 position-relative"
-                style={{
-                  fontFamily: serif,
-                  fontSize: '1.05rem',
-                  lineHeight: '1.85',
-                  fontStyle: 'italic',
-                  color: '#374151',
-                  textAlign: 'justify',
-                  zIndex: 1
-                }}
-              >
-                Quand nous avons rencontré Mariam, elle était déscolarisée et sans perspective. Grâce à nos sessions d'{' '}
-                <b style={{ fontStyle: 'normal', color: cobalt }}>éducation</b>, elle a repris confiance en elle et compris ses droits fondamentaux. Intégrée dans un espace{' '}
-                <b style={{ fontStyle: 'normal', color: gold }}>protégé</b>, elle a pu parler des violences qu'elle subissait et bénéficier d'un accompagnement juridique. Aujourd'hui, grâce à une formation en couture et gestion, elle est{' '}
-                <b style={{ fontStyle: 'normal', color: green }}>autonome</b>. Elle a monté sa propre petite activité et est devenue une source d'inspiration pour les autres jeunes filles de son quartier. Son histoire, c'est la raison d'être de notre action.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
