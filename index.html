@@ -53,37 +53,16 @@
     </div>
     
     <script>
-      // Sécurité pour masquer le spinner quoi qu'il arrive
-      window.addEventListener('load', function() {
-        var spinner = document.getElementById('spinner');
-        if (spinner) {
-          setTimeout(function() {
-            spinner.classList.remove('show');
-          }, 500);
-        }
-      });
-      // Force le masquage après 3 secondes au cas où 'load' ne se déclenche pas
+      // Force le masquage après 5 secondes au cas où React ne se chargerait pas
       setTimeout(function() {
         var spinner = document.getElementById('spinner');
         if (spinner && spinner.classList.contains('show')) {
           spinner.classList.remove('show');
         }
-      }, 3000);
+      }, 5000);
     </script>
     <div id="root"></div>
     <script type="module" src="src/main.tsx"></script>
-
-    <!-- PWA Service Worker Registration (Désactivé pour corriger les erreurs de cache)
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('Service Worker enregistré avec succès !', reg.scope))
-            .catch(err => console.error('Échec de l\'enregistrement du Service Worker:', err));
-        });
-      }
-    </script>
-    -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -93,8 +72,5 @@
     <script src="waypoints.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script src="counterup.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
   </body>
 </html>

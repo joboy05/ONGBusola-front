@@ -15,9 +15,9 @@ import ScrollToTop from './ScrollToTop'
 import GalleryPage from './GalleryPage'
 import SupportPage from './SupportPage'
 import Chatbot from './Chatbot'
+import AlbumPage from './AlbumPage'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
     <BrowserRouter basename="/">
       <ScrollToTop />
       <Routes>
@@ -31,9 +31,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/actualites" element={<NewsPage />} />
         <Route path="/actualites/:id" element={<NewsDetailPage />} />
         <Route path="/galerie" element={<GalleryPage />} />
+        <Route path="/galerie/:category" element={<GalleryPage />} />
+        <Route path="/galerie/album/:albumName" element={<AlbumPage />} />
         <Route path="/soutenir" element={<SupportPage />} />
       </Routes>
       <Chatbot />
     </BrowserRouter>
-  </React.StrictMode>,
 )

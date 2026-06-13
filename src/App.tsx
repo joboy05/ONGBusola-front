@@ -220,15 +220,21 @@ function App() {
   ];
 
   useEffect(() => {
-    const initJS = () => {
-      // Hide Spinner
+    if (!loadingContent) {
       const spinner = document.getElementById('spinner');
       if (spinner) {
         spinner.classList.remove('show');
       }
-
-      // Initialize WOW.js
       if (window.WOW) {
+        new window.WOW().init();
+      }
+    }
+  }, [loadingContent]);
+
+  useEffect(() => {
+    const initJS = () => {
+      // Initialize WOW.js if not already done by loadingContent
+      if (window.WOW && !loadingContent) {
         new window.WOW().init();
       }
 
